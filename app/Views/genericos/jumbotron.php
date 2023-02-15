@@ -1,12 +1,20 @@
-<div class="jumbotron text-center">
-  <h1>Company</h1> 
-  <p>We specialize in blablabla</p> 
-  <form>
-    <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
-      </div>
+<!-- <div class="jumbotron text-center">
+
+  <div class="titleWorld">WORLD GAMES</div> 
+  <div>Un nuevo mundo de juegos espera por ti!!</div> 
+  <button style="margin-top: 70px; border-radius:10px; color:purple; border-color:purple; font-weight:700;">Your Turn</button>
+</div> -->
+
+<div class="imgInicio">
+    <div class="content-container row">
+      <div class="col titleWorld">WORLD GAMES</div>
+      <div class="w-100"></div>
+      <div class="col subtitleWorld">Un nuevo mundo de juegos espera por ti!!</div>
+      <div class="w-100"></div>
+      <button class="buttonWorld">Your Turn</button>
     </div>
-  </form>
 </div>
+
+
+
+

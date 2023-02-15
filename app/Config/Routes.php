@@ -32,6 +32,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->add('/Articulos','Articulos::mensaje');
 $routes->add('inicio','Inicio::index');
+$routes->add('/contacto','ContactoController::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

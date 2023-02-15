@@ -1,165 +1,306 @@
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>About Company Page</h2><br>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+<!-- <div class="img-fluid carruselBackground " alt="fondo">
+  
+<div id="about" class="container-fluid carrusel">
+<div id="carouselExampleInterval" class="carousel slide carrusel" data-bs-ride="carousel" >
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+    <img src="<?php  echo base_url()?>/imagenes/zeldaCarrusel.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="carruselTitulos">The Legend of Zelda</h5>
+        <p>Sumergete en mundo de aventuras y descubrimientos en Legend of Zelda</p>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
+    <div class="carousel-item" data-bs-interval="2000">
+    <img src="<?php  echo base_url()?>/imagenes/aliceGame.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="carruselTitulos">Alice Madness Returns</h5>
+        <p>Con su mente por los suelos e incapaz de resolver el miedo impulsado por sus extraños recuerdos, sueños y visiones, Alice decide refugiarse en el País de las Maravillas para resolver mejor sus problemas.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+    <img src="<?php  echo base_url()?>/imagenes/marioKartCarrusel.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="carruselTitulos">Mario Kart 8 Deluxe</h5>
+        <p>Juega con nuevos personajes, podrás elegir una de las 48 pistas!!</p>
+      </div>
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 </div>
 
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+</div> -->
+
+
+<!-- Container Videojuegos -->
+
+<div id="carouselExampleInterval" class="carousel slide carrusel" data-bs-ride="carousel" >
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+    <img src="<?php  echo base_url()?>/imagenes/zeldaCarrusel.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="carruselTitulos">The Legend of Zelda</h5>
+        <p>Sumergete en mundo de aventuras y descubrimientos en Legend of Zelda</p>
+      </div>
     </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="carousel-item" data-bs-interval="2000">
+    <img src="<?php  echo base_url()?>/imagenes/aliceGame.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="carruselTitulos">Alice Madness Returns</h5>
+        <p>Con su mente por los suelos e incapaz de resolver el miedo impulsado por sus extraños recuerdos, sueños y visiones, Alice decide refugiarse en el País de las Maravillas para resolver mejor sus problemas.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+    <img src="<?php  echo base_url()?>/imagenes/marioKartCarrusel.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="carruselTitulos">Mario Kart 8 Deluxe</h5>
+        <p>Juega con nuevos personajes, podrás elegir una de las 48 pistas!!</p>
+      </div>
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 </div>
 
-<!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
-  <h2>SERVICES</h2>
-  <h4>What we offer</h4>
-  <br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-off logo-small"></span>
-      <h4>POWER</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+
+<!-- <div class="img-fluid backgroundGames" alt="fondo">
+  
+<div id="about" class="container-fluid carrusel">
+<div id="carouselExampleInterval" class="carousel slide carrusel" data-bs-ride="carousel" >
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+    <img src="<?php  echo base_url()?>/imagenes/zeldaCarrusel.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="carruselTitulos">The Legend of Zelda</h5>
+        <p>Sumergete en mundo de aventuras y descubrimientos en Legend of Zelda</p>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-heart logo-small"></span>
-      <h4>LOVE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+    <div class="carousel-item" data-bs-interval="2000">
+    <img src="<?php  echo base_url()?>/imagenes/aliceGame.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="carruselTitulos">Alice Madness Returns</h5>
+        <p>Con su mente por los suelos e incapaz de resolver el miedo impulsado por sus extraños recuerdos, sueños y visiones, Alice decide refugiarse en el País de las Maravillas para resolver mejor sus problemas.</p>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-lock logo-small"></span>
-      <h4>JOB DONE</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+    <div class="carousel-item">
+    <img src="<?php  echo base_url()?>/imagenes/marioKartCarrusel.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="carruselTitulos">Mario Kart 8 Deluxe</h5>
+        <p>Juega con nuevos personajes, podrás elegir una de las 48 pistas!!</p>
+      </div>
     </div>
   </div>
-  <br><br>
-  <div class="row slideanim">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+</div> -->
+
+
+
+
+<!-- <div id="services" class="container-fluid text-center">
+  <h2>VIDEOJUEGOS</h2>
+  <div class="container">
+  <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <div class="card">
+        <img src="<?php  echo base_url()?>/imagenes/MarioKartGame.jpg" alt="Imagen de la tarjeta" class="imgCard">
+        <div>
+          <h3>Mario Kart Deluxe</h3>
+          <p>Precio : $1200.60</p>
+        </div>
+      </div>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <div class="card">
+        <img src="<?php  echo base_url()?>/imagenes/zeldaGame.jpg" alt="Imagen de la tarjeta" class="imgCard">
+        <div>
+          <h3>Mario Kart</h3>
+          <p>Precio : $1200.60</p>
+        </div>
+      </div>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-wrench logo-small"></span>
-      <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
+      <div class="card">3</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">4</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">5</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">6</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">7</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">8</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">9</div>
     </div>
   </div>
 </div>
+</div> -->
+
+
 
 <!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Portfolio</h2><br>
-  <h4>What we have created</h4>
+<!-- <div id="portfolio" class="container-fluid text-center bg-grey backgroundGames">
+  <h1 style="color:whitesmoke; font-weight:bolder">VIDEOJUEGOS</h1><br>
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="<?php  echo base_url()?>/imagenes/paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
+        <img src="<?php  echo base_url()?>/imagenes/godofwar.jpg" alt="Paris" width="150" height="150">
+        <p><strong>GOD OF WAR RAGNAROK "PS4"</strong></p>
+        <p>Precio : $1200.00</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="<?php  echo base_url()?>/imagenes/newyork.jpg" alt="New York" width="400" height="300">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
+        <img src="<?php  echo base_url()?>/imagenes/halo2.jpg" alt="New York" width="400" height="300">
+        <p><strong>Halo Infinite "XBOX ONE"</strong></p>
+        <p>Precio : $1600.00</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="<?php  echo base_url()?>/imagenes/sanfran.jpg" alt="San Francisco" width="400" height="300">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
+        <img src="<?php  echo base_url()?>/imagenes/gtv.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>GTA V "PS5"</strong></p>
+        <p>Precio : $1500.00</p>
+      </div>
+    </div>
+  </div>
+ -->
+ <div id="portfolio" class="container-fluid text-center bg-grey portfolioGames">
+ <h1>VIDEOJUEGOS</h1><br>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="<?php  echo base_url()?>/imagenes/godofwar.jpg" alt="Paris" width="200" height="200">
+        <p><strong>GOD OF WAR RAGNAROK "PS4"</strong></p>
+        <p>Precio : $1200.00</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+      <img src="<?php  echo base_url()?>/imagenes/halo2.jpg" alt="New York" width="200" height="200">
+        <p><strong>Halo Infinite "XBOX ONE"</strong></p>
+        <p>Precio : $1600.00</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+      <img src="<?php  echo base_url()?>/imagenes/gtv.jpg" alt="San Francisco" width="200" height="200">
+        <p><strong>GTA V "PS5"</strong></p>
+        <p>Precio : $1500.00</p>
       </div>
     </div>
   </div><br>
-  
-  <h2>What our customers say</h2>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
-      </div>
-      <div class="item">
-        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
-      </div>
-      <div class="item">
-        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+
+
+
+  <!-- <h2 >Videojuegos</h2> -->
+  <!-- <div id="carouselExampleInterval" class="carousel slide carrusel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="<?php  echo base_url()?>/imagenes/marioKartCarrusel.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Mario Kart</h5>
+        <p>Conviertete en el campeon que siempre has querido!!</p>
       </div>
     </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+
+
+
+
+
 </div>
 
 <!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
+<div id="pricing" class="container-fluid ">
   <div class="text-center">
-    <h2>Pricing</h2>
-    <h4>Choose a payment plan that works for you</h4>
+    <h2>Membresias</h2>
+    <h4>Escoge tu membresia!!</h4>
   </div>
   <div class="row slideanim">
-    <div class="col-sm-4 col-xs-12">
+    <div class="col-sm-4 col-xs-8">
       <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Basic</h1>
+      <div class="panel-heading">
+          <h1>Platinum World</h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
           <p><strong>Endless</strong> Amet</p>
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <h3>$150.00</h3>
+          <h4>Costo por mes</h4>
+          <button class="btn btn-lg">Registrate</button>
         </div>
       </div>      
     </div>     
-    <div class="col-sm-4 col-xs-12">
+    <div class="col-sm-4 col-xs-8">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Pro</h1>
+          <h1>Gold World</h1>
         </div>
         <div class="panel-body">
           <p><strong>50</strong> Lorem</p>
@@ -170,15 +311,15 @@
         </div>
         <div class="panel-footer">
           <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <h4>Costo por año</h4>
+          <button class="btn btn-lg">Registrate</button>
         </div>
       </div>      
     </div>       
-    <div class="col-sm-4 col-xs-12">
+    <div class="col-sm-4 col-xs-8">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Premium</h1>
+          <h1>Diamond World</h1>
         </div>
         <div class="panel-body">
           <p><strong>100</strong> Lorem</p>
@@ -190,36 +331,49 @@
         <div class="panel-footer">
           <h3>$49</h3>
           <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
+          <button class="btn btn-lg">Registrate</button>
         </div>
       </div>      
     </div>    
   </div>
 </div>
 
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>NUESTROS VALORES</h2><br>
+      <h4><strong>MISION</strong> Brindar a nuestro clientes un gran catálogo de juegos de acuerdo a sus gustos. Ofreciendo un servicio de alto nivel, proponiendo ideas, servicios y productos de alta calidad. Mediante la implementación de opciones viables adaptables a sus distintos presupuestos.</h4><br>
+      <p><strong>VISION:</strong> Ser en 2026 uno de los principales canales de distribución de videojuegos en México.</p>
+    </div>
+  </div>
+</div>
+
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
+  <h2 class="text-center">CONTACTO</h2>
   <div class="row">
     <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+      <!-- <p>Contact us and we'll get back to you within 24 hours.</p> -->
+      <p><span class="glyphicon glyphicon-map-marker"></span>Merida Yucatan</p>
+      <p><span class="glyphicon glyphicon-phone"></span>99-93-35-43-42</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> contacto@worldgames.com.mx</p>
     </div>
     <div class="col-sm-7 slideanim">
       <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <input class="form-control" id="correo" name="correo" placeholder="Correo" type="email" required>
         </div>
       </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <textarea class="form-control" id="comentarios" name="comentarios" placeholder="Comentarios" rows="5"></textarea><br>
       <div class="row">
         <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
+          <button class="btn btn-outline-primary" type="submit">Enviar</button>
         </div>
       </div>
     </div>

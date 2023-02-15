@@ -1,9 +1,43 @@
 
-<footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
+<footer class="container-fluid text-center backgrounFooter">
+  <!-- <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>
+  </a> -->
+    <div class="row">
+      <div class="titleFooter"><b>World Games</b></div>
+      <div class="col-md-3" style="margin-top: 30px; color:#e60202;">
+        <h5><b>Información de la empresa</b></h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="informacion">¿Quienes somos?</a></li>
+          <li><a href="#" class="informacion">Aviso de privacidad</a></li>
+          <li><a href="#" class="informacion">Terminos y condiciones</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3" style="margin-top: 30px;">
+        <h5 style="color:#e60202;"><b>Puntos de distribucion</b></h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="informacion">Montecarlo</a></li>
+          <li><a href="#" class="informacion">Centro</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3" style="margin-top: 30px;">
+        <h5 style="color:#e60202;"><b>Contacto</b></h5>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-phone"></i> Teléfono: 99-93-35-43-42</li>
+          <li><i class="fa fa-envelope"></i>Email: contacto@worldgames.com</li>
+        </ul>
+      </div>
+      <div class="col-md-3" style="margin-top: 30px;">
+        <h5 style="color:#e60202;"><b>Síguenos en</b></h5>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+
 </footer>
 
 <script>

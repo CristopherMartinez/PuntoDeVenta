@@ -1,15 +1,30 @@
 <html>
 <head>
   <!-- Theme Made By www.w3schools.com -->
-  <title>Bootstrap Theme Company Page</title>
+  <title>World Games</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
   <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@1,800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+
+
   body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
@@ -30,11 +45,19 @@
     margin-bottom: 30px;
   }  
   .jumbotron {
-    background-color: #f4511e;
-    color: #fff;
-    padding: 100px 25px;
-    font-family: Montserrat, sans-serif;
+    /* background-image: url("<?php  echo base_url()?>/imagenes/fondo_1.jpg"); */
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+    /* font-family: 'Tourney', cursive; */
+    font-family: 'Orbitron', sans-serif;
+    color: purple;
+    font-weight: bolder;
+    font-size:20px;
   }
+
   .container-fluid {
     padding: 60px 50px;
   }
@@ -46,7 +69,7 @@
     font-size: 50px;
   }
   .logo {
-    color: #f4511e;
+    color: none;
     font-size: 200px;
   }
   .thumbnail {
@@ -119,12 +142,12 @@
   }
   .navbar {
     margin-bottom: 0;
-    background-color: #f4511e;
+    background-color: #150c43;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
     line-height: 1.42857143 !important;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     border-radius: 0;
     font-family: Montserrat, sans-serif;
   }
@@ -139,11 +162,13 @@
     border-color: transparent;
     color: #fff !important;
   }
+  
   footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
     color: #f4511e;
   }
+
   .slideanim {visibility:hidden;}
   .slide {
     animation-name: slide;
@@ -152,6 +177,8 @@
     -webkit-animation-duration: 1s;
     visibility: visible;
   }
+
+
   @keyframes slide {
     0% {
       opacity: 0;
@@ -162,6 +189,8 @@
       transform: translateY(0%);
     }
   }
+
+
   @-webkit-keyframes slide {
     0% {
       opacity: 0;
@@ -172,6 +201,8 @@
       -webkit-transform: translateY(0%);
     }
   }
+
+
   @media screen and (max-width: 768px) {
     .col-sm-4 {
       text-align: center;
@@ -181,12 +212,197 @@
       width: 100%;
       margin-bottom: 35px;
     }
+    /* .subtitleWorld{
+      padding-left: 30px;
+      padding-right: 10px;
+    }
+
+    .titleWorld{
+        font-size: 19px;
+      }
+
+    .buttonWorld{
+      
+      margin-left: 150px;
+      padding: 5px;
+      border-radius:10px; 
+      color:purple; 
+      border-color:purple; 
+      font-weight:bold; 
+      width: 150px;
+    } */
+
+
+
+
   }
   @media screen and (max-width: 480px) {
     .logo {
       font-size: 150px;
     }
+
+
+
   }
+
+  .imgGames{
+    padding-top: 10px;
+    width: 100px;
+  }
+
+  .card {
+  background-color: #ffffff;
+  border: 1px solid #333333;
+  padding: 20px;
+  text-align: center;
+  align-content: center;
+  margin: 2%;
+  border-radius: 50px;
+  color:purple; 
+  box-shadow: 2px 2px 5px gray; 
+  overflow: hidden;
+}
+
+.imgcard{
+  margin: auto;
+  width: 100;
+  color:lightgray; 
+  box-shadow: 2px 2px 5px gray; 
+  border-radius: 10px; 
+  overflow: hidden;
+  
+}
+
+.logoWorld{
+  width: 100px;
+}
+
+.carrusel{
+  width: 100%;
+
+}
+
+.carruselTitulos{
+  font-weight: bolder;
+  font-size: 40px;
+  color: black;
+}
+
+.portfolioGames{
+  color: purple;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.backgroundGames{
+    background-image: url("<?php  echo base_url()?>/imagenes/fondo6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: bolder;
+    height: 105%;
+    
+}
+
+.carruselBackground{
+    /*Cambiar fondo*/
+    background-image: url("<?php  echo base_url()?>/imagenes/fondo3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-weight: bolder;
+
+}
+
+.c{
+  width: 250px;
+}
+
+.c1{
+  width: 60%;
+  border-radius: 30px;
+  margin: auto;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.priceCard{
+  font-weight: bold;
+}
+
+.containerMembership{
+  border-radius: 40px;
+}
+.informacion{
+  text-decoration: none;
+  color: white;
+}
+
+.backgrounFooter{
+  background-image: url("<?php  echo base_url()?>/imagenes/fondo6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.letraNavbar{
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.imgInicio{
+  background-image: url("<?php  echo base_url()?>/imagenes/fondo_1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+
+}
+
+.content-container {
+  /*Checar este que se desborda un poco*/ 
+  background-color: none;
+  padding-left: 8%;
+  padding-right: 8%;
+  font-family: 'Orbitron', sans-serif;
+  color: purple;
+  padding-top: 20px;
+  font-weight: bolder;
+  /* background-color: red; */
+}
+
+.subtitleWorld{
+  padding-left: 70px;
+  /* background-color: red; */
+}
+
+.titleWorld{
+    font-size: 50px;
+    margin-bottom: -20px;
+    /* background-color: red; */
+  }
+
+.buttonWorld{
+  /* background-color: #f4511e; */
+  margin-left: 150px;
+  margin-top: 25%;
+  padding: 5px;
+  border-radius:10px; 
+  color:purple; 
+  border-color:purple; 
+  font-weight:bold; 
+  width: 150px;
+}
+
+.titleFooter{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+  color:#e60202;
+}
+
+
+
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">

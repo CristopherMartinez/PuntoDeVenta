@@ -9,6 +9,7 @@ class ContactoController extends BaseController{
         $vista= view('contacto/header',$data).
                 view('contacto/menu').
                 view('contacto/inicio').
+                view('contacto/contenido').
                 view('contacto/footer');
         return $vista;
     }
