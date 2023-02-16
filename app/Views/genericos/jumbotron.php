@@ -11,7 +11,7 @@
       <div class="w-100"></div>
       <div class="col subtitleWorld">Un nuevo mundo de juegos espera por ti!!</div>
       <div class="w-100"></div>
-      <button class="buttonWorld">Your Turn</button>
+      <a class="nav-link" href="register" style="font-size:smaller;"><button class="buttonWorld" style="font-weight: bolder; font-size:20px;">Your Turn</button></a>
     </div>
 </div>
 

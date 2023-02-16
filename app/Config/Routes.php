@@ -29,10 +29,17 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+//Pruebas
 $routes->get('/', 'Home::index');
 $routes->add('/Articulos','Articulos::mensaje');
-$routes->add('inicio','Inicio::index');
 $routes->add('/contacto','ContactoController::index');
+
+//Rutas de pagina de venta de videojuegos
+$routes->add('inicio','Inicio::index');
+$routes->add('/login','LoginController::index');
+$routes->add('/register','RegisterController::index');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

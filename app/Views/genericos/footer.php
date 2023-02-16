@@ -4,9 +4,9 @@
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a> -->
     <div class="row">
-      <div class="titleFooter"><b>World Games</b></div>
+      <div style="color:whitesmoke; font-weight: bold; font-size:40px;"><b>World Games</b></div>
       <div class="col-md-3" style="margin-top: 30px; color:#e60202;">
-        <h5><b>Información de la empresa</b></h5>
+        <h5 style="color:whitesmoke; font-weight: bold; font-size:22px;"><b>Información de la empresa</b></h5>
         <ul class="list-unstyled">
           <li><a href="#" class="informacion">¿Quienes somos?</a></li>
           <li><a href="#" class="informacion">Aviso de privacidad</a></li>
@@ -14,30 +14,30 @@
         </ul>
       </div>
       <div class="col-md-3" style="margin-top: 30px;">
-        <h5 style="color:#e60202;"><b>Puntos de distribucion</b></h5>
+        <h5 style="color:whitesmoke; font-weight: bold; font-size:22px;"><b>Puntos de distribucion</b></h5>
         <ul class="list-unstyled">
           <li><a href="#" class="informacion">Montecarlo</a></li>
           <li><a href="#" class="informacion">Centro</a></li>
         </ul>
       </div>
       <div class="col-md-3" style="margin-top: 30px;">
-        <h5 style="color:#e60202;"><b>Contacto</b></h5>
+        <h5 style="color:whitesmoke; font-weight: bold; font-size:22px;"><b>Contacto</b></h5>
         <ul class="list-unstyled">
           <li><i class="fa fa-phone"></i> Teléfono: 99-93-35-43-42</li>
           <li><i class="fa fa-envelope"></i>Email: contacto@worldgames.com</li>
         </ul>
       </div>
       <div class="col-md-3" style="margin-top: 30px;">
-        <h5 style="color:#e60202;"><b>Síguenos en</b></h5>
+        <h5 style="color:whitesmoke; font-weight: bold; font-size:22px;"><b>Síguenos en</b></h5>
         <ul class="list-inline">
-          <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/face.png" style="width: 30px;"></a></li>
+          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/instagram.png" style="width: 30px;"></a></li>
+          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/tiktok.png" style="width: 30px;"></i></a></li>
+          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/twiter.png" style="width: 30px;"></i></a></li>
+          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/twitch.png" style="width: 30px;"></i></a></li>
         </ul>
       </div>
     </div>
-
-
 </footer>
 
 <script>

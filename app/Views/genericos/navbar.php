@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <a class="navbar-brand" href="#" style="padding-left:10px;"><img src="<?php  echo base_url()?>/imagenes/logoWorld.png" class="logoWorld"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"> <img src="<?php  echo base_url()?>/imagenes/icons/menu3.png" style="width:30px"></span>
+    <button class="navbar-toggler" type="button"" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><a class="nav-link" href="inicio"> <img src="<?php  echo base_url()?>/imagenes/icons/menu3.png" style="width:30px"></a></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll letraNavbar" style="--bs-scroll-height: 100px;">
@@ -50,10 +50,10 @@
       </form>
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll letraNavbar" style="--bs-scroll-height: 100px;">
        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" style="font-size:smaller;">Registrarte</a>
+          <a class="nav-link active" aria-current="page" href="register" style="font-size:smaller;">Registrarte</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" style="font-size:smaller;">Inicia Sesión</a>
+          <a class="nav-link" href="login" style="font-size:smaller;">Inicia Sesión</a>
         </li>
       </ul>
       <!-- <div style="margin-left: 15px; color:blanchedalmond"><a href="#" style="text-decoration: none; color:aliceblue">Registrarse</a></div>
