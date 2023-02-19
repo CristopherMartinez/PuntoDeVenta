@@ -75,7 +75,7 @@
                     Videojuegos
                   </a>
                   <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:500;">
-                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;">PlayStation</a></li>
+                    <li><a class="dropdown-item" href="gamesplayStation" style="padding-left: 5px;">PlayStation</a></li>
                     <!-- <li><hr class="dropdown-divider"></li> -->
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Xbox</a></li>
                     <!-- <li><hr class="dropdown-divider"></li> -->

@@ -9,19 +9,24 @@
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" />
    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <style>
         .img1 {
             height: 280px;
             border-radius: 30px;
         }
-  
+   
+        
     </style>
 <body> 
             <div class="col-12 m-auto backgrounFooter" style="padding-top: 15px;">
                 <div class="owl-carousel owl-theme">
                     <div class="item mb-4">
                         <div class="card border-0 shadow">
-                       
+                        <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
+                        favorite
+                        </span>
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/modermwarfare.jpeg" alt="" class="card-img-top" style="padding-top:5px;">
                             <div class="card-body">
                                 <div class="card-title text-center">
@@ -35,6 +40,9 @@
  
                     <div class="item">
                         <div class="card border-0 shadow">
+                        <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
+                            favorite
+                        </span>
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/callofduty.jpeg"  alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
@@ -47,6 +55,9 @@
                     </div>
                     <div class="item">
                         <div class="card border-0 shadow">
+                        <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
+                            favorite
+                        </span>
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/forspoken.jpeg" alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
@@ -59,6 +70,9 @@
                     </div>
                     <div class="item">
                         <div class="card border-0 shadow">
+                        <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
+                            favorite
+                        </span>
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/animalcrosing.jpeg"alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
@@ -71,6 +85,9 @@
                     </div>
                     <div class="item">
                         <div class="card border-0 shadow">
+                        <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
+                            favorite
+                        </span>
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/frambo.jpeg" alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
@@ -83,6 +100,9 @@
                     </div>
                     <div class="item">
                         <div class="card border-0 shadow">
+                        <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
+                            favorite
+                        </span>
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/sonic.jpeg" alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
