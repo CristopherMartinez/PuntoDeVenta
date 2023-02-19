@@ -16,3 +16,78 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 22:56:58 --> Undefined variable $descripcion
+in APPPATH\Views\contacto\header.php on line 11.
+ 1 APPPATH\Views\contacto\header.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $descripcion', 'APPPATH\\Views\\contacto\\header.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/header', [], true)
+ 5 APPPATH\Controllers\ContactoController.php(9): view('contacto/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ContactoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContactoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 23:03:09 --> Undefined variable $titulo_seccion
+in APPPATH\Views\contacto\contenido.php on line 476.
+ 1 APPPATH\Views\contacto\contenido.php(476): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo_seccion', 'APPPATH\\Views\\contacto\\contenido.php', 476)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\ContactoController.php(12): view('contacto/contenido')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ContactoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContactoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 23:03:19 --> Undefined variable $titulo_seccion
+in APPPATH\Views\contacto\contenido.php on line 476.
+ 1 APPPATH\Views\contacto\contenido.php(476): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo_seccion', 'APPPATH\\Views\\contacto\\contenido.php', 476)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\ContactoController.php(12): view('contacto/contenido')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ContactoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContactoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 23:04:34 --> Undefined variable $titulo_seccion
+in APPPATH\Views\contacto\contenido.php on line 476.
+ 1 APPPATH\Views\contacto\contenido.php(476): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo_seccion', 'APPPATH\\Views\\contacto\\contenido.php', 476)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\ContactoController.php(12): view('contacto/contenido')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ContactoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContactoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 23:05:40 --> Undefined variable $descripcion
+in APPPATH\Views\contacto\contenido.php on line 476.
+ 1 APPPATH\Views\contacto\contenido.php(476): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $descripcion', 'APPPATH\\Views\\contacto\\contenido.php', 476)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\ContactoController.php(12): view('contacto/contenido')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ContactoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContactoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 23:06:09 --> Undefined variable $descripcion
+in APPPATH\Views\contacto\contenido.php on line 476.
+ 1 APPPATH\Views\contacto\contenido.php(476): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $descripcion', 'APPPATH\\Views\\contacto\\contenido.php', 476)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\ContactoController.php(12): view('contacto/contenido')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ContactoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ContactoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-16 23:47:00 --> Invalid file: "intro.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('intro.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('intro', [], true)
+ 3 APPPATH\Controllers\intro.php(7): view('intro')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\intro->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\intro))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

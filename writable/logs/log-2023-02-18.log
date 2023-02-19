@@ -1,0 +1,9 @@
+CRITICAL - 2023-02-18 16:36:26 --> Invalid file: "prueba.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('prueba.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('prueba', [], true)
+ 3 APPPATH\Controllers\Inicio.php(18): view('prueba')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

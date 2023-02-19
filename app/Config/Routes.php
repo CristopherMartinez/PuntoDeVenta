@@ -32,7 +32,10 @@ $routes->set404Override();
 //Pruebas
 $routes->get('/', 'Home::index');
 $routes->add('/Articulos','Articulos::mensaje');
-$routes->add('/contacto','ContactoController::index');
+// $routes->add('/contacto','ContactoController::index');
+$routes->add('/contacto','Contacto::index');
+$routes->add('/catalogo/(:num)','Contacto::catalogo/$1');//El $1 quiere decir la cantidad de parametros 
+$routes->add('/contacto','intro::index');
 
 //Rutas de pagina de venta de videojuegos
 $routes->add('inicio','Inicio::index');
