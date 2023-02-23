@@ -276,6 +276,8 @@
 
   }
 
+  
+
   .imgGames{
     padding-top: 10px;
     width: 100px;
@@ -455,7 +457,7 @@
 }
 
 .imgregister{
-  background-image: url("<?php  echo base_url()?>/imagenes/fondo6.jpg");
+    background-image: url("<?php  echo base_url()?>/imagenes/fondo6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

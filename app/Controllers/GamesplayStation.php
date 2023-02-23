@@ -7,9 +7,13 @@ class GamesplayStation extends BaseController{
     
     public function index(){
 
-        $vista= view('genericos/navbar').
-                view('genericos/header').
+        $vista= view('genericos/header').
+                view('genericos/navbar').
                 view('genericos/gamesplayStation');
+                // view('genericos/footer');
+                
+                
+                
         
 
         return $vista;

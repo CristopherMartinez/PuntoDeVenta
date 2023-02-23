@@ -1,5 +1,5 @@
 <!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid letraContaco backgrounFooter">
+<div id="contact" class="container-fluid bg-black letraContaco" >
   <h2 class="text-center" style="color:whitesmoke; font-weight:bolder;">CONTACTO</h2>
   <div class="row">
     <div class="col-sm-5"">

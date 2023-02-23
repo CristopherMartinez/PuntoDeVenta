@@ -42,6 +42,9 @@ $routes->add('inicio','Inicio::index');
 $routes->add('/login','LoginController::index');
 $routes->add('/register','RegisterController::index');
 $routes->add('/gamesplayStation','GamesplayStation::index');
+$routes->add('/ofertas','OfertasController::index');
+
+
 
 /*
  * --------------------------------------------------------------------

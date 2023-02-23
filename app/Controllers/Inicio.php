@@ -7,8 +7,8 @@ class Inicio extends BaseController{
         $data=['titulo'=>'Tienda'];
         $vistas= view('genericos/header',$data).
                  view('genericos/navbar').
-                 view('genericos/jumbotron.php').     
                  view('genericos/carruselInicio').
+                 view('genericos/jumbotron.php').     
                  view('genericos/cardsInicio.php').
                  view('genericos/contacto.php').
                  view('genericos/image').
