@@ -16,16 +16,11 @@
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 5px;">
                     Videojuegos
                   </a>
-                  <ul class="dropdown-menu navVideo" style="background-color: #d3d8e0; font-weight:bolder; opacity:.95;">
-                    <li><a class="dropdown-item" href="gamesplayStation" style="padding-left: 5px;">PlayStation</a></li>
-                    <!-- <li><hr class="dropdown-divider"></li> -->
-                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Xbox</a></li>
-                    <!-- <li><hr class="dropdown-divider"></li> -->
-                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;">PC</a></li>
-                    <!-- <li><hr class="dropdown-divider"></li> -->
-                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Nintendo</a></li>
-                    
-                  </ul>
+                  <ul class="dropdown-menu navVideo" style="background-color: #d3d8e0; font-weight:bolder; opacity:.95;" onmousedown="seleccionVideojuegos(event)">
+                    <li><a class="dropdown-item" href="gamesplayStation" style="padding-left: 5px;" data-opcion="PlayStation">PlayStation</a></li>
+                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;" data-opcion="Xbox">Xbox</a></li>
+                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;" data-opcion="Nintendo">Nintendo</a></li>
+                  </ul>  
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="padding-left: 5px;">Ofertas</a>
@@ -41,7 +36,7 @@
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Saldo digital</a></li>
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Monedas virtuales</a></li>
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Regalos</a></li>
-                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;">etc</a></li>
+                    <!-- <li><a class="dropdown-item" href="#" style="padding-left: 5px;">etc</a></li> -->
                   </ul>
                 </li>              
             </ul>
@@ -49,13 +44,21 @@
                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit" style="padding-left: 5px;">Buscar</button>
             </form>
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll letraNavbar" style="--bs-scroll-height: 100px;">
+            <ul class="navbar-nav ms-auto me-5 my-2 my-lg-0 navbar-nav-scroll letraNavbar" style="--bs-scroll-height: 100px;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="register" style="font-size:smaller; padding-left:5px;"><span>Icono </span><span>Registrate</span></a>
+                <a class="nav-link active" aria-current="page" href="register" style="font-size:smaller; padding-left:5px;"><span> </span><span>Registrate</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login" style="font-size:smaller; padding-left:5px;"><span>Icono </span><span>Iniciar Sesión</span></a>
+                <a class="nav-link" href="login" style="font-size:smaller; padding-left:5px;"><span><!--<img src="<?php echo base_url()?>/imagenes/icons/inicioSesion.png" style="width:25px;">--> </span><span>Iniciar Sesión</span></a>
               </li>
             </ul>
             </div>
         </nav>
+
+
+<script>
+  function seleccionVideojuegos(event) {
+    var opcionSeleccionada = event.target.getAttribute("data-opcion");
+    console.log(opcionSeleccionada); // aquí puedes hacer lo que necesites con el texto de la opción seleccionada
+  }
+</script>

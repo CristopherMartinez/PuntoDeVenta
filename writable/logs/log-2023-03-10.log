@@ -1,0 +1,193 @@
+CRITICAL - 2023-03-10 00:03:17 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 43.
+ 1 APPPATH\Views\contacto\contenido.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 00:05:56 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 43.
+ 1 APPPATH\Views\contacto\contenido.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 00:05:59 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 43.
+ 1 APPPATH\Views\contacto\contenido.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 00:06:13 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 43.
+ 1 APPPATH\Views\contacto\contenido.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-10 00:41:18 --> mysqli_sql_exception: Table 'tiendavideojuegos.personas' doesn't exist in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(729): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\Contacto.php(51): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-10 00:41:18 --> Table 'tiendavideojuegos.personas' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre`, `direccion`, `correo`) VALUES (:nombre:, :direccion:, :correo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(729): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Contacto.php(51): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 00:47:43 --> Invalid file: "genericos/navbar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('genericos/navbar.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/navbar', [], true)
+ 3 APPPATH\Controllers\Inicio.php(10): view('genericos/navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Inicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 00:58:20 --> Invalid file: "genericos/navbar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('genericos/navbar.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/navbar', [], true)
+ 3 APPPATH\Controllers\RegisterController.php(9): view('genericos/navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 01:11:28 --> Invalid file: "genericos/navbarLog.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('genericos/navbarLog.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/navbarLog.php', [], true)
+ 3 APPPATH\Controllers\RegisterController.php(44): view('genericos/navbarLog.php')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 01:11:57 --> Invalid file: "genericos/navbarLog.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('genericos/navbarLog.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/navbarLog.php', [], true)
+ 3 APPPATH\Controllers\RegisterController.php(44): view('genericos/navbarLog.php')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 01:17:27 --> Invalid file: "invitado/contacto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/contacto.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/contacto', [], true)
+ 3 APPPATH\Controllers\RegisterController.php(47): view('invitado/contacto')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 01:18:06 --> Invalid file: "invitado/contacto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/contacto.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/contacto.php', [], true)
+ 3 APPPATH\Controllers\RegisterController.php(47): view('invitado/contacto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 01:18:31 --> Invalid file: "invitado/contacto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/contacto.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/contacto.php', [], true)
+ 3 APPPATH\Controllers\RegisterController.php(47): view('invitado/contacto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 01:21:27 --> Invalid file: "invitado/contacto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/contacto.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/contacto.php', [], true)
+ 3 APPPATH\Controllers\RegisterController.php(47): view('invitado/contacto.php')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 01:28:45 --> Invalid file: "genericos/navbarLog.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('genericos/navbarLog.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/navbarLog.php', [], true)
+ 3 APPPATH\Controllers\InicioLog.php(10): view('genericos/navbarLog.php')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InicioLog->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InicioLog))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 02:34:30 --> Invalid file: "contacto/inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('contacto/inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/inicio', [], true)
+ 3 APPPATH\Controllers\Contacto.php(16): view('contacto/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 02:40:01 --> Undefined variable $data
+in APPPATH\Views\contacto\contenido.php on line 33.
+ 1 APPPATH\Views\contacto\contenido.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\contacto\\contenido.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 02:40:18 --> Undefined variable $data
+in APPPATH\Views\contacto\contenido.php on line 33.
+ 1 APPPATH\Views\contacto\contenido.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\contacto\\contenido.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-10 02:42:15 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

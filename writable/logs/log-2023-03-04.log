@@ -1,0 +1,280 @@
+CRITICAL - 2023-03-04 17:29:15 --> Undefined array key "nombre"
+in APPPATH\Controllers\Contacto.php on line 41.
+ 1 APPPATH\Controllers\Contacto.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Contacto.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:29:52 --> Undefined array key "nombre"
+in APPPATH\Controllers\Contacto.php on line 41.
+ 1 APPPATH\Controllers\Contacto.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Contacto.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:30:41 --> Undefined array key "nombre"
+in APPPATH\Controllers\Contacto.php on line 41.
+ 1 APPPATH\Controllers\Contacto.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Contacto.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:32:34 --> Undefined array key "nombre"
+in APPPATH\Controllers\Contacto.php on line 41.
+ 1 APPPATH\Controllers\Contacto.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Contacto.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-04 17:39:09 --> mysqli_sql_exception: Table 'tiendavideojuegos.personas' doesn't exist in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(729): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\Contacto.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-04 17:39:09 --> Table 'tiendavideojuegos.personas' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre`, `direccion`, `correo`) VALUES (:nombre:, :direccion:, :correo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(729): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Contacto.php(48): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:41:09 --> Undefined array key "correoElectronico"
+in APPPATH\Controllers\Contacto.php on line 42.
+ 1 APPPATH\Controllers\Contacto.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correoElectronico"', 'APPPATH\\Controllers\\Contacto.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:42:08 --> Undefined array key "correoElectronico"
+in APPPATH\Controllers\Contacto.php on line 42.
+ 1 APPPATH\Controllers\Contacto.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correoElectronico"', 'APPPATH\\Controllers\\Contacto.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-04 17:48:17 --> mysqli_sql_exception: Table 'tiendavideojuegos.personas' doesn't exist in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(729): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\Contacto.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-04 17:48:17 --> Table 'tiendavideojuegos.personas' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre`, `direccion`, `correo`) VALUES (:nombre:, :direccion:, :correo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(729): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Contacto.php(48): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-04 17:48:27 --> mysqli_sql_exception: Table 'tiendavideojuegos.personas' doesn't exist in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(729): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\Contacto.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-04 17:48:27 --> Table 'tiendavideojuegos.personas' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre`, `direccion`, `correo`) VALUES (:nombre:, :direccion:, :correo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(729): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Contacto.php(48): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:51:29 --> Undefined array key "nombre"
+in APPPATH\Controllers\Contacto.php on line 41.
+ 1 APPPATH\Controllers\Contacto.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Contacto.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 17:54:30 --> Undefined array key "nombre"
+in APPPATH\Controllers\Contacto.php on line 41.
+ 1 APPPATH\Controllers\Contacto.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Contacto.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 18:00:30 --> Undefined variable $titulo_seccion
+in APPPATH\Views\genericos\register.php on line 59.
+ 1 APPPATH\Views\genericos\register.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo_seccion', 'APPPATH\\Views\\genericos\\register.php', 59)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/register', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(11): view('genericos/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 18:00:34 --> Undefined variable $titulo_seccion
+in APPPATH\Views\genericos\register.php on line 59.
+ 1 APPPATH\Views\genericos\register.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo_seccion', 'APPPATH\\Views\\genericos\\register.php', 59)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/register', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(11): view('genericos/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 18:08:04 --> Undefined variable $titulo_seccion
+in APPPATH\Views\genericos\register.php on line 46.
+ 1 APPPATH\Views\genericos\register.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo_seccion', 'APPPATH\\Views\\genericos\\register.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/register', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(11): view('genericos/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 18:11:25 --> Undefined array key "direccion"
+in APPPATH\Controllers\Contacto.php on line 42.
+ 1 APPPATH\Controllers\Contacto.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "direccion"', 'APPPATH\\Controllers\\Contacto.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 18:12:34 --> Undefined array key "direccion"
+in APPPATH\Controllers\Contacto.php on line 42.
+ 1 APPPATH\Controllers\Contacto.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "direccion"', 'APPPATH\\Controllers\\Contacto.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 18:13:10 --> Undefined array key "direccion"
+in APPPATH\Controllers\Contacto.php on line 42.
+ 1 APPPATH\Controllers\Contacto.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "direccion"', 'APPPATH\\Controllers\\Contacto.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 18:13:47 --> Undefined array key "direccion"
+in APPPATH\Controllers\Contacto.php on line 42.
+ 1 APPPATH\Controllers\Contacto.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "direccion"', 'APPPATH\\Controllers\\Contacto.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-04 18:14:35 --> Undefined array key "direccion"
+in APPPATH\Controllers\Contacto.php on line 42.
+ 1 APPPATH\Controllers\Contacto.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "direccion"', 'APPPATH\\Controllers\\Contacto.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-04 18:15:47 --> mysqli_sql_exception: Table 'tiendavideojuegos.personas' doesn't exist in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(729): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\Contacto.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-04 18:15:47 --> Table 'tiendavideojuegos.personas' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre`, `direccion`, `correo`) VALUES (:nombre:, :direccion:, :correo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(729): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Contacto.php(48): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-04 18:16:23 --> mysqli_sql_exception: Table 'tiendavideojuegos.personas' doesn't exist in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(729): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\Contacto.php(48): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-04 18:16:23 --> Table 'tiendavideojuegos.personas' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `personas` (`nombre`, `direccion`, `correo`) VALUES (:nombre:, :direccion:, :correo:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(729): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Contacto.php(48): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-04 18:21:41 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`tiendavideojuegos`.`usuarios`, CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`idRol`) REFERENCES `rol` (`idRol`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(729): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\RegisterController.php(34): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-04 18:21:41 --> Cannot add or update a child row: a foreign key constraint fails (`tiendavideojuegos`.`usuarios`, CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`idRol`) REFERENCES `rol` (`idRol`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`nombre`, `correo`, `contrasenia`) VALUES (:nombre:, :correo:, :contrasenia:)', [...], false)
+ 2 SYSTEMPATH\Model.php(329): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(729): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\RegisterController.php(34): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

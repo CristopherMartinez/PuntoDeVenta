@@ -33,16 +33,31 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->add('/Articulos','Articulos::mensaje');
 // $routes->add('/contacto','ContactoController::index');
-$routes->add('/contacto','Contacto::index');
+$routes->add('/contacto','Contacto::index'); //Este abre la pagina contacto
 $routes->add('/catalogo/(:num)','Contacto::catalogo/$1');//El $1 quiere decir la cantidad de parametros 
 $routes->add('/contacto','intro::index');
+// $routes->add('/guardar_persona','Contacto::guardar_persona'); //Para que funcione el ejemplo
 
 //Rutas de pagina de venta de videojuegos
 $routes->add('inicio','Inicio::index');
+$routes->add('inicio','InicioLog::index');
 $routes->add('/login','LoginController::index');
-$routes->add('/register','RegisterController::index');
+ $routes->add('/register','RegisterController::index');
 $routes->add('/gamesplayStation','GamesplayStation::index');
 $routes->add('/ofertas','OfertasController::index');
+$routes->add('/admin/inicio','AdminController::index');
+$routes->add('/admin/registroVideojuegos','AgregarJuegoController::index');
+$routes->add('/admin/registroAdmin','RegistroAdminController::index');
+$routes->add('/admin/catalogoVideojuegos','CatalogoVideojuegos::index');
+$routes->add('/admin/catalogoAdmin','CatalogoAdministradores::index');
+$routes->add('/ShoppingCar','ShoppingCarController::index');
+
+//Guardado de datos
+$routes->add('/guardar_juego','AgregarJuegoController::guardar_juego');
+$routes->add('/guardar_persona','RegisterController::guardar_persona'); //este descomentar para que funcione el proyect WorldGames
+$routes->add('/guardar_admin','RegistroAdminController::guardar_admin');
+$routes->add('/verificar_login','LoginController::verificar_login');
+
 
 
 

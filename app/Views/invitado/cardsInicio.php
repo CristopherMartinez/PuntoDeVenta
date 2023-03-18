@@ -31,8 +31,12 @@
                             <div class="card-body">
                                 <div class="card-title text-center">
                                     <!-- <h4>C</h4> -->
-                                    <p>Call of Duty MW2 "PS4"</p>
-                                    <div><span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
+                                    <p style="font-size: 18px; color:#2e2a2a;">Call of Duty MW2 "PS4"</p>
+                                    <div>
+                                    <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1200</button></span>
+                                    <span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span>
+                                    <span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -47,8 +51,10 @@
                             <div class="card-body">
                                 <div class="card-title text-center">
                                     <!-- <h4>Black Ops III "XBOX ONE"</h4> -->
-                                    <p>Black Ops III "XBOX ONE"</p>
-                                    <div><span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
+                                    <p style="font-size: 18px; color:#2e2a2a;">Black Ops III "XBOX ONE"</p>
+                                    <div>
+                                    <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1400</button></span>
+                                        <span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
                                 </div>
                             </div>
                         </div>
@@ -62,8 +68,10 @@
                             <div class="card-body">
                                 <div class="card-title text-center">
                                     <!-- <h4>Forspoken "PS5"</h4> -->
-                                    <p>Forspoken "PS5"</p>
-                                    <div><span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
+                                    <p style="font-size: 18px; color:#2e2a2a;">Forspoken "PS5"</p>
+                                    <div>
+                                    <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1800</button></span>
+                                        <span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
                                 </div>
                             </div>
                         </div>
@@ -77,8 +85,10 @@
                             <div class="card-body">
                                 <div class="card-title text-center">
                                     <!-- <h4>Animal Crossing "PS4"</h4> -->
-                                    <p>Animal Crossing "PS4"</p>
-                                    <div><span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
+                                    <p style="font-size: 18px; color:#2e2a2a;">Animal Crossing "PS4"</p>
+                                    <div>
+                                    <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1800</button></span>
+                                        <span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
                                 </div>
                             </div>
                         </div>
@@ -92,8 +102,10 @@
                             <div class="card-body">
                                 <div class="card-title text-center">
                                     <!-- <h4>FranBow "PS5"</h4> -->
-                                    <p>FranBow "PS5"</p>
-                                    <div><span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
+                                    <p style="font-size: 18px; color:#2e2a2a;">FranBow "PS5"</p>
+                                    <div>
+                                    <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1600</button></span>
+                                        <span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
                                 </div>
                             </div>
                         </div>
@@ -107,8 +119,10 @@
                             <div class="card-body">
                                 <div class="card-title text-center">
                                     <!-- <h4>Sonic the Hedgehog "PS5"</h4> -->
-                                    <p>Sonic the Hedgehog "PS5"</p>
-                                    <div><span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
+                                    <p style="font-size: 18px; color:#2e2a2a;">Sonic the Hedgehog "PS5"</p>
+                                    <div>
+                                    <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1800</button></span>
+                                        <span><button type="button" class="btn btn-outline-primary" style="margin-top:10px;">Comprar</button></span><span style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px;">Agregar al carrito</button></span></div>
                                 </div>
                             </div>
                         </div>

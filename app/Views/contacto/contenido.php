@@ -10,10 +10,10 @@
 
 </head>
 
-<div class="container">
+<!-- <div class="container">
     <h4><?= $titulo_seccion;?></h4>
     <p><?= $descripcion;?></p>
-    <form method="post" action="<?php echo base_url().'registrar'?>">
+    <form method="post" action="<?php echo base_url().'/guardar_persona'?>">
         <div class="form-group row col-12">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre completo">
@@ -24,24 +24,42 @@
             <div class="col-6">
                 <label for="correo">Correo</label>
                 <input type="email" name="correo" id="correo" class="form-control">
-                <button class="btn btn-success">Registrar</button>
+                <br>
+                <button class="btn btn-success" type="submit" value="Registrar">Registrar</button>
             </div>
         </div>
     </form>
-    <div id="contenido de la tabla" class="row">
-        <!--<?php //print_($datos)?>-->
-        <div>
-            <div class="col-sm-12">
-                <div class="table table-responsive">
-                    <table class="table table-hover table-bordered">
-                        <tr>
-                            <td>Nombre</td>
-                            <td>Direccion</td>
-                            <td>Correo</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</div> -->
+
+
+
+<div class="container my-4">
+    <h4><?= $titulo_seccion;?></h4>
+    <p><?= $descripcion;?></p>
+    <form method="post" action="<?php echo base_url().'/guardar_persona'?>">
+      <div class="mb-3">
+        <label for="nombre" class="form-label"><b>Nombre</b></label>
+        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nombre completo">
+      </div>
+      <div class="mb-3">
+        <label for="direccion" class="form-label"><b>Dirección</b></label>
+        <input type="text" name="direccion" id="direccion" class="form-control" placeholder="Ingresa tu dirección">
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label"><b>Correo electrónico</b></label>
+        <input  type="email" name="correo" id="correo" class="form-control" placeholder="Ingresa tu correo electrónico">
+      </div>
+      <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+</body>
+
+
+
+
+
+
+

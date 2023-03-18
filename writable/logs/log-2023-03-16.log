@@ -1,0 +1,101 @@
+ERROR - 2023-03-16 15:26:21 --> mysqli_sql_exception: Table 'tiendavideojuegos.personas' doesn't exist in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT nombre,d...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nombre,d...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nombre,d...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\Personas.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nombre,d...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\Contacto.php(12): App\Models\Personas->traer_personas()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Contacto->index()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-03-16 15:26:21 --> Table 'tiendavideojuegos.personas' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\Personas.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nombre,direccion,correo,id FROM personas')
+ 2 APPPATH\Controllers\Contacto.php(12): App\Models\Personas->traer_personas()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 20:35:25 --> include_once(../controllers/conexion.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\LoginController.php on line 18.
+ 1 APPPATH\Controllers\LoginController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include_once(../controllers/conexion.php): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\LoginController.php', 18)
+ 2 APPPATH\Controllers\LoginController.php(18): include_once()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 20:37:10 --> include_once(../Controllers/conexion.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\LoginController.php on line 18.
+ 1 APPPATH\Controllers\LoginController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include_once(../Controllers/conexion.php): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\LoginController.php', 18)
+ 2 APPPATH\Controllers\LoginController.php(18): include_once()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 20:39:35 --> include_once(&lt;?php echo base_url()): Failed to open stream: No such file or directory
+in APPPATH\Controllers\LoginController.php on line 18.
+ 1 APPPATH\Controllers\LoginController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include_once(&lt;?php echo base_url()): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\LoginController.php', 18)
+ 2 APPPATH\Controllers\LoginController.php(18): include_once()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 20:40:17 --> mysqli_query(): Argument #1 ($mysql) must be of type mysqli, string given
+in APPPATH\Controllers\LoginController.php on line 24.
+ 1 APPPATH\Controllers\LoginController.php(24): mysqli_query('<?php echo base_url()?', 'SELECT * FROM usuarios WHERE correo=\'martinezcristopher69@gmail.com\' AND contrasenia=\'1234\'')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 20:42:32 --> Undefined variable $vista
+in APPPATH\Controllers\LoginController.php on line 39.
+ 1 APPPATH\Controllers\LoginController.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $vista', 'APPPATH\\Controllers\\LoginController.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 20:43:54 --> Undefined variable $videojuegos
+in APPPATH\Views\genericos\gamesplayStation.php on line 76.
+ 1 APPPATH\Views\genericos\gamesplayStation.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuegos', 'APPPATH\\Views\\genericos\\gamesplayStation.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesplayStation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesplayStation', [], true)
+ 5 APPPATH\Controllers\LoginController.php(32): view('genericos/gamesplayStation')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 20:57:50 --> Invalid file: "usuario/navbar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario/navbar.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbar', [], true)
+ 3 APPPATH\Controllers\LoginController.php(46): view('usuario/navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 21:30:21 --> Invalid file: "genericos/navbarLog.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('genericos/navbarLog.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/navbarLog', [], true)
+ 3 APPPATH\Controllers\ShoppingCarController.php(10): view('genericos/navbarLog')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 23:20:21 --> Call to undefined method App\Models\Videojuegos::getAllVideogames
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\GamesplayStation.php(14): CodeIgniter\Model->__call('getAllVideogames', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesplayStation->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesplayStation))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-16 23:46:01 --> Undefined array key "correo"
+in APPPATH\Controllers\LoginController.php on line 19.
+ 1 APPPATH\Controllers\LoginController.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'APPPATH\\Controllers\\LoginController.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,191 @@
+CRITICAL - 2023-03-13 05:15:06 --> Undefined variable $persona
+in APPPATH\Views\contacto\listar_personas.php on line 13.
+ 1 APPPATH\Views\contacto\listar_personas.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\listar_personas.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\listar_personas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/listar_personas.php', [], true)
+ 5 APPPATH\Controllers\Contacto.php(18): view('contacto/listar_personas.php')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:20:23 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:20:41 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:23:38 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:24:27 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:25:34 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:25:50 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:26:06 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:26:40 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:46:55 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(17): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-13 05:50:42 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'bd_ejemplo', 3306, '', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\Personas.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nombre,d...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\Contacto.php(12): App\Models\Personas->traer_personas()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Contacto->index()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Codeigniter4\app\Models\Personas.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nombre,d...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Controllers\Contacto.php(12): App\Models\Personas->traer_personas()
+#4 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Contacto->index()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-13 05:50:42 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\Personas.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nombre,direccion,correo,id FROM personas')
+ 3 APPPATH\Controllers\Contacto.php(12): App\Models\Personas->traer_personas()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:51:04 --> Undefined variable $persona
+in APPPATH\Views\contacto\contenido.php on line 44.
+ 1 APPPATH\Views\contacto\contenido.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\contenido.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\contenido.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/contenido', [], true)
+ 5 APPPATH\Controllers\Contacto.php(22): view('contacto/contenido', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 05:52:00 --> Undefined variable $persona
+in APPPATH\Views\contacto\listar_personas.php on line 13.
+ 1 APPPATH\Views\contacto\listar_personas.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persona', 'APPPATH\\Views\\contacto\\listar_personas.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\contacto\\listar_personas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('contacto/listar_personas', [], true)
+ 5 APPPATH\Controllers\Contacto.php(23): view('contacto/listar_personas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Contacto->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 20:25:25 --> The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\WorldGames/admin/AdminController::index"
+in SYSTEMPATH\Router\Router.php on line 473.
+ 1 SYSTEMPATH\Router\Router.php(473): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\WorldGames/admin/AdminController::index')
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('admin/inicio')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('admin/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 20:26:05 --> preg_match(): Compilation failed: unrecognized character follows \ at offset 8
+in SYSTEMPATH\Router\Router.php on line 418.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): Compilation failed: unrecognized character follows \\ at offset 8', 'SYSTEMPATH\\Router\\Router.php', 418)
+ 2 SYSTEMPATH\Router\Router.php(418): preg_match('#^\\admin\\inicio$#u', 'admin/inicio', [])
+ 3 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('admin/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('admin/inicio')
+ 5 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-13 20:30:31 --> The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\WorldGames/AdminController::index"
+in SYSTEMPATH\Router\Router.php on line 473.
+ 1 SYSTEMPATH\Router\Router.php(473): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\WorldGames/AdminController::index')
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('admin/inicio')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('admin/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

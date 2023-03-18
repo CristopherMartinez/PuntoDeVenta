@@ -1,0 +1,159 @@
+CRITICAL - 2023-03-18 15:17:19 --> Undefined array key "correo"
+in APPPATH\Views\usuario\navbarLog.php on line 56.
+ 1 APPPATH\Views\usuario\navbarLog.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'APPPATH\\Views\\usuario\\navbarLog.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\LoginController.php(39): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 15:20:41 --> Undefined array key "correo"
+in APPPATH\Views\usuario\navbarLog.php on line 57.
+ 1 APPPATH\Views\usuario\navbarLog.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'APPPATH\\Views\\usuario\\navbarLog.php', 57)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\LoginController.php(39): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 15:32:34 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 56.
+ 1 APPPATH\Views\usuario\navbarLog.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\ShoppingCarController.php(10): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 15:34:29 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 56.
+ 1 APPPATH\Views\usuario\navbarLog.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\ShoppingCarController.php(10): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 15:35:04 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 56.
+ 1 APPPATH\Views\usuario\navbarLog.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\ShoppingCarController.php(10): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 15:35:17 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 56.
+ 1 APPPATH\Views\usuario\navbarLog.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\LoginController.php(39): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 15:36:27 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 56.
+ 1 APPPATH\Views\usuario\navbarLog.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\ShoppingCarController.php(10): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 15:37:54 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 56.
+ 1 APPPATH\Views\usuario\navbarLog.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\ShoppingCarController.php(10): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 15:40:46 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 56.
+ 1 APPPATH\Views\usuario\navbarLog.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\ShoppingCarController.php(10): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-18 15:54:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '10 nombre,descripcion,imagen,precio,cantidadInventario FROM videojuego' at line 1 in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT TOP 10 n...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT TOP 10 n...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT TOP 10 n...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\Videojuegos.php(37): CodeIgniter\Database\BaseConnection->query('SELECT TOP 10 n...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\GamesplayStation.php(15): App\Models\Videojuegos->get10VideogamesPlay()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\GamesplayStation->index()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesplayStation))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-03-18 15:54:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '10 nombre,descripcion,imagen,precio,cantidadInventario FROM videojuego' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\Videojuegos.php(37): CodeIgniter\Database\BaseConnection->query('SELECT TOP 10 nombre,descripcion,imagen,precio,cantidadInventario FROM videojuego')
+ 2 APPPATH\Controllers\GamesplayStation.php(15): App\Models\Videojuegos->get10VideogamesPlay()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesplayStation->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesplayStation))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 15:58:15 --> Invalid file: "genericos/navbarInvitado.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('genericos/navbarInvitado.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/navbarInvitado', [], true)
+ 3 APPPATH\Controllers\GamesplayStation.php(18): view('genericos/navbarInvitado')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesplayStation->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesplayStation))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-18 16:19:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE idConsola = '1' AND idConsola = '2' ADN idConsola='3'' at line 1 in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT nombre, ...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nombre, ...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nombre, ...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\Videojuegos.php(37): CodeIgniter\Database\BaseConnection->query('SELECT nombre, ...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\GamesplayStation.php(15): App\Models\Videojuegos->get10VideogamesPlay()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\GamesplayStation->index()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesplayStation))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-03-18 16:19:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE idConsola = '1' AND idConsola = '2' ADN idConsola='3'' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\Videojuegos.php(37): CodeIgniter\Database\BaseConnection->query('SELECT nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego LIMIT 10 WHERE idConsola = \'1\' AND idConsola = \'2\' ADN idConsola=\'3\'')
+ 2 APPPATH\Controllers\GamesplayStation.php(15): App\Models\Videojuegos->get10VideogamesPlay()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesplayStation->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesplayStation))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-18 17:07:32 --> Undefined variable $administradores
+in APPPATH\Views\admin\registroAdmin.php on line 66.
+ 1 APPPATH\Views\admin\registroAdmin.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $administradores', 'APPPATH\\Views\\admin\\registroAdmin.php', 66)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroAdmin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroAdmin', [], true)
+ 5 APPPATH\Controllers\RegistroAdminController.php(10): view('admin/registroAdmin')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegistroAdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

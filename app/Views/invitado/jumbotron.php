@@ -132,34 +132,29 @@
   <style>
     .image-container {
       position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
+  display: inline-block;
+  width: 100%;
     }
 
     .image-container img {
       display: block;
-      max-width: 100%;
-      height: 50%;
+  width: 100%;
+  height:55%;
       
     }
 
     .image-overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 2rem;
-      box-sizing: border-box;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 2rem;
+  box-sizing: border-box;
     }
 
     .text-container {
@@ -200,23 +195,10 @@
       }
 
       .text-container {
-        width: 100%;
+        width: 50%;
       }
 
-      .image-overlay {
-        position: static;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background-repeat: none;
-        background-size: cover;
-        /* background-color: #fff; */
-        /* color: #000; */
-        /* padding: 1rem; */
-        background-image: url("<?php  echo base_url()?>/imagenes/fondo11.jpeg");
-       
-        
-      }
+     
 
       .image-overlay button,
       .text-container {
@@ -233,31 +215,17 @@
 
       .text-container {
         width: 50%;
-        color: whitesmoke;
+       
         
        
       }
 
-      .image-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        padding: 2rem;
-        box-sizing: border-box;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* background-color: red; */
-        
-        color: #fff;
-      }
+      
 
       .TituloWorld{
         font-size: 50px;
+      
+       
       }
       .letraWorld{
         font-size: 40px;
@@ -271,11 +239,13 @@
     <img src="<?php echo base_url()?>/imagenes/ds.png" alt="Descripción de la imagen">
     <div class="image-overlay">
       <div class="text-container letraGeneral">
-        <div class="TituloWorld">World Games</div>
-        <p class="letraWorld">¡¡¡¡Juegos desde un 50% de descuento en tu primera compra para PC,<br>
-        Nintendo, Xbox, PS3 y más soló en World <br>
+        <div class="TituloWorld" style="color:red;"><b>World Games</b></div>
+        <p class="letraWorld">¡¡¡¡Juegos desde un 50% de descuento en tu primera compra para PC,
+        Nintendo, Xbox, PS3 y más soló en World Games
         Regístrate aquí, esta es tu oportunidad!!!!</p>
-        <button type="button">Your turn</button>
+        
+         <a  href="register" style="color: whitesmoke;"><button type="button">Your turn</button></a> 
+        
   </div>
   </div>
   </div>
