@@ -1,0 +1,11 @@
+CRITICAL - 2023-03-23 06:16:13 --> Undefined array key "correo"
+in APPPATH\Views\usuario\navbarLog.php on line 56.
+ 1 APPPATH\Views\usuario\navbarLog.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'APPPATH\\Views\\usuario\\navbarLog.php', 56)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(75): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

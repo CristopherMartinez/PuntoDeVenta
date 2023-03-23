@@ -1,6 +1,5 @@
 <?php
 namespace App\Controllers;
-
 use App\Models\Personas;
 use App\Models\Registrar;
 

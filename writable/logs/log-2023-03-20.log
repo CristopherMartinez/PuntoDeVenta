@@ -1,0 +1,364 @@
+CRITICAL - 2023-03-20 16:59:26 --> The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\generico/SugerenciasController::guardar_sugerencia"
+in SYSTEMPATH\Router\Router.php on line 473.
+ 1 SYSTEMPATH\Router\Router.php(473): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\generico/SugerenciasController::guardar_sugerencia')
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('guardar_sugerencia')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('guardar_sugerencia')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 17:12:44 --> move_uploaded_file(../imagenes/Captura de pantalla (38).png): Failed to open stream: No such file or directory
+in APPPATH\Controllers\AgregarJuegoController.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(../imagenes/Captura de pantalla (38).png): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\AgregarJuegoController.php', 42)
+ 2 APPPATH\Controllers\AgregarJuegoController.php(42): move_uploaded_file('C:\\xampp\\tmp\\php33C8.tmp', '../imagenes/Captura de pantalla (38).png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->guardar_juego()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 17:20:28 --> move_uploaded_file(../imagenes/Captura de pantalla (28).png): Failed to open stream: No such file or directory
+in APPPATH\Controllers\AgregarJuegoController.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(../imagenes/Captura de pantalla (28).png): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\AgregarJuegoController.php', 42)
+ 2 APPPATH\Controllers\AgregarJuegoController.php(42): move_uploaded_file('C:\\xampp\\tmp\\php48D7.tmp', '../imagenes/Captura de pantalla (28).png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->guardar_juego()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 17:34:00 --> move_uploaded_file(../imagenes/Captura de pantalla (24).png): Failed to open stream: No such file or directory
+in APPPATH\Controllers\AgregarJuegoController.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(../imagenes/Captura de pantalla (24).png): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\AgregarJuegoController.php', 43)
+ 2 APPPATH\Controllers\AgregarJuegoController.php(43): move_uploaded_file('C:\\xampp\\tmp\\phpAB04.tmp', '../imagenes/Captura de pantalla (24).png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->guardar_juego()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 17:35:06 --> move_uploaded_file(../imagenes/Captura de pantalla (18).png): Failed to open stream: No such file or directory
+in APPPATH\Controllers\AgregarJuegoController.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(../imagenes/Captura de pantalla (18).png): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\AgregarJuegoController.php', 43)
+ 2 APPPATH\Controllers\AgregarJuegoController.php(43): move_uploaded_file('C:\\xampp\\tmp\\phpABDB.tmp', '../imagenes/Captura de pantalla (18).png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->guardar_juego()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 17:36:55 --> move_uploaded_file(../Codeigniter4/app/imagenes/Captura de pantalla (17).png): Failed to open stream: No such file or directory
+in APPPATH\Controllers\AgregarJuegoController.php on line 43.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_file(../Codeigniter4/app/imagenes/Captura de pantalla (17).png): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\AgregarJuegoController.php', 43)
+ 2 APPPATH\Controllers\AgregarJuegoController.php(43): move_uploaded_file('C:\\xampp\\tmp\\php57D6.tmp', '../Codeigniter4/app/imagenes/Captura de pantalla (17).png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->guardar_juego()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 19:18:03 --> explode(): Argument #2 ($string) must be of type string, array given
+in SYSTEMPATH\Router\Router.php on line 469.
+ 1 SYSTEMPATH\Router\Router.php(469): explode('::', [...])
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('admin/registroVideojuegos')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('admin/registroVideojuegos')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 19:18:09 --> explode(): Argument #2 ($string) must be of type string, array given
+in SYSTEMPATH\Router\Router.php on line 469.
+ 1 SYSTEMPATH\Router\Router.php(469): explode('::', [...])
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('admin/registroVideojuegos')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('admin/registroVideojuegos')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 19:18:42 --> The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\../Controllers/admin/AgregarJuegoController::index"
+in SYSTEMPATH\Router\Router.php on line 473.
+ 1 SYSTEMPATH\Router\Router.php(473): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\../Controllers/admin/AgregarJuegoController::index')
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('admin/registroVideojuegos')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('admin/registroVideojuegos')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 19:50:36 --> Call to undefined method App\Models\RegistrarUsuario::traerDatosUsuario
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(15): CodeIgniter\Model->__call('traerDatosUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 19:55:28 --> Call to undefined method App\Models\RegistrarUsuario::traerDatosUsuario
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(15): CodeIgniter\Model->__call('traerDatosUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 19:59:00 --> Invalid file: "genericos/register.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('genericos/register.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/register', [], true)
+ 3 APPPATH\Controllers\invitado\RegisterController.php(11): view('genericos/register')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:11:15 --> Call to undefined method App\Models\RegistrarUsuario::traerDatosUsuario
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(15): CodeIgniter\Model->__call('traerDatosUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:15:44 --> Call to undefined method App\Models\RegistrarUsuario::traerDatosUsuario
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(15): CodeIgniter\Model->__call('traerDatosUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:19:47 --> Call to undefined method App\Models\RegistrarUsuario::traerDatosUsuario
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\ShoppingCarController.php(15): CodeIgniter\Model->__call('traerDatosUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:21:05 --> Call to undefined method App\Models\RegistrarUsuario::traerDatosUsuario
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\ShoppingCarController.php(15): CodeIgniter\Model->__call('traerDatosUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:21:21 --> Call to undefined method App\Models\RegistrarUsuario::traerDatosUsuario
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\ShoppingCarController.php(15): CodeIgniter\Model->__call('traerDatosUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:29:18 --> Invalid file: "invitado/inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/inicio', [], true)
+ 3 APPPATH\Controllers\invitado\Inicio.php(19): view('invitado/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:42:12 --> Trying to access array offset on value of type int
+in APPPATH\Views\genericos\gamesXbox.php on line 64.
+ 1 APPPATH\Views\genericos\gamesXbox.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\genericos\\gamesXbox.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(31): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:42:24 --> Trying to access array offset on value of type int
+in APPPATH\Views\genericos\gamesXbox.php on line 64.
+ 1 APPPATH\Views\genericos\gamesXbox.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\genericos\\gamesXbox.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(31): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:43:52 --> Object of class stdClass could not be converted to string
+in APPPATH\Views\genericos\gamesXbox.php on line 64.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 4 APPPATH\Controllers\generico\GamesXboxController.php(37): view('genericos/gamesXbox', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:44:21 --> Cannot use object of type stdClass as array
+in APPPATH\Views\genericos\gamesXbox.php on line 64.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 4 APPPATH\Controllers\generico\GamesXboxController.php(37): view('genericos/gamesXbox', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:44:55 --> Undefined variable $cantidadVideojuegos
+in APPPATH\Views\genericos\gamesXbox.php on line 62.
+ 1 APPPATH\Views\genericos\gamesXbox.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cantidadVideojuegos', 'APPPATH\\Views\\genericos\\gamesXbox.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(37): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:45:12 --> Undefined variable $cantidadVideojuegos
+in APPPATH\Views\genericos\gamesXbox.php on line 62.
+ 1 APPPATH\Views\genericos\gamesXbox.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cantidadVideojuegos', 'APPPATH\\Views\\genericos\\gamesXbox.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(37): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:45:44 --> Undefined variable $cantidadVideojuegos
+in APPPATH\Views\genericos\gamesXbox.php on line 62.
+ 1 APPPATH\Views\genericos\gamesXbox.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cantidadVideojuegos', 'APPPATH\\Views\\genericos\\gamesXbox.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(38): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:46:25 --> Undefined variable $videojuego
+in APPPATH\Views\genericos\gamesXbox.php on line 74.
+ 1 APPPATH\Views\genericos\gamesXbox.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuego', 'APPPATH\\Views\\genericos\\gamesXbox.php', 74)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(38): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:47:17 --> Undefined variable $cantidadVideojuegos
+in APPPATH\Views\genericos\gamesXbox.php on line 62.
+ 1 APPPATH\Views\genericos\gamesXbox.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cantidadVideojuegos', 'APPPATH\\Views\\genericos\\gamesXbox.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(39): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:49:21 --> Undefined property: stdClass::$identificador
+in APPPATH\Views\genericos\gamesXbox.php on line 64.
+ 1 APPPATH\Views\genericos\gamesXbox.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$identificador', 'APPPATH\\Views\\genericos\\gamesXbox.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(39): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 20:50:58 --> Undefined variable $videojuego
+in APPPATH\Views\genericos\gamesXbox.php on line 73.
+ 1 APPPATH\Views\genericos\gamesXbox.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuego', 'APPPATH\\Views\\genericos\\gamesXbox.php', 73)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(40): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 21:37:42 --> Call to undefined method App\Models\Videojuegos::TotalGamesTerrorXBOXSS
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\generico\GamesXboxController.php(32): CodeIgniter\Model->__call('TotalGamesTerrorXBOXSS', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:32:50 --> Invalid file: "inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('inicio', [], true)
+ 3 APPPATH\Controllers\invitado\LoginController.php(47): view('inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:33:15 --> Invalid file: "inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('inicio', [], true)
+ 3 APPPATH\Controllers\invitado\LoginController.php(47): view('inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:35:09 --> Invalid file: "invitado/inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/inicio', [], true)
+ 3 APPPATH\Controllers\invitado\Inicio.php(19): view('invitado/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:35:21 --> Invalid file: "invitado/inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/inicio', [], true)
+ 3 APPPATH\Controllers\invitado\Inicio.php(19): view('invitado/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:36:11 --> Invalid file: "invitado/inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/inicio', [], true)
+ 3 APPPATH\Controllers\invitado\Inicio.php(19): view('invitado/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:36:35 --> Invalid file: "inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('inicio', [], true)
+ 3 APPPATH\Controllers\invitado\LoginController.php(47): view('inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:38:25 --> Invalid file: "inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('inicio', [], true)
+ 3 APPPATH\Controllers\invitado\RegisterController.php(65): view('inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:43:42 --> Invalid file: "inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('inicio', [], true)
+ 3 APPPATH\Controllers\invitado\LoginController.php(47): view('inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:44:20 --> Invalid file: "invitado/inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/inicio', [], true)
+ 3 APPPATH\Controllers\invitado\Inicio.php(19): view('invitado/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:49:42 --> Invalid file: "inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('inicio', [], true)
+ 3 APPPATH\Controllers\invitado\RegisterController.php(65): view('inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 22:50:50 --> Invalid file: "invitado/inicio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/inicio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/inicio', [], true)
+ 3 APPPATH\Controllers\invitado\Inicio.php(19): view('invitado/inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

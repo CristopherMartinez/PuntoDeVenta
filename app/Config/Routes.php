@@ -39,26 +39,46 @@ $routes->add('/contacto','intro::index');
 // $routes->add('/guardar_persona','Contacto::guardar_persona'); //Para que funcione el ejemplo
 
 //Rutas de pagina de venta de videojuegos
-$routes->add('inicio','Inicio::index');
+//Rutas genericas
+$routes->add('/gamesplayStation','generico\GamesplayStation::index');
+$routes->add('/gamesXbox','generico\GamesXboxController::index');
+$routes->add('inicio','invitado\Inicio::index');
 $routes->add('inicio','InicioLog::index');
-$routes->add('/login','LoginController::index');
- $routes->add('/register','RegisterController::index');
-$routes->add('/gamesplayStation','GamesplayStation::index');
+$routes->add('/login','invitado\LoginController::index');
+$routes->add('/guardar_sugerencia','generico\SugerenciasController::guardar_sugerencia');
+
+//Rutas invitado
+$routes->add('/register','invitado\RegisterController::index');
+
+
+$routes->add('/verificar_login','invitado\LoginController::verificar_login');
+$routes->add('/guardar_persona','invitado\RegisterController::guardar_persona');
+
+//Rutas de administrador
+$routes->add('/admin/inicio','admin\AdminController::index');
+$routes->add('/admin/registroVideojuegos','admin\AgregarJuegoController::index');
+$routes->add('/admin/registroAdmin','admin\RegistroAdminController::index');
+$routes->add('/ShoppingCar','ShoppingCarController::index'); //Verificar
+
+//Guardado
+$routes->add('/guardar_admin','admin\RegistroAdminController::guardar_admin');
+$routes->add('/guardar_juego','admin\AgregarJuegoController::guardar_juego');
+
+
 $routes->add('/ofertas','OfertasController::index');
-$routes->add('/admin/inicio','AdminController::index');
-$routes->add('/admin/registroVideojuegos','AgregarJuegoController::index');
-$routes->add('/admin/registroAdmin','RegistroAdminController::index');
-$routes->add('/admin/catalogoVideojuegos','CatalogoVideojuegos::index');
-$routes->add('/admin/catalogoAdmin','CatalogoAdministradores::index');
-$routes->add('/ShoppingCar','ShoppingCarController::index');
+ 
 
-//Guardado de datos
-$routes->add('/guardar_juego','AgregarJuegoController::guardar_juego');
-$routes->add('/guardar_persona','RegisterController::guardar_persona'); //este descomentar para que funcione el proyect WorldGames
-$routes->add('/guardar_admin','RegistroAdminController::guardar_admin');
-$routes->add('/verificar_login','LoginController::verificar_login');
+//Rutas agrupadas Administrador prueba
+// $routes->group('admin',['namespace' => 'App\Controllers\admin'], function($routes){
+//     $routes->get('inicio','AdminController::index',['as'=>'adminInicio']);
+//     $routes->get('registroAdmin','RegistroAdminController::index',['as'=>'registroAdmin']);
+//     $routes->get('registroVideojuegos','AgregarJuegoController::index',['as'=>'registroVideojuegos']);
+// });
+
+// $routes->group('generico',['namespace' => 'App\Controllers\generico'], function($routes){
 
 
+// });
 
 
 /*

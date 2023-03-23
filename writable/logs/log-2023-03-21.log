@@ -1,0 +1,13 @@
+CRITICAL - 2023-03-21 19:52:46 --> Call to a member function isValid() on null
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-21 23:33:30 --> Call to undefined method App\Models\usuario\RegistrarUsuario::traerDatosUsuario
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\ShoppingCarController.php(15): CodeIgniter\Model->__call('traerDatosUsuario', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

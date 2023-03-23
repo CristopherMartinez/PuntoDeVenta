@@ -1,0 +1,420 @@
+CRITICAL - 2023-03-19 15:21:00 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 55.
+ 1 APPPATH\Views\usuario\navbarLog.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(44): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 15:21:50 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 55.
+ 1 APPPATH\Views\usuario\navbarLog.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(44): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 15:25:55 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 55.
+ 1 APPPATH\Views\usuario\navbarLog.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(44): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 15:28:13 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 55.
+ 1 APPPATH\Views\usuario\navbarLog.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(44): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 15:29:34 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 55.
+ 1 APPPATH\Views\usuario\navbarLog.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(44): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 15:35:58 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 55.
+ 1 APPPATH\Views\usuario\navbarLog.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(43): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 15:37:48 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 55.
+ 1 APPPATH\Views\usuario\navbarLog.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(43): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 15:38:15 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 55.
+ 1 APPPATH\Views\usuario\navbarLog.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(43): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 15:38:54 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 55.
+ 1 APPPATH\Views\usuario\navbarLog.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\RegisterController.php(43): view('usuario/navbarLog')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-19 15:49:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com AND usuarios.telefono = 1212' at line 3 in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT usuarios...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT usuarios...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT usuarios...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\RegistrarUsuario.php(25): CodeIgniter\Database\BaseConnection->query('SELECT usuarios...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\RegisterController.php(44): App\Models\RegistrarUsuario->traerDatosUsuario('rosabahenasalga...', '1212')
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-03-19 15:49:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com AND usuarios.telefono = 1212' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\RegistrarUsuario.php(25): CodeIgniter\Database\BaseConnection->query('SELECT usuarios.correo, membresia.nombre 
+                                        FROM usuarios 
+                                        JOIN membresia ON usuarios.idMembresia = membresia.idMembresia WHERE usuarios.correo = rosabahenasalgado@gmail.com AND usuarios.telefono = 1212')
+ 2 APPPATH\Controllers\RegisterController.php(44): App\Models\RegistrarUsuario->traerDatosUsuario('rosabahenasalgado@gmail.com', '1212')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegisterController->guardar_persona()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegisterController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-19 15:56:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 3 in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT usuarios...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT usuarios...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT usuarios...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\RegistrarUsuario.php(25): CodeIgniter\Database\BaseConnection->query('SELECT usuarios...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\LoginController.php(33): App\Models\RegistrarUsuario->traerDatosUsuario('martinezcristop...')
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-03-19 15:56:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\RegistrarUsuario.php(25): CodeIgniter\Database\BaseConnection->query('SELECT usuarios.correo, membresia.nombre 
+                                        FROM usuarios 
+                                        JOIN membresia ON usuarios.idMembresia = membresia.idMembresia WHERE usuarios.correo = martinezcristopher69@gmail.com')
+ 2 APPPATH\Controllers\LoginController.php(33): App\Models\RegistrarUsuario->traerDatosUsuario('martinezcristopher69@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->verificar_login()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 16:00:36 --> Invalid file: "admin/catalogoAdmin.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/catalogoAdmin.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/catalogoAdmin', [], true)
+ 3 APPPATH\Controllers\CatalogoAdministradores.php(15): view('admin/catalogoAdmin', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\CatalogoAdministradores->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CatalogoAdministradores))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 16:05:54 --> Undefined variable $videojuegos
+in APPPATH\Views\admin\registroVideojuegos.php on line 160.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuegos', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 160)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\AgregarJuegoController.php(18): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 16:10:30 --> Undefined variable $videojuegos
+in APPPATH\Views\admin\registroVideojuegos.php on line 149.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuegos', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\AgregarJuegoController.php(18): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 16:11:09 --> Undefined variable $admin
+in APPPATH\Views\admin\registroVideojuegos.php on line 151.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $admin', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\AgregarJuegoController.php(19): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 16:29:08 --> Undefined variable $administradores
+in APPPATH\Views\admin\registroVideojuegos.php on line 111.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $administradores', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 111)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\AgregarJuegoController.php(19): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 17:01:28 --> Undefined variable $administradores
+in APPPATH\Views\admin\registroVideojuegos.php on line 167.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $administradores', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 167)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\AgregarJuegoController.php(19): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 17:11:51 --> Undefined variable $administradores
+in APPPATH\Views\admin\registroVideojuegos.php on line 190.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $administradores', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 190)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\AgregarJuegoController.php(19): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 17:14:30 --> Undefined array key "apellidos"
+in APPPATH\Controllers\RegistroAdminController.php on line 23.
+ 1 APPPATH\Controllers\RegistroAdminController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "apellidos"', 'APPPATH\\Controllers\\RegistroAdminController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RegistroAdminController->guardar_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RegistroAdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-19 17:49:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE idConsola IN (4, 5, 6) LIMIT 10' at line 1 in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT nombre, ...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nombre, ...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nombre, ...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\Videojuegos.php(42): CodeIgniter\Database\BaseConnection->query('SELECT nombre, ...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\GamesXboxController.php(15): App\Models\Videojuegos->get10VideogamesXBOX()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-03-19 17:49:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE idConsola IN (4, 5, 6) LIMIT 10' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\Videojuegos.php(42): CodeIgniter\Database\BaseConnection->query('SELECT nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego LIMIT 10 WHERE idConsola IN (4, 5, 6) LIMIT 10')
+ 2 APPPATH\Controllers\GamesXboxController.php(15): App\Models\Videojuegos->get10VideogamesXBOX()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 18:38:22 --> Undefined array key "subelemento1"
+in APPPATH\Views\genericos\gamesXbox.php on line 66.
+ 1 APPPATH\Views\genericos\gamesXbox.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subelemento1"', 'APPPATH\\Views\\genericos\\gamesXbox.php', 66)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(23): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 18:39:12 --> Undefined array key "subelemento1"
+in APPPATH\Views\genericos\gamesXbox.php on line 67.
+ 1 APPPATH\Views\genericos\gamesXbox.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "subelemento1"', 'APPPATH\\Views\\genericos\\gamesXbox.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(23): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 19:07:06 --> Undefined variable $categorias
+in APPPATH\Views\genericos\gamesXbox.php on line 66.
+ 1 APPPATH\Views\genericos\gamesXbox.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\genericos\\gamesXbox.php', 66)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(24): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 22:53:56 --> Undefined variable $totalJuegos
+in APPPATH\Views\genericos\gamesXbox.php on line 69.
+ 1 APPPATH\Views\genericos\gamesXbox.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalJuegos', 'APPPATH\\Views\\genericos\\gamesXbox.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(27): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 22:56:06 --> Call to undefined method App\Models\Videojuegos::getTotalGamesXboxOneS
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\GamesXboxController.php(20): CodeIgniter\Model->__call('getTotalGamesXboxOneS', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 22:56:18 --> Call to undefined method App\Models\Videojuegos::getTotalGamesXboxOneS
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\GamesXboxController.php(20): CodeIgniter\Model->__call('getTotalGamesXboxOneS', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 22:58:30 --> Call to undefined method App\Models\Videojuegos::getTotalGamesXboxOneS
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\GamesXboxController.php(22): CodeIgniter\Model->__call('getTotalGamesXboxOneS', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:03:56 --> Undefined variable $totalJuegosXboxOneSS
+in APPPATH\Views\genericos\gamesXbox.php on line 63.
+ 1 APPPATH\Views\genericos\gamesXbox.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalJuegosXboxOneSS', 'APPPATH\\Views\\genericos\\gamesXbox.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:04:05 --> Undefined variable $totalJuegosXboxOneSS
+in APPPATH\Views\genericos\gamesXbox.php on line 63.
+ 1 APPPATH\Views\genericos\gamesXbox.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalJuegosXboxOneSS', 'APPPATH\\Views\\genericos\\gamesXbox.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:04:41 --> Undefined variable $totalJuegosXboxOneSS
+in APPPATH\Views\genericos\gamesXbox.php on line 63.
+ 1 APPPATH\Views\genericos\gamesXbox.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalJuegosXboxOneSS', 'APPPATH\\Views\\genericos\\gamesXbox.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:05:47 --> Undefined variable $totalJuegosXboxOneSS
+in APPPATH\Views\genericos\gamesXbox.php on line 63.
+ 1 APPPATH\Views\genericos\gamesXbox.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalJuegosXboxOneSS', 'APPPATH\\Views\\genericos\\gamesXbox.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:11:10 --> Trying to access array offset on value of type int
+in APPPATH\Views\genericos\gamesXbox.php on line 71.
+ 1 APPPATH\Views\genericos\gamesXbox.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\genericos\\gamesXbox.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:11:17 --> Trying to access array offset on value of type int
+in APPPATH\Views\genericos\gamesXbox.php on line 71.
+ 1 APPPATH\Views\genericos\gamesXbox.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\genericos\\gamesXbox.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:13:06 --> Undefined variable $videojuegos
+in APPPATH\Views\genericos\gamesXbox.php on line 64.
+ 1 APPPATH\Views\genericos\gamesXbox.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuegos', 'APPPATH\\Views\\genericos\\gamesXbox.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:14:35 --> Undefined variable $totalJuegosXboxOneSS
+in APPPATH\Views\genericos\gamesXbox.php on line 64.
+ 1 APPPATH\Views\genericos\gamesXbox.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalJuegosXboxOneSS', 'APPPATH\\Views\\genericos\\gamesXbox.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:15:11 --> Trying to access array offset on value of type int
+in APPPATH\Views\genericos\gamesXbox.php on line 71.
+ 1 APPPATH\Views\genericos\gamesXbox.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\genericos\\gamesXbox.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-19 23:15:33 --> Trying to access array offset on value of type int
+in APPPATH\Views\genericos\gamesXbox.php on line 71.
+ 1 APPPATH\Views\genericos\gamesXbox.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'APPPATH\\Views\\genericos\\gamesXbox.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\GamesXboxController.php(30): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

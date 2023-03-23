@@ -26,13 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                <a class="nav-link" href="../admin/inicio">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="inicio">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="catalogoVideojuegos">Videojuegos</a>
+                <a class="nav-link" href="registroVideojuegos">Videojuegos</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="catalogoAdmin">Administradores</a>
+                <a class="nav-link" href="registroAdmin">Administradores</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="listaPedidos">Pedidos</a>

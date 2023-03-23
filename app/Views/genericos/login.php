@@ -1,9 +1,30 @@
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
+    </head>
+    <script>
+          function validarRecaptcha() {
+            var response = grecaptcha.getResponse();
+            if (response.length == 0) {
+                // El usuario no ha completado el reCAPTCHA
+                Swal.fire({
+                text: 'Porfavor verifíca el Recaptcha',        
+                })
+                return false;
+            } else {
+                // El usuario ha completado el reCAPTCHA
+                return true;
+            }
+            }
+    </script>
+
+    
     <body class="imgregister letraGeneral" style="color:whitesmoke">
         <div class="container">
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6">
                 <h2 class="text-center mb-4" style="color:whitesmoke; font-weight:Bolder;">Inicio de sesión</h2>
-                <form method="POST" action="<?php echo base_url().'/verificar_login'?>">
+                <form method="POST" action="<?php echo base_url().'/verificar_login'?>" onsubmit="return validarRecaptcha()">
                     <div class="mb-3">
                     <label for="correo" class="form-label" style="color:whitesmoke; font-weight:bold;">Correo electrónico</label>
                     <input type="text" class="form-control" id="correo" name="correo" required>

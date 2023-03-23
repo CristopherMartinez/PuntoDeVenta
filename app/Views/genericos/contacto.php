@@ -64,21 +64,26 @@ mail
 </span> contacto@worldgames.com.mx</p>
     </div>
     <div class="col-sm-7 slideanim">
-      <div class="row" style="padding-bottom: 10px;">
-        <div class="col-sm-6 form-group" style="padding-bottom: 10px;">
-          <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text" style="font-size:medium;">
+      <form name="registro" method="POST" action="<?php echo base_url().'/guardar_sugerencia'?>">
+        
+        <div class="row" style="padding-bottom: 10px;">
+          <div class="col-sm-6 form-group" style="padding-bottom: 10px;">
+            <input class="form-control" id="nombre" name="nombre" placeholder="Nombre" type="text" style="font-size:medium;">
+          </div>
+          <div class="col-sm-6 form-group" >
+            <input class="form-control" id="correo" name="correo" placeholder="Correo" type="email" required style="font-size:medium;">
+          </div>
         </div>
-        <div class="col-sm-6 form-group" >
-          <input class="form-control" id="correo" name="correo" placeholder="Correo" type="email" required style="font-size:medium;">
+        <textarea class="form-control" id="comentarios" name="comentarios" placeholder="Comentarios" rows="5" style="font-size:medium;"></textarea><br>
+        <small class="form-text " id="contador" style="color:whitesmoke;font-size:15px;">Caracteres : </small>
+        
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-outline-primary" type="submit" style="font-size:medium; ">Enviar</button>
+          </div>
         </div>
-      </div>
-      <textarea class="form-control" id="comentarios" name="comentarios" placeholder="Comentarios" rows="5" style="font-size:medium;"></textarea><br>
-      <small class="form-text " id="contador" style="color:whitesmoke;font-size:15px;">Caracteres : </small>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-outline-primary" type="submit" style="font-size:medium; ">Enviar</button>
-        </div>
-      </div>
+      </form>
+
     </div>
   </div>
 </div>

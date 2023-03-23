@@ -38,10 +38,99 @@ class Videojuegos extends Model
         return $query->getResultArray();
     }
 
+    
+    //Total de juegos de XboxOneSX
+    public function getTotalGamesXboxOneX(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '5'");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    //Total de juegos de XboxOneS
+    public function getTotalGamesXboxOneS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '6'");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //METODOS XBOX ONE SERIES S
+
+    //Total de juegos de XboxOneSS
+    public function getTotalGamesXboxOneSS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '4'");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de aventura de Xbox One Series S
+    public function TotalGamesAventuraXBOXSS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '4' AND idCategoria = '1'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de Arcade de Xbox One Series S
+    public function TotalGamesArcadeXBOXSS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '4' AND idCategoria = '2'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    //Total de juegos de Deportes de Xbox One Series S
+    public function TotalGamesDeportesXBOXSS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '4' AND idCategoria = '3'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Terror de Xbox One Series S
+    public function TotalGamesTerrorXBOXSS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '4' AND idCategoria = '4'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Estrategia de Xbox One Series S
+    public function TotalGamesEstrategiaXBOXSS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '4' AND idCategoria = '5'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+
+   
+   
+    
+
+
+
     public function get10VideogamesXBOX(){
-        $query = $this->db->query("SELECT nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego LIMIT 10");
+        $query = $this->db->query("SELECT nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (4, 5, 6) LIMIT 10");
         return $query->getResultArray();
     }
+    public function getConsolasXbox(){
+        $query=$this->db->query("SELECT nombre FROM consola WHERE idConsola IN (4, 5, 6)");                      
+        return $query->getResultArray();
+    }
+
+    
 
     public function get10VideogamesNintendo(){
         $query = $this->db->query("SELECT nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego LIMIT 10");
@@ -86,6 +175,13 @@ class Videojuegos extends Model
         $result = $query->getRow();
         return $result ? (int) $result->idConsola : 0;
     }
+
+    public function getNombreConsola($idConsola){
+        $query = $this->db->query("SELECT nombre FROM consola WHERE idConsola = ?", [$idConsola]);
+        $result = $query->getRow();
+        return $result ? $result->nombre : '';
+    }
+    
 
 
 }
