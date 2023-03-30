@@ -1,24 +1,58 @@
-<style>
-    .list:hover{
-    background-color:#c3c3c3;
-    list-style:none;
-    padding-left: 10px;
-    cursor: hand;
-  }
-  .backgroundGamesPlay{
-    background-image: url("<?php  echo base_url()?>/imagenes/fondoPlay8.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
-  .submenu {
-    display: none;
-  }
-  .visible {
-    display: block;
-  }
+<head>
+    <style>
+        .list:hover{
+        background-color:#c3c3c3;
+        list-style:none;
+        padding-left: 10px;
+        cursor: hand;
+    }
+    .backgroundGamesPlay{
+        background-image: url("<?php  echo base_url()?>/imagenes/fondoPlay8.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-</style>
+    .submenu {
+        display: none;
+    }
+    .visible {
+        display: block;
+    }
+
+            .accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .accordion-item {
+            border: 1px solid black;
+        }
+
+        .accordion-header {
+            background-color: #ccc;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+
+
+    </style>
+    <!-- CSS de Bootstrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.4/css/bootstrap.min.css">
+
+
+</head>
+
 
 <div class="backgrounFooter">
     <div class="container " style="padding-top: 30px; padding-bottom:30px;">
@@ -31,68 +65,52 @@
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit" style="padding-left: 5px;">Buscar</button>
                     </form>
-                    <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                XBOX
+
+                        <!--Xbox One Series S-->
+                        <div class="input-group mb-3 dropdown animate__animated animate__fadeInDown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <?php foreach ($listaVideojuegos as $juego) { ?>
+                                    <label><?php echo $juego->identificador ?> (<?php echo $juego->valor ?>)</label>
+                                <?php } ?>
                             </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Acción</a></li>
-                                <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Deportivos</a></li>
-                                <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Suspenso</a></li>
-                                <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Terror</a></li>
-                            </div>
-                        </div> 
-
-                    </div> -->
-                    
-
-                    <!-- <ul>
-                        <li>
-                            <a style="text-decoration: none; color:white;" href="#">Elemento 1</a>
-                            <ul>
-                                <li><a style="text-decoration: none; color:white;" href="#">Subelemento 1</a><span> (20)</span></li>
-                                <li><a style="text-decoration: none; color:white;" href="#">Subelemento 2</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <?php foreach ($listaVideojuegos as $videojuego) { ?>
+                                    <?php foreach ($totalGAventuraXboxSS as $categoria) { ?>
+                                        <li><a class="dropdown-item" href="#" data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
+                                    <?php } ?>
+                                <?php } ?>
                             </ul>
-                        </li>
-                    </ul> -->
-                    <!--Esta bien Funcionan correctamente-->
-                    <?php foreach ($numVideojuegos as $objeto): ?>
-                        <div>
-                            Total juegos: <?php echo $objeto->identificador, " ($objeto->valor)"?><br>
                         </div>
-                    <?php endforeach; ?>
-
-                    <?php foreach ($totalGAventuraXboxSS as $objeto): ?>
-                        <div>
-                         <?php echo $objeto->identificador, " ($objeto->valor)"?><br>
+                        <!--Xbox One X-->
+                        <div class="input-group mb-3 dropdown animate__animated animate__fadeInDown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <?php foreach ($XboxOneX as $juego) { ?>
+                                    <label><?php echo $juego->identificador ?> (<?php echo $juego->valor ?>)</label>
+                                <?php } ?>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <?php foreach ($XboxOneX as $videojuego) { ?>
+                                    <?php foreach ($CantGeneroXboxX as $categoria) { ?>
+                                        <li><a class="dropdown-item" href="#" data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
+                                    <?php } ?>
+                                <?php } ?>
+                            </ul>
                         </div>
-                    <?php endforeach; ?>
-                    
-
-
-
-                    <ul>
-                    <?php foreach ($consolasXbox as $elemento): ?>
-                        <li>
-                        <a style="text-decoration: none; color:white;" href="#"><?php echo $elemento["nombre"]; ?> </a>
-                        <ul>
-                            <?php foreach ($categorias as $cat): ?>
-                             <li><a style="text-decoration: none; color:white;" href="#"><?php echo $cat["nombre"]; ?></a>
-                             
-                                <span>prueba </span>
-                            
-                            </li>
-                            <?php endforeach; ?>
-                        </ul>
-                        </li>
-                    <?php endforeach; ?>
-                    </ul>
-                    
-
-
+                        <!--Xbox One S-->
+                        <div class="input-group mb-3 dropdown animate__animated animate__fadeInDown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <?php foreach ($XboxOneS as $juego) { ?>
+                                    <label><?php echo $juego->identificador ?> (<?php echo $juego->valor ?>)</label>
+                                <?php } ?>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <?php foreach ($XboxOneS as $videojuego) { ?>
+                                    <?php foreach ($CantGeneroXboxS as $categoria) { ?>
+                                        <li><a class="dropdown-item" href="#" data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
+                                    <?php } ?>
+                                <?php } ?>
+                            </ul>
+                        </div>
                 </div>
             </div>
         </div>
@@ -137,6 +155,18 @@
   elemento1.addEventListener('click', () => {
     submenu.classList.toggle('visible');
   });
+</script>
+
+<script>
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const accordionItem = header.parentNode;
+            accordionItem.classList.toggle('active');
+        });
+    });
+
 </script>
 
 

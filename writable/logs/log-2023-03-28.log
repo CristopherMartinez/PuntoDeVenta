@@ -1,0 +1,22 @@
+CRITICAL - 2023-03-28 02:42:23 --> Undefined variable $xboxOneX
+in APPPATH\Views\genericos\gamesXbox.php on line 87.
+ 1 APPPATH\Views\genericos\gamesXbox.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $xboxOneX', 'APPPATH\\Views\\genericos\\gamesXbox.php', 87)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(70): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-28 03:04:45 --> Undefined variable $administradores
+in APPPATH\Views\admin\registroVideojuegos.php on line 108.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $administradores', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 108)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(25): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

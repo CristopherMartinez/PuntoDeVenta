@@ -105,7 +105,7 @@
                 <div class="mb-3">
                 <label for="repite-contrasenia" class="form-label" style="color:whitesmoke; font-weight:bold;">Repite contraseña</label>
                 <div class="input-group">
-                  <input type="password" class="form-control" id="repite-contrasenia" name="repite-contrasenia" placeholder="*****" required>
+                  <input type="password" class="form-control" id="repite-contrasenia" name="repite-contrasenia" placeholder="***********" required>
                   <button class="btn btn-outline-secondary" type="button" id="ver-repite-contrasenia"><span class="material-symbols-outlined">
               visibility
               </span></button>

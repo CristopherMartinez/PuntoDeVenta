@@ -10,9 +10,13 @@ class ShoppingCarController extends BaseController{
     public function index(){
         
 
+
+        //Aqui tenemos que traerlos de acuerdo a la sesion iniciada
+        
+
         $generico = new RegistrarUsuario();
         $usuario = array(
-            'datosUsuario' => $generico->traerDatosUsuario()
+            'datosUsuario' => $generico->traerDatosUsuarioPorCorreo('martinezcristopher69@gmail.com')
         );
 
 

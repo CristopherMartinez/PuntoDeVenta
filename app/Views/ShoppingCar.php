@@ -1,205 +1,377 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          // Variables
-          //Generar el arreglo de objetos desde el modelo dependiendo a cual le de click el usuario, 
-          //con el id vamos a obtener los datos del juego , imagenes se cargaron solo para prueba
-          const baseDeDatos = [
-              {
-                  id: 1,
-                  nombre: 'Franbow',
-                  precio: 159,
-                  imagen: '<?php  echo base_url()?>/imagenes/frambo.png'
-              },
-              {
-                  id: 2,
-                  nombre: 'MarioBros',
-                  precio: 1355,
-                  imagen: 'cebolla.jpg'
-              },
-              {
-                  id: 3,
-                  nombre: 'Calabacin',
-                  precio: 235,
-                  imagen: 'calabacin.jpg'
-              },
-              {
-                  id: 4,
-                  nombre: 'Cars',
-                  precio: 5456,
-                  imagen: 'fresas.jpg'
-              }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda en línea</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<style>
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
 
-          ];
+    .slick-prev {
+      left: 0;
+    
+    }
 
-          let carrito = [];
-          const divisa = '$';
-          const DOMitems = document.querySelector('#items');
-          const DOMcarrito = document.querySelector('#carrito');
-          const DOMtotal = document.querySelector('#total');
-          const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+    .slick-next {
+      right: 0;
+     
+    }
 
-          // Funciones
+   .card {
+  width: 18rem;
+  margin: 1rem;
+  height: 30rem; /* Definimos la altura de la tarjeta */
+  display: flex; /* Hacemos que todas las tarjetas tengan la misma altura */
+  flex-direction: column; /* Ajustamos la dirección del contenido */
+}
 
-          /**
-          * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
-          */
-          function renderizarProductos() {
-              baseDeDatos.forEach((info) => {
-                  // Estructura
-                  const miNodo = document.createElement('div');
-                  miNodo.classList.add('card', 'col-sm-4');
-                  // Body
-                  const miNodoCardBody = document.createElement('div');
-                  miNodoCardBody.classList.add('card-body');
-                  // Titulo
-                  const miNodoTitle = document.createElement('h5');
-                  miNodoTitle.classList.add('card-title');
-                  miNodoTitle.textContent = info.nombre;
-                  // Imagen
-                  const miNodoImagen = document.createElement('img');
-                  miNodoImagen.classList.add('img-fluid');
-                  miNodoImagen.setAttribute('src', info.imagen);
-                  // Precio
-                  const miNodoPrecio = document.createElement('p');
-                  miNodoPrecio.classList.add('card-text');
-                  miNodoPrecio.textContent = `${info.precio}${divisa}`;
-                  // Boton 
-                  const miNodoBoton = document.createElement('button');
-                  miNodoBoton.classList.add('btn', 'btn-primary');
-                  miNodoBoton.textContent = '+';
-                  miNodoBoton.setAttribute('marcador', info.id);
-                  miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-                  // Insertamos
-                  miNodoCardBody.appendChild(miNodoImagen);
-                  miNodoCardBody.appendChild(miNodoTitle);
-                  miNodoCardBody.appendChild(miNodoPrecio);
-                  miNodoCardBody.appendChild(miNodoBoton);
-                  miNodo.appendChild(miNodoCardBody);
-                  DOMitems.appendChild(miNodo);
-              });
-          }
+.card-img-top {
+  flex-grow: 1; /* Permitimos que la imagen crezca para llenar el espacio restante */
+  object-fit: cover;
+  max-height: 100%; /* Establecemos la altura máxima de la imagen al 100% */
+}
 
-          /**
-          * Evento para añadir un producto al carrito de la compra
-          */
-          function anyadirProductoAlCarrito(evento) {
-              // Anyadimos el Nodo a nuestro carrito
-              carrito.push(evento.target.getAttribute('marcador'))
-              // Actualizamos el carrito 
-              renderizarCarrito();
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
 
-          }
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
 
-          /**
-          * Dibuja todos los productos guardados en el carrito
-          */
-          function renderizarCarrito() {
-              // Vaciamos todo el html
-              DOMcarrito.textContent = '';
-              // Quitamos los duplicados
-              const carritoSinDuplicados = [...new Set(carrito)];
-              // Generamos los Nodos a partir de carrito
-              carritoSinDuplicados.forEach((item) => {
-                  // Obtenemos el item que necesitamos de la variable base de datos
-                  const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                      // ¿Coincide las id? Solo puede existir un caso
-                      return itemBaseDatos.id === parseInt(item);
-                  });
-                  // Cuenta el número de veces que se repite el producto
-                  const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-                      // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
-                      return itemId === item ? total += 1 : total;
-                  }, 0);
-                  // Creamos el nodo del item del carrito
-                  const miNodo = document.createElement('li');
-                  miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-                  miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
-                  // Boton de borrar
-                  const miBoton = document.createElement('button');
-                  miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-                  miBoton.textContent = 'X';
-                  miBoton.style.marginLeft = '1rem';
-                  miBoton.dataset.item = item;
-                  miBoton.addEventListener('click', borrarItemCarrito);
-                  // Mezclamos nodos
-                  miNodo.appendChild(miBoton);
-                  DOMcarrito.appendChild(miNodo);
-              });
-             // Renderizamos el precio total en el HTML
-             DOMtotal.textContent = calcularTotal();
-          }
+    th {
+      background-color: #f2f2f2;
+    }
 
-          /**
-          * Evento para borrar un elemento del carrito
-          */
-          function borrarItemCarrito(evento) {
-              // Obtenemos el producto ID que hay en el boton pulsado
-              const id = evento.target.dataset.item;
-              // Borramos todos los productos
-              carrito = carrito.filter((carritoId) => {
-                  return carritoId !== id;
-              });
-              // volvemos a renderizar
-              renderizarCarrito();
-          }
+    .total {
+      text-align: right;
+    }
 
-          /**
-           * Calcula el precio total teniendo en cuenta los productos repetidos
-           */
-          function calcularTotal() {
-              // Recorremos el array del carrito 
-              return carrito.reduce((total, item) => {
-                  // De cada elemento obtenemos su precio
-                  const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                      return itemBaseDatos.id === parseInt(item);
-                  });
-                  // Los sumamos al total
-                  return total + miItem[0].precio;
-              }, 0).toFixed(2);
-          }
+    /* new style for cart */
+    .cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  background-color: white;
+   z-index: 9999;
+}
 
-          /**
-          * Varia el carrito y vuelve a dibujarlo
-          */
-          function vaciarCarrito() {
-              // Limpiamos los productos guardados
-              carrito = [];
-              // Renderizamos los cambios
-              renderizarCarrito();
-          }
+    .cart-container .cart-wrapper {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
 
-          // Eventos
-          DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+    .cart-container .cart-wrapper h2 {
+      margin-top: 0;
+    }
 
-          // Inicio
-          renderizarProductos();
-          renderizarCarrito();
-        });
-    </script>
+    .cart-container .cart-wrapper .table {
+      margin-bottom: 0;
+    }
+
+    .card-body {
+      max-height: 30rem;
+      overflow: hidden;
+    }
+
+  .add-to-cart {
+    margin-top: 1rem; /* Agregamos un margen superior para separar los botones */
+  }
+  .total-label {
+  text-align: right;
+  font-weight: bold;
+}
+
+    @media (min-width: 768px) {
+      .cart-container .cart-wrapper {
+        width: 50%;
+        margin-bottom: 0;
+        padding-right: 1rem;
+      }
+
+      .cart-container .cart-wrapper:last-child {
+        padding-right: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <!-- Elementos generados a partir del JSON -->
-            <main id="items" class="col-sm-8 row"></main>
-            <!-- Carrito -->
-            <aside class="col-sm-4">
-                <h2>Carrito de compras</h2>
-                <!-- Elementos del carrito -->
-                <ul id="carrito" class="list-group"></ul>
-                <hr>
-                <!-- Precio total -->
-                <p class="text-right">Total: $<span id="total"></span></p>
-                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-            </aside>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="text-center">Suspenso</h2>
+        <div class="carousel">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">ABC ¿Y la E?</h5>
+              <p class="card-text">Juego donde la E se perdió y se tiene que buscar...</p>
+              <p class="card-price">$15</p>
+              <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">mkmkkkmkk</h5>
+              <p class="card-text">opmkmkmkmkmkkmk</p>
+              <p class="card-price">$14</p>
+              <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
+
+           <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">sdassdd</h5>
+              <p class="card-text">vnkkkkkkkknk</p>
+              <p class="card-price">$14</p>
+              <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
+
+           <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">1234</h5>
+              <p class="card-text">fgkmkmkmkmkmkmkmkmkmk</p>
+              <p class="card-price">$14</p>
+              <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
+
+           <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">1234</h5>
+              <p class="card-text">kknkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkdknknknkckkkkkmmmmk</p>
+              <p class="card-price">$14</p>
+              <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
         </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <h2>Carrito</h2>
+     <table class="table" id="cart-table">
+
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="cart-list">
+          </tbody>
+          <tfoot>
+           <tr>
+  <td>Total</td>
+  <td class="cart-total">0</td>
+  <td>
+    <button class="btn btn-danger clear-cart">Vaciar</button>
+  </td>
+</tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="text-center">Puzzle</h2>
+        <div class="carousel">
+          <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title 3" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">xfxkmkmklslskdlsa</h5>
+              <p class="card-text">delemkmrkvnrkdslofkwkwdwdadfdl</p>
+              <p class="card-price">$10</p>
+      <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
+           <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">5667</h5>
+              <p class="card-text">djfjdkdkkkkkk</p>
+              <p class="card-price">$14</p>
+              <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
+           <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">7765</h5>
+              <p class="card-text">logkdflsd</p>
+              <p class="card-price">$14</p>
+              <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
+           <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">456</h5>
+              <p class="card-text">wwwfielsl</p>
+              <p class="card-price">$14</p>
+              <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
+           <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">jijijiji</h5>
+              <p class="card-text">gggggggggkkkkmmmmk</p>
+              <p class="card-price">$14</p>
+              <button class="btn btn-primary add-to-cart" data-title="Game Title " data-price="15">Agregar</button>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game Title" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">mkmkmkkmkmkmkmk</h5>
+              <p class="card-text">Game dmijijeidjeindslmslmlsmlfmslmsldsldmslmsl</p>
+              <p class="card-price">$11</p>
+           <button class="btn btn-primary add-to-cart" data-title="Game Title" data-price="15">Agregar</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
-</html>
+
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<<script>
+// variable para el total del carrito
+let cartTotal = 0;
+
+$(document).ready(function(){
+  $('.carousel').slick({
+    dots: true,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+    nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+});
+
+
+// selecciona todos los botones "Agregar"
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+// agrega un escucha de eventos de clic a cada botón "Agregar"
+addToCartButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    // obtén el título y el precio del producto del botón
+    const title = this.parentNode.querySelector('.card-title').textContent;
+    const price = parseInt(this.parentNode.querySelector('.card-price').textContent.substring(1));
+    
+    // agrega el producto a la tabla
+    const cartList = document.querySelector('.cart-list');
+    const cartItem = document.createElement('tr');
+    cartItem.innerHTML = `
+      <td>${title}</td>
+      <td>$${price}</td>
+      <td><button class="btn btn-danger remove-item">X</button></td>
+    `;
+    cartList.appendChild(cartItem);
+    
+    // actualiza el total del carrito
+    cartTotal += price;
+    const cartTotalElement = document.querySelector('td.cart-total');
+    cartTotalElement.textContent = cartTotal;
+
+    // selecciona todos los botones "X"
+    const removeButtons = document.querySelectorAll('.remove-item');
+    
+    // agrega un escucha de eventos de clic a cada botón "X"
+    removeButtons.forEach(function(removeButton) {
+      removeButton.addEventListener('click', function() {
+        // obtén el precio del producto del elemento anterior
+        const price = parseInt(this.parentNode.previousElementSibling.textContent.substring(1));
+        
+        // elimina el producto de la tabla
+        const cartItem = this.parentNode.parentNode;
+        const cartList = cartItem.parentNode;
+        cartList.removeChild(cartItem);
+        
+        // actualiza el total del carrito
+        cartTotal -= price;
+        const cartTotalElement = document.querySelector('td.cart-total');
+        cartTotalElement.textContent = cartTotal;
+      });
+    });
+  });
+});
+
+// selecciona el botón "Vaciar"
+const clearCartButton = document.querySelector('.clear-cart');
+
+// agrega un escucha de eventos de clic al botón "Vaciar"
+clearCartButton.addEventListener('click', function() {
+  // elimina todos los productos del carrito
+  const cartList = document.querySelector('.cart-list');
+  cartList.innerHTML = '';
+  
+  // actualiza el total del carrito
+  cartTotal = 0;
+  const cartTotalElement = document.querySelector('td.cart-total');
+  cartTotalElement.textContent = cartTotal;
+});
+
+</script>

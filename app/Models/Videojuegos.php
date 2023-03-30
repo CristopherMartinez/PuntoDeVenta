@@ -38,8 +38,11 @@ class Videojuegos extends Model
         return $query->getResultArray();
     }
 
+    //---------------------------------------------------
     
-    //Total de juegos de XboxOneSX
+    // METODOS XBOX ONE X
+
+    //Total de juegos de XboxOneX
     public function getTotalGamesXboxOneX(){
         $query=$this->db->query("SELECT COUNT(*) as numJuegos
                                  FROM videojuego 
@@ -47,6 +50,56 @@ class Videojuegos extends Model
         $result = $query->getRow();
         return $result ? (int) $result->numJuegos : 0;
     }
+     //Total de juegos de aventura de Xbox One X
+     public function TotalGamesAventuraXboxX(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '5' AND idCategoria = '1'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de Arcade de Xbox One X
+    public function TotalGamesArcadeXboxX(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '5' AND idCategoria = '2'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    //Total de juegos de Deportes de Xbox One X
+    public function TotalGamesDeportesXboxX(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '5' AND idCategoria = '3'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Terror de Xbox One X
+    public function TotalGamesTerrorXboxX(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '5' AND idCategoria = '4'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Estrategia de Xbox One X
+    public function TotalGamesEstrategiaXboxX(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '5' AND idCategoria = '5'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //-----------------------------------------------
+    //METODOS XBOX ONE S
+
     //Total de juegos de XboxOneS
     public function getTotalGamesXboxOneS(){
         $query=$this->db->query("SELECT COUNT(*) as numJuegos
@@ -55,6 +108,54 @@ class Videojuegos extends Model
         $result = $query->getRow();
         return $result ? (int) $result->numJuegos : 0;
     }
+      //Total de juegos de aventura de Xbox One S
+    public function TotalGamesAventuraXBOXS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '6' AND idCategoria = '1'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de Arcade de Xbox One S
+    public function TotalGamesArcadeXBOXS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '6' AND idCategoria = '2'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    //Total de juegos de Deportes de Xbox One S
+    public function TotalGamesDeportesXBOXS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '6' AND idCategoria = '3'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Terror de Xbox One S
+    public function TotalGamesTerrorXBOXS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '6' AND idCategoria = '4'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Estrategia de Xbox One S
+    public function TotalGamesEstrategiaXBOXS(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '6' AND idCategoria = '5'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //--------------------------------------------------------------------------
 
     //METODOS XBOX ONE SERIES S
 
@@ -113,6 +214,11 @@ class Videojuegos extends Model
         $result = $query->getRow();
         return $result ? (int) $result->numJuegos : 0;
     }
+
+
+
+
+    
 
 
    
