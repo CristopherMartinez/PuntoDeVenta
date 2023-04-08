@@ -1,0 +1,400 @@
+ERROR - 2023-04-08 17:54:02 --> mysqli_sql_exception: Table 'ecommerce.usuarios' doesn't exist in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\app\Models\usuario\UserModel.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter4\app\Controllers\invitado\RegisterController.php(34): App\Models\usuario\UserModel->get_email('martinezcristop...')
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-08 17:54:02 --> Table 'ecommerce.usuarios' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `usuarios`.`correo` = :usuarios.correo:', [...], false)
+ 2 APPPATH\Models\usuario\UserModel.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\invitado\RegisterController.php(34): App\Models\usuario\UserModel->get_email('martinezcristopher69@gmail.com')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-08 17:54:47 --> mysqli_sql_exception: Unknown column 'usuarios.correo' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\app\Models\usuario\UserModel.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter4\app\Controllers\invitado\RegisterController.php(34): App\Models\usuario\UserModel->get_email('martinezcristop...')
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-08 17:54:47 --> Unknown column 'usuarios.correo' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario`
+WHERE `usuarios`.`correo` = :usuarios.correo:', [...], false)
+ 2 APPPATH\Models\usuario\UserModel.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\invitado\RegisterController.php(34): App\Models\usuario\UserModel->get_email('martinezcristopher69@gmail.com')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-08 17:55:43 --> mysqli_sql_exception: Unknown column 'usuarios.correo' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\app\Models\usuario\UserModel.php(14): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter4\app\Controllers\invitado\RegisterController.php(34): App\Models\usuario\UserModel->get_email('martinezcristop...')
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-04-08 17:55:43 --> Unknown column 'usuarios.correo' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario`
+WHERE `usuarios`.`correo` = :usuarios.correo:', [...], false)
+ 2 APPPATH\Models\usuario\UserModel.php(14): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\invitado\RegisterController.php(34): App\Models\usuario\UserModel->get_email('martinezcristopher69@gmail.com')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 17:57:12 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\invitado\RegisterController.php on line 54.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 17:57:57 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\invitado\RegisterController.php on line 54.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:01:58 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\invitado\RegisterController.php on line 54.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:02:36 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\invitado\RegisterController.php on line 54.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->Registrar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:14:23 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 67.
+ 1 APPPATH\Views\usuario\navbarLog.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(135): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:15:05 --> Undefined variable $datosUsuario
+in APPPATH\Views\usuario\navbarLog.php on line 67.
+ 1 APPPATH\Views\usuario\navbarLog.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datosUsuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 67)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(135): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:17:03 --> Undefined variable $nombreUsuarioUnico
+in APPPATH\Controllers\invitado\RegisterController.php on line 107.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombreUsuarioUnico', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 107)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:23:32 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\Codeigniter4\app\Controllers\generico\GamesplayStation.php on line 23
+in SYSTEMPATH\Common.php on line 1163.
+ 1 APPPATH\Controllers\generico\GamesplayStation.php(23): view('genericos/gamesplayStation', 'Cristopher')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:23:48 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\Codeigniter4\app\Controllers\generico\GamesplayStation.php on line 23
+in SYSTEMPATH\Common.php on line 1163.
+ 1 APPPATH\Controllers\generico\GamesplayStation.php(23): view('genericos/gamesplayStation', 'Cristopher')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:23:49 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\Codeigniter4\app\Controllers\generico\GamesplayStation.php on line 23
+in SYSTEMPATH\Common.php on line 1163.
+ 1 APPPATH\Controllers\generico\GamesplayStation.php(23): view('genericos/gamesplayStation', 'Cristopher')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:23:57 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\Codeigniter4\app\Controllers\generico\GamesplayStation.php on line 23
+in SYSTEMPATH\Common.php on line 1163.
+ 1 APPPATH\Controllers\generico\GamesplayStation.php(23): view('genericos/gamesplayStation', 'Cristopher')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:24:43 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\Codeigniter4\app\Controllers\generico\GamesplayStation.php on line 22
+in SYSTEMPATH\Common.php on line 1163.
+ 1 APPPATH\Controllers\generico\GamesplayStation.php(22): view('invitado/navbarInvitado', 'Cristopher')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:26:57 --> Undefined variable $nombre
+in APPPATH\Views\invitado\navbarInvitado.php on line 62.
+ 1 APPPATH\Views\invitado\navbarInvitado.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\invitado\\navbarInvitado.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\navbarInvitado.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/navbarInvitado', [], true)
+ 5 APPPATH\Controllers\generico\GamesplayStation.php(27): view('invitado/navbarInvitado')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:28:36 --> Undefined variable $nombre
+in APPPATH\Views\invitado\navbarInvitado.php on line 62.
+ 1 APPPATH\Views\invitado\navbarInvitado.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\invitado\\navbarInvitado.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\navbarInvitado.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/navbarInvitado', [], true)
+ 5 APPPATH\Controllers\generico\GamesplayStation.php(27): view('invitado/navbarInvitado')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:28:41 --> Undefined variable $nombre
+in APPPATH\Views\invitado\navbarInvitado.php on line 62.
+ 1 APPPATH\Views\invitado\navbarInvitado.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\invitado\\navbarInvitado.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\navbarInvitado.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/navbarInvitado', [], true)
+ 5 APPPATH\Controllers\generico\GamesplayStation.php(27): view('invitado/navbarInvitado')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:29:17 --> Undefined variable $nombre
+in APPPATH\Views\invitado\navbarInvitado.php on line 62.
+ 1 APPPATH\Views\invitado\navbarInvitado.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\invitado\\navbarInvitado.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\navbarInvitado.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/navbarInvitado', [], true)
+ 5 APPPATH\Controllers\generico\GamesplayStation.php(23): view('invitado/navbarInvitado')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:29:22 --> Undefined variable $nombre
+in APPPATH\Views\invitado\navbarInvitado.php on line 62.
+ 1 APPPATH\Views\invitado\navbarInvitado.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\invitado\\navbarInvitado.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\navbarInvitado.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/navbarInvitado', [], true)
+ 5 APPPATH\Controllers\generico\GamesplayStation.php(22): view('invitado/navbarInvitado')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:29:33 --> Undefined variable $nombre
+in APPPATH\Views\invitado\navbarInvitado.php on line 62.
+ 1 APPPATH\Views\invitado\navbarInvitado.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\invitado\\navbarInvitado.php', 62)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\navbarInvitado.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/navbarInvitado', [], true)
+ 5 APPPATH\Controllers\generico\GamesplayStation.php(20): view('invitado/navbarInvitado')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:30:45 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\Codeigniter4\app\Controllers\generico\GamesplayStation.php on line 22
+in SYSTEMPATH\Common.php on line 1163.
+ 1 APPPATH\Controllers\generico\GamesplayStation.php(22): view('invitado/navbarInvitado', 'Cristopher')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:30:56 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\Codeigniter4\app\Controllers\generico\GamesplayStation.php on line 22
+in SYSTEMPATH\Common.php on line 1163.
+ 1 APPPATH\Controllers\generico\GamesplayStation.php(22): view('invitado/navbarInvitado', 'Cristopher')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:34:31 --> Undefined variable $nombreUsuarioUnico
+in APPPATH\Controllers\invitado\RegisterController.php on line 107.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombreUsuarioUnico', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 107)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:37:26 --> Call to undefined method CodeIgniter\Session\Session::isStarted()
+in APPPATH\Controllers\generico\GamesplayStation.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:38:04 --> Call to undefined method CodeIgniter\Session\Session::isStarted()
+in APPPATH\Controllers\generico\GamesplayStation.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:49:56 --> Undefined variable $nombre
+in APPPATH\Views\usuario\navbarLog.php on line 74.
+ 1 APPPATH\Views\usuario\navbarLog.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\usuario\\navbarLog.php', 74)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\LoginController.php(53): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 18:52:18 --> ini_set(): Session ini settings cannot be changed when a session is active
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 72.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Session ini settings cannot be changed when a session is active', 'SYSTEMPATH\\Session\\Handlers\\FileHandler.php', 72)
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(72): ini_set('session.save_path', 'FCPATH\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(667): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(641): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(252): CodeIgniter\Config\Services::session()
+ 8 SYSTEMPATH\Common.php(979): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 APPPATH\Controllers\invitado\LoginController.php(46): session()
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 19:13:51 --> Undefined array key "correo"
+in APPPATH\Controllers\invitado\LoginController.php on line 23.
+ 1 APPPATH\Controllers\invitado\LoginController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'APPPATH\\Controllers\\invitado\\LoginController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 19:17:15 --> Undefined array key "correo"
+in APPPATH\Controllers\invitado\LoginController.php on line 23.
+ 1 APPPATH\Controllers\invitado\LoginController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'APPPATH\\Controllers\\invitado\\LoginController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 19:18:24 --> Undefined array key "correo"
+in APPPATH\Controllers\invitado\LoginController.php on line 23.
+ 1 APPPATH\Controllers\invitado\LoginController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'APPPATH\\Controllers\\invitado\\LoginController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 19:43:50 --> Undefined variable $data2
+in APPPATH\Views\usuario\navbarLog.php on line 73.
+ 1 APPPATH\Views\usuario\navbarLog.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data2', 'APPPATH\\Views\\usuario\\navbarLog.php', 73)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\LoginController.php(58): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 19:46:18 --> Undefined variable $usuario
+in APPPATH\Views\usuario\navbarLog.php on line 73.
+ 1 APPPATH\Views\usuario\navbarLog.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 73)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\LoginController.php(58): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 19:47:54 --> Undefined variable $usuario
+in APPPATH\Views\usuario\navbarLog.php on line 73.
+ 1 APPPATH\Views\usuario\navbarLog.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'APPPATH\\Views\\usuario\\navbarLog.php', 73)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\LoginController.php(58): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 19:51:53 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\usuario\navbarLog.php on line 73.
+ 1 APPPATH\Views\usuario\navbarLog.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\usuario\\navbarLog.php', 73)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(145): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 20:06:07 --> Undefined variable $nombre
+in APPPATH\Views\usuario\navbarLog.php on line 75.
+ 1 APPPATH\Views\usuario\navbarLog.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\usuario\\navbarLog.php', 75)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\ShoppingCarController.php(24): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 20:06:25 --> Undefined variable $nombre
+in APPPATH\Views\usuario\navbarLog.php on line 75.
+ 1 APPPATH\Views\usuario\navbarLog.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'APPPATH\\Views\\usuario\\navbarLog.php', 75)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\ShoppingCarController.php(24): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 20:35:07 --> Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Controllers\invitado\LoginController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 20:38:18 --> Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Controllers\invitado\LoginController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 20:39:17 --> Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Controllers\invitado\LoginController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-08 20:41:40 --> Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Controllers\invitado\LoginController.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

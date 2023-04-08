@@ -21,9 +21,9 @@
                   <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#" style="padding-left: 5px;">Nosotros</a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                   <a class="nav-link" href="#" style="padding-left: 5px;">Membresias</a>
-                  </li>
+                  </li> -->
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 5px;">
                       Videojuegos
@@ -39,9 +39,9 @@
                       
                     </ul>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                   <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="padding-left: 5px;">Ofertas</a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                   <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="padding-left: 5px;">Lanzamientos</a>
                   </li>  
@@ -63,37 +63,28 @@
                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit" style="padding-left: 5px;">Buscar</button>
               </form>
-              <!-- <div style="margin-left: 10px;">
-              <?php foreach ($datosUsuario as $dato) { ?>
-                <div style="color:whitesmoke;">Usuario: <?php echo $dato['usuario'] ?></div>
-                <div style="color:whitesmoke;">Membresía : <?php echo $dato['nombre'] ?></div>           
-                  <?php } ?>
-              </div> -->
-              <!-- <div style="margin-left: 10px;">
-              <?php foreach ($datosUsuario as $dato) { ?>
-                <div style="color:whitesmoke;">
-                  <div style="display: inline-block; width: 200px;">Usuario: <?php echo $dato['usuario'] ?></div>
-                  <div style="display: inline-block; width: 200px;">Membresía: <?php echo $dato['nombre'] ?></div>
-                  <div style="clear:both;"></div> 
-                </div>
-              <?php } ?>
-            </div> -->
+             
 
             
               
             
               <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
-                  <div style="margin-left: 5px;">
-                    <?php foreach ($datosUsuario as $dato) { ?>
-                      Usuario: <?php echo $dato['usuario'] ?>
+
+                 <div style="margin-left: 100px; margin-top:15px;">
+                    
+                      Usuario: <?= $nombre ?>
                       <br>
-                      Membresía: <?php echo $dato['nombre'] ?>
-                    <?php } ?>
+                      Membresía: <? $membresia ?>
+                    
                   </div>
+                 
                  
                   <a  class="nav-link active" aria-current="page" style="padding-left:0px; margin-left:0px;"><img src="<?php  echo base_url()?>/imagenes/icons/cardRed.png" style="width:40px;"></a>
                           
               </ul>
-                 <a class="navbar-brand" href="inicio" style="padding-left:0px; margin-left:0px;"><img src="<?php  echo base_url()?>/imagenes/icons/profileb.png" style="width:40px;"></a>
+                 <!-- <a class="navbar-brand" href="inicio" style="padding-left:0px; margin-left:0px;"><img src="<?php  echo base_url()?>/imagenes/icons/profileb.png" style="width:40px;"></a> -->
+                 <!-- Agregar este botón a la vista -->
+                  <a href="<?php echo base_url().'/cerrarSesion'?>" class="btn btn-primary">Cerrar sesión</a>
+                  
           </div>
 </nav>

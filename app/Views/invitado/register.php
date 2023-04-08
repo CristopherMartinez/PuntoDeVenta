@@ -139,4 +139,69 @@
 
 
 
+ <!-- <!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Registro de usuario</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link href="assets/user/login/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="h-100">
+    <div class="authincation h-100">
+        <div class="container-fluid h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                
+                                <div class="auth-form">
+                                    <h4 class="text-center mb-4">Crear una cuenta</h4>
+                                    <form action="<?php echo base_url().'/Registrar'?>" method="post">
+                                        <div class="form-group">
+                                            <label><strong>Nombre completo</strong></label>
+                                            <input type="text" class="form-control"  maxlength="25" onkeypress="return isNumberKey(event)" id="nombre" placeholder="Enter fullname" name="nombre" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label><strong>Correo electrónico</strong></label>
+                                            <input type="email" class="form-control" maxlength="30" onkeypress="return isNumberKey(event)"  id="correo" placeholder="Enter email" name="correo" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label><strong>Password</strong></label>
+                                            <input type="password" class="form-control" maxlength="25" onkeypress="return isNumberKey(event)" id="password" placeholder="Enter password" name="password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label><strong>Dirección</strong></label>
+                                            <input type="text" class="form-control" maxlength="100" onkeypress="return isNumberKey(event)" id="direccion" placeholder="Enter address" name="direccion" required>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+                                        </div>
+                                    </form>
+                                    <div class="new-account mt-3">
+                                        <p>¿Ya tienes cuenta? <a class="text-primary" href="login">Login</a></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+   
+</body>
+
+</html> -->
 

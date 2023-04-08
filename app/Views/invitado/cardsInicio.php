@@ -171,7 +171,7 @@
   </ul>
   <!-- Contratar / Comprar -->
   <div class="table-buy">
-    <a href="#" class="pricing-action">Comprar</a>
+    <a href="register" class="pricing-action">Comprar</a>
   </div>
 </div>
 
@@ -188,7 +188,7 @@
   </ul>
   <!-- Contratar / Comprar -->
   <div class="table-buy">
-    <a href="#" class="pricing-action">Comprar</a>
+    <a href="register" class="pricing-action">Comprar</a>
   </div>
 </div>
 
@@ -205,7 +205,7 @@
   </ul>
   <!-- Contratar / Comprar -->
   <div class="table-buy">
-    <a href="#" class="pricing-action">Comprar</a>
+    <a href="register" class="pricing-action">Comprar</a>
   </div>
 </div>
 </div>

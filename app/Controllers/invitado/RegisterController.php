@@ -2,6 +2,8 @@
 namespace App\Controllers\invitado;
 use App\Models\usuario\RegistrarUsuario;
 use App\Controllers\BaseController;
+use App\Models\usuario\UserModel;
+use CodeIgniter\Exceptions\AlertError;
 
 class RegisterController extends BaseController{
     
@@ -26,11 +28,64 @@ class RegisterController extends BaseController{
 
     // }
 
+    //Test
+    public function Registrar(){
+        $user_model = new UserModel();
+        $kq = $user_model->get_email($this->request->getPost('correo'));
+        if($kq){  
+            // return '<script>alert("The email address has been used");
+            // window.location ="'.base_url().'/signup";
+            // </script>';
+            
+            return redirect()->back();
+        }
+        $data=[
+			'nombre'=>$this->request->getPost('nombre'),
+			'correo'=>$this->request->getPost('correo'),
+			'password'=>$this->request->getPost('password'),
+            'direccion'=>$this->request->getPost('direccion'),
+			'rol'=>2
+		];
+        
+		$user_model->insert($data);
+        $rs = $user_model->where('correo',$this->request->getPost('correo'))->where('password',$this->request->getPost('password'))->first();
+        $session = session();
+        $sessionData = [
+            'nombre' => $rs['nombre'],
+            'customerID' => $rs['idUsuario']
+        ];
+        $session->set($sessionData);
+        
+
+        // $usuario = array(
+        //     'datosUsuario' => 
+        // );
+
+        // //echo json_encode(["mensaje"=>"creado el registro"]);
+        $vistas= view('genericos/header',$data).
+                // view('usuario/navbarLog',).
+                view('invitado/carruselInicio').    
+                view('invitado/cardsInicio.php').
+                view('genericos/contacto.php').
+                view('genericos/footer');
+                view('inicio');
+
+        //Agregar $Session
+        return $vistas;
+        // return redirect()->back();
+		// return '<script>window.location ="'.base_url().'"</script>';
+        // return index();
+    }
+
+
+    //Este es el correcto
     public function guardar_persona(){
 
 
         // if($_POST['contrasenia2'] == $_POST["contrasenia"]){
         //     if (isset($_POST['checkbox'])) {
+
+                // $session = session();
 
                 $mregistrar=new RegistrarUsuario();
 
@@ -66,8 +121,23 @@ class RegisterController extends BaseController{
                     $correo = $_POST["correo"];
                     $generico = new RegistrarUsuario();
                     //Aqui en esta parte guardar en $_session de codeigniter 4 y recuperar, para no hacer consulta
-                    $usuario = array(
-                        'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($correo)
+                    // $usuario = array(
+                    //     'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($correo)
+                    // );
+                  
+                    $session = session();
+                    $sessionData = [
+                        'nombre' => $_POST['nombre'],
+                        'membresia'=>1,
+                        'logged_in'=>true
+                    ];
+                    $session->set($sessionData);
+
+                    //Lo que se recupera
+                     $usuario = array(
+                        'nombre' => $session->get('nombre'),
+                        'membresia'=>$session->get('membresia'),
+                        // 'logged_in'=>true
                     );
             
                     //echo json_encode(["mensaje"=>"creado el registro"]);
@@ -101,6 +171,14 @@ class RegisterController extends BaseController{
             //     return redirect()->back();
             // }
 
+        }
+
+        public function cerrarSesion(){
+            // Cerrar sesión
+            session()->remove('logged_in');
+
+            // Redirigir al usuario a la página de inicio de sesión
+            return redirect()->to('inicio');
         }
 
         

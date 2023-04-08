@@ -32,6 +32,7 @@ class Database extends Config
         'password' => '',
         //'database' => 'bd_ejemplo',
         'database' => 'tiendavideojuegos',
+        //'database' => 'ecommerce',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

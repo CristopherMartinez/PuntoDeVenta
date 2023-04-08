@@ -66,6 +66,21 @@ $routes->add('/guardar_juego','admin\AgregarJuegoController::guardar_juego');
 
 
 $routes->add('/ofertas','OfertasController::index');
+
+
+
+
+
+//pruebas 08 del 04 del 2023
+$routes->get('/cerrarSesion', 'invitado\RegisterController::cerrarSesion');
+
+// $routes->add('/ShoppingCar','ShoppingCarController::index'); //Verificar
+
+
+
+//Pruebas
+// $routes->get('/register', 'invitado\RegisterController::index');
+// $routes->post('/Registrar', 'invitado\RegisterController::Registrar');
  
 
 //Rutas agrupadas Administrador prueba

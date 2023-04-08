@@ -103,6 +103,11 @@
     <a class="text-reset fw-bold" href="#">WorldGames.com</a>
   </div>
 
+
+
+  <div><?php $session = session(); echo $session->get('nombre'); ?></div>
+
+					
 </footer>
 
 

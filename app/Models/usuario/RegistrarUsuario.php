@@ -33,6 +33,14 @@ class RegistrarUsuario extends Model
                                            WHERE usuarios.correo = ?", array($correo));
                 return $query->getResultArray();
         }
+        public function traerMembresiaPorCorreo($correo){
+                $query = $this->db->query("SELECT membresia.nombre 
+                                           FROM usuarios 
+                                           JOIN membresia ON usuarios.idMembresia = membresia.idMembresia 
+                                           WHERE usuarios.correo = ?", array($correo));
+                $row = $query->getRow();
+                return $row->nombre;
+            }
 
         public function existeUsuario($correo) {
                 $query = $this->db->query("SELECT COUNT(*) AS num_usuarios FROM usuarios WHERE correo = ?", array($correo));

@@ -8,11 +8,28 @@ use App\Controllers\BaseController;
 class GamesplayStation extends BaseController{
     
     public function index(){
+
+        // $session = session();
+        // if ($session->isStarted()) {
+        // // la sesión está iniciada
+        // } else {
+        // // la sesión no está iniciada
+        // }
+        // $session = session();
+
+        // if ($session->has('usuario')) {
+        //   // la sesión está iniciada
+        // } else {
+        //   // la sesión no está iniciada
+        // }
+        
         //$data=['titulo'=>'Videojuegos PS5'];
          $videojuegos = new Videojuegos();
         //  $data2["videojuegos"]=$videojuegos->getVideogamesAventPS5();
          //$categorias["categorias"]=$videojuegosPS5->getCategoria(); //Traer las categorias
          //$data2["videojuegos"]=$videojuegos->getAllVideogames();
+        
+
         $data2["videojuegos"]=$videojuegos->get10VideogamesPlay();
 
         $vista= view('genericos/header').

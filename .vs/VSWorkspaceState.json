@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "\\app",
+    "\\app\\Config",
+    "\\app\\Controllers",
+    "\\app\\Controllers\\invitado",
+    "\\app\\Views",
+    "\\app\\Views\\invitado",
+    "\\app\\Views\\usuario"
+  ],
+  "PreviewInSolutionExplorer": false
+}

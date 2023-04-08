@@ -6,12 +6,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll" style="padding-left: 0px;">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
+                <li class="nav-item" style="margin-left: 5px;">
                 <a class="nav-link active" aria-current="page" href="#" style="padding-left: 5px;">Nosotros</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                 <a class="nav-link" href="#" style="padding-left: 5px;">Membresias</a>
-                </li>
+                </li> -->
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 5px;">
                     Videojuegos
@@ -24,9 +24,9 @@
                     <ul>
                   </ul>  
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="padding-left: 5px;">Ofertas</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="padding-left: 5px;">Lanzamientos</a>
                 </li>  
