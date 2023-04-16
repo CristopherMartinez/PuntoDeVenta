@@ -19,35 +19,15 @@ class LoginController extends BaseController{
 
     public function verificar_login(){
 
-        // $mysqli=include_once"../Codeigniter4/app/Controllers/conexion.php";
-        // $correo=$_POST['correo'];
-        // $contrasenia=$_POST['contrasenia'];
-
-
-        // $sentencia="SELECT * FROM usuarios WHERE correo='".$correo."' AND contrasenia='".$contrasenia."'";
-        // $query=mysqli_query($mysqli,$sentencia);
-        // $existe=mysqli_num_rows($query);
-        
-        // if ($existe>0){
-            // session_start();
-            // $_SESSION['Autentificacion']="SI";
             $generico = new RegistrarUsuario();
-            // $usuario = array(
-            //     'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($correo),
-            // );
+            $generico->traerDatosUsuarioPorCorreo($_POST['correo']);
 
-            // //Guardamos datos en session
-            // $arraydata = array(
-            //     "datosUsuario" => $generico->traerDatosUsuarioPorCorreo($correo)
-            // );
-            // $this->session->set_userdata($arraydata);
-            
-            // $_SESSION['correo'] = htmlentities($correo);
+
             $session = session();
 
-            if ($session->has('nombre')) {
+            if ($session->has('usuario')) {
                 // La sesión existe, se obtienen los datos de la sesión
-                $nombre = $session->get('nombre');
+                $nombre = $session->get('usuario');
                 $membresia = $session->get('membresia');
             
                 // Se cargan los datos en la vista correspondiente
@@ -55,6 +35,7 @@ class LoginController extends BaseController{
                     "nombre" => $nombre,
                     "membresia" => $membresia
                 ];
+                //Para volver a establecer que estamos logueados al volver a iniciar sesión
                 $session->set('logged_in', true);
 
                 $vista = view('genericos/header').
@@ -70,31 +51,6 @@ class LoginController extends BaseController{
                 return redirect()->to('login');
             }
 
-            // $session = session();
-            // $nombre = $session->get('nombre');
-            // $membresia =$session->get('membresia');
-            // $arraydata = array(
-            //     "nombre" => $nombre,
-            //     "membresia"=>$membresia
-            // );
-
-            // $vista= 
-            // view('genericos/header').
-            // view('usuario/navbarLog',$arraydata).
-            // view('invitado/carruselInicio').    
-            // view('invitado/cardsInicio').
-            // view('genericos/contacto').
-            // view('invitado/image').
-            // view('genericos/footer');
-            // return $vista;
-        // }
-        // else{
-        //     $vista= 
-        //     view('genericos/header').
-        //     view('genericos/navbar').
-        //     view('genericos/login');
-        //     return $vista;
-        // }
     }
 
 }

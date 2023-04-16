@@ -192,20 +192,47 @@
             </tr>
           </thead>
           <tbody class="cart-list">
+
           </tbody>
           <tfoot>
            <tr>
-  <td>Total</td>
-  <td class="cart-total">0</td>
-  <td>
-    <button class="btn btn-danger clear-cart">Vaciar</button>
-  </td>
-</tr>
+            <td>Total</td>
+            <td class="cart-total">0</td>
+            <td>
+              <button class="btn btn-danger clear-cart">Vaciar</button>
+            </td>
+          </tr>
           </tfoot>
         </table>
+<!-- 
+        <table class="table" id="cart-table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="cart-list">
+
+          </tbody>
+          <tfoot>
+          <tr>
+            <td>Total</td>
+            <td class="cart-total">0</td>
+            <td>Cantidad</td>
+            <td>
+              <button class="btn btn-danger clear-cart">Vaciar</button>
+            </td>
+          </tr>
+          </tfoot>
+        </table> -->
+
+
       </div>
     </div>
-
+<!-- 
     <div class="row">
       <div class="col-md-8">
         <h2 class="text-center">Puzzle</h2>
@@ -273,7 +300,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </body>
 

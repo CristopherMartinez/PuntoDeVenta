@@ -1,0 +1,149 @@
+CRITICAL - 2023-04-09 18:01:38 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 145.
+ 1 APPPATH\Views\invitado\register.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(14): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 18:03:52 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 145.
+ 1 APPPATH\Views\invitado\register.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(14): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 18:07:43 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 145.
+ 1 APPPATH\Views\invitado\register.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(14): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 18:07:46 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 145.
+ 1 APPPATH\Views\invitado\register.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(14): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 18:10:22 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 145.
+ 1 APPPATH\Views\invitado\register.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(14): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 18:19:04 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 145.
+ 1 APPPATH\Views\invitado\register.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(14): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 18:20:21 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 145.
+ 1 APPPATH\Views\invitado\register.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(14): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 18:20:26 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 145.
+ 1 APPPATH\Views\invitado\register.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(14): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 18:20:31 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 145.
+ 1 APPPATH\Views\invitado\register.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(14): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 18:55:34 --> Undefined variable $validation
+in APPPATH\Views\invitado\register.php on line 75.
+ 1 APPPATH\Views\invitado\register.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\invitado\\register.php', 75)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\register.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/register', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(13): view('invitado/register')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 19:23:29 --> Undefined variable $nombreUsuarioUnico
+in APPPATH\Controllers\invitado\RegisterController.php on line 241.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(241): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombreUsuarioUnico', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 241)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 19:26:51 --> Undefined variable $nombreUsuarioUnico
+in APPPATH\Controllers\invitado\RegisterController.php on line 241.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(241): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombreUsuarioUnico', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 241)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 19:28:46 --> Undefined variable $nombreUsuarioUnico
+in APPPATH\Controllers\invitado\RegisterController.php on line 241.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(241): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombreUsuarioUnico', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 241)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 19:37:57 --> Undefined variable $nombreUsuarioUnico
+in APPPATH\Controllers\invitado\RegisterController.php on line 241.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(241): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombreUsuarioUnico', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 241)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-09 20:17:06 --> Undefined variable $games
+in APPPATH\Views\ShoppingCar.php on line 230.
+ 1 APPPATH\Views\ShoppingCar.php(230): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $games', 'APPPATH\\Views\\ShoppingCar.php', 230)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\ShoppingCar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('ShoppingCar', [], true)
+ 5 APPPATH\Controllers\ShoppingCarController.php(43): view('ShoppingCar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ShoppingCarController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

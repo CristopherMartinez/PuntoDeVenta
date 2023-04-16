@@ -27,10 +27,10 @@ class GamesplayStation extends BaseController{
          $videojuegos = new Videojuegos();
         //  $data2["videojuegos"]=$videojuegos->getVideogamesAventPS5();
          //$categorias["categorias"]=$videojuegosPS5->getCategoria(); //Traer las categorias
-         //$data2["videojuegos"]=$videojuegos->getAllVideogames();
+         $data2["videojuegos"]=$videojuegos->getAllVideogames();
         
 
-        $data2["videojuegos"]=$videojuegos->get10VideogamesPlay();
+        // $data2["videojuegos"]=$videojuegos->get10VideogamesPlay();
 
         $vista= view('genericos/header').
                 view('invitado/navbarInvitado').

@@ -8,6 +8,19 @@
 		table.dataTable tbody td {
 			color: white;
 		}
+		.dataTables_filter input[type="search"] {
+			background-color: white;
+		}
+		select {
+		color: white;
+		}
+		.dataTables_paginate .paginate_button {
+			color: white !important;
+		}
+		.dataTables_wrapper .paginate_button {
+		color: white !important;
+		}
+
 	</style>
 </head>
 

@@ -22,6 +22,7 @@
 <body> 
             <div class="col-12 m-auto backgrounFooter" style="padding-top: 15px;">
                 <div class="owl-carousel owl-theme">
+               
                     <div class="item mb-4">
                         <div class="card border-0 shadow">
                         <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
@@ -30,7 +31,6 @@
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/modermwarfare.jpeg" alt="" class="card-img-top" style="padding-top:5px;">
                             <div class="card-body">
                                 <div class="card-title text-center">
-                                    <!-- <h4>C</h4> -->
                                     <p style="font-size: 18px; color:#2e2a2a;">Call of Duty MW2 "PS4"</p>
                                     <div>
                                     <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1200</button></span>
@@ -41,6 +41,8 @@
                             </div>
                         </div>
                     </div>
+                    
+
  
                     <div class="item">
                         <div class="card border-0 shadow">
@@ -50,7 +52,6 @@
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/callofduty.jpeg"  alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
-                                    <!-- <h4>Black Ops III "XBOX ONE"</h4> -->
                                     <p style="font-size: 18px; color:#2e2a2a;">Black Ops III "XBOX ONE"</p>
                                     <div>
                                     <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1400</button></span>
@@ -67,7 +68,6 @@
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/forspoken.jpeg" alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
-                                    <!-- <h4>Forspoken "PS5"</h4> -->
                                     <p style="font-size: 18px; color:#2e2a2a;">Forspoken "PS5"</p>
                                     <div>
                                     <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1800</button></span>
@@ -84,7 +84,6 @@
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/animalcrosing.jpeg"alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
-                                    <!-- <h4>Animal Crossing "PS4"</h4> -->
                                     <p style="font-size: 18px; color:#2e2a2a;">Animal Crossing "PS4"</p>
                                     <div>
                                     <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1800</button></span>
@@ -101,7 +100,6 @@
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/frambo.jpeg" alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
-                                    <!-- <h4>FranBow "PS5"</h4> -->
                                     <p style="font-size: 18px; color:#2e2a2a;">FranBow "PS5"</p>
                                     <div>
                                     <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1600</button></span>
@@ -118,7 +116,6 @@
                         <img class="img1" src="<?php  echo base_url()?>/imagenes/sonic.jpeg" alt="" class="card-img-top">
                             <div class="card-body">
                                 <div class="card-title text-center">
-                                    <!-- <h4>Sonic the Hedgehog "PS5"</h4> -->
                                     <p style="font-size: 18px; color:#2e2a2a;">Sonic the Hedgehog "PS5"</p>
                                     <div>
                                     <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $1800</button></span>
@@ -133,8 +130,8 @@
  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-        crossorigin="anonymous"></script>
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"></script>
     <script>
         $('.owl-carousel').owlCarousel({
             loop: true,

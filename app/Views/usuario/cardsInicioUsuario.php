@@ -175,6 +175,21 @@
   </div>
 </div>
 
+<!-- <div class="pricing-table gold">
+  <h3 class="pricing-title">Gold</h3>
+  <div class="price">$100<sup>/ mes</sup></div>
+
+  <ul class="table-list">
+    <li>Acceso Ilimitado <span>por 12 meses</span></li>
+    <li>Gratis 10 <span>videojuegos</span></li>
+    <li>1 Meses <span>de demos especiales</span></li>
+    <li>6 Meses <span> de acceso a juegos online</span></li>
+    <li>Acceso a preventa especial</li>
+  </ul>
+  <div class="table-buy">
+    <a href="#" class="pricing-action">Comprar</a>
+  </div>
+</div> -->
 <div class="pricing-table gold">
   <h3 class="pricing-title">Gold</h3>
   <div class="price">$100<sup>/ mes</sup></div>
@@ -187,10 +202,15 @@
     <li>Acceso a preventa especial</li>
   </ul>
   <!-- Contratar / Comprar -->
-  <div class="table-buy">
-    <a href="#" class="pricing-action">Comprar</a>
+  <!-- <div class="table-buy">
+    <?php if ($session->has('logged_in') && $session->get('logged_in') == true): ?>
+      <a href="ShoppingCar" class="pricing-action">Comprar</a>
+    <?php else: ?>
+      <a href="register" class="pricing-action">Registrarse</a>
+    <?php endif; ?>
   </div>
-</div>
+</div> -->
+
 
 <div class="pricing-table diamond">
   <h3 class="pricing-title">Diamond</h3>

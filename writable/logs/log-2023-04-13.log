@@ -1,0 +1,23 @@
+CRITICAL - 2023-04-13 23:17:06 --> Undefined variable $contenido
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 63.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contenido', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 63)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-13 23:20:51 --> The route for "registroVideojuegos" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('registroVideojuegos')
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(76): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-13 23:21:21 --> The route for "../registroVideojuegos" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('../registroVideojuegos')
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(76): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

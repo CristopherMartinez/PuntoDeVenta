@@ -1,0 +1,185 @@
+ERROR - 2023-04-15 14:39:07 --> Error connecting to the database: mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'tiendavideojueg...', 3306, '', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\Videojuegos.php(253): CodeIgniter\Database\BaseConnection->query('SELECT nombre F...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(18): App\Models\Videojuegos->getProveedores()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Codeigniter4\app\Models\Videojuegos.php(253): CodeIgniter\Database\BaseConnection->query('SELECT nombre F...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(18): App\Models\Videojuegos->getProveedores()
+#4 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-04-15 14:39:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\Videojuegos.php(253): CodeIgniter\Database\BaseConnection->query('SELECT nombre FROM proveedor')
+ 3 APPPATH\Controllers\admin\AgregarJuegoController.php(18): App\Models\Videojuegos->getProveedores()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 15:46:07 --> Undefined array key "id"
+in APPPATH\Views\admin\registroVideojuegos.php on line 275.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(275): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 275)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(25): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 15:58:44 --> Call to a member function do_upload() on null
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 86.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(58): App\Controllers\admin\AgregarJuegoController->uploadImage()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 16:00:47 --> Call to a member function do_upload() on null
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 86.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(58): App\Controllers\admin\AgregarJuegoController->uploadImage()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 16:01:26 --> Call to a member function do_upload() on null
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 86.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(58): App\Controllers\admin\AgregarJuegoController->uploadImage()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 16:03:59 --> Call to a member function do_upload() on null
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 108.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(76): App\Controllers\admin\AgregarJuegoController->uploadImage()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 16:05:23 --> Call to a member function do_upload() on null
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 108.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(76): App\Controllers\admin\AgregarJuegoController->uploadImage()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 16:07:45 --> Call to a member function do_upload() on null
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 109.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(76): App\Controllers\admin\AgregarJuegoController->uploadImage()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 16:09:46 --> Call to a member function do_upload() on null
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 111.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(76): App\Controllers\admin\AgregarJuegoController->uploadImage()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 16:40:33 --> Unsupported operand types: string + string
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 62.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 16:52:52 --> The uploaded file has already been moved.
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 133.
+ 1 SYSTEMPATH\HTTP\Files\UploadedFile.php(133): CodeIgniter\HTTP\Exceptions\HTTPException::forAlreadyMoved()
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(64): CodeIgniter\HTTP\Files\UploadedFile->move('FCPATH\\images', 'Videojuego.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 16:54:05 --> strval() expects exactly 1 argument, 2 given
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 79.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(79): strval('FCPATH\\images', 'Videojuego.png')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 17:30:14 --> mysqli_sql_exception: Unknown column 'c.id' in 'on clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\Videojuegos.php(252): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(26): App\Models\Videojuegos->getAllVideogames()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-15 17:30:14 --> Unknown column 'c.id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\Videojuegos.php(252): CodeIgniter\Database\BaseConnection->query('
+            SELECT v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario, c.nombre AS nombreConsola
+            FROM videojuego v
+            JOIN consola c ON v.idConsola = c.id;
+        ')
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(26): App\Models\Videojuegos->getAllVideogames()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-15 17:30:20 --> mysqli_sql_exception: Unknown column 'c.id' in 'on clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Codeigniter4\app\Models\Videojuegos.php(252): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(26): App\Models\Videojuegos->getAllVideogames()
+#5 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+#6 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-04-15 17:30:20 --> Unknown column 'c.id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\Videojuegos.php(252): CodeIgniter\Database\BaseConnection->query('
+            SELECT v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario, c.nombre AS nombreConsola
+            FROM videojuego v
+            JOIN consola c ON v.idConsola = c.id;
+        ')
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(26): App\Models\Videojuegos->getAllVideogames()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 17:31:43 --> Undefined array key "idConsola"
+in APPPATH\Views\admin\registroVideojuegos.php on line 274.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(274): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idConsola"', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 274)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-15 18:16:42 --> Undefined array key "id"
+in APPPATH\Views\admin\registroVideojuegos.php on line 301.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(301): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 301)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,994 @@
+ERROR - 2023-04-16 01:45:30 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(111): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('69')
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-04-16 01:45:30 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `videojuego`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(267): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(111): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('69')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 01:45:51 --> unlink(../images/../images/FallOut4.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../images/../images/FallOut4.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 114)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(114): unlink('../images/../images/FallOut4.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('69')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 01:46:42 --> unlink(../images/FallOut4.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../images/FallOut4.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 114)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(114): unlink('../images/FallOut4.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('69')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 01:49:32 --> unlink(../images/mariokart.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../images/mariokart.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 114)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(114): unlink('../images/mariokart.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('39')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 01:53:41 --> unlink(): Invalid argument
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(): Invalid argument', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 114)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(114): unlink('C:\\xampp\\htdocs\\Codeigniter4')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('39')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 01:53:55 --> unlink(): Invalid argument
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(): Invalid argument', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 114)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(114): unlink('C:\\xampp\\htdocs\\Codeigniter4')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('39')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 01:53:58 --> unlink(): Invalid argument
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(): Invalid argument', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 114)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(114): unlink('C:\\xampp\\htdocs\\Codeigniter4')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('39')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 01:54:04 --> unlink(): Invalid argument
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(): Invalid argument', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 114)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(114): unlink('C:\\xampp\\htdocs\\Codeigniter4')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('39')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 01:54:21 --> unlink(../images/mariokart.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../images/mariokart.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 114)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(114): unlink('../images/mariokart.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('39')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 02:14:09 --> Invalid file: "admin/editarVideojuegos.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/editarVideojuegos.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuegos', [], true)
+ 3 APPPATH\Controllers\admin\AgregarJuegoController.php(132): view('admin/editarVideojuegos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 02:14:39 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 19.
+ 1 APPPATH\Views\admin\editarVideojuego.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(132): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 02:14:54 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 18.
+ 1 APPPATH\Views\admin\editarVideojuego.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(132): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 02:23:13 --> Undefined variable $categorias
+in APPPATH\Views\admin\registroVideojuegos.php on line 46.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(131): view('admin/registroVideojuegos')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:47:44 --> Undefined array key "consola"
+in APPPATH\Views\admin\editarVideojuego.php on line 52.
+ 1 APPPATH\Views\admin\editarVideojuego.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "consola"', 'APPPATH\\Views\\admin\\editarVideojuego.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(139): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:56:31 --> Cannot access offset of type string on string
+in APPPATH\Views\admin\editarVideojuego.php on line 44.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(142): view('admin/editarVideojuego', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:56:37 --> Cannot access offset of type string on string
+in APPPATH\Views\admin\editarVideojuego.php on line 44.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(142): view('admin/editarVideojuego', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:56:51 --> Cannot access offset of type string on string
+in APPPATH\Views\admin\editarVideojuego.php on line 44.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(142): view('admin/editarVideojuego', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 06:56:56 --> Cannot access offset of type string on string
+in APPPATH\Views\admin\editarVideojuego.php on line 44.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(142): view('admin/editarVideojuego', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('2')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:00:43 --> Undefined array key "Videojuego"
+in APPPATH\Views\admin\editarVideojuego.php on line 52.
+ 1 APPPATH\Views\admin\editarVideojuego.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Videojuego"', 'APPPATH\\Views\\admin\\editarVideojuego.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(142): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:10:35 --> Undefined variable $categoria
+in APPPATH\Views\admin\editarVideojuego.php on line 51.
+ 1 APPPATH\Views\admin\editarVideojuego.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categoria', 'APPPATH\\Views\\admin\\editarVideojuego.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(145): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:29:59 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 51.
+ 1 APPPATH\Views\admin\editarVideojuego.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(149): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:32:05 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 51.
+ 1 APPPATH\Views\admin\editarVideojuego.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(150): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:33:09 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 231.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 231)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:33:12 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 231.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 231)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:34:16 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 231.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 231)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:34:45 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 231.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 231)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:34:54 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 51.
+ 1 APPPATH\Views\admin\editarVideojuego.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(150): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:38:10 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 233.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 233)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:40:27 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 111.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 111)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:40:34 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 111.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 111)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:41:00 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 111.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 111)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:41:26 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 52.
+ 1 APPPATH\Views\admin\editarVideojuego.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(143): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:43:21 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 52.
+ 1 APPPATH\Views\admin\editarVideojuego.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(142): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:46:29 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 52.
+ 1 APPPATH\Views\admin\editarVideojuego.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(143): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:47:35 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 52.
+ 1 APPPATH\Views\admin\editarVideojuego.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(143): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:52:35 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 52.
+ 1 APPPATH\Views\admin\editarVideojuego.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(144): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:53:15 --> Undefined variable $categorias
+in APPPATH\Views\admin\editarVideojuego.php on line 52.
+ 1 APPPATH\Views\admin\editarVideojuego.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\editarVideojuego.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(144): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 07:53:21 --> Undefined variable $proveedores
+in APPPATH\Views\admin\editarVideojuego.php on line 53.
+ 1 APPPATH\Views\admin\editarVideojuego.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $proveedores', 'APPPATH\\Views\\admin\\editarVideojuego.php', 53)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(144): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 08:06:53 --> Unclosed '{' on line 133
+in APPPATH\Views\admin\registroVideojuegos.php on line 406.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 3 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 08:31:04 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 61.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 61)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->guardar_juego()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 08:39:28 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 162.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 162)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 08:43:14 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 162.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 162)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(30): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 14:42:13 --> Undefined variable $datos
+in APPPATH\Views\admin\registroVideojuegos.php on line 377.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(377): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 377)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(164): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 15:28:44 --> The route for "admin/editarVideojuego" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('admin/editarVideojuego')
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(170): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 15:28:51 --> The route for "admin/editarVideojuego" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('admin/editarVideojuego')
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(170): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:17:27 --> Cannot access offset of type string on string
+in APPPATH\Views\admin\editarVideojuego.php on line 133.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(164): view('admin/editarVideojuego', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:18:48 --> Undefined array key "idProveedor"
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 187.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idProveedor"', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:19:41 --> Undefined array key "idProveedor"
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 187.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idProveedor"', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:21:28 --> Undefined array key "idProveedor"
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 187.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idProveedor"', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:25:08 --> Undefined array key "nombre"
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 225.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 225)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:27:55 --> Undefined array key "idProveedor"
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 187.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(187): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idProveedor"', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 187)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-16 16:31:46 --> mysqli_sql_exception: Unknown column 'videojuego.id' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `videoju...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `videoju...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `videoju...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videoju...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(755): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(235): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-04-16 16:31:46 --> Unknown column 'videojuego.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videojuego` SET `nombre` = :nombre:, `descripcion` = :descripcion:, `precio` = :precio:, `cantidadInventario` = :cantidadInventario:, `idCategoria` = :idCategoria:, `idConsola` = :idConsola:
+WHERE `videojuego`.`id` IN :videojuego.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(235): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-16 16:39:32 --> mysqli_sql_exception: Unknown column 'videojuego.id' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `videoju...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `videoju...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `videoju...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videoju...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(755): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(235): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-04-16 16:39:32 --> Unknown column 'videojuego.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videojuego` SET `nombre` = :nombre:, `descripcion` = :descripcion:, `precio` = :precio:, `cantidadInventario` = :cantidadInventario:, `idCategoria` = :idCategoria:, `idConsola` = :idConsola:
+WHERE `videojuego`.`id` IN :videojuego.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(235): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-16 16:40:39 --> mysqli_sql_exception: Unknown column 'videojuego.id' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `videoju...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `videoju...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `videoju...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videoju...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(755): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(235): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-04-16 16:40:39 --> Unknown column 'videojuego.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videojuego` SET `nombre` = :nombre:, `descripcion` = :descripcion:, `precio` = :precio:, `cantidadInventario` = :cantidadInventario:, `idCategoria` = :idCategoria:, `idConsola` = :idConsola:
+WHERE `videojuego`.`id` IN :videojuego.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(235): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:44:53 --> Undefined array key "idVideojuego"
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 179.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 179)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:45:22 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 390.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\admin\AgregarJuegoController.php(239): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:50:07 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 390.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\admin\AgregarJuegoController.php(245): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('2')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:53:40 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 390.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\admin\AgregarJuegoController.php(303): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:54:42 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 390.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\admin\AgregarJuegoController.php(303): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:56:06 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(304): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:57:59 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(304): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 16:58:18 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(304): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar('1')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-16 17:09:03 --> mysqli_sql_exception: Unknown column 'videojuego.id' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `videoju...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `videoju...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `videoju...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videoju...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(755): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(317): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-04-16 17:09:03 --> Unknown column 'videojuego.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videojuego` SET `nombre` = :nombre:
+WHERE `videojuego`.`id` IN :videojuego.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(317): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:12:53 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(318): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:16:16 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(333): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:17:12 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(333): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-16 17:19:03 --> mysqli_sql_exception: Unknown column 'videojuego.id' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `videoju...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `videoju...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `videoju...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videoju...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(755): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(325): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-04-16 17:19:03 --> Unknown column 'videojuego.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videojuego` SET `nombre` = :nombre:
+WHERE `videojuego`.`id` IN :videojuego.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(325): CodeIgniter\Model->update('1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-16 17:19:27 --> mysqli_sql_exception: Unknown column 'videojuego.id' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `videoju...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `videoju...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `videoju...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videoju...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(755): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(325): CodeIgniter\Model->update(1, Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-04-16 17:19:27 --> Unknown column 'videojuego.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videojuego` SET `nombre` = :nombre:
+WHERE `videojuego`.`id` IN :videojuego.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(325): CodeIgniter\Model->update(1, [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:20:04 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(326): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:20:36 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(326): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:20:47 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(326): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:20:59 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\admin\AgregarJuegoController.php(326): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-16 17:21:33 --> mysqli_sql_exception: Unknown column 'videojuego.id' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `videoju...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `videoju...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `videoju...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videoju...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(755): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(325): CodeIgniter\Model->update(1, Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-04-16 17:21:33 --> Unknown column 'videojuego.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videojuego` SET `nombre` = :nombre:
+WHERE `videojuego`.`id` IN :videojuego.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(325): CodeIgniter\Model->update(1, [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-04-16 17:22:44 --> mysqli_sql_exception: Unknown column 'videojuego.id' in 'where clause' in C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `videoju...', 0)
+#1 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `videoju...')
+#2 C:\xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `videoju...')
+#3 C:\xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videoju...', Array, false)
+#4 C:\xampp\htdocs\Codeigniter4\system\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Codeigniter4\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Codeigniter4\system\Model.php(755): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Codeigniter4\app\Controllers\admin\AgregarJuegoController.php(325): CodeIgniter\Model->update(1, Array)
+#8 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+#9 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+#10 C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Codeigniter4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-04-16 17:22:44 --> Unknown column 'videojuego.id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2462): CodeIgniter\Database\BaseConnection->query('UPDATE `videojuego` SET `nombre` = :nombre:
+WHERE `videojuego`.`id` IN :videojuego.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(395): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(325): CodeIgniter\Model->update(1, [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:34:02 --> The route for "admin/editarVideojuego" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('admin/editarVideojuego')
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(334): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:36:10 --> The route for "editar/1" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('editar/1')
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(334): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:42:03 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\editarVideojuego.php on line 2.
+ 1 APPPATH\Views\admin\editarVideojuego.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\editarVideojuego.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\EditarVideojuegoController.php(21): view('admin/editarVideojuego')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\EditarVideojuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\EditarVideojuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:52:12 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 336.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(336): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 336)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 17:59:37 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 336.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(336): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 336)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 18:00:06 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 336.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(336): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 336)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 18:00:16 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 336.
+ 1 APPPATH\Controllers\admin\AgregarJuegoController.php(336): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type bool', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 336)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 18:05:17 --> Undefined variable $validacion
+in APPPATH\Views\admin\editarVideojuego.php on line 64.
+ 1 APPPATH\Views\admin\editarVideojuego.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validacion', 'APPPATH\\Views\\admin\\editarVideojuego.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\editarVideojuego.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/editarVideojuego', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(161): view('admin/editarVideojuego', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 18:32:30 --> Undefined array key "id"
+in APPPATH\Views\admin\registroVideojuegos.php on line 93.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(25): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 18:32:47 --> Undefined array key "id"
+in APPPATH\Views\admin\registroVideojuegos.php on line 93.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(25): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 18:32:51 --> Undefined array key "id"
+in APPPATH\Views\admin\registroVideojuegos.php on line 93.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 93)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(25): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 18:40:45 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 151.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 151)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(25): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-16 20:38:16 --> Undefined variable $videojuegos
+in APPPATH\Views\invitado\cardsInicio.php on line 25.
+ 1 APPPATH\Views\invitado\cardsInicio.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuegos', 'APPPATH\\Views\\invitado\\cardsInicio.php', 25)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(15): view('invitado/cardsInicio.php')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

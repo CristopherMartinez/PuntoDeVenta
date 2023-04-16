@@ -79,7 +79,7 @@
                         <div class="card mb-3 backgroundGamesPlay" style="max-width: auto; border-radius:5px;">
                             <div class="row g-0">
                                 <div class="col-md-4 align-self-center">
-                                    <img src="<?php echo base_url()?>/imagenes/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px;" alt="...">
+                                    <img src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px;" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">

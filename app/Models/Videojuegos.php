@@ -6,9 +6,9 @@ USE CodeIgniter\Model;
 class Videojuegos extends Model
 {
     protected $table = 'videojuego';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'idVideojuego';
     protected $returnType = 'array';
-    protected $allowedFields = ['nombre','descripcion','imagen','precio','cantidadInventario','idCategoria','idConsola'];
+    protected $allowedFields = ['idVideojuego','nombre','descripcion','imagen','precio','cantidadInventario','idCategoria','idConsola'];
     
     //Para traer los videojuegos de PS5
     public function getVideogamesAventPS5(){
@@ -244,8 +244,15 @@ class Videojuegos extends Model
     }
 
     //Funcion para traer todos los videojuegos para mostrar en modo Admin
-    public function getAllVideogames(){
-        $query=$this->db->query("SELECT nombre,descripcion,imagen,precio,cantidadInventario FROM videojuego");
+    // public function getAllVideogames(){
+    //     $query=$this->db->query("SELECT nombre,descripcion,imagen,precio,cantidadInventario,idConsola FROM videojuego ");
+    //     return $query->getResultArray();
+    // }
+     public function getAllVideogames(){
+        $query=$this->db->query("SELECT v.idVideojuego, v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario, c.nombre as consola
+        FROM videojuego v
+        INNER JOIN consola c ON v.idConsola = c.idConsola
+        ");
         return $query->getResultArray();
     }
 
@@ -287,6 +294,17 @@ class Videojuegos extends Model
         $result = $query->getRow();
         return $result ? $result->nombre : '';
     }
+    public function getProveedorWithId($idProveedor){
+        $query = $this->db->query("SELECT nombre FROM proveedor WHERE idProveedor = ?", [$idProveedor]);
+        $result = $query->getRow();
+        return $result ? $result->nombre : '';
+    }
+    public function getCategoriaWithId($idCategoria){
+        $query = $this->db->query("SELECT nombre FROM categoria WHERE idCategoria = ?", [$idCategoria]);
+        $result = $query->getRow();
+        return $result ? $result->nombre : '';
+    }
+
     
 
 

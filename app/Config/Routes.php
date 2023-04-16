@@ -59,7 +59,6 @@ $routes->add('/admin/inicio','admin\AdminController::index');
 $routes->add('/admin/registroVideojuegos','admin\AgregarJuegoController::index');
 $routes->add('/admin/registroAdmin','admin\RegistroAdminController::index');
 $routes->add('/ShoppingCar','ShoppingCarController::index'); //Verificar
-
 //Guardado
 $routes->add('/guardar_admin','admin\RegistroAdminController::guardar_admin');
 $routes->add('/guardar_juego','admin\AgregarJuegoController::guardar_juego');
@@ -68,6 +67,12 @@ $routes->add('/guardar_juego','admin\AgregarJuegoController::guardar_juego');
 $routes->add('/ofertas','OfertasController::index');
 
 
+//Administrador BorrarJuego
+$routes->get('/borrar/(:num)','admin\AgregarJuegoController::borrar/$1');
+//Editar Juego
+$routes->get('/editar/(:num)','admin\AgregarJuegoController::editar/$1');
+//Actualizar
+$routes->post('/actualizar','admin\AgregarJuegoController::actualizar');
 
 
 

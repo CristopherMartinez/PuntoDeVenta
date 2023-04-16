@@ -7,85 +7,218 @@ use CodeIgniter\Exceptions\AlertError;
 
 class RegisterController extends BaseController{
     
-    
     public function index(){
         $vista= view('genericos/navbar').
                 view('genericos/header').
                 view('invitado/register');
-        
-
         return $vista;
     }
+
+    protected $validation;
+
+    // public function guardar_persona1()
+    // {
+    //     // Cargar librerías y helpers
+    //     helper(['form', 'url']);
+    //     $this->validation = \Config\Services::validation();
+
+    //     // Definir reglas de validación
+    //     $this->validation->setRules([
+    //         'nombre' => 'required|min_length[3]',
+    //         'apellidos' => 'required|min_length[3]',
+    //         'correo' => 'required|valid_email',
+    //         'direccion' => 'required',
+    //         'telefono' => 'required',
+    //         'contrasenia' => 'required|min_length[6]',
+    //     ]);
+
+    //     // Validar campos del formulario
+    //     if (!$this->validation->withRequest($this->request)->run()) {
+    //         // Si la validación falla, mostrar errores en la vista
+    //         $data = [
+    //             'validation' => $this->validation,
+    //         ];
+    //         return view('formulario', $data);
+    //     }
+    //     // Si la validación es exitosa, procesar los datos del formulario
+    //     $mregistrar=new RegistrarUsuario();
+
+    //     if (isset($_POST['correo'])) {
+    //         $texto = $_POST['correo'];
+        
+    //         // Utilizar la función substr() para extraer las primeras 5 letras de la variable $texto
+    //         $primerasCincoLetras = substr($texto, 0, 5);
+    //         $numeroAleatorio = mt_rand(1000, 9999);
+    //         $nombreUsuarioUnico = substr(strtolower($primerasCincoLetras), 0, 5) . $numeroAleatorio;
+            
+    //         while($mregistrar->verificarNombreUsuarioUnico($nombreUsuarioUnico) == True) {
+    //             $numeroAleatorio = mt_rand(1000, 9999);
+    //             $nombreUsuarioUnico = substr(strtolower($primerasCincoLetras), 0, 5) . $numeroAleatorio;
+    //         }
+    //     }
+
+        
+    //     $data = [
+    //         "usuario"=>$nombreUsuarioUnico,
+    //         "nombre"=>$_POST["nombre"],
+    //         "apellidos"=>$_POST["apellidos"],
+    //         "correo"=>$_POST["correo"],
+    //         "direccion"=>$_POST["direccion"],
+    //         "telefono"=>$_POST["telefono"],
+    //         "contrasenia"=>$_POST["contrasenia"]
+    //     ];
+
+    //     if( $mregistrar->existeUsuario($_POST["correo"]) == False){
+
+    //         $mregistrar->insert($data);
+
+    //         $correo = $_POST["correo"];
+    //         $generico = new RegistrarUsuario();
+    //         //Aqui en esta parte guardar en $_session de codeigniter 4 y recuperar, para no hacer consulta
+    //         // $usuario = array(
+    //         //     'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($correo)
+    //         // );
+          
+    //         $session = session();
+    //         $sessionData = [
+    //             'nombre' => $_POST['nombre'],
+    //             'membresia'=>1,
+    //             'logged_in'=>true
+    //         ];
+    //         $session->set($sessionData);
+
+    //         //Lo que se recupera
+    //          $usuario = array(
+    //             'nombre' => $session->get('nombre'),
+    //             'membresia'=>$session->get('membresia'),
+    //             // 'logged_in'=>true
+    //         );
     
-    // public function envio_post(){
-    //     $valor1=$_POST["nombre"];
-    //     $valor2=$_POST["apellidos"];
-    //     $valor3=$_POST["correo"];
-    //     $valor4=$_POST["direccion"];
-    //     $valor5=$_POST["telefono"];
-    //     $valor6=$_POST["contrasenia"];
-    //     echo $valor1."<br>".$valor2."<br>".$valor3."<br>".$valor4."<br>".$valor5."<br>".$valor6;
+    //         //echo json_encode(["mensaje"=>"creado el registro"]);
+    //         $vistas= view('genericos/header',$data).
+    //                 view('usuario/navbarLog',$usuario).
+    //                 view('invitado/carruselInicio').    
+    //                 view('invitado/cardsInicio.php').
+    //                 view('genericos/contacto.php').
+    //                 view('genericos/footer');
+    //                 // view('inicio');
+
+    //         //Agregar $Session
+    //         return $vistas;
+    //     }else{
+    //         //Existe el usuario Falta mostrar mensaje 
+    //          return redirect()->back();
+    //     }
+    // }
+
+    // public function guardar_persona(){
+    //     // Recibir datos del formulario
+    //     $nombre = $this->request->getPost('nombre');
+    //     $apellidos = $this->request->getPost('apellidos');
+    //     $correo = $this->request->getPost('correo');
+    //     $direccion = $this->request->getPost('direccion');
+    //     $telefono = $this->request->getPost('telefono');
+    //     $contrasenia = $this->request->getPost('contrasenia');
+    //     $repite_contrasenia = $this->request->getPost('repite-contrasenia');
+
+    //     // Validar campos del formulario
+    //     $validation = \Config\Services::validation();
+
+    //     $validation->setRules([
+    //         'nombre' => 'required',
+    //         'apellidos' => 'required',
+    //         'correo' => 'required|valid_email',
+    //         'direccion' => 'required',
+    //         'telefono' => 'required',
+    //         'contrasenia' => 'required|min_length[8]',
+    //         'repite-contrasenia' => 'required|matches[contrasenia]',
+    //         'checkbox' => 'required',
+    //         'g-recaptcha-response' => 'required'
+    //     ]);
+
+    //     if (!$validation->run($this->request->getPost())) {
+    //         // Mostrar errores de validación en la vista
+    //         $data['validation'] = $validation;
+    //         $vista= view('genericos/navbar').
+    //             view('genericos/header').
+    //             view('invitado/register',$data);
+    //         return $vista;
+    //     }
+
+    //     // Guardar persona en la base de datos
+    //     $mregistrar=new RegistrarUsuario();
+
+    //     if (isset($_POST['correo'])) {
+    //         $texto = $_POST['correo'];
+        
+    //         // Utilizar la función substr() para extraer las primeras 5 letras de la variable $texto
+    //         $primerasCincoLetras = substr($texto, 0, 5);
+    //         $numeroAleatorio = mt_rand(1000, 9999);
+    //         $nombreUsuarioUnico = substr(strtolower($primerasCincoLetras), 0, 5) . $numeroAleatorio;
+            
+    //         while($mregistrar->verificarNombreUsuarioUnico($nombreUsuarioUnico) == True) {
+    //             $numeroAleatorio = mt_rand(1000, 9999);
+    //             $nombreUsuarioUnico = substr(strtolower($primerasCincoLetras), 0, 5) . $numeroAleatorio;
+    //         }
+    //     }
+
+        
+    //     $data = [
+    //         "usuario"=>$nombreUsuarioUnico,
+    //         "nombre"=>$nombre,
+    //         "apellidos"=>$apellidos,
+    //         "correo"=>$correo,
+    //         "direccion"=>$direccion,
+    //         "telefono"=>$telefono,
+    //         "contrasenia"=>$contrasenia
+    //     ];
+
+    //     if( $mregistrar->existeUsuario($_POST["correo"]) == False){
+
+    //         $mregistrar->insert($data);
+
+    //         $correo = $_POST["correo"];
+    //         $generico = new RegistrarUsuario();
+    //         //Aqui en esta parte guardar en $_session de codeigniter 4 y recuperar, para no hacer consulta
+    //         // $usuario = array(
+    //         //     'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($correo)
+    //         // );
+          
+    //         $session = session();
+    //         $sessionData = [
+    //             'nombre' => $_POST['nombre'],
+    //             'membresia'=>1,
+    //             'logged_in'=>true
+    //         ];
+    //         $session->set($sessionData);
+
+    //         //Lo que se recupera
+    //          $usuario = array(
+    //             'nombre' => $session->get('nombre'),
+    //             'membresia'=>$session->get('membresia'),
+    //             // 'logged_in'=>true
+    //         );
+    
+    //         //echo json_encode(["mensaje"=>"creado el registro"]);
+    //         $vistas= view('genericos/header',$data).
+    //                 view('usuario/navbarLog',$usuario).
+    //                 view('invitado/carruselInicio').    
+    //                 view('invitado/cardsInicio.php').
+    //                 view('genericos/contacto.php').
+    //                 view('genericos/footer');
+    //                 // view('inicio');
+
+    //         //Agregar $Session
+    //         return $vistas;
+    //     }else{
+    //         //Existe el usuario Falta mostrar mensaje 
+    //          return redirect()->back();
+    //     }
 
     // }
 
-    //Test
-    public function Registrar(){
-        $user_model = new UserModel();
-        $kq = $user_model->get_email($this->request->getPost('correo'));
-        if($kq){  
-            // return '<script>alert("The email address has been used");
-            // window.location ="'.base_url().'/signup";
-            // </script>';
-            
-            return redirect()->back();
-        }
-        $data=[
-			'nombre'=>$this->request->getPost('nombre'),
-			'correo'=>$this->request->getPost('correo'),
-			'password'=>$this->request->getPost('password'),
-            'direccion'=>$this->request->getPost('direccion'),
-			'rol'=>2
-		];
-        
-		$user_model->insert($data);
-        $rs = $user_model->where('correo',$this->request->getPost('correo'))->where('password',$this->request->getPost('password'))->first();
-        $session = session();
-        $sessionData = [
-            'nombre' => $rs['nombre'],
-            'customerID' => $rs['idUsuario']
-        ];
-        $session->set($sessionData);
-        
-
-        // $usuario = array(
-        //     'datosUsuario' => 
-        // );
-
-        // //echo json_encode(["mensaje"=>"creado el registro"]);
-        $vistas= view('genericos/header',$data).
-                // view('usuario/navbarLog',).
-                view('invitado/carruselInicio').    
-                view('invitado/cardsInicio.php').
-                view('genericos/contacto.php').
-                view('genericos/footer');
-                view('inicio');
-
-        //Agregar $Session
-        return $vistas;
-        // return redirect()->back();
-		// return '<script>window.location ="'.base_url().'"</script>';
-        // return index();
-    }
-
-
     //Este es el correcto
     public function guardar_persona(){
-
-
-        // if($_POST['contrasenia2'] == $_POST["contrasenia"]){
-        //     if (isset($_POST['checkbox'])) {
-
-                // $session = session();
 
                 $mregistrar=new RegistrarUsuario();
 
@@ -104,38 +237,39 @@ class RegisterController extends BaseController{
                 }
  
                 
+                $contrasenia_cifrada = password_hash($_POST["contrasenia"], PASSWORD_DEFAULT);
+
                 $data = [
-                    "usuario"=>$nombreUsuarioUnico,
-                    "nombre"=>$_POST["nombre"],
-                    "apellidos"=>$_POST["apellidos"],
-                    "correo"=>$_POST["correo"],
-                    "direccion"=>$_POST["direccion"],
-                    "telefono"=>$_POST["telefono"],
-                    "contrasenia"=>$_POST["contrasenia"]
+                    "usuario" => $nombreUsuarioUnico,
+                    "nombre" => $_POST["nombre"],
+                    "apellidos" => $_POST["apellidos"],
+                    "correo" => $_POST["correo"],
+                    "direccion" => $_POST["direccion"],
+                    "telefono" => $_POST["telefono"],
+                    "contrasenia" => $contrasenia_cifrada
                 ];
 
                 if( $mregistrar->existeUsuario($_POST["correo"]) == False){
 
                     $mregistrar->insert($data);
         
-                    $correo = $_POST["correo"];
                     $generico = new RegistrarUsuario();
                     //Aqui en esta parte guardar en $_session de codeigniter 4 y recuperar, para no hacer consulta
-                    // $usuario = array(
-                    //     'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($correo)
-                    // );
+                    $usuario = array(
+                        'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($_POST["correo"])
+                    );
                   
                     $session = session();
                     $sessionData = [
-                        'nombre' => $_POST['nombre'],
-                        'membresia'=>1,
+                        'usuario' => $nombreUsuarioUnico,
+                        'membresia'=>"Prueba",
                         'logged_in'=>true
                     ];
                     $session->set($sessionData);
 
                     //Lo que se recupera
                      $usuario = array(
-                        'nombre' => $session->get('nombre'),
+                        'nombre' => $session->get('usuario'),
                         'membresia'=>$session->get('membresia'),
                         // 'logged_in'=>true
                     );
@@ -155,22 +289,6 @@ class RegisterController extends BaseController{
                     //Existe el usuario Falta mostrar mensaje 
                      return redirect()->back();
                 }
-
-                // return redirect()->back();
-
-
-
-            //   } else {
-            //     //Poner mensaje de que no ha marcado el checkbox
-            //     return redirect()->back();
-            //   }
-              
-        
-            // }else{
-            //     //Poner aviso de la contraseña no es correcta
-            //     return redirect()->back();
-            // }
-
         }
 
         public function cerrarSesion(){
@@ -181,6 +299,7 @@ class RegisterController extends BaseController{
             return redirect()->to('inicio');
         }
 
+        
         
 
     
