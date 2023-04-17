@@ -29,10 +29,10 @@
                 <a class="nav-link" href="inicio">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="registroVideojuegos">Videojuegos</a>
+                <a class="nav-link" href="<?php echo base_url()?>/admin/registroVideojuegos">Videojuegos</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="registroAdmin">Administradores</a>
+                <a class="nav-link" href="<?php echo base_url()?>/admin/registroAdmin">Administradores</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="listaPedidos">Pedidos</a>

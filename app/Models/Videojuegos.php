@@ -34,7 +34,7 @@ class Videojuegos extends Model
     }
     //Obtenemos los primeros 10 videojuegos de PlayStation Especificando los id de Consolas para mostrar en gamesplayStation 
     public function get10VideogamesPlay(){
-        $query = $this->db->query("SELECT nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (1, 2, 3) LIMIT 10");
+        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (1, 2, 3) LIMIT 10");
         return $query->getResultArray();
     }
 
@@ -228,7 +228,11 @@ class Videojuegos extends Model
 
 
     public function get10VideogamesXBOX(){
-        $query = $this->db->query("SELECT nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (4, 5, 6) LIMIT 10");
+        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (4, 5, 6) LIMIT 10");
+        return $query->getResultArray();
+    }
+    public function getAllVideogamesXbox(){
+        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (4, 5, 6)");
         return $query->getResultArray();
     }
     public function getConsolasXbox(){

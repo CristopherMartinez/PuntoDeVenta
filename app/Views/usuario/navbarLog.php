@@ -1,3 +1,9 @@
+<?php 
+
+// echo json_encode($_SESSION);
+// print_r($_SESSION);
+?>
+
 
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -12,7 +18,7 @@
 </style>
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary letraNavbar">
-        <a class="navbar-brand" href="#" style="padding-left:5px;"><img src="<?php  echo base_url()?>/imagenes/logoWorld.png" class="logoWorld"></a>
+        <a class="navbar-brand" href="<?php echo base_url()?>/inicio" style="padding-left:5px;"><img src="<?php  echo base_url()?>/imagenes/logoWorld.png" class="logoWorld"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,11 +77,8 @@
               <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
 
                  <div style="margin-left: 100px; margin-top:15px;">
-                    
-                      Usuario: <?= $nombre ?>
-                      <br>
-                      Membresía: <? $membresia ?>
-                    
+                 <span style="color: white;">Usuario:<?= $_SESSION['usuario'];?></span>
+                 <span style="color: white;">Membresia: <?= $_SESSION['datosUsuario'][0]['nombre'];?></span>
                   </div>
                  
                  

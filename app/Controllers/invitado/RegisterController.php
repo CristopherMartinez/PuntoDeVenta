@@ -4,6 +4,8 @@ use App\Models\usuario\RegistrarUsuario;
 use App\Controllers\BaseController;
 use App\Models\usuario\UserModel;
 use CodeIgniter\Exceptions\AlertError;
+use App\Models\Videojuegos;
+
 
 class RegisterController extends BaseController{
     
@@ -221,6 +223,9 @@ class RegisterController extends BaseController{
     public function guardar_persona(){
 
                 $mregistrar=new RegistrarUsuario();
+                $videojuego = new Videojuegos();
+                $data2["videojuegos"]=$videojuego->get10VideogamesPlay();
+    
 
                 if (isset($_POST['correo'])) {
                     $texto = $_POST['correo'];
@@ -254,31 +259,19 @@ class RegisterController extends BaseController{
                     $mregistrar->insert($data);
         
                     $generico = new RegistrarUsuario();
-                    //Aqui en esta parte guardar en $_session de codeigniter 4 y recuperar, para no hacer consulta
-                    $usuario = array(
-                        'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($_POST["correo"])
-                    );
-                  
+
                     $session = session();
                     $sessionData = [
                         'usuario' => $nombreUsuarioUnico,
-                        'membresia'=>"Prueba",
+                        'datosUsuario'=>$generico->traerDatosUsuarioPorCorreo($_POST["correo"]),
                         'logged_in'=>true
                     ];
                     $session->set($sessionData);
 
-                    //Lo que se recupera
-                     $usuario = array(
-                        'nombre' => $session->get('usuario'),
-                        'membresia'=>$session->get('membresia'),
-                        // 'logged_in'=>true
-                    );
-            
-                    //echo json_encode(["mensaje"=>"creado el registro"]);
                     $vistas= view('genericos/header',$data).
-                            view('usuario/navbarLog',$usuario).
+                            view('usuario/navbarLog').
                             view('invitado/carruselInicio').    
-                            view('invitado/cardsInicio.php').
+                            view('invitado/cardsInicio.php',$data2).
                             view('genericos/contacto.php').
                             view('genericos/footer');
                             // view('inicio');

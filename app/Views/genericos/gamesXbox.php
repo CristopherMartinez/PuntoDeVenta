@@ -1,3 +1,7 @@
+<!-- 
+<?php 
+print_r($videojuegosXbox)
+?> -->
 
 <head>
     <style>
@@ -6,19 +10,19 @@
         list-style:none;
         padding-left: 10px;
         cursor: hand;
-    }
-    .backgroundGamesPlay{
-        background-image: url("<?php  echo base_url()?>/imagenes/fondoPlay8.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+        }
+        .backgroundGamesPlay{
+            background-image: url("<?php  echo base_url()?>/imagenes/fondoPlay8.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-    .submenu {
-        display: none;
-    }
-    .visible {
-        display: block;
-    }
+        .submenu {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
 
             .accordion {
             display: flex;
@@ -49,12 +53,10 @@
     </style>
     <!-- CSS de Bootstrap -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.4/css/bootstrap.min.css">
-
-
 </head>
 
-
-<div class="backgrounFooter">
+<body class="backgrounFooter">
+<div >
     <div class="container " style="padding-top: 30px; padding-bottom:30px;">
     <div class="row" style="background-color: #a2aab8;">
         <div class="col-xl-3 col-sm-12" style="background-color:transparent;">
@@ -62,8 +64,10 @@
                 <br>
                 <div class="col-xl-12" style="background-color: transparent; margin-top:30px;">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit" style="padding-left: 5px;">Buscar</button>
+                        <!-- <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="searchInput">
+                        <button class="btn btn-outline-success" type="submit" style="padding-left: 5px;" onclick="buscar()">Buscar</button> -->
+                        <input  type="search" id="searchInput" aria-label="Search"  class="form-control" placeholder="Buscar">
+                        <button class="btn btn-outline-success" type="button" style="margin-left: 10px;" onclick="buscar()">Buscar</button>     
                     </form>
 
                         <!--Xbox One Series S-->
@@ -111,11 +115,10 @@
                                 <?php } ?>
                             </ul>
                         </div>
+                     
                 </div>
             </div>
         </div>
-
-        
 
         <div class="col-xl-9 col-sm-12"  style="background-color: transparent; ">
             <div class="row">
@@ -129,11 +132,14 @@
                                 <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title" style="color:whitesmoke;"><?php echo $juego['nombre'] ?></h5>
+                                        <!--Id del videojuego (no borrar)-->
+                                        <p class="card-text"  style="color:whitesmoke;" hidden><?php echo $juego['idVideojuego'] ?></p>
                                         <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['descripcion'] ?></p>
+                                        
                                         <p class="card-text">
                                            
                                             <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:whitesmoke; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
-                                            <span class="col-6 col-sm-6 col-xl-4"><button type="button" class="btn btn-outline-primary" style="margin-top:10px; margin-left:5px; font-weight:bolder;">Comprar</button></span>
+                                            <!-- <span class="col-6 col-sm-6 col-xl-4"><button type="button" class="btn btn-outline-primary" style="margin-top:10px; margin-left:5px; font-weight:bolder;">Comprar</button></span> -->
                                             <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
                                         </p>
                                     </div>
@@ -142,10 +148,16 @@
                         </div>
                     </div>
                 <?php } ?>
+                <div id="noResults" style="display:none;">No se encontraron resultados de la busqueda.</div>
             </div>
         </div>
+       
+
+
     </div>
 </div>
+</body>
+
 
 
 <script>
@@ -168,6 +180,70 @@
     });
 
 </script>
+
+<script>
+    //     // Obtener los elementos de la página
+    // const searchInput = document.getElementById('searchInput');
+    // const cards = document.querySelectorAll('.card');
+
+    // // Agregar un evento de entrada al campo de búsqueda
+    // searchInput.addEventListener('input', function(event) {
+    //     const searchTerm = event.target.value.toLowerCase();
+
+    //     // Recorrer todas las tarjetas y ocultar aquellas que no coincidan con el término de búsqueda
+    //     cards.forEach(function(card) {
+    //     const title = card.querySelector('.card-title').textContent.toLowerCase();
+    //     const description = card.querySelector('.card-text:not([hidden])').textContent.toLowerCase();
+    //     const matches = title.includes(searchTerm) || description.includes(searchTerm);
+    //     card.style.display = matches ? 'block' : 'none';
+    //     });
+    // });
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+    const noResults = document.getElementById('noResults');
+
+    searchInput.addEventListener('input', function(event) {
+        const searchTerm = event.target.value.toLowerCase();
+        let foundMatch = false;
+
+        cards.forEach(function(card) {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            const description = card.querySelector('.card-text:not([hidden])').textContent.toLowerCase();
+            const matches = title.includes(searchTerm) || description.includes(searchTerm);
+            card.style.display = matches ? 'block' : 'none';
+
+            if(matches){
+                foundMatch = true;
+            }
+        });
+
+        if(!foundMatch){
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
+    });
+
+
+
+
+  function buscar() {
+    // Obtener los elementos de la página
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+
+    const searchTerm = searchInput.value.toLowerCase();
+
+    // Recorrer todas las tarjetas y ocultar aquellas que no coincidan con el término de búsqueda
+    cards.forEach(function(card) {
+      const title = card.querySelector('.card-title').textContent.toLowerCase();
+      const description = card.querySelector('.card-text:not([hidden])').textContent.toLowerCase();
+      const matches = title.includes(searchTerm) || description.includes(searchTerm);
+      card.style.display = matches ? 'block' : 'none';
+    });
+  }
+</script>
+
 
 
 

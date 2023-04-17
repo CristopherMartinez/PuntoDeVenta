@@ -25,8 +25,12 @@ print_r($videojuegos)
 
 
 	</style>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.11.5/pagination/simple_numbers_no_ellipses.js"></script>
+	
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -41,8 +45,8 @@ print_r($videojuegos)
 									</script>
 			<?php } ?>	
 
-			<div class="modal-dialog" style="margin-bottom: 100px; margin-top: -630px;">
-				<div class="modal-content">
+			<div class="modal-dialog" style="margin-bottom: 100px; margin-top: -600px;">
+				<div class="modal-content" >
 				<div class="modal-header">
 					<h5 class="modal-title" id="miModalLabel" style="color:black;">Actualizar Videojuego</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

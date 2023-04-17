@@ -14,6 +14,7 @@ class GamesXboxController extends BaseController{
         $data2["videojuegosXbox"]=$videojuegos->get10VideogamesXBOX();
         $consolas['consolasXbox']=$videojuegos->getConsolasXbox();
 
+
         //XBOX ONE SERIES S (XboxOneSS)
         $cantidadjuegosXboxOneSS = [
             (object) ['identificador' => 'Xbox One SS', 'valor' => $videojuegos->getTotalGamesXboxOneSS()],
@@ -71,7 +72,7 @@ class GamesXboxController extends BaseController{
 
 
         $data =  array(
-            'videojuegosXbox' => $videojuegos->get10VideogamesXBOX(),
+            'videojuegosXbox' => $videojuegos->getAllVideogamesXbox(),
             'consolasXbox' => $videojuegos->getConsolasXbox(),
             'categorias' => $videojuegos->getCategoria(),
             //Xbox One SS
@@ -86,6 +87,22 @@ class GamesXboxController extends BaseController{
 
     
         );
+        // $data =  array(
+        //     'videojuegosXbox' => $videojuegos->get10VideogamesXBOX(),
+        //     'consolasXbox' => $videojuegos->getConsolasXbox(),
+        //     'categorias' => $videojuegos->getCategoria(),
+        //     //Xbox One SS
+        //     'listaVideojuegos'=>$cantidadjuegosXboxOneSS,
+        //     'totalGAventuraXboxSS'=>$cantidadPorGeneroXBOXSS,
+        //     //Xbox One X
+        //     'XboxOneX'=>$CantidadXboxOneX,
+        //     'CantGeneroXboxX'=>$CantidadGeneroXboxX,
+        //     //Xbox One S
+        //     'XboxOneS'=>$CantidadXboxOneS,
+        //     'CantGeneroXboxS'=>$CantidadGeneroXboxS
+
+    
+        // );
 
 
         $vista= view('genericos/header').

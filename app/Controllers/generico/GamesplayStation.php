@@ -40,34 +40,31 @@ class GamesplayStation extends BaseController{
         return $vista;
     }
 
-      
+    // public function guardarVideojuego(){
+    //     $data = [
+    //         // "idProveedor" => $_POST['idProveedor'],
+    //         "nombre" => $_POST['nombre'],
+    //         "descripcion" => $_POST['descripcion'],
+    //         "imagen" => $_POST['imagen'],
+    //         "precio" => $_POST['precio'],
+    //         "cantidadInventario" => $_POST['cantidadInventario'],
+    //         // $idCategoria = $_POST['idCategoria'],
+    //         // $idConsola = $_POST['idConsola']
+    //     ];
 
-    public function guardarVideojuego(){
-        $data = [
-            // "idProveedor" => $_POST['idProveedor'],
-            "nombre" => $_POST['nombre'],
-            "descripcion" => $_POST['descripcion'],
-            "imagen" => $_POST['imagen'],
-            "precio" => $_POST['precio'],
-            "cantidadInventario" => $_POST['cantidadInventario'],
-            // $idCategoria = $_POST['idCategoria'],
-            // $idConsola = $_POST['idConsola']
-        ];
+    //       $videoRegistrar=new Videojuegos();
+    //     // $mregistrar->insert($data);
 
-          $videoRegistrar=new Videojuegos();
-        // $mregistrar->insert($data);
+    //     //Este es el primer metodo de insercion
+    //     if($videoRegistrar->insert($data)==false){
+    //         //var_dump proporcina informacion sobre el tamaño del array o los elementos que lo componen
+    //        var_dump($videoRegistrar->errors());
+    //     }
 
-        //Este es el primer metodo de insercion
-        if($videoRegistrar->insert($data)==false){
-            //var_dump proporcina informacion sobre el tamaño del array o los elementos que lo componen
-           var_dump($videoRegistrar->errors());
-        }
+    //     //Este es el segundo metodo de insercion
+    //     // $mregistrar->guardar_persona($data);
 
-        //Este es el segundo metodo de insercion
-        // $mregistrar->guardar_persona($data);
+    //     return redirect()->back(); //para regresar a pagina anterior 
 
-        return redirect()->back(); //para regresar a pagina anterior 
-
-    }
-
+    // }
 }

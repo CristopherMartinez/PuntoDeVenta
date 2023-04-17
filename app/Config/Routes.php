@@ -67,12 +67,17 @@ $routes->add('/guardar_juego','admin\AgregarJuegoController::guardar_juego');
 $routes->add('/ofertas','OfertasController::index');
 
 
-//Administrador BorrarJuego
+//Administrador Videojuegos
 $routes->get('/borrar/(:num)','admin\AgregarJuegoController::borrar/$1');
 //Editar Juego
 $routes->get('/editar/(:num)','admin\AgregarJuegoController::editar/$1');
 //Actualizar
 $routes->post('/actualizar','admin\AgregarJuegoController::actualizar');
+
+
+// $routes->add('/cardsInicio','generico\CardsInicio::index');
+
+
 
 
 

@@ -1,0 +1,224 @@
+CRITICAL - 2023-04-17 15:48:09 --> Undefined variable $Videojuego
+in APPPATH\Views\invitado\cardsInicio.php on line 2.
+ 1 APPPATH\Views\invitado\cardsInicio.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\invitado\\cardsInicio.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(20): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 15:48:21 --> Undefined variable $Videojuego
+in APPPATH\Views\invitado\cardsInicio.php on line 2.
+ 1 APPPATH\Views\invitado\cardsInicio.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\invitado\\cardsInicio.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(20): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 15:50:55 --> Invalid file: "invitado/cardsIncio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/cardsIncio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsIncio', [], true)
+ 3 APPPATH\Controllers\generico\CardsInicio.php(21): view('invitado/cardsIncio', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\CardsInicio->obtenerCardsInicio()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\CardsInicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 15:54:45 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\generico\CardsInicio.php on line 28.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\generico\\CardsInicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\generico\\CardsInicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\generico\\CardsInicio')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\generico\\CardsInicio', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 15:55:02 --> Invalid file: "invitado/cardsIncio.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/cardsIncio.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsIncio', [], true)
+ 3 APPPATH\Controllers\generico\CardsInicio.php(21): view('invitado/cardsIncio')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\CardsInicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\CardsInicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 15:58:28 --> Undefined array key "titulo"
+in APPPATH\Views\invitado\cardsInicio.php on line 142.
+ 1 APPPATH\Views\invitado\cardsInicio.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "titulo"', 'APPPATH\\Views\\invitado\\cardsInicio.php', 142)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(20): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 15:58:38 --> Undefined array key "titulo"
+in APPPATH\Views\invitado\cardsInicio.php on line 142.
+ 1 APPPATH\Views\invitado\cardsInicio.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "titulo"', 'APPPATH\\Views\\invitado\\cardsInicio.php', 142)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(20): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 15:58:51 --> Undefined array key "titulo"
+in APPPATH\Views\invitado\cardsInicio.php on line 142.
+ 1 APPPATH\Views\invitado\cardsInicio.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "titulo"', 'APPPATH\\Views\\invitado\\cardsInicio.php', 142)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(20): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 16:04:23 --> Undefined array key "idVideojuego"
+in APPPATH\Views\invitado\cardsInicio.php on line 63.
+ 1 APPPATH\Views\invitado\cardsInicio.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Views\\invitado\\cardsInicio.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(20): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 16:04:34 --> Undefined array key "idVideojuego"
+in APPPATH\Views\invitado\cardsInicio.php on line 63.
+ 1 APPPATH\Views\invitado\cardsInicio.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Views\\invitado\\cardsInicio.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(20): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 16:04:44 --> Undefined array key "id"
+in APPPATH\Views\invitado\cardsInicio.php on line 63.
+ 1 APPPATH\Views\invitado\cardsInicio.php(63): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\invitado\\cardsInicio.php', 63)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(20): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 16:33:38 --> Undefined array key "idVideojuego"
+in APPPATH\Views\genericos\gamesXbox.php on line 137.
+ 1 APPPATH\Views\genericos\gamesXbox.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Views\\genericos\\gamesXbox.php', 137)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(93): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 16:34:23 --> Undefined array key "nombreConsola"
+in APPPATH\Views\genericos\gamesXbox.php on line 139.
+ 1 APPPATH\Views\genericos\gamesXbox.php(139): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreConsola"', 'APPPATH\\Views\\genericos\\gamesXbox.php', 139)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(93): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 16:38:34 --> Undefined array key "nombreConsola"
+in APPPATH\Views\genericos\gamesXbox.php on line 138.
+ 1 APPPATH\Views\genericos\gamesXbox.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreConsola"', 'APPPATH\\Views\\genericos\\gamesXbox.php', 138)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(110): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 16:43:01 --> Undefined variable $paginaActual
+in APPPATH\Views\genericos\gamesXbox.php on line 157.
+ 1 APPPATH\Views\genericos\gamesXbox.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginaActual', 'APPPATH\\Views\\genericos\\gamesXbox.php', 157)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesXbox.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesXbox', [], true)
+ 5 APPPATH\Controllers\generico\GamesXboxController.php(110): view('genericos/gamesXbox', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 17:43:45 --> Undefined variable $videojuegos
+in APPPATH\Views\invitado\cardsInicio.php on line 3.
+ 1 APPPATH\Views\invitado\cardsInicio.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuegos', 'APPPATH\\Views\\invitado\\cardsInicio.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(281): view('invitado/cardsInicio.php')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 17:44:19 --> Undefined variable $videojuegos
+in APPPATH\Views\invitado\cardsInicio.php on line 28.
+ 1 APPPATH\Views\invitado\cardsInicio.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuegos', 'APPPATH\\Views\\invitado\\cardsInicio.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio', [], true)
+ 5 APPPATH\Controllers\invitado\LoginController.php(44): view('invitado/cardsInicio')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 17:53:54 --> Undefined variable $arrayData
+in APPPATH\Views\usuario\navbarLog.php on line 2.
+ 1 APPPATH\Views\usuario\navbarLog.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $arrayData', 'APPPATH\\Views\\usuario\\navbarLog.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\LoginController.php(46): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 18:00:23 --> Undefined variable $membresia
+in APPPATH\Views\usuario\navbarLog.php on line 82.
+ 1 APPPATH\Views\usuario\navbarLog.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $membresia', 'APPPATH\\Views\\usuario\\navbarLog.php', 82)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\RegisterController.php(285): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 18:04:11 --> Undefined array key "contrasenia"
+in APPPATH\Controllers\invitado\RegisterController.php on line 245.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasenia"', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 245)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 18:09:57 --> Undefined array key "contrasenia"
+in APPPATH\Controllers\invitado\RegisterController.php on line 245.
+ 1 APPPATH\Controllers\invitado\RegisterController.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasenia"', 'APPPATH\\Controllers\\invitado\\RegisterController.php', 245)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\RegisterController->guardar_persona()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\RegisterController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-17 18:25:48 --> Undefined array key "correo"
+in APPPATH\Controllers\invitado\LoginController.php on line 25.
+ 1 APPPATH\Controllers\invitado\LoginController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'APPPATH\\Controllers\\invitado\\LoginController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
