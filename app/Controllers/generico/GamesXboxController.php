@@ -14,22 +14,23 @@ class GamesXboxController extends BaseController{
         $data2["videojuegosXbox"]=$videojuegos->get10VideogamesXBOX();
         $consolas['consolasXbox']=$videojuegos->getConsolasXbox();
 
-
+         //Agregar el idConsola y tambien 
         //XBOX ONE SERIES S (XboxOneSS)
         $cantidadjuegosXboxOneSS = [
-            (object) ['identificador' => 'Xbox One SS', 'valor' => $videojuegos->getTotalGamesXboxOneSS()],
+            (object) ['identificador' => 'Xbox One SS', 'valor' => $videojuegos->getTotalGamesXboxOneSS(),'idConsola'=>'4'],
         ];
+ 
         $cantidadPorGeneroXBOXSS = [
             //Cantidad de juegos de Aventura 
-            (object) ['identificador' => 'Aventura XBOX One SS', 'valor' => $videojuegos->TotalGamesAventuraXBOXSS()],
+            (object) ['identificador' => 'Aventura XBOX One SS', 'valor' => $videojuegos->TotalGamesAventuraXBOXSS(),'idCategoria'=>'1'],
             //Cantidad de juegos Arcade
-            (object) ['identificador' => 'Arcade XBOX One SS', 'valor' => $videojuegos->TotalGamesArcadeXBOXSS()],
+            (object) ['identificador' => 'Arcade XBOX One SS', 'valor' => $videojuegos->TotalGamesArcadeXBOXSS(),'idCategoria'=>'2'],
             //Cantidad de juegos Deportes
-            (object) ['identificador' => 'Deportes XBOX One SS', 'valor' => $videojuegos->TotalGamesDeportesXBOXSS()],
+            (object) ['identificador' => 'Deportes XBOX One SS', 'valor' => $videojuegos->TotalGamesDeportesXBOXSS(),'idCategoria'=>'3'],
             //Cantidad de juegos Terror
-            (object) ['identificador' => 'Terror XBOX One SS', 'valor' => $videojuegos->TotalGamesTerrorXBOXSS()],
+            (object) ['identificador' => 'Terror XBOX One SS', 'valor' => $videojuegos->TotalGamesTerrorXBOXSS(),'idCategoria'=>'4'],
             //Cantidad de juegos Estrategia
-            (object) ['identificador' => 'Estrategia XBOX One SS', 'valor' => $videojuegos->TotalGamesEstrategiaXBOXSS()],
+            (object) ['identificador' => 'Estrategia XBOX One SS', 'valor' => $videojuegos->TotalGamesEstrategiaXBOXSS(),'idCategoria'=>'5'],
         ];
 
         //XBOX ONE X

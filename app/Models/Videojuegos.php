@@ -228,11 +228,11 @@ class Videojuegos extends Model
 
 
     public function get10VideogamesXBOX(){
-        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (4, 5, 6) LIMIT 10");
+        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario,idConsola,idCategoria FROM videojuego WHERE idConsola IN (4, 5, 6) LIMIT 10");
         return $query->getResultArray();
     }
     public function getAllVideogamesXbox(){
-        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (4, 5, 6)");
+        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario,idConsola,idCategoria  FROM videojuego WHERE idConsola IN (4, 5, 6)");
         return $query->getResultArray();
     }
     public function getConsolasXbox(){
