@@ -46,14 +46,6 @@ class ShoppingCarController extends BaseController{
 
         return $vista;
 
-
-        //Aqui tenemos que traerlos de acuerdo a la sesion iniciada
-        
-        // $generico = new RegistrarUsuario();
-        // $usuario = array(
-        //     'datosUsuario' => $generico->traerDatosUsuarioPorCorreo('martinezcristopher69@gmail.com')
-        // );
-       
     }
 
 

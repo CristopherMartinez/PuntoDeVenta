@@ -6,9 +6,7 @@ USE CodeIgniter\Model;
 class agregarVideojuego extends Model
 {
         protected $table = 'videojuego';
-        protected $primaryKey = 'id';
+        protected $primaryKey = 'idVideojuego';
         protected $returnType = 'array';
         protected $allowedFields = ['idProveedor','nombre','descripcion','precio','cantidadInventario','idCategoria','idConsola',"imagen"];   
-        
-
 }

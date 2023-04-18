@@ -1,8 +1,6 @@
-<?php 
-
-// echo json_encode($_SESSION);
-// print_r($_SESSION);
-?>
+<!-- <?php 
+print_r(json_encode($_SESSION));
+?> -->
 
 
 <head>
@@ -35,9 +33,9 @@
                       Videojuegos
                     </a>
                     <ul class="dropdown-menu navVideo" style="background-color: #d3d8e0; font-weight:bolder; opacity:.95;">
-                      <li><a class="dropdown-item" href="gamesplayStation" style="padding-left: 5px;">PlayStation</a></li>
+                      <li><a class="dropdown-item" href="gamesplayStationLog" style="padding-left: 5px;">PlayStation</a></li>
                       <!-- <li><hr class="dropdown-divider"></li> -->
-                      <li><a class="dropdown-item" href="gamesXbox" style="padding-left: 5px;">Xbox</a></li>
+                      <li><a class="dropdown-item" href="gamesXboxLog" style="padding-left: 5px;">Xbox</a></li>
                       <!-- <li><hr class="dropdown-divider"></li> -->
                       <li><a class="dropdown-item" href="#" style="padding-left: 5px;">PC</a></li>
                       <!-- <li><hr class="dropdown-divider"></li> -->
@@ -77,8 +75,8 @@
               <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
 
                  <div style="margin-left: 100px; margin-top:15px;">
-                 <span style="color: white;">Usuario:<?= $_SESSION['usuario'];?></span>
-                 <span style="color: white;">Membresia: <?= $_SESSION['datosUsuario'][0]['nombre'];?></span>
+                 <span style="color: white;">Usuario: <?= session('datosUsuario')[0]['usuario']; ?></span>
+                 <span style="color: white;">Membresía: <?= session('datosUsuario')[0]['nombre']; ?></span>
                   </div>
                  
                  

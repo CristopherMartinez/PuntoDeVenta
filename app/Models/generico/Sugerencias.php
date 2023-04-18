@@ -10,6 +10,5 @@ class Sugerencias extends Model
         protected $table = 'sugerencias';
         protected $primaryKey = 'id';
         protected $returnType = 'array';
-        protected $allowedFields = ['nombre','correo','comentarios'];
-        
+        protected $allowedFields = ['nombre','correo','comentarios'];     
 }

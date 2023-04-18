@@ -47,15 +47,20 @@ $routes->add('inicio','InicioLog::index');
 $routes->add('/login','invitado\LoginController::index');
 $routes->add('/guardar_sugerencia','generico\SugerenciasController::guardar_sugerencia');
 
-//Rutas invitado
-$routes->add('/register','invitado\RegisterController::index');
+//RutasUsuario Logueado
+$routes->add('/gamesXboxLog','generico\GamesXboxController::indexGameXboxLog');
 
+
+
+//Rutas invitado
+$routes->add('/SingUp','invitado\RegisterController::index');
 
 $routes->add('/verificar_login','invitado\LoginController::verificar_login');
 $routes->add('/guardar_persona','invitado\RegisterController::guardar_persona');
 
 //Rutas de administrador
 $routes->add('/admin/inicio','admin\AdminController::index');
+$routes->add('/admin/clientes','admin\AdminController::recuperarclientes');
 $routes->add('/admin/registroVideojuegos','admin\AgregarJuegoController::index');
 $routes->add('/admin/registroAdmin','admin\RegistroAdminController::index');
 $routes->add('/ShoppingCar','ShoppingCarController::index'); //Verificar
@@ -75,35 +80,10 @@ $routes->get('/editar/(:num)','admin\AgregarJuegoController::editar/$1');
 $routes->post('/actualizar','admin\AgregarJuegoController::actualizar');
 
 
-// $routes->add('/cardsInicio','generico\CardsInicio::index');
-
-
-
-
-
 //pruebas 08 del 04 del 2023
 $routes->get('/cerrarSesion', 'invitado\RegisterController::cerrarSesion');
 
-// $routes->add('/ShoppingCar','ShoppingCarController::index'); //Verificar
 
-
-
-//Pruebas
-// $routes->get('/register', 'invitado\RegisterController::index');
-// $routes->post('/Registrar', 'invitado\RegisterController::Registrar');
- 
-
-//Rutas agrupadas Administrador prueba
-// $routes->group('admin',['namespace' => 'App\Controllers\admin'], function($routes){
-//     $routes->get('inicio','AdminController::index',['as'=>'adminInicio']);
-//     $routes->get('registroAdmin','RegistroAdminController::index',['as'=>'registroAdmin']);
-//     $routes->get('registroVideojuegos','AgregarJuegoController::index',['as'=>'registroVideojuegos']);
-// });
-
-// $routes->group('generico',['namespace' => 'App\Controllers\generico'], function($routes){
-
-
-// });
 
 
 /*

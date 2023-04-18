@@ -244,7 +244,7 @@
         Nintendo, Xbox, PS3 y más soló en World Games
         Regístrate aquí, esta es tu oportunidad!!!!</p>
         
-         <a  href="register" style="color: whitesmoke;"><button type="button">Your turn</button></a> 
+         <a  href="SingUp" style="color: whitesmoke;"><button type="button">Your turn</button></a> 
         
   </div>
   </div>

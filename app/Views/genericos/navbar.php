@@ -48,7 +48,7 @@
             </form>
             <ul class="navbar-nav ms-auto me-5 my-2 my-lg-0 navbar-nav-scroll letraNavbar" style="--bs-scroll-height: 100px;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="register" style="font-size:smaller; padding-left:5px;"><span> </span><span>Registrate</span></a>
+                <a class="nav-link active" aria-current="page" href="SingUp" style="font-size:smaller; padding-left:5px;"><span> </span><span>Registrate</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="login" style="font-size:smaller; padding-left:5px;"><span><!--<img src="<?php echo base_url()?>/imagenes/icons/inicioSesion.png" style="width:25px;">--> </span><span>Iniciar Sesión</span></a>

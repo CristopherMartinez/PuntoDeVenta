@@ -1,5 +1,3 @@
-
-
 //GAMES XBOX SCRIPTS -------------------------------------------------------------------------------------
 
     //Funcion para buscar con el input type search
@@ -126,6 +124,51 @@ function searchXboxS(categoria,consola) {
 //-------------------------------------------------------------------------------------
 
 
+//LOGIN--------------------------------------------------------------------------
+
+        function verContraseniaLogin(){
+            const verContraseniaBtn = document.getElementById('ver-contrasenia');
+            const contraseniaInput = document.getElementById('contrasenia');
+
+            if (contraseniaInput.getAttribute('type') === 'password') {
+                contraseniaInput.setAttribute('type', 'text');
+                verContraseniaBtn.innerHTML = '<span class="material-symbols-outlined">visibility</span>';
+            } else {
+                contraseniaInput.setAttribute('type', 'password');
+                verContraseniaBtn.innerHTML = '<span class="material-symbols-outlined">visibility_off</span>';
+            }
+        }
+
+        function validarRecaptcha() {
+            var response = grecaptcha.getResponse();
+            if (response.length == 0) {
+                // El usuario no ha completado el reCAPTCHA
+                Swal.fire({
+                text: 'Porfavor verifíca el Recaptcha',        
+                })
+                return false;
+            } else {
+                // El usuario ha completado el reCAPTCHA
+                return true;
+            }
+            }
+        
+//--------------------------------------------------------------------------
+
+//SingUp--------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------------
 
 
 

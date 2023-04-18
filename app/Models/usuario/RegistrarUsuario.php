@@ -8,23 +8,9 @@ USE CodeIgniter\Model;
 class RegistrarUsuario extends Model
 {
         protected $table = 'usuarios';
-        protected $primaryKey = 'id';
+        protected $primaryKey = 'idUsuario';
         protected $returnType = 'array';
-        protected $allowedFields = ['usuario','nombre','apellidos','correo','direccion','telefono','contrasenia'];
-        
-        // public function guardar_persona($param){
-        //     $query=$this->db->query("INSERT INTO usuarios(nombre,apellidos,correo,direccion,telefono,contrasenia)
-        //     values('".$param['nombre']."','".$param['apellidos']."','".$param
-        //     ['correo']."','".$param['direccion']."','".$param['telefono']."','".$param['contrasenia']."'");
-        //     return $query->getResult();
-        // }
-        //Traer los datos especificos del usuario que se registra o 
-        // public function traerDatosUsuario(){
-        //         $query=$this->db->query("SELECT usuarios.correo, membresia.nombre 
-        //                                 FROM usuarios 
-        //                                 JOIN membresia ON usuarios.idMembresia = membresia.idMembresia");
-        //         return $query->getResultArray();
-        // }
+        protected $allowedFields = ['idUsuario','usuario','nombre','apellidos','correo','direccion','telefono','contrasenia'];
 
         public function traerDatosUsuarioPorCorreo($correo){
                 $query = $this->db->query("SELECT usuarios.usuario, membresia.nombre 
@@ -53,26 +39,36 @@ class RegistrarUsuario extends Model
                 $result = $query->getRow();
                 return $result->num_usuarios > 0;
         }
-            
 
-        // public function verificarSiExisteUsuario($correo){
-        //         $query = $this->db->query("SELECT usuarios.correo, membresia.nombre 
-        //                                    FROM usuarios 
-        //                                    JOIN membresia ON usuarios.idMembresia = membresia.idMembresia 
-        //                                    WHERE usuarios.correo = ?", array($correo));
-        //         return $query->getResultArray();
-        // }
+        public function existeUsuarioCheck($email)
+        {
+            $query = $this->db->table($this->table)
+                              ->select('*')
+                              ->where('correo', $email)
+                              ->get();
+    
+            return $query->getRow(); // Returns a single row or null
+        }
 
-            
-            
-            
+        function get_email($email) {
+		$row = $this->db->table($this->table)->where('user.correo',$email)->get()->getRow();
+		if ($row) {
+			return true;
+		}
+		return false;
+	}
 
-        // public function traerDatosUsuario(){
-        //         $query=$this->db->query("SELECT usuarios.correo, membresia.nombre 
-        //                                 FROM usuarios 
-        //                                 JOIN membresia ON usuarios.idMembresia = membresia.idMembresia");
-        //         return $query->getResultArray();
-        // }
+        public function obtenerUsuario($data) {
+                $Usuario = $this->db->table('usuarios');
+                $Usuario->where($data);
+                return $Usuario->get()->getResultArray();
+        }
+        public function obtenerAdmin($data) {
+                $Usuario = $this->db->table('administradores');
+                $Usuario->where($data);
+                return $Usuario->get()->getResultArray();
+        }
+
         
 }
 
