@@ -18,7 +18,7 @@ class Inicio extends BaseController{
                  view('invitado/jumbotron.php').  
                  view('invitado/carruselInicio').    
                  view('invitado/cardsInicio.php',$data2).
-                 view('genericos/contacto.php').
+                 view('usuario/contacto.php').
                  view('invitado/image').
                  view('genericos/footer').
                  view('invitado/inicio');

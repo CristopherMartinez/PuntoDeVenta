@@ -1,0 +1,37 @@
+/*STYLES GAMES XBOX-----------------------------*/
+.submenu {
+    display: none;
+}
+.visible {
+    display: block;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion-item {
+    border: 1px solid black;
+}
+
+.accordion-header {
+    background-color: #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+/*----------------------------*/
+
+
+/*----------------------------*/

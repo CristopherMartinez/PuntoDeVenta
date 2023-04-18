@@ -35,38 +35,38 @@ class GamesXboxController extends BaseController{
 
         //XBOX ONE X
         $CantidadXboxOneX = [
-             (object) ['identificador' => 'Xbox One X', 'valor' => $videojuegos->getTotalGamesXboxOneX()],
+             (object) ['identificador' => 'Xbox One X', 'valor' => $videojuegos->getTotalGamesXboxOneX(),'idConsola'=>'5'],
         ];
 
         //CANTIDAD POR GENERO XBOX ONE X
         $CantidadGeneroXboxX = [
             //Cantidad de juegos de Aventura 
-            (object) ['identificador' => 'Aventura XBOX One X', 'valor' => $videojuegos->TotalGamesAventuraXboxX()],
+            (object) ['identificador' => 'Aventura XBOX One X', 'valor' => $videojuegos->TotalGamesAventuraXboxX(),'idCategoria'=>'1'],
             //Cantidad de juegos Arcade
-            (object) ['identificador' => 'Arcade XBOX One X', 'valor' => $videojuegos->TotalGamesArcadeXboxX()],
+            (object) ['identificador' => 'Arcade XBOX One X', 'valor' => $videojuegos->TotalGamesArcadeXboxX(),'idCategoria'=>'2'],
             //Cantidad de juegos Deportes
-            (object) ['identificador' => 'Deportes XBOX One X', 'valor' => $videojuegos->TotalGamesDeportesXboxX()],
+            (object) ['identificador' => 'Deportes XBOX One X', 'valor' => $videojuegos->TotalGamesDeportesXboxX(),'idCategoria'=>'3'],
             //Cantidad de juegos Terror
-            (object) ['identificador' => 'Terror XBOX One X', 'valor' => $videojuegos->TotalGamesTerrorXboxX()],
+            (object) ['identificador' => 'Terror XBOX One X', 'valor' => $videojuegos->TotalGamesTerrorXboxX(),'idCategoria'=>'4'],
             //Cantidad de juegos Estrategia
-            (object) ['identificador' => 'Estrategia XBOX One X', 'valor' => $videojuegos->TotalGamesEstrategiaXboxX()],
+            (object) ['identificador' => 'Estrategia XBOX One X', 'valor' => $videojuegos->TotalGamesEstrategiaXboxX(),'idCategoria'=>'5'],
         ];
 
         //XBOX ONE S
         $CantidadXboxOneS = [
-            (object) ['identificador' => 'Xbox One S', 'valor' => $videojuegos->getTotalGamesXboxOneS()],
+            (object) ['identificador' => 'Xbox One S', 'valor' => $videojuegos->getTotalGamesXboxOneS(),'idConsola'=>'6'],
         ];
         $CantidadGeneroXboxS = [
             //Cantidad de juegos de Aventura 
-            (object) ['identificador' => 'Aventura XBOX One S', 'valor' => $videojuegos->TotalGamesAventuraXBOXS()],
+            (object) ['identificador' => 'Aventura XBOX One S', 'valor' => $videojuegos->TotalGamesAventuraXBOXS(),'idCategoria'=>'1'],
             //Cantidad de juegos Arcade
-            (object) ['identificador' => 'Arcade XBOX One S', 'valor' => $videojuegos->TotalGamesArcadeXBOXS()],
+            (object) ['identificador' => 'Arcade XBOX One S', 'valor' => $videojuegos->TotalGamesArcadeXBOXS(),'idCategoria'=>'2'],
             //Cantidad de juegos Deportes
-            (object) ['identificador' => 'Deportes XBOX One S', 'valor' => $videojuegos->TotalGamesDeportesXBOXS()],
+            (object) ['identificador' => 'Deportes XBOX One S', 'valor' => $videojuegos->TotalGamesDeportesXBOXS(),'idCategoria'=>'3'],
             //Cantidad de juegos Terror
-            (object) ['identificador' => 'Terror XBOX One S', 'valor' => $videojuegos->TotalGamesTerrorXBOXS()],
+            (object) ['identificador' => 'Terror XBOX One S', 'valor' => $videojuegos->TotalGamesTerrorXBOXS(),'idCategoria'=>'4'],
             //Cantidad de juegos Estrategia
-            (object) ['identificador' => 'Estrategia XBOX One S', 'valor' => $videojuegos->TotalGamesEstrategiaXBOXS()],
+            (object) ['identificador' => 'Estrategia XBOX One S', 'valor' => $videojuegos->TotalGamesEstrategiaXBOXS(),'idCategoria'=>'5'],
         ];
 
         
@@ -88,23 +88,6 @@ class GamesXboxController extends BaseController{
 
     
         );
-        // $data =  array(
-        //     'videojuegosXbox' => $videojuegos->get10VideogamesXBOX(),
-        //     'consolasXbox' => $videojuegos->getConsolasXbox(),
-        //     'categorias' => $videojuegos->getCategoria(),
-        //     //Xbox One SS
-        //     'listaVideojuegos'=>$cantidadjuegosXboxOneSS,
-        //     'totalGAventuraXboxSS'=>$cantidadPorGeneroXBOXSS,
-        //     //Xbox One X
-        //     'XboxOneX'=>$CantidadXboxOneX,
-        //     'CantGeneroXboxX'=>$CantidadGeneroXboxX,
-        //     //Xbox One S
-        //     'XboxOneS'=>$CantidadXboxOneS,
-        //     'CantGeneroXboxS'=>$CantidadGeneroXboxS
-
-    
-        // );
-
 
         $vista= view('genericos/header').
                 view('invitado/navbarInvitado').

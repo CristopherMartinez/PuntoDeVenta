@@ -1,60 +1,28 @@
-
-<!-- <?php
+<!-- 
+<?php
 // print_r($videojuegosXbox);
 // print_r(json_encode($videojuegosXbox));
-print_r(json_encode($listaVideojuegos));
+// print_r(json_encode($listaVideojuegos));
+print_r(json_encode($XboxOneX));
 ?> -->
 
 <head>
     <style>
-        .list:hover{
+        /* .list:hover{
         background-color:#c3c3c3;
         list-style:none;
         padding-left: 10px;
         cursor: hand;
-        }
+        } */
         .backgroundGamesPlay{
             background-image: url("<?php  echo base_url()?>/imagenes/fondoPlay8.png");
             background-repeat: no-repeat;
             background-size: cover;
         }
-
-        .submenu {
-            display: none;
-        }
-        .visible {
-            display: block;
-        }
-
-            .accordion {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .accordion-item {
-            border: 1px solid black;
-        }
-
-        .accordion-header {
-            background-color: #ccc;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        .accordion-content {
-            display: none;
-            padding: 10px;
-        }
-
-        .accordion-item.active .accordion-content {
-            display: block;
-        }
-
-
+        /*Los demas estilos estan en ../styles/styles.css*/ 
     </style>
-    <!-- CSS de Bootstrap -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/styles/styles.cs">
+        <script src=" <?php echo base_url()?>/js/scripts.js"></script>
 </head>
 
 <body class="backgrounFooter">
@@ -103,7 +71,8 @@ print_r(json_encode($listaVideojuegos));
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <?php foreach ($XboxOneX as $videojuego) { ?>
                                     <?php foreach ($CantGeneroXboxX as $categoria) { ?>
-                                        <li><a class="dropdown-item" href="#" data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="searchXboxX(<?php echo $categoria->idCategoria;?>,<?php echo $videojuego->idConsola;?>)"  data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
+                                      
                                     <?php } ?>
                                 <?php } ?>
                             </ul>
@@ -118,7 +87,7 @@ print_r(json_encode($listaVideojuegos));
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <?php foreach ($XboxOneS as $videojuego) { ?>
                                     <?php foreach ($CantGeneroXboxS as $categoria) { ?>
-                                        <li><a class="dropdown-item" href="#" data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="searchXboxS(<?php echo $categoria->idCategoria;?>,<?php echo $videojuego->idConsola;?>)" data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
                                     <?php } ?>
                                 <?php } ?>
                             </ul>
@@ -140,9 +109,11 @@ print_r(json_encode($listaVideojuegos));
                                 <div class="col-md-8">
                                     <div class="card-body" id="cards-container">
                                         <h5 class="card-title" style="color:whitesmoke;"><?php echo $juego['nombre'] ?></h5>
+                                        <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['nombreConsola'] ?></p>
                                         <!--Id del videojuego (no borrar)-->
                                         <p class="card-text"  style="color:whitesmoke;" hidden><?php echo $juego['idVideojuego'] ?></p>
                                         <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['descripcion'] ?></p>
+                                         <!--Campos ocultos (no borrar)-->
                                         <p class="category-tag" style="color:whitesmoke;" hidden>ID Categoria : <?php echo $juego['idCategoria'] ?></p>
                                         <p class="consola-tag" style="color:whitesmoke;" hidden>ID Consola : <?php echo $juego['idConsola'] ?></p>
                                         
@@ -162,7 +133,6 @@ print_r(json_encode($listaVideojuegos));
                     </div>
                 <?php } ?>
                 <div id="noResults" style="display:none;">No se encontraron resultados de la busqueda.</div>
-                <div id="noResults1" style="display:none;">No hay juegos disponibles del género seleccionado</div>
             </div>
         </div>
 
@@ -186,32 +156,8 @@ print_r(json_encode($listaVideojuegos));
 </div>
 </body>
 
-
-
 <script>
-  const elemento1 = document.querySelector('a:contains("Elemento 1")');
-  const submenu = document.querySelector('.submenu');
-
-  elemento1.addEventListener('click', () => {
-    submenu.classList.toggle('visible');
-  });
-</script>
-
-<script>
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const accordionItem = header.parentNode;
-            accordionItem.classList.toggle('active');
-        });
-    });
-
-</script>
-
-<script>
-
-    //XBOX ONE SS-------------------------------------
+     //XBOX ONE SS-------------------------------------
     //Para detectar cuando se esta escribiendo y coincida lo que se pone en el input con la etiqueta .card-title
     const searchInput = document.getElementById('searchInput');
     const cards = document.querySelectorAll('.card');
@@ -238,79 +184,8 @@ print_r(json_encode($listaVideojuegos));
             noResults.style.display = 'none';
         }
     });
-
-  function buscar() {
-    // Obtener los elementos de la página
-    const searchInput = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('.card');
-
-    const searchTerm = searchInput.value.toLowerCase();
-
-    // Recorrer todas las tarjetas y ocultar aquellas que no coincidan con el término de búsqueda
-    cards.forEach(function(card) {
-      const title = card.querySelector('.card-title').textContent.toLowerCase();
-      const description = card.querySelector('.card-text:not([hidden])').textContent.toLowerCase();
-      const matches = title.includes(searchTerm) || description.includes(searchTerm);
-      card.style.display = matches ? 'block' : 'none';
-    });
-  }
-
-  //-----------------------------------
-
-   //XBOX ONE X-------------------------------------
-  
-
-
+    //Los demas scripts estan en ../js/scripts.js
 </script>
-<script>
-
-//Funcion para buscar de acuerdo a categoria de Xbox One SS Funciona correctamente 
-function searchXboxSS(categoria,consola) {
-    const searchInput = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('.card');
-    const searchTerm = searchInput.value.toLowerCase();
-    
-    // Recorrer todas las tarjetas y ocultar aquellas que no coincidan con el término de búsqueda y con la categoría seleccionada
-    let foundMatch = false;
-    cards.forEach(function(card) {
-        const title = card.querySelector('.card-title').textContent.toLowerCase();
-        const description = card.querySelector('.card-text:not([hidden])').textContent.toLowerCase();
-        const categoryTag = card.querySelector('.category-tag').textContent.toLowerCase();
-        const consolaTag = card.querySelector('.consola-tag').textContent.toLowerCase();
-        const matches = title.includes(searchTerm) && categoryTag.includes(categoria) &&consolaTag.includes(consola);
-        card.style.display = matches ? 'block' : 'none';
-
-        if(matches){
-            foundMatch = true;
-        }
-    });
-
-    // Mostrar mensaje de no resultados
-    const noResults = document.getElementById('noResults1');
-    if(!foundMatch){
-        noResults.style.display = 'block';
-    } else {
-        noResults.style.display = 'none';
-    }
-}
-
-
-
-//XBOX ONE X
-
-
-
-//XBOX ONE S
-
-
-
-
-
-
-
-</script>
-
-
 
 
 

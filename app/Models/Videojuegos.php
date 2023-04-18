@@ -216,42 +216,37 @@ class Videojuegos extends Model
     }
 
 
-
-
-    
-
-
-   
-   
-    
-
-
-
+    //Funcion para obtener 10 videojuegos de Xbox
     public function get10VideogamesXBOX(){
         $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario,idConsola,idCategoria FROM videojuego WHERE idConsola IN (4, 5, 6) LIMIT 10");
         return $query->getResultArray();
     }
+
+    //Funcion para obtener todos los videojuegos de Xbox
     public function getAllVideogamesXbox(){
-        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario,idConsola,idCategoria  FROM videojuego WHERE idConsola IN (4, 5, 6)");
+        $query = $this->db->query("SELECT v.idVideojuego, v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario,v.idConsola,v.idCategoria, c.nombre as nombreConsola 
+            FROM videojuego v 
+            INNER JOIN consola c ON v.idConsola = c.idConsola 
+            WHERE v.idConsola IN (4, 5, 6)");
         return $query->getResultArray();
     }
+
+    //Funcion para obtener todos los videojuegos de PlayStation
+    public function getAllVideogamesPlayStation(){
+        $query = $this->db->query("SELECT v.idVideojuego, v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario,v.idConsola,v.idCategoria, c.nombre as nombreConsola 
+            FROM videojuego v 
+            INNER JOIN consola c ON v.idConsola = c.idConsola 
+            WHERE v.idConsola IN (1, 2, 3)");
+        return $query->getResultArray();
+    }
+    
+
     public function getConsolasXbox(){
         $query=$this->db->query("SELECT nombre FROM consola WHERE idConsola IN (4, 5, 6)");                      
         return $query->getResultArray();
     }
 
-    
-
-    public function get10VideogamesNintendo(){
-        $query = $this->db->query("SELECT nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego LIMIT 10");
-        return $query->getResultArray();
-    }
-
-    //Funcion para traer todos los videojuegos para mostrar en modo Admin
-    // public function getAllVideogames(){
-    //     $query=$this->db->query("SELECT nombre,descripcion,imagen,precio,cantidadInventario,idConsola FROM videojuego ");
-    //     return $query->getResultArray();
-    // }
+     //Funcion para traer todos los videojuegos para mostrar en modo Admin
      public function getAllVideogames(){
         $query=$this->db->query("SELECT v.idVideojuego, v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario, c.nombre as consola
         FROM videojuego v
@@ -260,49 +255,59 @@ class Videojuegos extends Model
         return $query->getResultArray();
     }
 
+    //Funcion para obtener los proveedores
     public function getProveedores(){
         $query=$this->db->query("SELECT nombre FROM proveedor");                      
         return $query->getResultArray();
     }
 
+    //Funcion para obtener Categorias
     public function getCategoria(){
         $query=$this->db->query("SELECT idCategoria,nombre FROM categoria");                      
         return $query->getResultArray();
     }
 
+    //Funcion para obtener Consolas
     public function getConsolas(){
         $query=$this->db->query("SELECT nombre FROM consola");                      
         return $query->getResultArray();
     }
 
+    //Funcion para obtener el id del proveedor pasando como parametro el nombre
     public function getIdProveedor($nombre){
         $query = $this->db->query("SELECT idProveedor FROM proveedor WHERE nombre = ?", [$nombre]);
         $result = $query->getRow();
         return $result ? (int) $result->idProveedor : 0;
     }
 
+    //Funcion para obtener el id de la categoria pasando como parametro el nombre
     public function getIdCategoria($nombre){
         $query = $this->db->query("SELECT idCategoria FROM categoria WHERE nombre = ?", [$nombre]);
         $result = $query->getRow();
         return $result ? (int) $result->idCategoria : 0;
     }
 
+     //Funcion para obtener el id de la consola pasando como parametro el nombre
     public function getIdConsola($nombre){
         $query = $this->db->query("SELECT idConsola FROM consola WHERE nombre = ?", [$nombre]);
         $result = $query->getRow();
         return $result ? (int) $result->idConsola : 0;
     }
 
+     //Funcion para obtener el nombre de consola con el idConsola
     public function getNombreConsola($idConsola){
         $query = $this->db->query("SELECT nombre FROM consola WHERE idConsola = ?", [$idConsola]);
         $result = $query->getRow();
         return $result ? $result->nombre : '';
     }
+
+    //Funcion para obtener el nombre de proveedor con el idProveedor
     public function getProveedorWithId($idProveedor){
         $query = $this->db->query("SELECT nombre FROM proveedor WHERE idProveedor = ?", [$idProveedor]);
         $result = $query->getRow();
         return $result ? $result->nombre : '';
     }
+    //Funcion para obtener el nombre de categoria con el idCategoria
     public function getCategoriaWithId($idCategoria){
         $query = $this->db->query("SELECT nombre FROM categoria WHERE idCategoria = ?", [$idCategoria]);
         $result = $query->getRow();

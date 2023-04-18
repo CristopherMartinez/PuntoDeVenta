@@ -18,7 +18,7 @@
         <div class="col-xl-3 col-sm-12" style="background-color:transparent;">
             <div class="row">
                 <br>
-                <div class="col-xl-12" style="background-color: transparent; margin-top:30px;">
+                <!-- <div class="col-xl-12" style="background-color: transparent; margin-top:30px;">
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit" style="padding-left: 5px;">Buscar</button>
@@ -66,7 +66,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                
             </div>
         </div>
 
