@@ -27,6 +27,7 @@
     
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <div class="container">
 	<br>
 
@@ -176,12 +177,6 @@
     </div>
 </div>
 
-
-
-
-
-<!--Correcto-->
-
 <head>
 	<!-- Agregar los enlaces de los archivos necesarios -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
@@ -213,7 +208,7 @@
 
 
 <div class="container">
-<div id="contenido de la tabla" class="form-group row">
+				<div id="contenido de la tabla" class="form-group row">
 					<div class="col-sm-12">
 						<br>
 						<div class="table table-responsive">
@@ -282,79 +277,80 @@
     
 
 <script>
-$(document).ready(function() {
-    $('#miTabla').DataTable({
-        "pagingType": "simple_numbers_no_ellipses",
-        "language": {
-            "emptyTable": "<span style='color:white'>No hay datos disponibles en la tabla</span>",
-            "info": "<span style='color:white'>Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros</span>",
-            "infoEmpty": "<span style='color:white'>Mostrando 0 registros</span>",
-            "infoFiltered": "<span style='color:white'>(filtrado de un total de _MAX_ registros)</span>",
-            "infoPostFix": "",
-            "thousands": ",",
-            "lengthMenu": "<span style='color:white'>Mostrar _MENU_ registros</span>",
-            "loadingRecords": "<span style='color:white'>Cargando...</span>",
-            "processing": "<span style='color:white'>Procesando...</span>",
-            "search": "<span style='color:white'>Buscar:</span>",
-            "zeroRecords": "<span style='color:black; font-weight:bold;' >No existen registros similares</span>",
-            "paginate": {
-                "first": "Primero",
-                "last": "Último",
-                "next": "<span style='color:white'>Siguiente</span>",
-                "previous": "<span style='color:white'>Anterior</span>"
-            }
-        },
-        "paging": true,
-        "lengthMenu": [3, 10, 25, 50],
-        "pageLength": 3,
-        "ordering": true,
-        "info": true,
-        "searching": true,
-        "autoWidth": false,
-        "columnDefs": [
-            {"className": "dt-center", "targets": "_all"},
-            {"orderable": false, "targets": 4}
-        ]
-    });
-});
-</script>
-<script>
-	// Obtener el botón y el modal
-var btnAbrirModal = document.getElementById("btnAbrirModal");
-var miModal = document.getElementById("miModal");
-
-// Agregar evento al botón para mostrar el modal
-btnAbrirModal.addEventListener("click", function() {
-  miModal.classList.add("show");
-  miModal.style.display = "block";
-});
-
-// Agregar evento al botón de cerrar para ocultar el modal
-var btnCerrarModal = miModal.querySelector(".btn-close");
-btnCerrarModal.addEventListener("click", function() {
-  miModal.classList.remove("show");
-  miModal.style.display = "none";
-});
-
+	$(document).ready(function() {
+		$('#miTabla').DataTable({
+			"pagingType": "simple_numbers_no_ellipses",
+			"language": {
+				"emptyTable": "<span style='color:white'>No hay datos disponibles en la tabla</span>",
+				"info": "<span style='color:white'>Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros</span>",
+				"infoEmpty": "<span style='color:white'>Mostrando 0 registros</span>",
+				"infoFiltered": "<span style='color:white'>(filtrado de un total de _MAX_ registros)</span>",
+				"infoPostFix": "",
+				"thousands": ",",
+				"lengthMenu": "<span style='color:white'>Mostrar _MENU_ registros</span>",
+				"loadingRecords": "<span style='color:white'>Cargando...</span>",
+				"processing": "<span style='color:white'>Procesando...</span>",
+				"search": "<span style='color:white'>Buscar:</span>",
+				"zeroRecords": "<span style='color:black; font-weight:bold;' >No existen registros similares</span>",
+				"paginate": {
+					"first": "Primero",
+					"last": "Último",
+					"next": "<span style='color:white'>Siguiente</span>",
+					"previous": "<span style='color:white'>Anterior</span>"
+				}
+			},
+			"paging": true,
+			"lengthMenu": [3, 10, 25, 50],
+			"pageLength": 3,
+			"ordering": true,
+			"info": true,
+			"searching": true,
+			"autoWidth": false,
+			"columnDefs": [
+				{"className": "dt-center", "targets": "_all"},
+				{"orderable": false, "targets": 4}
+			]
+		});
+	});
 </script>
 
 <script>
-// 	function abrirModal(id) {
-//     $('#miModal').modal('show');
-//     $('#id').val(id);
-//     $.ajax({
-//         url: "<?php echo base_url('editar'); ?>",
-//         type: "POST",
-//         data: {id: id},
-//         dataType: "JSON",
-//         success: function(data) {
-//             $('#nombre').val(data.nombre);
-//             // $('#email').val(data.email);
-//         }
-//     });
-// }
+		// Obtener el botón y el modal
+	var btnAbrirModal = document.getElementById("btnAbrirModal");
+	var miModal = document.getElementById("miModal");
+
+	// Agregar evento al botón para mostrar el modal
+	btnAbrirModal.addEventListener("click", function() {
+	miModal.classList.add("show");
+	miModal.style.display = "block";
+	});
+
+	// Agregar evento al botón de cerrar para ocultar el modal
+	var btnCerrarModal = miModal.querySelector(".btn-close");
+	btnCerrarModal.addEventListener("click", function() {
+	miModal.classList.remove("show");
+	miModal.style.display = "none";
+	});
+
 </script>
-			<script>
+
+<script>
+	// 	function abrirModal(id) {
+	//     $('#miModal').modal('show');
+	//     $('#id').val(id);
+	//     $.ajax({
+	//         url: "<?php echo base_url('editar'); ?>",
+	//         type: "POST",
+	//         data: {id: id},
+	//         dataType: "JSON",
+	//         success: function(data) {
+	//             $('#nombre').val(data.nombre);
+	//             // $('#email').val(data.email);
+	//         }
+	//     });
+	// }
+</script>
+<script>
 						function previewImage(input) {
 							if (input.files && input.files[0]) {
 								var reader = new FileReader();
@@ -364,7 +360,7 @@ btnCerrarModal.addEventListener("click", function() {
 								reader.readAsDataURL(input.files[0]);
 							}
 						}
-			</script>
+</script>
 
 			
 

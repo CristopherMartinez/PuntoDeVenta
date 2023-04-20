@@ -27,34 +27,22 @@ $routes->set404Override();
  * --------------------------------------------------------------------
  */
 
-// We get a performance increase by specifying the default
-// route since we don't have to scan directories.
-//Pruebas
-$routes->get('/', 'Home::index');
-$routes->add('/Articulos','Articulos::mensaje');
-// $routes->add('/contacto','ContactoController::index');
-$routes->add('/contacto','Contacto::index'); //Este abre la pagina contacto
-$routes->add('/catalogo/(:num)','Contacto::catalogo/$1');//El $1 quiere decir la cantidad de parametros 
-$routes->add('/contacto','intro::index');
-// $routes->add('/guardar_persona','Contacto::guardar_persona'); //Para que funcione el ejemplo
-
-//Rutas de pagina de venta de videojuegos
 //Rutas genericas
 $routes->add('/gamesplayStation','generico\GamesplayStation::index');
 $routes->add('/gamesXbox','generico\GamesXboxController::index');
 $routes->add('inicio','invitado\Inicio::index');
-$routes->add('inicio','InicioLog::index');
 $routes->add('/login','invitado\LoginController::index');
 $routes->add('/guardar_sugerencia','generico\SugerenciasController::guardar_sugerencia');
 
-//RutasUsuario Logueado
-$routes->add('/gamesXboxLog','generico\GamesXboxController::indexGameXboxLog');
-
+//Rutas de usuario Logueado
+$routes->add('/usuario/inicio','invitado\Inicio::indexLog');
+$routes->add('/usuario/gamesXbox','generico\GamesXboxController::indexGameXboxLog');
+$routes->add('/usuario/ShoppingCar','usuario\ShoppingCarController::index'); 
+$routes->add('/usuario/listaDeseos','usuario\ShoppingCarController::listaDeseos'); 
 
 
 //Rutas invitado
 $routes->add('/SingUp','invitado\RegisterController::index');
-
 $routes->add('/verificar_login','invitado\LoginController::verificar_login');
 $routes->add('/guardar_persona','invitado\RegisterController::guardar_persona');
 
@@ -63,14 +51,10 @@ $routes->add('/admin/inicio','admin\AdminController::index');
 $routes->add('/admin/clientes','admin\AdminController::recuperarclientes');
 $routes->add('/admin/registroVideojuegos','admin\AgregarJuegoController::index');
 $routes->add('/admin/registroAdmin','admin\RegistroAdminController::index');
-$routes->add('/ShoppingCar','ShoppingCarController::index'); //Verificar
-//Guardado
+
+//Guardado de Juegos y Admin
 $routes->add('/guardar_admin','admin\RegistroAdminController::guardar_admin');
 $routes->add('/guardar_juego','admin\AgregarJuegoController::guardar_juego');
-
-
-$routes->add('/ofertas','OfertasController::index');
-
 
 //Administrador Videojuegos
 $routes->get('/borrar/(:num)','admin\AgregarJuegoController::borrar/$1');
@@ -79,9 +63,15 @@ $routes->get('/editar/(:num)','admin\AgregarJuegoController::editar/$1');
 //Actualizar
 $routes->post('/actualizar','admin\AgregarJuegoController::actualizar');
 
-
-//pruebas 08 del 04 del 2023
+//Cerrar sesion
 $routes->get('/cerrarSesion', 'invitado\RegisterController::cerrarSesion');
+
+
+
+$routes->add('/ofertas','OfertasController::index');
+
+
+// $routes->post('/listaDeseo', 'usuario\ShoppingCarController::listaDeseo');
 
 
 

@@ -13,9 +13,4 @@ class Home extends BaseController
         return view('welcome_message',$datos);
     }
 
-    // public function signUp()
-    // {
-    //     return view('Views/user/signUp');
-    // }
-
 }

@@ -200,7 +200,7 @@ class GamesXboxController extends BaseController{
 
         $vista= view('genericos/header').
                 view('usuario/navbarLog',$usuario).
-                view('usuario/gamesXboxLog',$data);
+                view('usuario/gamesXbox',$data);
         return $vista;
     }
 }

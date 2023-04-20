@@ -38,6 +38,14 @@ class Videojuegos extends Model
         return $query->getResultArray();
     }
 
+    public function getVideogamesCartTest(){
+        $query = $this->db->query("SELECT v.idVideojuego, v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario,v.idConsola,v.idCategoria, c.nombre as nombreConsola 
+            FROM videojuego v 
+            INNER JOIN consola c ON v.idConsola = c.idConsola 
+            WHERE v.idConsola IN (1, 2, 3)");
+        return $query->getResultArray();
+    }
+
     //---------------------------------------------------
     
     // METODOS XBOX ONE X

@@ -79,14 +79,7 @@ class LoginController extends BaseController{
             ];
             $session->set($sessionData);
 
-            $vista =view('genericos/header').
-                            view('usuario/navbarLog').
-                            view('invitado/carruselInicio').    
-                            view('invitado/cardsInicio',$data2).
-                            view('usuario/contacto').
-                            view('invitado/image').
-                            view('genericos/footer');
-                        return $vista;
+            return redirect()->to('usuario/inicio');
 
 		} else {
 			return redirect()->to('login');
