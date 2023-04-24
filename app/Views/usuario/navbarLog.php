@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -32,7 +35,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 5px;">
                       Videojuegos
                     </a>
-                    <ul class="dropdown-menu navVideo" style="background-color: #d3d8e0; font-weight:bolder; opacity:.95;">
+                    <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;">
                       <li><a class="dropdown-item" href="gamesplayStationLog" style="padding-left: 5px;">PlayStation</a></li>
                       <!-- <li><hr class="dropdown-divider"></li> -->
                       <li><a class="dropdown-item" href="gamesXbox" style="padding-left: 5px;">Xbox</a></li>
@@ -52,7 +55,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="padding-left: 5px;">
                       Mas
                     </a>
-                    <ul class="dropdown-menu navVideo" style="background-color: #d3d8e0; font-weight:bolder; opacity:.95;">
+                    <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;">
                       <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Saldo digital</a></li>
                       <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Monedas virtuales</a></li>
                       <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Regalos</a></li>
@@ -60,50 +63,50 @@
                   </li>   
                 </li>           
               </ul>
-              
-              <a class="nav-link" href="ShoppingCar" style= padding-left:5px;><span class="material-symbols-outlined">
-                  shopping_cart </span></a>
-                   <a class="nav-link" href="listaDeseos" style="position: relative; padding-left: 5px;" type="button">
-                      <span class="material-symbols-outlined">
-                        favorite
-                        <span id="btnCantidadDeseo" style="font-size:13px; position: absolute; top: -5px; right: -5px; background-color: transparent; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
-                          0
+           
+                  
+              <a class="nav-link" href="listaCarrito" style="padding-left: 5px;">  
+                  <?php
+                      $count = 0;
+                      if(isset($_SESSION['cart'])){
+                        $count = count($_SESSION['cart']);
+                      }
+                  ?>
+                  <span class="material-symbols-outlined">
+                      shopping_cart 
+                  </span>
+                  <span><?php echo $count;?></span> 
+              </a>
+
+
+                <a class="nav-link" href="listaDeseos" style="position: relative; padding-left: 5px;" type="button">
+                        <span class="material-symbols-outlined">
+                          favorite
+                          <span id="btnCantidadDeseo" style="font-size:13px; position: absolute; top: -5px; right: -5px; background-color: transparent; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
+                            0
+                          </span>
                         </span>
-                      </span>
-                    </a>
-                 
-
-              <!-- <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit" style="padding-left: 5px;">Buscar</button>
-              </form> -->
+                </a>
              
-
             
-              
+                 
             
-              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" >
-<!-- 
-                 <div style="margin-left: 100px; margin-top:15px;">
-                 <span style="color: white;">Usuario: <?= session('datosUsuario')[0]['usuario']; ?></span>
-                 <span style="color: white;">Membresía: <?= session('datosUsuario')[0]['nombre']; ?></span>
-                  </div>
-                  <a  class="nav-link active" aria-current="page" style="padding-left:10px; margin-left:0px;"><img src="<?php  echo base_url()?>/imagenes/icons/cardRed.png" style="width:40px;"></a>
-                           -->
-              </ul>
                  <!-- <a class="navbar-brand" href="inicio" style="padding-left:0px; margin-left:0px;"><img src="<?php  echo base_url()?>/imagenes/icons/profileb.png" style="width:40px;"></a> -->
                  <!-- Agregar este botón a la vista -->
-                 <span style="color: white;">Membresía: <?= session('datosUsuario')[0]['nombre']; ?></span>
+                 <span style="color: white; padding-left:10px;">Membresía: <?= session('datosUsuario')[0]['nombre']; ?></span>
                  <a  class="nav-link active" aria-current="page" style="padding-left:10px; margin-left:0px;"><img src="<?php  echo base_url()?>/imagenes/icons/cardRed.png" style="width:40px;"></a>
-                          
-                <a href="<?php echo base_url().'/cerrarSesion'?>" class="btn btn-primary" style="display: flex; align-items: center;">
-                  <span style="color: white; font-size: 12px; margin-right: 5px;">
+                 
+                 <span style="color: white; font-size: 12px; margin-right: 2px; padding-left:6px;">
                     <?= session('datosUsuario')[0]['usuario']; ?>
                   </span>
                   <span class="material-symbols-outlined">
                     person
-                  </span>
-                </a>
+                  </span>       
+                  <a href="<?php echo base_url().'/cerrarSesion'?>" class="btn btn-primary" style="display: flex; align-items: center; margin-left:4px; margin-right:3px;">
+                  Cerrar Sesión
+                  </a>
+                  
+              
                 
 
 

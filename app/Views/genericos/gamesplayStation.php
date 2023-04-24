@@ -18,56 +18,7 @@
         <div class="col-xl-3 col-sm-12" style="background-color:transparent;">
             <div class="row">
                 <br>
-                <!-- <div class="col-xl-12" style="background-color: transparent; margin-top:30px;">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit" style="padding-left: 5px;">Buscar</button>
-                    </form>
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Play Station 3
-                            </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Acción</a></li>
-                                <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Deportivos</a></li>
-                                <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Suspenso</a></li>
-                                <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Terror</a></li>
-                            </div>
-                        </div>
-                        
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                Play Station 4
-                            </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                    <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Acción</a></li>
-                                    <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Deportivos</a></li>
-                                    <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Suspenso</a></li>
-                                    <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Terror</a></li>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                Play Station 5
-                            </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Acción</a></li>
-                                    <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Deportivos</a></li>
-                                    <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Suspenso</a></li>
-                                    <li class="list"><a href="#" style="text-decoration:none; margin-top:0px; color: black;">Terror</a></li>
-
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                
+            
             </div>
         </div>
 

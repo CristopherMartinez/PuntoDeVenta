@@ -1,0 +1,37 @@
+CRITICAL - 2023-04-20 16:16:01 --> Invalid file: "invitado/jumbotron.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/jumbotron.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/jumbotron', [], true)
+ 3 APPPATH\Controllers\invitado\Inicio.php(26): view('invitado/jumbotron')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-20 20:08:25 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 194.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-04-20 20:08:48 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 194.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-04-20 20:10:08 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 194.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-04-20 21:29:45 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 194.
+ 1 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-04-20 20:04:30 --> unlink(././images/Forspoken): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(././images/Forspoken): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 111)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(111): unlink('././images/Forspoken')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('52')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-20 20:05:02 --> unlink(././images/Forspoken): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(././images/Forspoken): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 111)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(111): unlink('././images/Forspoken')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('52')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

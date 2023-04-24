@@ -37,12 +37,17 @@ class Videojuegos extends Model
         $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (1, 2, 3) LIMIT 10");
         return $query->getResultArray();
     }
+    // public function get10VideogamesPlay(){
+    //     $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario FROM videojuego WHERE idConsola IN (1, 2, 3) LIMIT 10");
+    //     return $query->getResultArray();
+    // }
 
+    //Obtenemos los primeros 10 videojuegos de PlayStation Especificando los id de Consolas para mostrar en gamesplayStation 
     public function getVideogamesCartTest(){
         $query = $this->db->query("SELECT v.idVideojuego, v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario,v.idConsola,v.idCategoria, c.nombre as nombreConsola 
             FROM videojuego v 
             INNER JOIN consola c ON v.idConsola = c.idConsola 
-            WHERE v.idConsola IN (1, 2, 3)");
+            WHERE v.idConsola IN (1, 2, 3) LIMIT 10");
         return $query->getResultArray();
     }
 

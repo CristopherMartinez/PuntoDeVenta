@@ -1,17 +1,4 @@
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="
-    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css
-    " rel="stylesheet">
-
-
     <style>
         .img1 {
             height: 280px;
@@ -218,15 +205,16 @@
         }
         }
 
+
    
         
     </style>
 </head>
-   
 <body> 
             <div class="col-12 m-auto backgrounFooter" style="padding-top: 15px;">
                 <div class="owl-carousel owl-theme">
             
+                  
                     <?php foreach ($videojuegos as $juego) { ?>
                     <div class="item mb-4">
                         <div class="card border-0 shadow">
@@ -237,31 +225,50 @@
                         </a>
                         <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px;">
                             <div class="card-body">
-                                <div class="card-title text-center">
-                                    <p style="font-size: 18px; color:#2e2a2a;"><?php echo $juego['nombre'] ?></p>
-                                    <!--Id del videojuego oculto(no borrar)-->
-                                    <p class="card-text"  style="color:black;" hidden><?php echo $juego['idVideojuego'] ?></p>
-                                    <div>
-                                    <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
-                                    
-                                    <!-- <span style="padding-left: 5px;"><a type="button" class="btn btn-outline-success" style="margin-top:10px;" href="SingUp">Agregar al carrito</a></span>
-                                     -->
-                                     <span style="padding-left: 5px;">
-                                      <button type="button" class="btn btn-outline-success" style="margin-top:10px;" onclick="agregarAlCarrito()">Agregar al carrito</button>
-                                     </span>
-
-<!-- 
-                                    <span style="padding-left: 5px;">
-                                      <a type="button" class="btn btn-outline-success" style="margin-top:10px;" href="carrito-de-compras">Agregar al carrito</a>
-                                    </span> -->
+                                <form action="inicio" method="POST">
+                                    <div class="card-title text-center">
+                                        <p style="font-size: 20px; color:#2e2a2a;"><?php echo $juego['nombre'] ?></p>
+                                        <!--Id del videojuego oculto(no borrar)-->
+                                        <p class="card-text"  style="color:black;" hidden><?php echo $juego['idVideojuego'] ?></p>
+                                        <p class="card-text"  style="color:black; font-size: 15px;"><?php echo $juego['nombreConsola'] ?></p>
+                                        <input type="text" id="idVideojuego" name="idVideojuego" value="<?php echo $juego['idVideojuego'] ?>" hidden>
+                                        <input type="text" id="nombre" name="nombre" value="<?php echo $juego['nombre'] ?>" hidden>
+                                        <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
+                                        <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
+                                        <div>
+                                        <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
+                                        <span style="padding-left: 5px;">
+                                        <button type="submit" name="Add_To_Cart" class="btn btn-success" style="margin-top:10px;">Agregar al carrito</button>
+                                        <!-- <button type="button" class="btn btn-outline-success" style="margin-top:10px;" onclick="agregarAlCarrito()">Agregar al carrito</button> -->
+                                        </span>
+                                        </div>
                                     </div>
-                                </div>
+                                </form>    
                             </div>
                         </div>
                     </div>
                     <?php } ?>
+                
                     
                 </div>
+                <?php
+               
+                print_r(json_encode($_SESSION));
+                // print_r(json_encode($videojuegos));
+                ?>
+                <br>
+                <!--Prueba de envio de datos de seleccion hacia el carrito de compras-->
+                <!-- <div>Desde aqui se va mandar hacia el carrito de compras</div> -->
+                <!-- <form action="listaCarrito" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="idVideojuego">
+                <br>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" value="nombre">
+                <br>
+                <input type="submit" name="Add_To_Cart" value="Enviar">
+                </form> -->
+
 
                  
 </body>

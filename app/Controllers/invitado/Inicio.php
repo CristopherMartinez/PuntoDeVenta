@@ -50,7 +50,9 @@ class Inicio extends BaseController{
         );
 
         $videojuego = new Videojuegos();
-        $data2["videojuegos"]=$videojuego->get10VideogamesPlay();
+        // $data2["videojuegos"]=$videojuego->get10VideogamesPlay();
+        $data2["videojuegos"]=$videojuego->getVideogamesCartTest();
+       
 
        
 

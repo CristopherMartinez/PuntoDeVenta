@@ -1,45 +1,3 @@
-
-<!-- <footer class="container-fluid text-center backgrounFooter" >
-    <div class="row">
-      <div style="color:whitesmoke; font-weight: bold; font-size:40px;"><b>World Games</b></div>
-      <div class="col-md-3" style="margin-top: 30px; color:#e60202;">
-        <h5 style="color:whitesmoke; font-weight: bold; font-size:22px;"><b>Información de la empresa</b></h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="informacion">¿Quienes somos?</a></li>
-          <li><a href="#" class="informacion">Aviso de privacidad</a></li>
-          <li><a href="#" class="informacion">Terminos y condiciones</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3" style="margin-top: 30px;">
-        <h5 style="color:whitesmoke; font-weight: bold; font-size:22px;"><b>Puntos de distribucion</b></h5>
-        <ul class="list-unstyled">
-          <li><a href="#" class="informacion">Montecarlo</a></li>
-          <li><a href="#" class="informacion">Centro</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3" style="margin-top: 30px;">
-        <h5 style="color:whitesmoke; font-weight: bold; font-size:22px;"><b>Contacto</b></h5>
-        <ul class="list-unstyled">
-          <li><i class="fa fa-phone"></i> Teléfono: 99-93-35-43-42</li>
-          <li><i class="fa fa-envelope"></i>Email: contacto@worldgames.com</li>
-        </ul>
-      </div>
-      <div class="col-md-3" style="margin-top: 30px;">
-        <h5 style="color:whitesmoke; font-weight: bold; font-size:22px;"><b>Síguenos en</b></h5>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/face.png" style="width: 30px;"></a></li>
-          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/instagram.png" style="width: 30px;"></a></li>
-          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/tiktok.png" style="width: 30px;"></i></a></li>
-          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/twiter.png" style="width: 30px;"></i></a></li>
-          <li class="list-inline-item"><a href="#"><img src="<?php  echo base_url()?>/imagenes/icons/twitch.png" style="width: 30px;"></i></a></li>
-        </ul>
-      </div>
-    </div>
-</footer> -->
-
-
-
-
 <footer class="text-center text-lg-start bg-black text-muted" >
 
   <section class="">
@@ -60,17 +18,6 @@
         </ul>
         </div>
 
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-          <h6 class="text-uppercase fw-bold mb-4">
-            Puntos de distribución
-          </h6>
-          <ul class="list-unstyled" style="font-size:15px;">
-          <li><a href="#" class="informacion">Montecarlo</a></li>
-          <li><a href="#" class="informacion">García Gineres</a></li>
-        </ul>
-        </div>
- 
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
           <h6 class="text-uppercase fw-bold mb-4" style="font-weight: bolder; font-size:17px;">Contacto</h6>
@@ -105,9 +52,6 @@
 
 
 
-  <div><?php $session = session(); echo $session->get('nombre'); ?></div>
-
-					
 </footer>
 
 

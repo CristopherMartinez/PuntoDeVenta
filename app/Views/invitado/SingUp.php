@@ -1,18 +1,20 @@
 <head>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+ -->
 
   <style>
-      #ver-repite-contrasenia span.material-symbols-outlined {
+      /* #ver-repite-contrasenia span.material-symbols-outlined {
       color: white;
     }
     #ver-contrasenia span.material-symbols-outlined {
       color: white;
-    }
+    } */
   </style>
 </head>
+
+
 <body class="imgregister letraGeneral" style="color:whitesmoke">
       <div class="container">
         <div class="row justify-content-center mt-5">
@@ -111,6 +113,9 @@
       </div>
 </body>
 
+
+
+
 <script>
    document.getElementById('miFormulario').addEventListener('submit', function(event) {
         if (!this.checkValidity()) {
@@ -161,5 +166,3 @@
     }
 
 </script>
-
-

@@ -1,4 +1,5 @@
 
+<!--Navbar invitado-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary letraNavbar">
         <a class="navbar-brand" href="inicio" style="padding-left:5px;"><img src="<?php  echo base_url()?>/imagenes/logoWorld.png" class="logoWorld"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,4 +61,4 @@
             </div>
 
         
-        </nav>
+</nav>

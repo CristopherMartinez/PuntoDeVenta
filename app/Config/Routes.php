@@ -67,13 +67,20 @@ $routes->post('/actualizar','admin\AgregarJuegoController::actualizar');
 $routes->get('/cerrarSesion', 'invitado\RegisterController::cerrarSesion');
 
 
+// $routes->post('/listaDeseo', 'usuario\ShoppingCarController::listaDeseo');
+$routes->add('/usuario/listaDeseos2','usuario\ShoppingCarController::mostrarDeseos');
+$routes->add('/usuario/listaCarrito','usuario\ShoppingCarController::listaCarrito');
+$routes->add('/usuario/manejadorCarrito','usuario\ShoppingCarController::manejadorCarrito');
+
+
+//Guardar Tarjeta (Usuario)
+$routes->add('/guardarTarjeta','usuario\ShoppingCarController::guardarTarjeta');
+//Comprar videojuego (Usuario)
+$routes->add('/comprar','usuario\ShoppingCarController::comprar');
+
+
 
 $routes->add('/ofertas','OfertasController::index');
-
-
-// $routes->post('/listaDeseo', 'usuario\ShoppingCarController::listaDeseo');
-
-
 
 
 /*
