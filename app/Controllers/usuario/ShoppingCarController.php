@@ -134,8 +134,10 @@ class ShoppingCarController extends BaseController{
         }
     }
 
+    //Comprar sin agregar tarjeta directo
     public function comprar(){
         $tarjeta = new Ordenes();
+        $videojuego = new Videojuegos();
         //Generamos un folio aleatorio
         $folio = rand(1000000000, 9999999999);
         //Obtenemos la fecha actual y hora
@@ -143,6 +145,7 @@ class ShoppingCarController extends BaseController{
 
         //Se genera arreglo con datos de la venta
         $data = [
+            "usuario"=>$_SESSION['datosUsuario'][0]['usuario'],
             "folio"=> $folio,
             "nombre" => $_POST['nombre'],
             "apellidos" => $_POST["apellidos"],
@@ -171,23 +174,36 @@ class ShoppingCarController extends BaseController{
             $precio = $values['precio'];
             $cantidad = $values['Cantidad'];
             $idVideojuego = $values['idVideojuego'];
+            $consola = $values['NombreConsola'];
 
             // Agregamos los datos de la venta al arreglo de ventas
             $ventas[] = [
                 "idOrden" => $idOrden,
                 "idVideojuego"=>$idVideojuego,
                 "nombre" => $nombre,
+                "consola" => $consola,
                 "precio" => $precio,
                 "cantidad" => $cantidad,
-            ];
-            
+            ];             
         }
 
-        // Insertamos los datos de todas las ventas en la tabla de ordenesUsuario
         foreach ($ventas as $venta) {
             $tarjeta->insert($venta);
+            
+            // Obtener la cantidad actual del videojuego correspondiente
+            $videojuegoActual = $videojuego->find($venta['idVideojuego']);
+            $cantidadActual = $videojuegoActual['cantidadInventario'];
+            
+            // Calcular la nueva cantidad de inventario
+            $nuevaCantidad = $cantidadActual - $venta['cantidad'];
+            
+            // Actualizar la cantidad de inventario en la base de datos
+            $actualizarLicencias = [
+                "cantidadInventario" => $nuevaCantidad
+            ];
+            $videojuego->update($venta['idVideojuego'], $actualizarLicencias);
         }
-
+        
         //Se llama a funcion para agregar a tabla de VideojuegosUsuario mandando como parametro el idOrden
          $this->addToVideojuegosUsuario();
 

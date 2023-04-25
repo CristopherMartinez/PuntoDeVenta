@@ -1,10 +1,8 @@
-
-<!-- <?php
-//Para imprimir en formato JSON Test
-print_r(json_encode($usuarios));
+<!-- 
+<?php
+// print_r(json_encode($videojuegos));
+print_r(json_encode($ventas));
 ?> -->
-
-<h2 style="text-align: center; margin-top:10px;">Clientes</h2>
 
 <head>
 	<!-- Agregar los enlaces de los archivos necesarios -->
@@ -33,50 +31,53 @@ print_r(json_encode($usuarios));
 	</style>
 </head>
 
-
+<br>
 <div class="container">
-<div id="contenido de la tabla" class="form-group row">
-					<div class="col-sm-12">
-						<br>
-						<div class="table table-responsive">
-							<table id="miTabla" class="table table-hover table-bordered">
-								<thead>
-									<tr class="bg-dark">
-									<td><b>idUsuario</b></td>	
-									<td><b>Membresía</b></td>	
-									<td><b>Usuario</b></td>
-									<td><b>Nombre</b></td>
-									<td><b>Correo</b></td>
-                                    <td><b>Dirección</b></td>
-									<td><b>Teléfono</b></td>
-                                    <td><b>Estado</b></td>
-									</tr>
-								</thead>
-								<tbody>
-								<?php foreach ($usuarios as $usuario): ?>
-									<tr class="bg-info">
-										<td><?= $usuario['idUsuario'] ?></td>
-                                        <td><?= $usuario['idMembresia'] ?></td>
-                                        <td><?= $usuario['usuario'] ?></td>
-                                        <td><?= $usuario['nombre'] ?> <?= $usuario['apellidos']?></td>
-                                        <td><?= $usuario['correo'] ?></td>
-                                        <td><?= $usuario['direccion'] ?></td>
-                                        <td><?= $usuario['telefono'] ?></td>
-                                        <td><?php 
-										if($usuario['estado'] == 1){
-											echo "Activo";
-										}else{
-											echo "Inactivo";
-										}
-										 ?></td>
-									</tr>
-								<?php endforeach; ?>
+    <h2>VENTAS</h2>
+    <div id="contenido de la tabla" class="form-group row">
+    <div class="col-sm-12">
+        <br>
+        <div class="table table-responsive">
+            <table id="miTabla" class="table table-hover table-bordered">
+                <thead>
+                    <tr class="bg-dark">
+                        <td>id Orden</td>
+                        <td><b>Folio de compra</b></td>
+                        <td><b>Usuario</b></td>
+                        <td><b>Nombre</b></td>
+                        <!-- <td> 
+                            <div class="row">                              
+                                <div class="col">
+                                    <b>Videojuegos vendidos</b>
+                                </div>              
+                            </div>
+                            <div class="row">
+                                        <div class="col-4">Nombre</div>
+                                        <div class="col-4">Consola</div>
+                                        <div class="col-4">Precio</div>
+                            </div>
+                        </td> -->
+                        <!-- <td><b>Total de venta</b></td> -->
+                        <td><b>Fecha de venta</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($ventas as $venta): ?>
+                        <tr class="bg-info">
+                            <td><?= $venta['idOrden'] ?></td>
+                            <td><?= $venta['folio'] ?></td>
+                            <td><?= $venta['usuario'] ?></td>
+                            <td><?= $venta['nombre'] ?> <?= $venta['apellidos'] ?></td>
+                            
+                            <td><?= $venta['fechaVenta'] ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
 </div>
 				
     
@@ -86,7 +87,7 @@ $(document).ready(function() {
     $('#miTabla').DataTable({
         "pagingType": "simple_numbers_no_ellipses",
         "language": {
-            "emptyTable": "<span style='color:white'>No hay datos disponibles en la tabla</span>",
+            "emptyTable": "<span style='color:black;'><b>No hay datos disponibles en la tabla</b></span>",
             "info": "<span style='color:white'>Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros</span>",
             "infoEmpty": "<span style='color:white'>Mostrando 0 registros</span>",
             "infoFiltered": "<span style='color:white'>(filtrado de un total de _MAX_ registros)</span>",
@@ -120,11 +121,6 @@ $(document).ready(function() {
 </script>
 
 
+
+
 			
-
-
-
-
-
-
-

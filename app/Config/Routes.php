@@ -51,6 +51,7 @@ $routes->add('/admin/inicio','admin\AdminController::index');
 $routes->add('/admin/clientes','admin\AdminController::recuperarclientes');
 $routes->add('/admin/registroVideojuegos','admin\AgregarJuegoController::index');
 $routes->add('/admin/registroAdmin','admin\RegistroAdminController::index');
+$routes->add('/admin/ventas','admin\AdminController::ventas');
 
 //Guardado de Juegos y Admin
 $routes->add('/guardar_admin','admin\RegistroAdminController::guardar_admin');

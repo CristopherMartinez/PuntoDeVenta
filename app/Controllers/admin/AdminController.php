@@ -2,6 +2,7 @@
 namespace App\Controllers\admin;
 use App\Controllers\BaseController;
 use App\Models\usuario\RegistrarUsuario;
+use App\Models\usuario\Ordenes;
 
 class AdminController extends BaseController{
     
@@ -17,22 +18,35 @@ class AdminController extends BaseController{
 
     public function recuperarclientes(){
        $usuario = new RegistrarUsuario();
-    //    $usuarios = $usuario->findAll();
-
-    //    foreach ($usuarios as $usuario) {
-    //     echo $usuario['idUsuario'] . ' - ' . $usuario['nombre'] . ' ' . $usuario['apellidos'] . '<br>';
-    //     }
-
         // //El metodo findAll
         $usuarios = array(
             'usuarios' => $usuario->findAll()
         );
 
-
-
         $vistas= 
                 view('admin/navbarAdmin').
                  view('admin/clientes',$usuarios);
+         
+        return $vistas;
+    }
+
+    //Mostrar vista de ventas
+    public function ventas(){
+        $ventas = new Ordenes();
+       
+        $ventas = array(
+            'ventas' => $ventas->findAll(),
+            'videojuegos'=>$ventas->getProducts1(31) //Test
+        );
+        // $ventas = array(
+        //     'ventas' => $ventas->findAll(),
+        //     'videojuegos' => $ventas->getProducts(session('datosUsuario')[0]['usuario']),
+        //     'total'=>$ventas->getProductsTotal(session('datosUsuario')[0]['usuario'])
+        // );
+
+        $vistas= 
+                view('admin/navbarAdmin').
+                 view('admin/ventas',$ventas);
          
         return $vistas;
     }

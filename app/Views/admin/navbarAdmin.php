@@ -35,7 +35,7 @@
                     </div>
                   </li>
                   <li class="nav-item">
-                  <a class="nav-link" href="listaPedidos">Pedidos</a>
+                  <a class="nav-link" href="ventas">Ventas</a>
                   </li>
               </ul>
             </div>

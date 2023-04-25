@@ -10,7 +10,7 @@ class OrdenesUsuario extends Model
         protected $table = 'ordenesusuario';
         protected $primaryKey = 'idOrden';
         protected $returnType = 'array';
-        protected $allowedFields = ['idOrden','idVideojuego','nombre','precio','cantidad'];
+        protected $allowedFields = ['idOrden','idVideojuego','nombre','consola','precio','cantidad'];
         
         
 }
