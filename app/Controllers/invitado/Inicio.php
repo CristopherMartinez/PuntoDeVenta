@@ -58,11 +58,12 @@ class Inicio extends BaseController{
 
         $vista= view('genericos/header').
                 view('usuario/navbarLog',$usuario).
-                view('invitado/carruselInicio'). 
+                view('invitado/carruselInicio').               
                 view('usuario/cardsGames',$data2).
                 view('usuario/memberships').
                 view('usuario/contacto').
                 view('invitado/image').
+                view('usuario/misionVision'). 
                 view('genericos/footer').
                 view('usuario/inicio');
         return $vista;

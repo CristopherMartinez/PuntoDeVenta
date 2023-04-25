@@ -20,3 +20,65 @@ in APPPATH\Views\usuario\navbarLog.php on line 96.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:36:17 --> Undefined array key "idVideojuego"
+in APPPATH\Views\usuario\inicio.php on line 64.
+ 1 APPPATH\Views\usuario\inicio.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Views\\usuario\\inicio.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\inicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/inicio', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(67): view('usuario/inicio')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:53:42 --> Undefined array key "idVideojuego"
+in APPPATH\Views\usuario\inicio.php on line 136.
+ 1 APPPATH\Views\usuario\inicio.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Views\\usuario\\inicio.php', 136)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\inicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/inicio', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(67): view('usuario/inicio')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:54:26 --> Undefined array key "idVideojuego"
+in APPPATH\Views\usuario\inicio.php on line 136.
+ 1 APPPATH\Views\usuario\inicio.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Views\\usuario\\inicio.php', 136)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\inicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/inicio', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(67): view('usuario/inicio')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:55:20 --> Undefined array key "idVideojuego"
+in APPPATH\Views\usuario\inicio.php on line 138.
+ 1 APPPATH\Views\usuario\inicio.php(138): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Views\\usuario\\inicio.php', 138)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\inicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/inicio', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(67): view('usuario/inicio')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 15:58:11 --> Undefined array key "idVideojuego"
+in APPPATH\Views\usuario\inicio.php on line 136.
+ 1 APPPATH\Views\usuario\inicio.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Views\\usuario\\inicio.php', 136)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\inicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/inicio', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(67): view('usuario/inicio')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-24 16:21:20 --> Undefined array key "cart"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 208.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(208): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cart"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 208)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprar2()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

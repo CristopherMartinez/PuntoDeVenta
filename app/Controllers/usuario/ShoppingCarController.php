@@ -6,6 +6,7 @@ use App\Models\Videojuegos;
 use App\Models\usuario\Tarjeta;
 use App\Models\usuario\Ordenes;
 use App\Models\usuario\OrdenesUsuario;
+use App\Models\usuario\VideojuegosUsuario;
 
 class ShoppingCarController extends BaseController{
 
@@ -135,109 +136,132 @@ class ShoppingCarController extends BaseController{
 
     public function comprar(){
         $tarjeta = new Ordenes();
+        //Generamos un folio aleatorio
+        $folio = rand(1000000000, 9999999999);
+        //Obtenemos la fecha actual y hora
+        $fechaVenta = date('Y-m-d H:i:s');
 
-        // session_start();
-        // foreach($_SESSION['cart'] as $key => $values){
-        //     $nombre = $values['nombre'];
-        //     $precio = $values['precio'];
-        //     $cantidad = $values['Cantidad'];
-        // }
+        //Se genera arreglo con datos de la venta
+        $data = [
+            "folio"=> $folio,
+            "nombre" => $_POST['nombre'],
+            "apellidos" => $_POST["apellidos"],
+            "numeroTarjeta" => $_POST["tarjeta"],
+            "direccion" => $_POST["direccion"],
+            "fechaVencimiento" => $_POST["fechaVencimiento"],
+            "cvv" => $_POST["cvv"],
+            "fechaVenta"=> $fechaVenta
+        ];
 
-            //Se genera arreglo con datos de la venta
-            $data = [
-                "nombre" => $_POST['nombre'],
-                "apellidos" => $_POST["apellidos"],
-                "numeroTarjeta" => $_POST["tarjeta"],
-                "direccion" => $_POST["direccion"],
-                "fechaVencimiento" => $_POST["fechaVencimiento"],
-                "cvv" => $_POST["cvv"],
+        $tarjeta->insert($data);
+        //Obtenemos el idOrden que se genero automaticamente 
+        $idOrden = $tarjeta->getConnection()->insert_id;
+
+         $tarjeta = new OrdenesUsuario();
+
+        session_start();
+
+        // Creamos un arreglo para almacenar los datos de todas las ventas
+        $ventas = [];
+
+        if(isset($_SESSION['cart'])){
+
+        foreach ($_SESSION['cart'] as $key => $values) {
+            $nombre = $values['nombre'];
+            $precio = $values['precio'];
+            $cantidad = $values['Cantidad'];
+            $idVideojuego = $values['idVideojuego'];
+
+            // Agregamos los datos de la venta al arreglo de ventas
+            $ventas[] = [
+                "idOrden" => $idOrden,
+                "idVideojuego"=>$idVideojuego,
+                "nombre" => $nombre,
+                "precio" => $precio,
+                "cantidad" => $cantidad,
             ];
-    
-            $tarjeta->insert($data);
+            
+        }
 
-             $tarjeta = new OrdenesUsuario();
+        // Insertamos los datos de todas las ventas en la tabla de ordenesUsuario
+        foreach ($ventas as $venta) {
+            $tarjeta->insert($venta);
+        }
 
-            session_start();
+        //Se llama a funcion para agregar a tabla de VideojuegosUsuario mandando como parametro el idOrden
+         $this->addToVideojuegosUsuario();
 
-            // Creamos un arreglo para almacenar los datos de todas las ventas
-            $ventas = [];
 
+        // Eliminamos el carrito de la sesión
+        unset($_SESSION['cart']);
+
+        // Mostramos un mensaje
+        $session = session();
+        $session->setFlashdata('success', 'Se realizó la compra correctamente');
+
+        return redirect()->to('usuario/listaCarrito');
+        }else{
+            
+            //Mostrar mensaje de que no hay en el carrito cosas
+            $session = session();
+            $session->setFlashdata('SinCompras', 'No hay ningun videojuego agregado al carrito');
+            return redirect()->to('usuario/listaCarrito');
+        }
+
+    }
+
+    //Realizar compra usuario insertando en Tabla de VideojuegosUsuario
+    public function addToVideojuegosUsuario()
+    {
+         $videojuegosUsuario = new VideojuegosUsuario();
+
+
+        session_start();
+
+        // Creamos un arreglo para almacenar los datos de todas las ventas
+        $ventas = [];
+
+        if(isset($_SESSION['cart'])){
             foreach ($_SESSION['cart'] as $key => $values) {
                 $nombre = $values['nombre'];
+                $consola = $values['NombreConsola'];
+                $idVideojuego = $values['idVideojuego'];
                 $precio = $values['precio'];
-                $cantidad = $values['Cantidad'];
-
-                // Agregamos los datos de la venta al arreglo de ventas
+    
+                // Agregamos los datos de la venta al arreglo 
                 $ventas[] = [
-                    "nombre" => $nombre,
+                    "usuario"=>$_SESSION['datosUsuario'][0]['usuario'],
+                    "idVideojuego" => $idVideojuego,
+                    "nombreVideojuego" => $nombre,
+                    "consola" => $consola,
                     "precio" => $precio,
-                    "cantidad" => $cantidad,
+                    // "image"=>$
                 ];
                 
             }
-
-            // Insertamos los datos de todas las ventas en la tabla de ventas
+    
+            // Insertamos los datos de todas las ventas en la tabla de videojuegosUsuario
             foreach ($ventas as $venta) {
-                $tarjeta->insert($venta);
+                $videojuegosUsuario->insert($venta);
             }
-
+    
             // Eliminamos el carrito de la sesión
             unset($_SESSION['cart']);
-
+    
             // Mostramos un mensaje
             $session = session();
             $session->setFlashdata('success', 'Se realizó la compra correctamente');
-
+    
             return redirect()->to('usuario/listaCarrito');
+        }else{
+            //Mostrar mensaje de que no hay en el carrito cosas
+            $session = session();
+            $session->setFlashdata('SinCompras', 'No hay ningun videojuego agregado al carrito');
+            return redirect()->to('usuario/listaCarrito');
+        }
 
-
-            // //Eliminamos $_SESSION['cart']
-            // unset($_SESSION['cart']);
-
-            // // $session = session();
-            // // $session->setFlashdata('success', 'Se realizo la compra correctamente');
-
-            // return redirect()->to('usuario/listaCarrito');
+      
     }
-
-    //Realizar compra (Usuario) directamente sin registrar tarjeta
-    // public function comprar()
-    // {
-    //     $tarjeta = new Ventas();
-
-    //     session_start();
-
-    //     // Creamos un arreglo para almacenar los datos de todas las ventas
-    //     $ventas = [];
-
-    //     foreach ($_SESSION['cart'] as $key => $values) {
-    //         $nombre = $values['nombre'];
-    //         $precio = $values['precio'];
-    //         $cantidad = $values['Cantidad'];
-
-    //         // Agregamos los datos de la venta al arreglo de ventas
-    //         $ventas[] = [
-    //             "nombre" => $nombre,
-    //             "precio" => $precio,
-    //             "cantidad" => $cantidad,
-    //         ];
-            
-    //     }
-
-    //     // Insertamos los datos de todas las ventas en la tabla de ventas
-    //     foreach ($ventas as $venta) {
-    //         $tarjeta->insert($venta);
-    //     }
-
-    //     // Eliminamos el carrito de la sesión
-    //     unset($_SESSION['cart']);
-
-    //     // Mostramos un mensaje
-    //     $session = session();
-    //     $session->setFlashdata('success', 'Se realizó la compra correctamente');
-
-    //     return redirect()->to('usuario/listaCarrito');
-    // }
 
 
 

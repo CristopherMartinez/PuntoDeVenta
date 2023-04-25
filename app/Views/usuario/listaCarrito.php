@@ -3,7 +3,10 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
 </head>
-
+<!-- 
+ <?php       
+    print_r(json_encode($_SESSION));
+ ?> -->
 
 <br>
 <body class="backgrounFooter">
@@ -32,13 +35,15 @@
                     foreach($_SESSION['cart'] as $key => $value){
                         // print_r($value);
                         // $total = $total+$value['precio'];
+                        //En la parte de maximo esta limitado a un juego es decir una licencia por juego
                         echo"
                         <tr>
                             <td>$value[idVideojuego]</td>
                             <td>$value[nombre]</td>
+                            <td>$value[NombreConsola]</td>
                             <td>$$value[precio]<input type='hidden' class='iprice' value='$value[precio]'></td>
                             <td>
-                            <input class='text-center iquantity' onchange='subTotal()'  type='number' value='$value[Cantidad]' min='1' max='10'>
+                            <input class='text-center iquantity' onchange='subTotal()'  type='number' value='$value[Cantidad]' min='1' max='1'>
                             </td>
                             <td class='itotal'></td>
                             <td>
@@ -73,6 +78,7 @@
     <!-- Botón para abrir el modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar Tarjeta</button>
    
+    <!--Mensaje para mostrar cuando se completa la compra-->
     <?php if (session()->has('success')): ?>
         <script>
             Swal.fire({
@@ -84,16 +90,30 @@
         </script>
     <?php endif; ?>
 
+    <!--Mensaje para mostrar ya esta agregado al carrito-->
     <?php if (session()->has('error')): ?>
         <script>
             Swal.fire({
-                icon: 'error',
-                title: '<?= session('error') ?>',
+                icon: 'warning',
+                title: '<?= session('warning') ?>',
                 showConfirmButton: false,
                 timer: 1500
             });
         </script>
     <?php endif; ?>
+
+     <!--Mensaje para mostrar cuando no hay compras en el carrito-->        
+    <?php if (session()->has('SinCompras')): ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: '<?= session('SinCompras') ?>',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -130,7 +150,7 @@
                                 </div>
                                 <div class="col">
                                     <label for="cvv" class="form-label colorLetrasForm">CVV</label>
-                                    <input type="password" placeholder="123" class="form-control" name="cvv" id="cvv" maxlength="3" required>
+                                    <input type="password" placeholder="267" class="form-control" name="cvv" id="cvv" maxlength="3" required>
                                 </div>
                             </div>
                         
@@ -180,7 +200,7 @@
                                 </div>
                                 <div class="col">
                                     <label for="cvv" class="form-label colorLetrasForm">CVV</label>
-                                    <input type="password" placeholder="123" class="form-control" name="cvv" id="cvv" maxlength="3" required>
+                                    <input type="password" placeholder="267" class="form-control" name="cvv" id="cvv" maxlength="3" required>
                                 </div>
                             </div>
                         
@@ -214,7 +234,7 @@
         for(i=0; i<iprice.length; i++)
         {
 
-            itotal[i].innerText = (iprice[i].value)*(iquantity[i].value);
+            itotal[i].innerText = '$'+(iprice[i].value)*(iquantity[i].value);
             gt = gt + (iprice[i].value)*(iquantity[i].value);
 
         }

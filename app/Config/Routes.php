@@ -77,6 +77,8 @@ $routes->add('/usuario/manejadorCarrito','usuario\ShoppingCarController::manejad
 $routes->add('/guardarTarjeta','usuario\ShoppingCarController::guardarTarjeta');
 //Comprar videojuego (Usuario)
 $routes->add('/comprar','usuario\ShoppingCarController::comprar');
+//Comprar videojuego (Usuario) Sin tarjeta
+$routes->add('/comprar2','usuario\ShoppingCarController::comprar2');
 
 
 

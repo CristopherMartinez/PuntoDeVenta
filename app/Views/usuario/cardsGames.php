@@ -251,11 +251,11 @@
                 
                     
                 </div>
-                <?php
+                <!-- <?php
                
                 print_r(json_encode($_SESSION));
                 // print_r(json_encode($videojuegos));
-                ?>
+                ?> -->
                 <br>
                 <!--Prueba de envio de datos de seleccion hacia el carrito de compras-->
                 <!-- <div>Desde aqui se va mandar hacia el carrito de compras</div> -->

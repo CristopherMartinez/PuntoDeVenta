@@ -10,8 +10,6 @@ class Ordenes extends Model
         protected $table = 'ordenes';
         protected $primaryKey = 'idOrden';
         protected $returnType = 'array';
-        protected $allowedFields = ['idOrden','nombre','apellidos','numeroTarjeta','direccion','fechaVencimiento','cvv'];
-        
-        
+        protected $allowedFields = ['idOrden','folio','nombre','apellidos','numeroTarjeta','direccion','fechaVencimiento','cvv','fechaVenta'];       
 }
 
