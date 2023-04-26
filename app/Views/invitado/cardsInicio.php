@@ -1,8 +1,11 @@
-
+<head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
+</head> 
 <body> 
             <div class="col-12 m-auto backgrounFooter" style="padding-top: 15px;">
                 <div class="owl-carousel owl-theme">
             
+                  
                     <?php foreach ($videojuegos as $juego) { ?>
                     <div class="item mb-4">
                         <div class="card border-0 shadow">
@@ -13,39 +16,40 @@
                         </a>
                         <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px;">
                             <div class="card-body">
-                                <div class="card-title text-center">
-                                    <p style="font-size: 18px; color:#2e2a2a;"><?php echo $juego['nombre'] ?></p>
-                                    <!--Id del videojuego oculto(no borrar)-->
-                                    <p class="card-text"  style="color:black;" hidden><?php echo $juego['idVideojuego'] ?></p>
-                                    <div>
-                                    <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
-                                    
-                                    <!-- <span style="padding-left: 5px;"><a type="button" class="btn btn-outline-success" style="margin-top:10px;" href="SingUp">Agregar al carrito</a></span>
-                                     -->
-                                     <span style="padding-left: 5px;">
-                                      <button type="button" class="btn btn-outline-success" style="margin-top:10px;" onclick="agregarAlCarrito()">Agregar al carrito</button>
-                                     </span>
-
-<!-- 
-                                    <span style="padding-left: 5px;">
-                                      <a type="button" class="btn btn-outline-success" style="margin-top:10px;" href="carrito-de-compras">Agregar al carrito</a>
-                                    </span> -->
+                                
+                                    <div class="card-title text-center">
+                                        <p style="font-size: 20px; color:#2e2a2a;"><?php echo $juego['nombre'] ?></p>
+                                        <!--Id del videojuego oculto(no borrar)-->
+                                        <p class="card-text"  style="color:black;" hidden><?php echo $juego['idVideojuego'] ?></p>
+                                        <p class="card-text"  style="color:black; font-size: 15px;"><?php echo $juego['nombreConsola'] ?></p>
+                                        <input type="text" id="idVideojuego" name="idVideojuego" value="<?php echo $juego['idVideojuego'] ?>" hidden>
+                                        <input type="text" id="nombre" name="nombre" value="<?php echo $juego['nombre'] ?>" hidden>
+                                        <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
+                                        <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
+                                        <div>
+                                        <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
+                                        <span style="padding-left: 5px;">
+                                        <!-- <button  class="btn btn-success" style="margin-top:10px;">Agregar al carrito</button> -->
+                                        <button  class="btn btn-success" style="margin-top:10px;" onclick="mostrarMensaje()">Agregar al carrito</button>
+                                        </span>
+                                        </div>
                                     </div>
-                                </div>
+                                   
                             </div>
                         </div>
                     </div>
                     <?php } ?>
+                
                     
-                </div>
+                </div>            
 </body>
 
-<div class="pricing-wrapper clearfix" style="margin-bottom: 30px;">
+
+<!-- <div class="pricing-wrapper clearfix" style="margin-bottom: 30px;">
 
   <div class="pricing-table">
     <h3 class="pricing-title">Premium</h3>
     <div class="price">$60<sup>/ mes</sup></div>
-    <!-- Lista de Caracteristicas / Propiedades -->
     <ul class="table-list">
       <li>Temporadas <span>de videojuegos</span></li>
       <li>Acceso Ilimitado <span>por 3 meses</span></li>
@@ -53,7 +57,6 @@
       <li>15 días <span> de demos espciales</span></li>
       <li>6 Meses <span>de acceso a juegos online</span></li>
     </ul>
-    <!-- Contratar / Comprar -->
     <div class="table-buy">
       <a href="SingUp" class="pricing-action">Comprar</a>
     </div>
@@ -62,7 +65,6 @@
   <div class="pricing-table gold">
     <h3 class="pricing-title">Gold</h3>
     <div class="price">$100<sup>/ mes</sup></div>
-    <!-- Lista de Caracteristicas / Propiedades -->
     <ul class="table-list">
       <li>Acceso Ilimitado <span>por 12 meses</span></li>
       <li>Gratis 10 <span>videojuegos</span></li>
@@ -70,7 +72,6 @@
       <li>6 Meses <span> de acceso a juegos online</span></li>
       <li>Acceso a preventa especial</li>
     </ul>
-    <!-- Contratar / Comprar -->
     <div class="table-buy">
       <a href="SingUp" class="pricing-action">Comprar</a>
     </div>
@@ -79,7 +80,6 @@
   <div class="pricing-table diamond">
     <h3 class="pricing-title">Diamond</h3>
     <div class="price">$200<sup>/ mes</sup></div>
-    <!-- Lista de Caracteristicas / Propiedades -->
     <ul class="table-list">
       <li>Acceso Ilimitado <span>por 15 meses</span></li>
       <li>Gratis 15 <span>videojuegos</span></li>
@@ -87,12 +87,11 @@
       <li>Soporte <span> personalizado</span></li>
       <li>Acceso a preventa especial</li>
     </ul>
-    <!-- Contratar / Comprar -->
     <div class="table-buy">
       <a href="SingUp" class="pricing-action">Comprar</a>
     </div>
   </div>
-</div>
+</div> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
@@ -139,4 +138,15 @@ crossorigin="anonymous"></script>
 }
 </script>
 <script src=" <?php echo base_url()?>/js/scripts.js"></script>
-    
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+<script>
+    function mostrarMensaje(){
+        Swal.fire({  
+        icon: 'info',
+        title: '¿Aun no estas registrado?',
+        showConfirmButton:true,
+        // html: '<button class="btn btn-primary">Registrate</button>'
+        confirmButtonText: '<a href="SingUp" style="text-decoration:none; color:#454746; font-weight:700;">Registrate</a>',
+        })   
+    }
+</script>

@@ -3,10 +3,11 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
 </head>
-<!-- 
- <?php       
+
+ <!-- <?php       
     print_r(json_encode($_SESSION));
  ?> -->
+
 
 <br>
 <body class="backgrounFooter">
@@ -75,6 +76,15 @@
             <h2 style="color: whitesmoke;">$</h2><h2 class="text-end" id="gtotal" style="color:whitesmoke;"></h2>
         </div>
 
+    
+    <button class="btn btn-danger">Vaciar Carrito</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel0" aria-hidden="true">
+        
+    </div>
+            
+
+    
+
     <!-- Botón para abrir el modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar Tarjeta</button>
    
@@ -95,7 +105,7 @@
         <script>
             Swal.fire({
                 icon: 'warning',
-                title: '<?= session('warning') ?>',
+                title: '<?= session('error') ?>',
                 showConfirmButton: false,
                 timer: 1500
             });
@@ -126,31 +136,31 @@
                         
                             <div class="row mb-3">
                                 <div class="col">
-                                    <label for="nombre" class="form-label colorLetrasForm">Nombre(s)</label>
-                                    <input type="text" class="form-control" name="nombre" id="nombre" required>
+                                    <label for="nombre1" class="form-label colorLetrasForm">Nombre(s)</label>
+                                    <input type="text" class="form-control" name="nombre1" id="nombre1" required>
                                 </div>
                                 <div class="col">
-                                    <label for="apellidos" class="form-label colorLetrasForm">Apellidos</label>
-                                    <input type="text" class="form-control" name="apellidos" id="apellidos" required>
+                                    <label for="apellidos1" class="form-label colorLetrasForm">Apellidos</label>
+                                    <input type="text" class="form-control" name="apellidos1" id="apellidos1" required>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="tarjeta" class="form-label colorLetrasForm">Número de tarjeta</label>
-                                <input type="int" placeholder="XXXX XXXX XXXX XXXX" name="tarjeta" maxlength="19" class="form-control" id="tarjeta" required>
+                                <label for="tarjeta1" class="form-label colorLetrasForm">Número de tarjeta</label>
+                                <input type="int" placeholder="XXXX XXXX XXXX XXXX" name="tarjeta1" maxlength="19" class="form-control" id="tarjeta1" required>
                             </div>
                             <div class="mb-3">
-                                <label for="direccion" class="form-label colorLetrasForm">Dirección de tarjeta</label>
-                                <input type="text" class="form-control" name="direccion" id="direccion" maxlength="150" required>
+                                <label for="direccion1" class="form-label colorLetrasForm">Dirección de tarjeta</label>
+                                <input type="text" class="form-control" name="direccion1" id="direccion1" maxlength="150" required>
                             </div>
                             <div class="row mb-3">
                                 <div class="col">
-                                    <label for="fechaVencimiento" class="form-label colorLetrasForm">Fecha de vencimiento</label>
+                                    <label for="fechaVencimiento1" class="form-label colorLetrasForm">Fecha de vencimiento</label>
                                     <!-- <input type="text" class="form-control" id="fechaVencimiento" placeholder="MM/AA" required> -->
-                                    <input type="date" class="form-control" name="fechaVencimiento" id="fechaVencimiento" required>
+                                    <input type="date" class="form-control" name="fechaVencimiento1" id="fechaVencimiento1" required>
                                 </div>
                                 <div class="col">
-                                    <label for="cvv" class="form-label colorLetrasForm">CVV</label>
-                                    <input type="password" placeholder="267" class="form-control" name="cvv" id="cvv" maxlength="3" required>
+                                    <label for="cvv1" class="form-label colorLetrasForm">CVV</label>
+                                    <input type="password" placeholder="267" class="form-control" name="cvv1" id="cvv1" maxlength="3" required>
                                 </div>
                             </div>
                         
@@ -170,11 +180,28 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:20px;">Realizar Compra</h5>
+                    <h3 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:20px;">Realizar Compra</h3>
                 </div>
                 <form method="POST" action="<?php echo base_url().'/comprar'?>" enctype="multipart/form-data">
                     <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
-                        
+                            <!--Tarjetas registradas (En caso de haber)-->
+                         
+                            <?php
+                            if(isset($tarjetas)){
+                                
+                                foreach($tarjetas as $tarjeta){
+                                    echo
+                                    "
+                                    <div class='mb-3'>
+                                        <input type='radio' name='tarjeta_seleccionada' value='$tarjeta[numeroTarjeta]'/>
+                                        <label style='color: black; padding-left:5px;'>$tarjeta[numeroTarjeta]</label>
+                                    </div>
+                                    ";    
+                                }
+                            }
+                            
+                            ?>
+                            <!--Si ya se cuenta con tarjetas registradas solo mostrar las tarjetas -->
                             <div class="row mb-3">
                                 <div class="col">
                                     <label for="nombre" class="form-label colorLetrasForm">Nombre(s)</label>
@@ -193,7 +220,7 @@
                                 <label for="direccion" class="form-label colorLetrasForm">Dirección de tarjeta</label>
                                 <input type="text" class="form-control" name="direccion" id="direccion" maxlength="150" required>
                             </div>
-                            <div class="row mb-3">
+                            <div class="row mb-3" >
                                 <div class="col">
                                     <label for="fechaVencimiento" class="form-label colorLetrasForm">Fecha de vencimiento</label>
                                     <input type="date" class="form-control" name="fechaVencimiento" id="fechaVencimiento" required>
@@ -207,7 +234,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary">Comprar</button>
+                        <button type="submit" class="btn btn-primary" >Comprar</button>   
                     </div>
                 </form>
             </div>
@@ -221,6 +248,13 @@
 </body>
 
 <script>
+
+    
+    // const tarjetasReg = document.querySelector('.tarjetasReg');
+    // tarjetasReg.innerHTML = 'No se encontraron tarjetas registradas.';                       
+    
+
+  
     var gt = 0;
     var iprice = document.getElementsByClassName('iprice');
     var iquantity = document.getElementsByClassName('iquantity');
@@ -242,6 +276,7 @@
     }
 
     subTotal();
+
 
 
 

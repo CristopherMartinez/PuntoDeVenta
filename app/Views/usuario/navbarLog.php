@@ -26,7 +26,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarScroll" style="padding-left: 0px;">
               <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                   <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" style="padding-left: 5px;">Nosotros</a>
+                  <a class="nav-link active" aria-current="page" href="nosotros" style="padding-left: 5px;">Nosotros</a>
                   </li>
                   <!-- <li class="nav-item">
                   <a class="nav-link" href="#" style="padding-left: 5px;">Membresias</a>

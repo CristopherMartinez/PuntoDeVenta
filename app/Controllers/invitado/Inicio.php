@@ -20,13 +20,15 @@ class Inicio extends BaseController{
         $data=['titulo'=>'WorldGames'];
 
         $videojuego = new Videojuegos();
-        $data2["videojuegos"]=$videojuego->get10VideogamesPlay();
+        // $data2["videojuegos"]=$videojuego->get10VideogamesPlay();
+        $data2["videojuegos"]=$videojuego->getVideogamesCartInicio();
 
         $vistas= view('genericos/header',$data).
                  view('genericos/navbar').
                  view('invitado/jumbotron.php').  
                  view('invitado/carruselInicio').    
                  view('invitado/cardsInicio.php',$data2).
+                 view('invitado/memberships').
                  view('usuario/contacto.php').
                  view('invitado/image').
                  view('genericos/footer');
@@ -52,7 +54,7 @@ class Inicio extends BaseController{
 
         $videojuego = new Videojuegos();
         // $data2["videojuegos"]=$videojuego->get10VideogamesPlay();
-        $data2["videojuegos"]=$videojuego->getVideogamesCartTest();
+        $data2["videojuegos"]=$videojuego->getVideogamesCartInicio();
 
         $membresia = new Membresias();
         $data3["membresias"] = $membresia->findAll();
@@ -60,7 +62,7 @@ class Inicio extends BaseController{
 
         $vista= view('genericos/header').
                 view('usuario/navbarLog',$usuario).
-                view('invitado/carruselInicio').               
+                view('invitado/carruselInicio').  
                 view('usuario/cardsGames',$data2).
                 view('usuario/memberships',$data3).
                 view('usuario/contacto').
@@ -70,5 +72,40 @@ class Inicio extends BaseController{
                 view('usuario/inicio');
         return $vista;
     } 
+
+    // //Pagina nosotros invitado
+    // public function pageNosotrosinvitado(){
+
+    //      $vista = view('genericos/header') .
+    //               view('genericos/navbar').
+    //               view('invitado/nosotros');
+ 
+    //      return $vista;
+ 
+    //  }
+    //Pagina nosotros Logueada
+    public function pageNosotros(){
+        
+        // Verificar si la sesión está iniciada
+         if (!$this->session->get('logged_in')) {
+             return redirect()->to('/login');
+         }
+ 
+         // Obtener los datos del usuario de la sesión
+         $session = session();
+         $usuario = array(
+             'nombre' => $session->get('nombre'),
+             'membresia' => $session->get('membresia'),
+         );
+  
+         // Cargar la vista del carrito de compras
+         $vista = view('genericos/header') .
+                  view('usuario/navbarLog',$usuario).
+                  view('usuario/nosotros');
+ 
+         return $vista;
+ 
+     }
+ 
 
 }

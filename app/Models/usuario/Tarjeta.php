@@ -10,7 +10,7 @@ class Tarjeta extends Model
         protected $table = 'tarjetasusuario';
         protected $primaryKey = 'idTarjeta';
         protected $returnType = 'array';
-        protected $allowedFields = ['idTarjeta','nombre','apellidos','numeroTarjeta','direccion','fechaVencimiento','cvv'];
+        protected $allowedFields = ['idTarjeta','usuario','nombre','apellidos','numeroTarjeta','direccion','fechaVencimiento','cvv'];
 
 
         public function existeTarjeta($tarjeta) {
@@ -18,12 +18,11 @@ class Tarjeta extends Model
                 $result = $query->getRow();
                 return $result->num_Tarjetas > 0;
         }
+        public function recuperarTarjetas($usuario) {
+                $query = $this->db->query("SELECT numeroTarjeta FROM tarjetasusuario WHERE usuario = ?", array($usuario));
+                return $query->getResultArray();
+        }
 
-        // public function recuperarTarjetas($idTarjeta){
-        //     $query = $this->db->query("SELECT COUNT(*) AS num_Tarjetas FROM tarjetasusuario WHERE numeroTarjeta = ?", array($idTarjeta));
-        //     $result = $query->getRow();
-        //     return $result->num_Tarjetas > 0;
-        // }
         
 }
 

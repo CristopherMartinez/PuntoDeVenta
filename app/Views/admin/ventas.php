@@ -1,6 +1,5 @@
 <!-- 
 <?php
-// print_r(json_encode($videojuegos));
 print_r(json_encode($ventas));
 ?> -->
 
@@ -57,7 +56,7 @@ print_r(json_encode($ventas));
                                         <div class="col-4">Precio</div>
                             </div>
                         </td> -->
-                        <!-- <td><b>Total de venta</b></td> -->
+                        <td><b>Total de venta</b></td>
                         <td><b>Fecha de venta</b></td>
                     </tr>
                 </thead>
@@ -68,7 +67,18 @@ print_r(json_encode($ventas));
                             <td><?= $venta['folio'] ?></td>
                             <td><?= $venta['usuario'] ?></td>
                             <td><?= $venta['nombre'] ?> <?= $venta['apellidos'] ?></td>
-                            
+                            <!-- <td>
+                                <?php foreach ($videojuegos as $videojuego): ?>
+                                    <div class="row">
+                                        <div class="col-4"><?= $videojuego['nombreVideojuego'] ?></div>
+                                        <div class="col-4"><?= $videojuego['consola'] ?></div>
+                                        <div class="col-4">$<?= $videojuego['precio'] ?></div>
+                                    </div>
+                                <?php endforeach; ?>
+                            </td>
+                            <td>
+                             $<?php echo $total?>
+                            </td> -->
                             <td><?= $venta['fechaVenta'] ?></td>
                         </tr>
                     <?php endforeach; ?>

@@ -43,7 +43,7 @@ class Videojuegos extends Model
     // }
 
     //Obtenemos los primeros 10 videojuegos de PlayStation Especificando los id de Consolas para mostrar en gamesplayStation 
-    public function getVideogamesCartTest(){
+    public function getVideogamesCartInicio(){
         $query = $this->db->query("SELECT v.idVideojuego, v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario,v.idConsola,v.idCategoria, c.nombre as nombreConsola 
             FROM videojuego v 
             INNER JOIN consola c ON v.idConsola = c.idConsola 

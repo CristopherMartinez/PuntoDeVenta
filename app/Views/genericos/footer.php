@@ -12,7 +12,7 @@
             Información de la empresa
           </h6>
           <ul class="list-unstyled" style="font-size:15px;">
-          <li><a href="#" class="informacion">¿Quienes somos?</a></li>
+          <li><a href="nosotros" class="informacion">¿Quienes somos?</a></li>
           <li><a href="#" class="informacion">Aviso de privacidad</a></li>
           <li><a href="#" class="informacion">Terminos y condiciones</a></li>
         </ul>

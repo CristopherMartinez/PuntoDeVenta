@@ -5,12 +5,9 @@ use App\Controllers\BaseController;
 use App\Models\generico\Membresias;
 use App\Models\usuario\Usuarios;
 
-
 class MembresiasController extends BaseController{
 
-    public function comprarMembresiaPremium(){
-        // session_start();
-
+    public function comprarMembresia(){
         $user = new Usuarios();
         //Obtenemos el idMebresia del usuario que tiene iniciada la sesión
         $session = session();
@@ -21,21 +18,28 @@ class MembresiasController extends BaseController{
         $idMembresia = $user->getIdMembresia($usuario);
 
         //Validamos que no este comprando la misma mebresia que tiene ya asignada
+        //Si ya tiene la membresia
         if($idMembresia == $_POST['idMembresia']){
-            echo "Ya cuentas con esta membresia";
+            // Mostramos un mensaje
+            $session = session();
+            $session->setFlashdata('CuentasConMembresia', 'Ya cuentas con esta membresia');
 
-            // return redirect()->to('usuario/inicio');
-        }else{
-
-            echo "Membresia comprada correctamente, Caduca el dia ";
+            return redirect()->to('usuario/inicio'); 
         }
-        
+        //Si no realizamos el proceso de actualizacion
+        else{
+            //Obtenemos fecha actual y la fecha proxima a vencer la membresia
+            $fechaActual = date('d-m-Y');
+            $nuevaFecha = date('d-m-Y', strtotime('+1 month', strtotime($fechaActual)));
 
-       
+            //llamamos al metodo ActualizarMembresia 
+            $user->actualizarMembresia($usuario,$_POST['idMembresia']);
 
-        // echo"";
+            $session = session();
+            $session->setFlashdata('MembresiaActualizada', "Se ha actualizado correctamente tu membresía, Vence: $nuevaFecha");
 
-        // return redirect()->to('usuario/inicio');
+            return redirect()->to('usuario/inicio');
+        }
     }
 
 

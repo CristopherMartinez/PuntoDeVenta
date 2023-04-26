@@ -12,4 +12,15 @@ class VideojuegosUsuario extends Model
         protected $returnType = 'array';
         protected $allowedFields = ['idVidUsuario','idVideojuego','usuario','nombreVideojuego','consola','precio','imagen'];
         
+        //traer videojuegos por usuario
+        public function getidsVideogames($usuario){
+                        $query = $this->db->query("SELECT idVideojuego FROM videojuegosusuario WHERE usuario = ?", [$usuario]);
+                        return $query->getResultArray();   
+        }
+        // public function getVideogamesUser($usuario){
+        //         $query = $this->db->query("SELECT idVideojuego,nombreVideojuego,consola,precio,imagen FROM videojuegosusuario WHERE usuario = ?", [$usuario]);
+        //         return $query->getResultArray();   
+        // }
+
+
 }

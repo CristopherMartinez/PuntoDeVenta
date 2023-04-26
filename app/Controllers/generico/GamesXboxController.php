@@ -104,6 +104,7 @@ class GamesXboxController extends BaseController{
 
         return $vista;
     }
+    
 
     //Metodo para pintar en vista de perfil logueado
     public function indexGameXboxLog(){

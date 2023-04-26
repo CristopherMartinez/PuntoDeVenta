@@ -1,19 +1,98 @@
-<!-- 
 <?php
-// print_r($videojuegosXbox);
-// print_r(json_encode($videojuegosXbox));
-// print_r(json_encode($listaVideojuegos));
-print_r(json_encode($XboxOneX));
-?> -->
+  session_start();
+  
+  //Agregar al carrito
+  if($_SERVER['REQUEST_METHOD']=="POST"){
+  
+
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        //Verificamos que exista Add_To_Cart mandado mediante post
+        if (isset($_POST['Add_To_Cart'])) {
+            //Checamos que exista en la sesion un arreglo llamado cart
+            if (isset($_SESSION['cart'])) {
+                //Si existe asignamos a myitems de acuerdo a nombre y el idVideojuego
+                $myitems = array_column($_SESSION['cart'], 'nombre', 'idVideojuego');
+                if (isset($myitems[$_POST['idVideojuego']]) && $myitems[$_POST['idVideojuego']] == $_POST['nombre']) {
+                    //Asignamos un setFlashData para decir que ya esta en el carrito 
+                    $session = session();
+                    $session->setFlashdata('error', 'Este elemento ya está en el carrito');
+                    //Redirigimos a pagina inicio del usuario logueado
+                    echo "<script> 
+                        window.location.href = '" . base_url() . "/usuario/inicio';
+                        exit();
+                    </script>";
+
+                } else {
+                    //Si aun no existe en el carrito lo insertamos
+                    $count = count($_SESSION['cart']);
+                    $_SESSION['cart'][$count] = array(
+                        'idVideojuego' => $_POST['idVideojuego'],
+                        'nombre' => $_POST['nombre'],
+                        'precio' => $_POST['precio'],
+                        'NombreConsola' => $_POST['nombreConsola'],
+                        'Cantidad' => 1
+                    );
+                    $session = session();
+                    $session->setFlashdata('success', 'Agregado al carrito');
+                    echo "<script>
+                        window.location.href = '" . base_url() . "/usuario/inicio';
+                        exit();                      
+                    </script>";
+                }
+            } else {
+                 //Si aun no existe en el carrito lo insertamos
+                $_SESSION['cart'][0] = array(
+                    'idVideojuego' => $_POST['idVideojuego'],
+                    'nombre' => $_POST['nombre'],
+                    'precio' => $_POST['precio'],
+                    'NombreConsola' => $_POST['nombreConsola'],
+                    'Cantidad' => 1
+                );
+                $session = session();
+                $session->setFlashdata('success', 'Agregado al carrito');
+                echo "<script>          
+                    window.location.href = '" . base_url() . "/usuario/inicio';
+                    exit();
+                </script>";
+            }
+        }
+    }
+    
+
+    //REMOVER DEL CARRITO
+    if(isset($_POST['Remove_Item']))
+    {
+        foreach($_SESSION['cart'] as $key => $value)
+        {
+         
+            if($value['nombre']==$_POST['nombre'])
+            {
+                unset($_SESSION['cart'][$key]);
+                $_SESSION['cart'] = array_values($_SESSION['cart']);
+                echo"
+                <script>
+                alert('Eliminado del carrito');
+                window.location.href = '" . base_url() . "/usuario/inicio';
+                exit();
+                </script>";
+            } 
+        }
+    }
+}
+
+
+  
+?>
+
+
+
+
+
+
+
 
 <head>
     <style>
-        /* .list:hover{
-        background-color:#c3c3c3;
-        list-style:none;
-        padding-left: 10px;
-        cursor: hand;
-        } */
         .backgroundGamesPlay{
             background-image: url("<?php  echo base_url()?>/imagenes/fondoPlay8.png");
             background-repeat: no-repeat;
@@ -102,33 +181,33 @@ print_r(json_encode($XboxOneX));
                 <?php foreach ($videojuegosXbox as $juego) { ?>
                     <div class="col-12" style="margin-top: 10px;">
                         <div class="card mb-3 backgroundGamesPlay" style="max-width: auto; border-radius:5px;">
-                            <div class="row g-0">
-                                <div class="col-md-4 align-self-center">
-                                    <img src="<?php echo base_url()?>/imagenes/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px;" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body" id="cards-container">
-                                        <h5 class="card-title" style="color:whitesmoke;"><?php echo $juego['nombre'] ?></h5>
-                                        <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['nombreConsola'] ?></p>
-                                        <!--Id del videojuego (no borrar)-->
-                                        <p class="card-text"  style="color:whitesmoke;" hidden><?php echo $juego['idVideojuego'] ?></p>
-                                        <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['descripcion'] ?></p>
-                                         <!--Campos ocultos (no borrar)-->
-                                        <p class="category-tag" style="color:whitesmoke;" hidden>ID Categoria : <?php echo $juego['idCategoria'] ?></p>
-                                        <p class="consola-tag" style="color:whitesmoke;" hidden>ID Consola : <?php echo $juego['idConsola'] ?></p>
-                                        
-                                        <!-- <p style="color:whitesmoke;">  <?php print_r($videojuegosXbox)?></p>
-                                       -->
-
-                                        <p class="card-text">
-
-                                            <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:whitesmoke; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
-                                            <!-- <span class="col-6 col-sm-6 col-xl-4"><button type="button" class="btn btn-outline-primary" style="margin-top:10px; margin-left:5px; font-weight:bolder;">Comprar</button></span> -->
-                                            <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
-                                        </p>
+                            
+                            <form action="gamesXbox" method="POST">
+                                <div class="row g-0">
+                                    <div class="col-md-4 align-self-center">
+                                        <img src="<?php echo base_url()?>/imagenes/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px;" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body" id="cards-container">
+                                            <h5 class="card-title" style="color:whitesmoke;"><?php echo $juego['nombre'] ?></h5>
+                                            <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['nombreConsola'] ?></p>
+                                            <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['descripcion'] ?></p>
+                                            <p class="card-text"  style="color:whitesmoke;" hidden><?php echo $juego['idVideojuego'] ?></p>
+                                            <p class="category-tag" style="color:whitesmoke;" hidden>ID Categoria : <?php echo $juego['idCategoria'] ?></p>
+                                            <p class="consola-tag" style="color:whitesmoke;" hidden>ID Consola : <?php echo $juego['idConsola'] ?></p>
+                                            <input type="text" id="idVideojuego" name="idVideojuego" value="<?php echo $juego['idVideojuego'] ?>" hidden>
+                                            <input type="text" id="nombre" name="nombre" value="<?php echo $juego['nombre'] ?>" hidden>
+                                            <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
+                                            <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
+                                            <p class="card-text">
+                                                <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:whitesmoke; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
+                                                <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="submit" name="Add_To_Cart" class="btn btn-outline-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
+
                         </div>
                     </div>
                 <?php } ?>
@@ -136,7 +215,7 @@ print_r(json_encode($XboxOneX));
             </div>
         </div>
 
-
+        <!--indice-->
         <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
                 <li class="page-item disabled">

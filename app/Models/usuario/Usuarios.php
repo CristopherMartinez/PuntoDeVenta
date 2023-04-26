@@ -8,13 +8,17 @@ class Usuarios extends Model
         protected $table = 'usuarios';
         protected $primaryKey = 'idUsuario';
         protected $returnType = 'array';
-        protected $allowedFields = ['idUsuario','usuario','nombre','apellidos','correo','direccion','telefono'];
+        protected $allowedFields = ['idUsuario','idMembresia','usuario','nombre','apellidos','correo','direccion','telefono'];
  
         //Obtener el idMembresia pasandole como parametro el usuario
         public function getIdMembresia($usuario) {
             $query = $this->db->query("SELECT idMembresia FROM usuarios WHERE usuario = ?", [$usuario]);
             $row = $query->getRow();
             return $row ? $row->idMembresia : null;
+        }
+
+        public function actualizarMembresia($usuario, $nuevoIdMembresia) {
+            $this->db->query("UPDATE usuarios SET idMembresia = ? WHERE usuario = ?", [$nuevoIdMembresia, $usuario]);
         }
         
 }

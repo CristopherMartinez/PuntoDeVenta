@@ -39,12 +39,16 @@ $routes->add('/usuario/inicio','invitado\Inicio::indexLog');
 $routes->add('/usuario/gamesXbox','generico\GamesXboxController::indexGameXboxLog');
 $routes->add('/usuario/ShoppingCar','usuario\ShoppingCarController::index'); 
 $routes->add('/usuario/listaDeseos','usuario\ShoppingCarController::listaDeseos'); 
+$routes->add('/usuario/nosotros','invitado\Inicio::pageNosotros');
 
 
 //Rutas invitado
 $routes->add('/SingUp','invitado\RegisterController::index');
 $routes->add('/verificar_login','invitado\LoginController::verificar_login');
 $routes->add('/guardar_persona','invitado\RegisterController::guardar_persona');
+// $routes->add('/invitado/nosotros','invitado\Inicio::pageNosotrosinvitado');
+
+
 
 //Rutas de administrador
 $routes->add('/admin/inicio','admin\AdminController::index');
@@ -81,9 +85,11 @@ $routes->add('/comprar','usuario\ShoppingCarController::comprar');
 //Comprar videojuego (Usuario) Sin tarjeta
 $routes->add('/comprar2','usuario\ShoppingCarController::comprar2');
 
+$routes->add('/comprarConTarjetaRegistrada','usuario\ShoppingCarController::comprarConTarjetaRegistrada');
+
 
 //Membresias (Comprar membresia)
-$routes->add('/comprarMembresiaPremium','generico\MembresiasController::comprarMembresiaPremium');
+$routes->add('/comprarMembresia','generico\MembresiasController::comprarMembresia');
 
 
 $routes->add('/ofertas','OfertasController::index');

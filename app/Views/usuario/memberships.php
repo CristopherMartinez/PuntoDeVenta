@@ -1,8 +1,3 @@
-
-<?php
-print_r(json_encode($_SESSION));
-?>
-
 <div class="pricing-wrapper clearfix" style="margin-bottom: 30px;">
     
     <?php foreach ($membresias as $membresia) { ?>
@@ -20,7 +15,7 @@ print_r(json_encode($_SESSION));
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:20px;">Comprar membresia Premium</h5>
                         </div>
-                        <form method="POST" action="<?php echo base_url().'/comprarMembresiaPremium'?>" enctype="multipart/form-data">
+                        <form method="POST" action="<?php echo base_url().'/comprarMembresia'?>" enctype="multipart/form-data">
                             <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
                                 
                                     <div class="row mb-3">
@@ -48,7 +43,7 @@ print_r(json_encode($_SESSION));
                                         </div>
                                         <div class="col">
                                             <label for="cvv" class="form-label colorLetrasForm">CVV</label>
-                                            <input type="password" placeholder="123" class="form-control" name="cvv" id="cvv" maxlength="3" required>
+                                            <input type="password" placeholder="267" class="form-control" name="cvv" id="cvv" maxlength="3" required>
                                         </div>
                                     </div>
                                     <div class="mb-3" hidden>
@@ -100,8 +95,12 @@ print_r(json_encode($_SESSION));
                                         </div>
                                         <div class="col">
                                             <label for="cvv" class="form-label colorLetrasForm">CVV</label>
-                                            <input type="password" placeholder="123" class="form-control" name="cvv" id="cvv" maxlength="3" required>
+                                            <input type="password" placeholder="267" class="form-control" name="cvv" id="cvv" maxlength="3" required>
                                         </div>
+                                    </div>
+                                    <div class="mb-3" hidden>
+                                        <label for="idMembresia" class="form-label colorLetrasForm">idMembresia</label>
+                                        <input type="text" class="form-control" name="idMembresia" id="idMembresia" value="2">
                                     </div>
                                 
                             </div>
@@ -149,10 +148,13 @@ print_r(json_encode($_SESSION));
                                         </div>
                                         <div class="col">
                                             <label for="cvv" class="form-label colorLetrasForm">CVV</label>
-                                            <input type="password" placeholder="123" class="form-control" name="cvv" id="cvv" maxlength="3" required>
+                                            <input type="password" placeholder="267" class="form-control" name="cvv" id="cvv" maxlength="3" required>
                                         </div>
                                     </div>
-                                
+                                    <div class="mb-3" hidden>
+                                        <label for="idMembresia" class="form-label colorLetrasForm">idMembresia</label>
+                                        <input type="text" class="form-control" name="idMembresia" id="idMembresia" value="3">
+                                    </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

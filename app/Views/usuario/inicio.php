@@ -158,3 +158,31 @@
         </script>
     <?php endif; ?>
 
+    <!--Mensaje para mostrar que ya se cuenta con membresia-->
+    <?php if (session()->has('CuentasConMembresia')): ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: '<?= session('CuentasConMembresia') ?>',
+                showConfirmButton: false,
+                timer: 1800
+            });
+        </script>
+    <?php endif; ?>
+
+    <!--Mensaje para mostrar que ya se actualizo la membresia-->
+    <?php if (session()->has('MembresiaActualizada')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('MembresiaActualizada') ?>',
+                showConfirmButton: false,
+                 timer: 2000
+                // timer : false,
+                
+            });
+        </script>
+    <?php endif; ?>
+
+    
+

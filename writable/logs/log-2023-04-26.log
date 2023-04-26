@@ -51,3 +51,155 @@ in APPPATH\Controllers\generico\MembresiasController.php on line 20.
  2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\MembresiasController))
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 17:53:30 --> Undefined variable $total
+in APPPATH\Views\admin\ventas.php on line 80.
+ 1 APPPATH\Views\admin\ventas.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'APPPATH\\Views\\admin\\ventas.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\ventas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/ventas', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(49): view('admin/ventas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AdminController->ventas()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 17:53:38 --> Undefined variable $total
+in APPPATH\Views\admin\ventas.php on line 80.
+ 1 APPPATH\Views\admin\ventas.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'APPPATH\\Views\\admin\\ventas.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\ventas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/ventas', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(49): view('admin/ventas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AdminController->ventas()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 17:54:17 --> Undefined variable $total
+in APPPATH\Views\admin\ventas.php on line 80.
+ 1 APPPATH\Views\admin\ventas.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'APPPATH\\Views\\admin\\ventas.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\ventas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/ventas', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(49): view('admin/ventas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AdminController->ventas()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 17:54:26 --> Undefined variable $total
+in APPPATH\Views\admin\ventas.php on line 80.
+ 1 APPPATH\Views\admin\ventas.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'APPPATH\\Views\\admin\\ventas.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\ventas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/ventas', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(49): view('admin/ventas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AdminController->ventas()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 18:09:17 --> Array to string conversion
+in APPPATH\Controllers\generico\MembresiasController.php on line 32.
+ 1 APPPATH\Controllers\generico\MembresiasController.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\generico\\MembresiasController.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\MembresiasController->comprarMembresiaPremium()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\MembresiasController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 18:11:39 --> Unsupported operand types: string + string
+in APPPATH\Controllers\generico\MembresiasController.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\MembresiasController->comprarMembresiaPremium()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\MembresiasController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 18:28:31 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\generico\MembresiasController.php(43): CodeIgniter\Model->update('idMembresia', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\MembresiasController->comprarMembresia()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\MembresiasController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 18:36:53 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(755): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\generico\MembresiasController.php(45): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\MembresiasController->comprarMembresia()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\MembresiasController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 19:12:29 --> Call to undefined method App\Models\usuario\VideojuegosUsuario::getVideogamesUser
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(288): CodeIgniter\Model->__call('getVideogamesUser', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 19:52:22 --> Undefined array key "id"
+in APPPATH\Views\usuario\listaCarrito.php on line 205.
+ 1 APPPATH\Views\usuario\listaCarrito.php(205): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\usuario\\listaCarrito.php', 205)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaCarrito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaCarrito', [], true)
+ 5 APPPATH\Controllers\usuario\ShoppingCarController.php(104): view('usuario/listaCarrito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 19:52:47 --> Undefined array key "idTarjeta"
+in APPPATH\Views\usuario\listaCarrito.php on line 205.
+ 1 APPPATH\Views\usuario\listaCarrito.php(205): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idTarjeta"', 'APPPATH\\Views\\usuario\\listaCarrito.php', 205)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaCarrito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaCarrito', [], true)
+ 5 APPPATH\Controllers\usuario\ShoppingCarController.php(104): view('usuario/listaCarrito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 19:53:04 --> Undefined array key "idTarjeta"
+in APPPATH\Views\usuario\listaCarrito.php on line 205.
+ 1 APPPATH\Views\usuario\listaCarrito.php(205): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idTarjeta"', 'APPPATH\\Views\\usuario\\listaCarrito.php', 205)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaCarrito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaCarrito', [], true)
+ 5 APPPATH\Controllers\usuario\ShoppingCarController.php(104): view('usuario/listaCarrito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 20:46:49 --> Undefined array key "tarjeta"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 131.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tarjeta"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 131)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->guardarTarjeta()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 21:16:38 --> Undefined array key "datosUsuario"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 99.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datosUsuario"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 99)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaCarrito()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 21:56:54 --> Undefined array key "nombreConsola"
+in APPPATH\Views\invitado\cardsInicio.php on line 18.
+ 1 APPPATH\Views\invitado\cardsInicio.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreConsola"', 'APPPATH\\Views\\invitado\\cardsInicio.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(29): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 21:57:28 --> Undefined array key "nombreConsola"
+in APPPATH\Views\invitado\cardsInicio.php on line 21.
+ 1 APPPATH\Views\invitado\cardsInicio.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreConsola"', 'APPPATH\\Views\\invitado\\cardsInicio.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\cardsInicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/cardsInicio.php', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(29): view('invitado/cardsInicio.php', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
