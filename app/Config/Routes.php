@@ -82,6 +82,9 @@ $routes->add('/comprar','usuario\ShoppingCarController::comprar');
 $routes->add('/comprar2','usuario\ShoppingCarController::comprar2');
 
 
+//Membresias (Comprar membresia)
+$routes->add('/comprarMembresiaPremium','generico\MembresiasController::comprarMembresiaPremium');
+
 
 $routes->add('/ofertas','OfertasController::index');
 

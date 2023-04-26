@@ -1,0 +1,53 @@
+CRITICAL - 2023-04-26 16:06:57 --> Undefined variable $membresias
+in APPPATH\Views\usuario\memberships.php on line 2.
+ 1 APPPATH\Views\usuario\memberships.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $membresias', 'APPPATH\\Views\\usuario\\memberships.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\memberships.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/memberships', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(63): view('usuario/memberships')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 16:07:17 --> Undefined variable $membresias
+in APPPATH\Views\usuario\memberships.php on line 2.
+ 1 APPPATH\Views\usuario\memberships.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $membresias', 'APPPATH\\Views\\usuario\\memberships.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\memberships.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/memberships', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(63): view('usuario/memberships')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 16:08:25 --> Undefined variable $membresias
+in APPPATH\Views\usuario\memberships.php on line 2.
+ 1 APPPATH\Views\usuario\memberships.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $membresias', 'APPPATH\\Views\\usuario\\memberships.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\memberships.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/memberships', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(63): view('usuario/memberships')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 16:55:42 --> Undefined global variable $_SESSION
+in APPPATH\Controllers\generico\MembresiasController.php on line 15.
+ 1 APPPATH\Controllers\generico\MembresiasController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'APPPATH\\Controllers\\generico\\MembresiasController.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\MembresiasController->comprarMembresiaPremium()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\MembresiasController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 16:59:04 --> Undefined array key "datosUsuario"
+in APPPATH\Controllers\generico\MembresiasController.php on line 16.
+ 1 APPPATH\Controllers\generico\MembresiasController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datosUsuario"', 'APPPATH\\Controllers\\generico\\MembresiasController.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\MembresiasController->comprarMembresiaPremium()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\MembresiasController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-26 17:05:23 --> Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Controllers\generico\MembresiasController.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\MembresiasController->comprarMembresiaPremium()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\MembresiasController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

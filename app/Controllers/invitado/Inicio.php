@@ -3,6 +3,7 @@ namespace App\Controllers\invitado;
 use App\Models\invitado\RegistrarP;
 use App\Controllers\BaseController;
 use App\Models\Videojuegos;
+use App\Models\generico\Membresias;
 
 class Inicio extends BaseController{
 
@@ -52,21 +53,22 @@ class Inicio extends BaseController{
         $videojuego = new Videojuegos();
         // $data2["videojuegos"]=$videojuego->get10VideogamesPlay();
         $data2["videojuegos"]=$videojuego->getVideogamesCartTest();
-       
 
-       
+        $membresia = new Membresias();
+        $data3["membresias"] = $membresia->findAll();
+
 
         $vista= view('genericos/header').
                 view('usuario/navbarLog',$usuario).
                 view('invitado/carruselInicio').               
                 view('usuario/cardsGames',$data2).
-                view('usuario/memberships').
+                view('usuario/memberships',$data3).
                 view('usuario/contacto').
                 view('invitado/image').
                 view('usuario/misionVision'). 
                 view('genericos/footer').
                 view('usuario/inicio');
         return $vista;
-    }
-    
+    } 
+
 }

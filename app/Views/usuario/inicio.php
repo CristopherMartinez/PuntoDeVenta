@@ -128,69 +128,12 @@
             } 
         }
     }
-
-//     if(isset($_POST['Remove_Item']))
-// {
-//     foreach($_SESSION['cart'] as $key => $value)
-//     {
-//         if(isset($value['idVideojuego']) && $value['idVideojuego']==$_POST['idVideojuego'])
-//         {
-//             unset($_SESSION['cart'][$key]);
-//             $_SESSION['cart'] = array_values($_SESSION['cart']);
-//             echo"
-//             <script>
-//             alert('Eliminado del carrito');
-//             window.location.href = '" . base_url() . "/usuario/inicio';
-//             exit();
-//             </script>";
-//         } 
-//     }
-// }
-
-
-    //REMOVER DEL CARRITO
-    // if(isset($_POST['Remove_Item']))
-    // {
-    //     foreach($_SESSION['cart'] as $key => $value)
-    //     {
-         
-    //         if($value['idVideojuego']==$_POST['idVideojuego'])
-    //         {
-    //             unset($_SESSION['cart'][$key]);
-    //             $_SESSION['cart'] = array_values($_SESSION['cart']);
-    //             echo"
-    //             <script>
-    //             alert('Eliminado del carrito');
-    //             window.location.href = '" . base_url() . "/usuario/inicio';
-    //             exit();
-    //             </script>";
-    //         } 
-    //     }
-    // }
-
-    // if(isset($_POST['Remove_Item']))
-    // {
-    //     foreach($_SESSION['cart'] as $key => $value)
-    //     {
-    //         if($value['nombre']==$_POST['nombre'] && $value['idVideojuego'] == $_POST['idVideojuego'])
-    //         {
-    //             unset($_SESSION['cart'][$key]);
-    //             $_SESSION['cart'] = array_values($_SESSION['cart']);
-    //             echo"
-    //             <script>
-    //             alert('Eliminado del carrito');
-    //             window.location.href = '" . base_url() . "/usuario/inicio';
-    //             exit();
-    //             </script>";
-    //         } 
-    //     }
-    // }
-
-
 }
 
-    
+
+  
 ?>
+
 
 
 <?php if (session()->has('success')): ?>
