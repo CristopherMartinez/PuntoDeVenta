@@ -39,8 +39,7 @@ $routes->add('/usuario/inicio','invitado\Inicio::indexLog');
 $routes->add('/usuario/gamesXbox','generico\GamesXboxController::indexGameXboxLog');
 $routes->add('/usuario/ShoppingCar','usuario\ShoppingCarController::index'); 
 $routes->add('/usuario/listaDeseos','usuario\ShoppingCarController::listaDeseos'); 
-$routes->add('/usuario/nosotros','invitado\Inicio::pageNosotros');
-
+$routes->add('/usuario/gamesPlayStation','generico\GamesplayStation::indexLog');
 
 //Rutas invitado
 $routes->add('/SingUp','invitado\RegisterController::index');
@@ -84,8 +83,12 @@ $routes->add('/guardarTarjeta','usuario\ShoppingCarController::guardarTarjeta');
 $routes->add('/comprar','usuario\ShoppingCarController::comprar');
 //Comprar videojuego (Usuario) Sin tarjeta
 $routes->add('/comprar2','usuario\ShoppingCarController::comprar2');
+//Vaciar Carrito
+$routes->add('/vaciarCarrito','usuario\ShoppingCarController::vaciarCarrito');
 
-$routes->add('/comprarConTarjetaRegistrada','usuario\ShoppingCarController::comprarConTarjetaRegistrada');
+
+
+$routes->add('/comprarConTarjetaGuardada','usuario\ShoppingCarController::comprarConTarjetaGuardada');
 
 
 //Membresias (Comprar membresia)

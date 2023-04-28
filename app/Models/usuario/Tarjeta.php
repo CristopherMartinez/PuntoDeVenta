@@ -23,7 +23,12 @@ class Tarjeta extends Model
                 return $query->getResultArray();
         }
 
-        
+        //Funcion para recuperar el cvv y la fecha de vencimiento de la tarjeta del usuario
+        public function recuperarDatosTarjeta($usuario, $tarjeta) {
+                $query = $this->db->query("SELECT * FROM tarjetasusuario WHERE usuario = ? AND numeroTarjeta = ?", array($usuario, $tarjeta));
+                return $query->getResultArray();
+        }
+            
 }
 
 

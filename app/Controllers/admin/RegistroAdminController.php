@@ -23,13 +23,16 @@ class RegistroAdminController extends BaseController{
     }
 
     public function guardar_admin(){
+
+        $contrasenia_cifrada = password_hash($_POST["contrasenia"], PASSWORD_DEFAULT);
+
         $data = [
             "nombre"=>$_POST["nombre"],
             "apellidos"=>$_POST["apellidos"],
             "correoElectronico"=>$_POST["correoElectronico"],
             "telefono"=>$_POST["telefono"],
             "direccion"=>$_POST["direccion"],
-            "contrasenia"=>$_POST["contrasenia"]
+            "contrasenia"=>$contrasenia_cifrada
         ];
 
           $mregistrar=new RegistrarAdmin();
@@ -39,7 +42,7 @@ class RegistroAdminController extends BaseController{
            var_dump($mregistrar->errors());
         }
 
-         return redirect()->back(); //para regresar a pagina anterior 
+        return redirect()->to('admin/registroAdmin'); //para regresar a pagina anterior 
 
     }
 

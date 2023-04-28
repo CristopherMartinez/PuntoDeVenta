@@ -189,9 +189,9 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body" id="cards-container">
-                                            <h5 class="card-title" style="color:whitesmoke;"><?php echo $juego['nombre'] ?></h5>
-                                            <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['nombreConsola'] ?></p>
-                                            <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['descripcion'] ?></p>
+                                            <h3 class="card-title" style="color:whitesmoke;"><?php echo $juego['nombre'] ?></h3>
+                                            <h5 class="card-text" style="color:whitesmoke;"><?php echo $juego['nombreConsola'] ?></h5>
+                                            <p class="card-text"  style="color:whitesmoke; font-size:16px;"><?php echo $juego['descripcion'] ?></p>
                                             <p class="card-text"  style="color:whitesmoke;" hidden><?php echo $juego['idVideojuego'] ?></p>
                                             <p class="category-tag" style="color:whitesmoke;" hidden>ID Categoria : <?php echo $juego['idCategoria'] ?></p>
                                             <p class="consola-tag" style="color:whitesmoke;" hidden>ID Consola : <?php echo $juego['idConsola'] ?></p>
@@ -200,8 +200,8 @@
                                             <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
                                             <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
                                             <p class="card-text">
-                                                <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:whitesmoke; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
-                                                <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="submit" name="Add_To_Cart" class="btn btn-outline-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
+                                                <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:white; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
+                                                <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="submit" name="Add_To_Cart" class="btn btn-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
                                             </p>
                                         </div>
                                     </div>

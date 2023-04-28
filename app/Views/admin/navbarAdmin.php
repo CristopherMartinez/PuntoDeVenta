@@ -31,7 +31,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="<?php echo base_url()?>/admin/registroVideojuegos">Videojuegos</a>
                       <a class="dropdown-item" href="<?php echo base_url()?>/admin/registroAdmin">Administradores</a>
-                      <a class="dropdown-item" href="<?php echo base_url()?>/admin/clientes">Clientes</a>
+                      <a class="dropdown-item" href="<?php echo base_url()?>/admin/clientes">Usuarios</a>
                     </div>
                   </li>
                   <li class="nav-item">

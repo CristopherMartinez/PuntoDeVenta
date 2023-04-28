@@ -13,6 +13,13 @@ if($_SESSION == null){
         <script src=" <?php echo base_url()?>/js/scripts.js"></script>    
 
     </head>
+
+   
+    
+
+
+
+
     
     <body class="imgregister letraGeneral" style="color:whitesmoke">
         <div class="container">

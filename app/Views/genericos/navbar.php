@@ -7,7 +7,7 @@
             <div class="collapse navbar-collapse" id="navbarScroll" style="padding-left: 0px;">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item" style="margin-left: 5px;">
-                <a class="nav-link active" aria-current="page" href="nosotros" style="padding-left: 5px;">Nosotros</a>
+                <a class="nav-link active" aria-current="page" href="#" style="padding-left: 5px;">Nosotros</a>
                 </li>
                 <!-- <li class="nav-item">
                 <a class="nav-link" href="#" style="padding-left: 5px;">Membresias</a>
@@ -16,7 +16,7 @@
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left: 5px;">
                     Videojuegos
                   </a>
-                    <ul class="dropdown-menu navVideo" style="background-color: #d3d8e0; font-weight:bolder; opacity:.95;" onmousedown="seleccionVideojuegos(event)">
+                    <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;;" onmousedown="seleccionVideojuegos(event)">
                       <li><a class="dropdown-item" href="gamesplayStation" style="padding-left: 5px;" data-opcion="PlayStation">PlayStation</a></li>
                       <li><a class="dropdown-item" href="gamesXbox" style="padding-left: 5px;" data-opcion="Xbox">Xbox</a></li>
                       <li><a class="dropdown-item" href="#" style="padding-left: 5px;" data-opcion="Nintendo">Nintendo</a></li>
@@ -34,7 +34,7 @@
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="padding-left: 5px;">
                     Mas
                   </a>
-                  <ul class="dropdown-menu navVideo" style="background-color: #d3d8e0; font-weight:bolder; opacity:.95;">
+                  <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;">
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Saldo digital</a></li>
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Monedas virtuales</a></li>
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Regalos</a></li>

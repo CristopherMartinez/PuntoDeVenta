@@ -4,7 +4,7 @@
 print_r(json_encode($usuarios));
 ?> -->
 
-<h2 style="text-align: center; margin-top:10px;">Clientes</h2>
+<h2 style="text-align: center; margin-top:10px;">Usuarios</h2>
 
 <head>
 	<!-- Agregar los enlaces de los archivos necesarios -->

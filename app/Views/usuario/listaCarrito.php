@@ -2,14 +2,18 @@
 <head>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
+        <script src="https://kit.fontawesome.com/9efa70fc0a.js" crossorigin="anonymous"></script>
 </head>
 
  <!-- <?php       
-    print_r(json_encode($_SESSION));
+    print_r($tarjetas);
  ?> -->
-
-
+<!-- <br>
 <br>
+<br>
+<br>
+<br> -->
+
 <body class="backgrounFooter">
 <div class="container ">
     <div class="alert alert-success" role="alert">
@@ -20,56 +24,53 @@
         <table class="table">
             <thead style="color:whitesmoke;">
                 <tr>
+                <th>#</th>
                 <th>idVideojuego</th>
                 <th>Nombre</th>
                 <th>Consola</th>
                 <th>Precio</th>
-                <th>Cantidad</th>
                 <th>Total</th>
                 <th>Accion</th>
                 </tr>
             </thead>
             <tbody style="color:whitesmoke;">
-                <?php
-                // $total = 0;
-                if(isset($_SESSION['cart'])){
-                    foreach($_SESSION['cart'] as $key => $value){
-                        // print_r($value);
-                        // $total = $total+$value['precio'];
-                        //En la parte de maximo esta limitado a un juego es decir una licencia por juego
-                        echo"
-                        <tr>
-                            <td>$value[idVideojuego]</td>
-                            <td>$value[nombre]</td>
-                            <td>$value[NombreConsola]</td>
-                            <td>$$value[precio]<input type='hidden' class='iprice' value='$value[precio]'></td>
-                            <td>
-                            <input class='text-center iquantity' onchange='subTotal()'  type='number' value='$value[Cantidad]' min='1' max='1'>
-                            </td>
-                            <td class='itotal'></td>
-                            <td>
-                                <form action='inicio' method='POST'>
-                                    <input type='hidden' name='nombre' value='$value[nombre]'>
-                                    <button name='Remove_Item' class='btn btn-danger'>Eliminar</button>
-                                
-                                </form>
-                            </td>
-                            
-                        </tr>
-                        ";
-                    
+            <?php
+            if(isset($_SESSION['cart'])){
+                $key = 1; // Inicializar el contador en 1
+                foreach($_SESSION['cart'] as $value){
+                    echo"
+                    <tr>
+                        <td>$key</td>
+                        <td>$value[idVideojuego]</td>
+                        <td>$value[nombre]</td>
+                        <td>$value[NombreConsola]</td>
+                        <td>$$value[precio]<input type='hidden' class='iprice' value='$value[precio]'></td>
+                        <td hidden>
+                        <input class='text-center iquantity' onchange='subTotal()'  type='number' value='$value[Cantidad]' min='1' max='1' hidden>
+                        </td>
+                        <td class='itotal'></td>
+                        <td>
+                            <form action='inicio' method='POST'>
+                                <input type='hidden' name='nombre' value='$value[nombre]'>
+                                <button name='Remove_Item' class='btn btn-danger  rounded-circle'>
+                                    <i class='fas fa-times' ></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    ";
+                    $key++; // Aumentar el contador en 1
+                }
+            }          
+            ?>
 
-
-                    }
-                }          
-                ?>
             </tbody>
         </table>
     </div>
    
     <br>
 
-    <div >
+<div >
         <!--Precio Total-->
          <div class="d-flex justify-content-top">
             <h2 class="me-2" style="color:whitesmoke;">Total:</h2>
@@ -77,59 +78,21 @@
         </div>
 
     
-    <button class="btn btn-danger">Vaciar Carrito</button>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel0" aria-hidden="true">
-        
-    </div>
-            
-
-    
+    <form method="POST" action="<?php echo base_url().'/vaciarCarrito'?>" enctype="multipart/form-data">
+        <input hidden name="prueba" id="prueba" >
+        <button type="submit" class="btn btn-danger">Vaciar Carrito</button>
+    </form>
+ 
+    <br>
+    <!-- <button type="submit" class="btn btn-danger">Vaciar Carrito</button> -->
 
     <!-- Botón para abrir el modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar Tarjeta</button>
-   
-    <!--Mensaje para mostrar cuando se completa la compra-->
-    <?php if (session()->has('success')): ?>
-        <script>
-            Swal.fire({
-                icon: 'success',
-                title: '<?= session('success') ?>',
-                showConfirmButton: false,
-                timer: 1500
-            });
-        </script>
-    <?php endif; ?>
-
-    <!--Mensaje para mostrar ya esta agregado al carrito-->
-    <?php if (session()->has('error')): ?>
-        <script>
-            Swal.fire({
-                icon: 'warning',
-                title: '<?= session('error') ?>',
-                showConfirmButton: false,
-                timer: 1500
-            });
-        </script>
-    <?php endif; ?>
-
-     <!--Mensaje para mostrar cuando no hay compras en el carrito-->        
-    <?php if (session()->has('SinCompras')): ?>
-        <script>
-            Swal.fire({
-                icon: 'info',
-                title: '<?= session('SinCompras') ?>',
-                showConfirmButton: false,
-                timer: 1500
-            });
-        </script>
-    <?php endif; ?>
-
-
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:20px;">Agregar Tarjeta</h5>
+                    <h3 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:40px;">Agregar Tarjeta</h3>
                 </div>
                 <form method="POST" action="<?php echo base_url().'/guardarTarjeta'?>" enctype="multipart/form-data">
                     <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
@@ -172,35 +135,96 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div>           
+
+    <!--Mensaje para mostrar cuando se completa la compra-->
+    <?php if (session()->has('success')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('success') ?>',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+    <!--Mensaje para mostrar ya esta agregado al carrito-->
+    <?php if (session()->has('error')): ?>
+        <script>
+            Swal.fire({
+                icon: 'warning',
+                title: '<?= session('error') ?>',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+     <!--Mensaje para mostrar cuando no hay compras en el carrito-->        
+    <?php if (session()->has('SinCompras')): ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: '<?= session('SinCompras') ?>',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+     <!--Mensaje para mostrar cuando se hara compra con tarjeta y los datos cv y fecha son incorrectos-->        
+     <?php if (session()->has('datosDeTarjetaError')): ?>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: '<?= session('datosDeTarjetaError') ?>',
+                showConfirmButton: false,
+                timer: 1800
+            });
+        </script>
+    <?php endif; ?>
+
+     <!--Mensaje para vaciar carrito-->        
+     <?php if (session()->has('vaciarCarrito')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('vaciarCarrito') ?>',
+                showConfirmButton: false,
+                timer: 1800
+            });
+        </script>
+    <?php endif; ?>
+
+    
 
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">Realizar Compra</button>
-    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+
+    <!--Si el array de tarjetas esta vacio abrimos el modalCompra si no esta vacio abrimos el modalTarjetas-->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+    data-bs-target="
+    <?php 
+    if(empty($tarjetas)){
+        echo "#modalCompra";
+    }
+    else
+    {
+        echo "#modalTarjetas";
+    }?>" onclick="temporizador()">
+    Realizar Compra
+    </button>
+    <!--Modal para realizar compra directa-->
+    <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:20px;">Realizar Compra</h3>
+                    <h3 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:40px;">Realizar Compra</h3>
                 </div>
                 <form method="POST" action="<?php echo base_url().'/comprar'?>" enctype="multipart/form-data">
                     <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
                             <!--Tarjetas registradas (En caso de haber)-->
-                         
-                            <?php
-                            if(isset($tarjetas)){
-                                
-                                foreach($tarjetas as $tarjeta){
-                                    echo
-                                    "
-                                    <div class='mb-3'>
-                                        <input type='radio' name='tarjeta_seleccionada' value='$tarjeta[numeroTarjeta]'/>
-                                        <label style='color: black; padding-left:5px;'>$tarjeta[numeroTarjeta]</label>
-                                    </div>
-                                    ";    
-                                }
-                            }
-                            
-                            ?>
                             <!--Si ya se cuenta con tarjetas registradas solo mostrar las tarjetas -->
                             <div class="row mb-3">
                                 <div class="col">
@@ -240,8 +264,83 @@
             </div>
         </div>
     </div>
+     <!--Modal para realizar compra directa con tarjeta guardada-->
+    <div class="modal fade" id="modalTarjetas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span><h3 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:50px;">Realizar Compra</h3></span>
+                    <span>
+                        <h3 style="color:black; padding-top:50px;" id="gtotalModal"></h3>
+                    </span>
+                </div>
+                <form method="POST" action="<?php echo base_url().'/comprarConTarjetaGuardada'?>" enctype="multipart/form-data">
+                    <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+                            <!--Tarjetas registradas (En caso de haber)-->
+                            <?php
+                            if(isset($tarjetas)){
+                               
+                                
+                                foreach($tarjetas as $tarjeta){
+                                    echo
+                                    "
+                                    <div class='container'>
+                                        <div class='col'>
+                                            <div class='card'>
+                                                <div class='card-body'>
+                                                    <h5 class='card-title' style='color:black;'>Tarjeta de debito</h5>
+                                                    <div class='mb-3'>
+                                                    <span>  
+                                                        <input type='radio' name='tarjeta_seleccionada' id='tarjeta_seleccionada' value='$tarjeta[numeroTarjeta]'/>
+                                                        <label style='color: black; padding-left:5px; font-size:16px;'>$tarjeta[numeroTarjeta]</label>
+                                                    </span>
+                                                    <span><i class='fa-brands fa-cc-visa fa-2xl' style='color: #1c10c6;'></i></span>
+                                                    <br>
+                                                    <a href='#' style='text-decoration:none; color:black; font-weight:bold; font-size:15px;' id='detalle-link'>Ver detalle</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                    ";    
+                                }
+                            }
+                            
+                            ?>
+
+                            
+                            <!--Si ya se cuenta con tarjetas registradas solo mostrar las tarjetas -->    
+                            <div class="row mb-3" >
+                                <div class="col">
+                                    <label for="fechaVencimientomodalTarjetas" class="form-label colorLetrasForm">Fecha de vencimiento</label>
+                                    <input type="date" class="form-control" name="fechaVencimientomodalTarjetas" id="fechaVencimientomodalTarjetas" required>
+                                </div>
+                                <div class="col">
+                                    <label for="cvvmodalTarjetas" class="form-label colorLetrasForm">CVV</label>
+                                    <input type="password" placeholder="267" class="form-control" name="cvvmodalTarjetas" id="cvvmodalTarjetas" maxlength="3" required>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <div class="progress" style="width: 100%; height: 20px; margin-bottom: 10px;">
+                            <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" id="botonCerrar" data-bs-dismiss="modal" onclick="pararTemporizador()">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Comprar</button>   
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
 
 </div> 
+
+
+
 
 
 
@@ -249,17 +348,13 @@
 
 <script>
 
-    
-    // const tarjetasReg = document.querySelector('.tarjetasReg');
-    // tarjetasReg.innerHTML = 'No se encontraron tarjetas registradas.';                       
-    
-
   
     var gt = 0;
     var iprice = document.getElementsByClassName('iprice');
     var iquantity = document.getElementsByClassName('iquantity');
     var itotal = document.getElementsByClassName('itotal');
     var gtotal = document.getElementById('gtotal');
+    var gTotalModal = document.getElementById('gtotalModal');
 
 
 
@@ -273,9 +368,68 @@
 
         }
         gtotal.innerText = gt;
+        gTotalModal.innerText = 'Total de compra: $' + gt;
     }
 
     subTotal();
+
+    // function verDetalle(){
+    //     var link = document.getElementById('detalle-link');
+    //     var detalles = document.getElementById('detalles');
+
+    //     if (link.innerHTML === 'Ver detalle') {
+    //         link.innerHTML = 'Ocultar detalle';
+    //         detalles.style.display = 'block';
+    //     } else {
+    //         link.innerHTML = 'Ver detalle';
+    //         detalles.style.display = 'none';
+    //     }
+    // }
+
+    
+
+
+    var timerInterval; 
+
+    function temporizador() {
+        var time = 60; // tiempo en segundos
+        var progressBar = document.querySelector('.progress-bar');
+        progressBar.classList.add('bg-success'); // añadir clase de color verde
+        var width = 0;
+        progressBar.style.width = width + '%';
+        progressBar.setAttribute('aria-valuenow', width);
+        timerInterval = setInterval(function() {
+            if (width >= 100) {
+                //seleccionamos mediante el id el elemento del boton y ejecutamos la funcion de click para que se cierre el 
+                //modal y se ejecute la funcion parar temporizador
+                var botonCerrar = document.getElementById('botonCerrar');
+                botonCerrar.click();
+                //Mostramos mensaje de que se acabo tu tiempo
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Se acabó tu tiempo!!',
+                })
+
+
+                // alert('Tiempo finalizado');
+            } else {
+                width += (100 / time);
+                progressBar.style.width = width + '%';
+                progressBar.setAttribute('aria-valuenow', width);
+                if (time - parseInt(width * (time / 100)) <= 40) {
+                    progressBar.classList.remove('bg-success');
+                    progressBar.classList.add('bg-danger'); // cambiar a color rojo
+                }
+            }
+        }, 1000); // intervalo de 1 segundo
+    }
+
+    //Función para parar el temporizador
+    function pararTemporizador() {
+        clearInterval(timerInterval);
+    }
+
 
 
 

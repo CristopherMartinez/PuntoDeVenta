@@ -1,0 +1,56 @@
+CRITICAL - 2023-04-28 17:53:19 --> Array to string conversion
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 426.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(426): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 426)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:57:30 --> Undefined array key "cvv"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 431.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(431): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cvv"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 431)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 17:58:05 --> Undefined array key "cvv"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 428.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cvv"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 428)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:05:18 --> print_r() expects at most 2 arguments, 3 given
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 430.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(430): print_r('267', ' ', '2023-04-13')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:05:33 --> A non-numeric value encountered
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 430.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(430): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 430)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:06:30 --> Unsupported operand types: string + string
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 430.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:07:55 --> Undefined array key "nombre"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 268.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(268): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 268)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(438): App\Controllers\usuario\ShoppingCarController->comprar()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-28 18:09:55 --> Call to undefined method App\Models\usuario\Tarjeta::recuperarFechayCVV
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(425): CodeIgniter\Model->__call('recuperarFechayCVV', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

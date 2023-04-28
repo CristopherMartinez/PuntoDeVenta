@@ -4,6 +4,7 @@ use App\Models\generico\Sugerencias;
 use App\Controllers\BaseController;
 use App\Models\generico\Membresias;
 use App\Models\usuario\Usuarios;
+use App\Models\usuario\RegistrarUsuario;
 
 class MembresiasController extends BaseController{
 
@@ -35,7 +36,15 @@ class MembresiasController extends BaseController{
             //llamamos al metodo ActualizarMembresia 
             $user->actualizarMembresia($usuario,$_POST['idMembresia']);
 
+            
             $session = session();
+            //se agrego
+            $generico = new RegistrarUsuario();
+            $sessionData = [
+                'datosUsuario' => $generico->traerDatosUsuarioPorUsuario($usuario),
+            ];
+            $session->set($sessionData);
+            //-----
             $session->setFlashdata('MembresiaActualizada', "Se ha actualizado correctamente tu membresía, Vence: $nuevaFecha");
 
             return redirect()->to('usuario/inicio');

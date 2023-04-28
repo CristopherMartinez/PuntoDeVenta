@@ -327,6 +327,209 @@ class Videojuegos extends Model
         return $result ? $result->nombre : '';
     }
 
+
+    
+// METODOS PlayStation 3
+
+    //Total de juegos de PlayStation 3
+    public function getTotalGamesPlayStation3(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '1'");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+     //Total de juegos de aventura de PlayStation 3
+     public function TotalGamesAventuraPlayStation3(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '1' AND idCategoria = '1'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de Arcade de PlayStation 3
+    public function TotalGamesArcadePlayStation3(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '1' AND idCategoria = '2'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    //Total de juegos de Deportes de PlayStation 3
+    public function TotalGamesDeportesPlayStation3(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '1' AND idCategoria = '3'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Terror de PlayStation3
+    public function TotalGamesTerrorPlayStation3(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '1' AND idCategoria = '4'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Estrategia de PlayStation 3
+    public function TotalGamesEstrategiaPlayStation3(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '1' AND idCategoria = '5'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //-----------------------------------------------
+    //METODOS PlayStation 4
+
+    //Total de juegos de Playstation 4
+    public function getTotalGamesPlayStation4(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '2'");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+      //Total de juegos de aventura de Playstation 4
+    public function TotalGamesAventuraPlayStation4(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '2' AND idCategoria = '1'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de Arcade de Playstation 4
+    public function TotalGamesArcadePlayStation4(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '2' AND idCategoria = '2'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    //Total de juegos de Deportes de Playstation 4
+    public function TotalGamesDeportesPlayStation4(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '2' AND idCategoria = '3'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Terror de Playstation 4
+    public function TotalGamesTerrorPlayStation4(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '2' AND idCategoria = '4'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Estrategia de Playstation 4
+    public function TotalGamesEstrategiaPlayStation4(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '2' AND idCategoria = '5'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //--------------------------------------------------------------------------
+
+    //METODOS PlayStation 5
+
+    //Total de juegos de PlayStation 5
+    public function getTotalGamesPlayStation5(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '3'");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de aventura de PlayStation 5
+    public function TotalGamesAventuraPlayStation5(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '3' AND idCategoria = '1'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de Arcade de PlayStation 5
+    public function TotalGamesArcadePlayStation5(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '3' AND idCategoria = '2'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    //Total de juegos de Deportes de PlayStation 5
+    public function TotalGamesDeportesPlayStation5(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '3' AND idCategoria = '3'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Terror de PlayStation 5
+    public function TotalGamesTerrorPlayStation5(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '3' AND idCategoria = '4'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Estrategia de PlayStation 5
+    public function TotalGamesEstrategiaPlayStation5(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '3' AND idCategoria = '5'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+
+    //Funcion para obtener 10 videojuegos de PlayStation
+    public function get10VideogamesPlayStation(){
+        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario,idConsola,idCategoria FROM videojuego WHERE idConsola IN (1, 2, 3) LIMIT 10");
+        return $query->getResultArray();
+    }
+
+    // //Funcion para obtener todos los videojuegos de PlayStation
+    // public function getAllVideogamesPlayStation(){
+    //     $query = $this->db->query("SELECT v.idVideojuego, v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario,v.idConsola,v.idCategoria, c.nombre as nombreConsola 
+    //         FROM videojuego v 
+    //         INNER JOIN consola c ON v.idConsola = c.idConsola 
+    //         WHERE v.idConsola IN (1, 2, 3)");
+    //     return $query->getResultArray();
+    // }
+
+    
+
+    public function getConsolasPlayStation(){
+        $query=$this->db->query("SELECT nombre FROM consola WHERE idConsola IN (1, 2, 3)");                      
+        return $query->getResultArray();
+    }
+
+//---------------------------------------------------------------------------------------------------------
+
+
     
 
 

@@ -19,6 +19,15 @@ class RegistrarUsuario extends Model
                                            WHERE usuarios.correo = ?", array($correo));
                 return $query->getResultArray();
         }
+
+        public function traerDatosUsuarioPorUsuario($usuario){
+                $query = $this->db->query("SELECT usuarios.usuario, membresia.nombre 
+                                           FROM usuarios 
+                                           JOIN membresia ON usuarios.idMembresia = membresia.idMembresia 
+                                           WHERE usuarios.usuario = ?", array($usuario));
+                return $query->getResultArray();
+        }
+
         public function traerMembresiaPorCorreo($correo){
                 $query = $this->db->query("SELECT membresia.nombre 
                                            FROM usuarios 
@@ -63,11 +72,21 @@ class RegistrarUsuario extends Model
                 $Usuario->where($data);
                 return $Usuario->get()->getResultArray();
         }
-        public function obtenerAdmin($data) {
-                $Usuario = $this->db->table('administradores');
-                $Usuario->where($data);
-                return $Usuario->get()->getResultArray();
+
+        public function buscarPorCorreo($correo)
+        {
+        // Consultar la base de datos para obtener el usuario correspondiente al correo electrónico
+        $builder = $this->db->table('usuarios');
+        $builder->where('correo', $correo);
+        $query = $builder->get();
+
+        // Devolver el registro de usuario correspondiente, o false si no existe
+        return $query->getRowArray() ?: false;
         }
+
+            
+            
+      
 
         
 }
