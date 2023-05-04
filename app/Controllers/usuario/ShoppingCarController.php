@@ -17,7 +17,7 @@ class ShoppingCarController extends BaseController{
         $this->session = \Config\Services::session();
 
     }
-    
+    //Funcion para mostrar el carrito de compras
     public function index(){
         
        // Verificar si la sesión está iniciada
@@ -48,49 +48,6 @@ class ShoppingCarController extends BaseController{
 
     }
 
-    public function listaDeseos(){
-
-        $videojuegos = new Videojuegos();
-        // Verificar si la sesión está iniciada
-        if (!$this->session->get('logged_in')) {
-            return redirect()->to('/login');
-        }
-
-        // Obtener los datos del usuario de la sesión
-        $session = session();
-        $usuario = array(
-            'nombre' => $session->get('nombre'),
-            'membresia' => $session->get('membresia'),
-        );
-
-        //Prueba
-        $data2["deseos"]=$videojuegos->getVideogamesCartTest();
-
-
-          
-          $vista = view('genericos/header').
-                   view('usuario/navbarLog',$usuario).
-                   view('usuario/listaDeseos',$data2);
-
-                //    view('genericos/footer');
-
-                // print_r(base_url().'/js/recibirDatos.php');
-           
-           return $vista;
-    }
-
-    public function obtenerDeseos(){
-        // $datos = file_get_contents('php://input');
-        // $json = json_decode($datos);
-        // print_r($json);
-        print_r($_POST);
-    }
-
-    public function mostrarDeseos(){
-        return view('usuario/listaDeseos2');
-
-    }
-
     public function   listaCarrito(){
 
          // Verificar si la sesión está iniciada
@@ -117,16 +74,7 @@ class ShoppingCarController extends BaseController{
 
         return $vista;
     }
-
-    public function manejadorCarrito(){
-        $vista =    view('genericos/header') .
-                    view('usuario/navbarLog').
-                    view('usuario/manejadorCarrito');
-
-        return $vista;
-
-    }
-
+    //Funcion para guardar la tarjeta del cliente
     public function guardarTarjeta(){
         $tarjeta = new Tarjeta();
     
@@ -153,8 +101,6 @@ class ShoppingCarController extends BaseController{
             return redirect()->to('usuario/listaCarrito');
         }
     }
-
- 
 
     //Comprar sin agregar tarjeta directo CORRECTO
     public function comprar(){
@@ -303,7 +249,7 @@ class ShoppingCarController extends BaseController{
 
       
     }
-
+    //Funcion para eliminar productos del carrito
     public function vaciarCarrito(){
 
         session_start();
@@ -452,7 +398,7 @@ class ShoppingCarController extends BaseController{
 
     }
 
-
+  
     //Funcion para verificar si ya tiene los juegos el usuario
     // public function comprar(){
 

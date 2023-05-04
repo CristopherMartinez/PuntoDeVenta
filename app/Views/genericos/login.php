@@ -1,10 +1,5 @@
 <!-- <?php
 session_start();
-if($_SESSION == null){
-  print_r("No hay sesion iniciada");
-}else{
-  print_r(json_encode($_SESSION));
-}
 ?>  -->
     <head>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
@@ -14,13 +9,6 @@ if($_SESSION == null){
 
     </head>
 
-   
-    
-
-
-
-
-    
     <body class="imgregister letraGeneral" style="color:whitesmoke">
         <div class="container">
     

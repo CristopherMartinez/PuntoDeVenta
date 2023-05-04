@@ -16,7 +16,7 @@ class Administradores extends Model
     }
 
     public function buscarPorCorreo($correo)
-        {
+    {
         // Consultar la base de datos para obtener el usuario correspondiente al correo electrónico
         $builder = $this->db->table('administradores');
         $builder->where('correoElectronico', $correo);
@@ -24,6 +24,8 @@ class Administradores extends Model
 
         // Devolver el registro de usuario correspondiente, o false si no existe
         return $query->getRowArray() ?: false;
-        }
+    }
+
+        
 
 }

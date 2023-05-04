@@ -1,0 +1,28 @@
+CRITICAL - 2023-05-02 22:55:28 --> Call to undefined method App\Models\Videojuegos::getVideogamesCartTest
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(67): CodeIgniter\Model->__call('getVideogamesCartTest', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaDeseos()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 22:56:47 --> Call to undefined method App\Models\Videojuegos::getVideogamesCartTest
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(67): CodeIgniter\Model->__call('getVideogamesCartTest', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaDeseos()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 23:02:52 --> Call to undefined method App\Models\Videojuegos::getVideogamesCartTest
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(67): CodeIgniter\Model->__call('getVideogamesCartTest', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaDeseos()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-02 23:03:47 --> Call to undefined method App\Models\Videojuegos::getVideogamesCartTest
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(67): CodeIgniter\Model->__call('getVideogamesCartTest', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaDeseos()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

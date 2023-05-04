@@ -8,6 +8,14 @@ use App\Models\Videojuegos;
 
 
 class RegisterController extends BaseController{
+
+    protected $email ;
+
+    public function __construct()
+    {
+        $this->email  = \Config\Services::email();
+
+    }
     
     public function index(){
         $vista= view('genericos/navbar').
@@ -132,20 +140,48 @@ class RegisterController extends BaseController{
                 ];
                 $session->set($sessionData);
 
-                $vistas= view('genericos/header',$data).
-                        view('usuario/navbarLog').
-                        view('invitado/carruselInicio').    
-                        view('invitado/cardsInicio.php',$data2).
-                        view('usuario/contacto.php').
-                        view('genericos/footer');
-                        // view('inicio');
+                // $vistas= view('genericos/header',$data).
+                //         view('usuario/navbarLog').
+                //         view('invitado/carruselInicio').    
+                //         view('invitado/cardsInicio.php',$data2).
+                //         view('usuario/contacto.php').
+                //         view('genericos/footer');
+                //         // view('inicio');
 
-                //Agregar $Session
-                return $vistas;
+                // //Agregar $Session
+                // return $vistas;
+
+                //llamamos al metodo de enviar correo
+                $this->sendCorreo($_POST["correo"]);
+                return redirect()->to('usuario/inicio');
+
             }else{
                 //Existe el usuario Falta mostrar mensaje 
                  return redirect()->back();
             }
+    }
+
+    
+    //Envia de correo de registro exitoso
+    public function sendCorreo($destinatario){
+        $this->email->setTo($destinatario);
+        $this->email->setFrom('worldgamess975@gmail.com', 'WorldGames');
+        $this->email->setSubject('Datos para iniciar sesión');
+        // $body = "";
+
+
+        $this->email->setMessage('Correo electronico');
+
+        //Enviamos el correo
+        $this->email->send();
+
+        // if ($this->email->send()) {
+        //     echo 'Correo electrónico enviado exitosamente.';
+        // } else {
+        //     $data =  $this->email->printDebugger(['headers']);
+        //     print_r($data);
+        // }
+        
     }
 
         public function cerrarSesion(){

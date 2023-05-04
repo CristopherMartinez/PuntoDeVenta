@@ -8,6 +8,14 @@ use App\Models\Videojuegos;
 use App\Models\admin\Administradores;
 
 class LoginController extends BaseController{
+
+    protected $email ;
+
+    public function __construct()
+    {
+        $this->email  = \Config\Services::email();
+
+    }
         
     public function index(){
         $vista= view('genericos/navbar').
@@ -36,6 +44,7 @@ class LoginController extends BaseController{
                     'logged_in' => true
                 ];
                 $session->set($sessionData);
+
                 return redirect()->to('usuario/inicio');
 
             } else {
@@ -54,6 +63,31 @@ class LoginController extends BaseController{
 
         }
 
+        
+    }
+
+
+                    // //llamamos al metodo de enviar correo
+                    // $this->sendCorreo($correo);
+    //Envia de correo de registro exitoso
+    public function sendCorreo($destinatario){
+        $this->email->setTo($destinatario);
+        $this->email->setFrom('worldgamess975@gmail.com', 'WorldGames');
+        $this->email->setSubject('Datos para iniciar sesión');
+        // $body = "";
+
+        $this->email->setMessage('Correo electronico');
+
+        //Enviamos el correo
+        $this->email->send();
+
+        // if ($this->email->send()) {
+        //     echo 'Correo electrónico enviado exitosamente.';
+        // } else {
+        //     $data =  $this->email->printDebugger(['headers']);
+        //     print_r($data);
+        // }
+        
     }
 
 

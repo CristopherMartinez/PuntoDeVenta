@@ -109,13 +109,28 @@ session_start();
 
 
                 <a class="nav-link" href="listaDeseos" style="position: relative; padding-left: 5px;" type="button">
+                  <!--Cambiar de cart a Deseos-->
+                  <!-- <?php
+                      $count = 0;
+                      if(isset($_SESSION['cart'])){
+                        $count = count($_SESSION['cart']);
+                      }
+                  ?>  -->
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                        <span>
+                            0
+                        </span>
+                </a>
+                <!-- <a class="nav-link" href="listaDeseos" style="position: relative; padding-left: 5px;" type="button">
                         <span class="material-symbols-outlined">
                           favorite
                           <span id="btnCantidadDeseo" style="font-size:13px; position: absolute; top: -5px; right: -5px; background-color: transparent; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
                             0
                           </span>
                         </span>
-                </a>
+                </a> -->
              
             
                  

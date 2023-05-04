@@ -38,8 +38,12 @@ $routes->add('/guardar_sugerencia','generico\SugerenciasController::guardar_suge
 $routes->add('/usuario/inicio','invitado\Inicio::indexLog');
 $routes->add('/usuario/gamesXbox','generico\GamesXboxController::indexGameXboxLog');
 $routes->add('/usuario/ShoppingCar','usuario\ShoppingCarController::index'); 
-$routes->add('/usuario/listaDeseos','usuario\ShoppingCarController::listaDeseos'); 
 $routes->add('/usuario/gamesPlayStation','generico\GamesplayStation::indexLog');
+
+$routes->add('/usuario/listaCarrito','usuario\ShoppingCarController::listaCarrito');
+$routes->add('/usuario/listaDeseos','usuario\DeseosController::listaDeseos');
+
+
 
 //Rutas invitado
 $routes->add('/SingUp','invitado\RegisterController::index');
@@ -55,6 +59,7 @@ $routes->add('/admin/clientes','admin\AdminController::recuperarclientes');
 $routes->add('/admin/registroVideojuegos','admin\AgregarJuegoController::index');
 $routes->add('/admin/registroAdmin','admin\RegistroAdminController::index');
 $routes->add('/admin/ventas','admin\AdminController::ventas');
+$routes->add('/admin/login','admin\AdminController::mostrarVistaLogin');
 
 //Guardado de Juegos y Admin
 $routes->add('/guardar_admin','admin\RegistroAdminController::guardar_admin');
@@ -71,10 +76,8 @@ $routes->post('/actualizar','admin\AgregarJuegoController::actualizar');
 $routes->get('/cerrarSesion', 'invitado\RegisterController::cerrarSesion');
 
 
-// $routes->post('/listaDeseo', 'usuario\ShoppingCarController::listaDeseo');
-$routes->add('/usuario/listaDeseos2','usuario\ShoppingCarController::mostrarDeseos');
-$routes->add('/usuario/listaCarrito','usuario\ShoppingCarController::listaCarrito');
-$routes->add('/usuario/manejadorCarrito','usuario\ShoppingCarController::manejadorCarrito');
+
+// $routes->add('/usuario/manejadorCarrito','usuario\ShoppingCarController::manejadorCarrito');
 
 
 //Guardar Tarjeta (Usuario)
@@ -86,13 +89,12 @@ $routes->add('/comprar2','usuario\ShoppingCarController::comprar2');
 //Vaciar Carrito
 $routes->add('/vaciarCarrito','usuario\ShoppingCarController::vaciarCarrito');
 
-
-
 $routes->add('/comprarConTarjetaGuardada','usuario\ShoppingCarController::comprarConTarjetaGuardada');
-
 
 //Membresias (Comprar membresia)
 $routes->add('/comprarMembresia','generico\MembresiasController::comprarMembresia');
+
+
 
 
 $routes->add('/ofertas','OfertasController::index');

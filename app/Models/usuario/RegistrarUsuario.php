@@ -13,7 +13,7 @@ class RegistrarUsuario extends Model
         protected $allowedFields = ['idUsuario','usuario','nombre','apellidos','correo','direccion','telefono','contrasenia'];
 
         public function traerDatosUsuarioPorCorreo($correo){
-                $query = $this->db->query("SELECT usuarios.usuario, membresia.nombre 
+                $query = $this->db->query("SELECT usuarios.usuario, membresia.nombre
                                            FROM usuarios 
                                            JOIN membresia ON usuarios.idMembresia = membresia.idMembresia 
                                            WHERE usuarios.correo = ?", array($correo));

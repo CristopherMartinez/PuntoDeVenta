@@ -42,10 +42,10 @@
                   </ul>
                 </li>              
             </ul>
-            <form class="d-flex">
+            <!-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit" style="padding-left: 5px;">Buscar</button>
-            </form>
+            </form> -->
             <ul class="navbar-nav ms-auto me-5 my-2 my-lg-0 navbar-nav-scroll letraNavbar" style="--bs-scroll-height: 100px;">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="SingUp" style="font-size:smaller; padding-left:5px;"><span> </span><span>Registrate</span></a>

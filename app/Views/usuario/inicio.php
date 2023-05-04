@@ -57,7 +57,7 @@
     //     }
     // }
 
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    // if ($_SERVER['REQUEST_METHOD'] == "POST") {
         //Verificamos que exista Add_To_Cart mandado mediante post
         if (isset($_POST['Add_To_Cart'])) {
             //Checamos que exista en la sesion un arreglo llamado cart
@@ -106,7 +106,7 @@
                 </script>";
             }
         }
-    }
+    // }
     
 
     //REMOVER DEL CARRITO
@@ -129,14 +129,11 @@
         }
     }
 }
-
-
-  
+ 
 ?>
 
 
-
-<?php if (session()->has('success')): ?>
+    <?php if (session()->has('success')): ?>
         <script>
             Swal.fire({
                 icon: 'success',
@@ -146,7 +143,7 @@
             });
         </script>
     <?php endif; ?>
-
+            
     <?php if (session()->has('error')): ?>
         <script>
             Swal.fire({

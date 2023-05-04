@@ -1,0 +1,26 @@
+ERROR - 2023-05-04 06:48:00 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-04 06:48:00 --> 220 smtp.gmail.com ESMTP dw16-20020a056870771000b00192566722e1sm392822oab.0 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2806:2f0:83e0:fb3b:10fe:7c98:cc8f:28e9]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2806:2f0:83e0:fb3b:10fe:7c98:cc8f:28e9]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 534-5.7.9 Application-specific password required. Learn more at
+534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor dw16-20020a056870771000b00192566722e1sm392822oab.0 - gsmtp
+

@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers\admin;
 use App\Controllers\BaseController;
+use App\Models\admin\Administradores;
 use App\Models\usuario\RegistrarUsuario;
 use App\Models\usuario\Ordenes;
 
@@ -49,6 +50,54 @@ class AdminController extends BaseController{
                  view('admin/ventas',$ventas);
          
         return $vistas;
+    }
+
+    //Login de admin
+    public function mostrarVistaLogin(){
+        $vistas= 
+                view('genericos/header').
+                view('genericos/navbar').
+                 view('admin/login');
+         
+        return $vistas;
+
+    }
+
+    //Verificar login de admin
+    public function verificar_login(){
+        $correo = $this->request->getPost('correo');
+        $contrasenia = strval($this->request->getPost('contrasenia'));
+    
+        $administrador = new Administradores();
+        $admin = $administrador->buscarPorCorreo($correo);
+    
+        if ($admin) {
+            // $hash = $user['contrasenia'];
+        } else {
+            echo "No existe en la bd";
+        }
+    
+        // echo "Hash: " . $hash . "<br>";
+        // echo "Contraseña: " . $contrasenia . "<br>";
+    
+        $verificacion = password_verify($contrasenia, $admin['contrasenia']);
+        if ($verificacion) {
+
+
+            $generico = new RegistrarUsuario();
+            // $session = session();
+            // $sessionData = [
+            //                 'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($_POST["correo"]),
+            //                 'logged_in' => true
+            // ];
+            // $session->set($sessionData);
+            return redirect()->to('usuario/inicio');
+
+
+        } else {
+            echo "<script>alert('Contraseña incorrecta')</script>";
+            return redirect()->to('login');
+        }
     }
 
     

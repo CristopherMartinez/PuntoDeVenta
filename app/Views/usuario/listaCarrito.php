@@ -8,16 +8,11 @@
  <!-- <?php       
     print_r($tarjetas);
  ?> -->
-<!-- <br>
 <br>
-<br>
-<br>
-<br> -->
-
 <body class="backgrounFooter">
 <div class="container ">
     <div class="alert alert-success" role="alert">
-    <h3>Carrito de compras</h3>
+        <h3>Carrito de compras</h3>
     </div>
     <br>
     <div class="table-responsive">
@@ -29,7 +24,7 @@
                 <th>Nombre</th>
                 <th>Consola</th>
                 <th>Precio</th>
-                <th>Total</th>
+                <!-- <th>Total</th> -->
                 <th>Accion</th>
                 </tr>
             </thead>
@@ -48,7 +43,7 @@
                         <td hidden>
                         <input class='text-center iquantity' onchange='subTotal()'  type='number' value='$value[Cantidad]' min='1' max='1' hidden>
                         </td>
-                        <td class='itotal'></td>
+                        <td class='itotal' hidden></td>
                         <td>
                             <form action='inicio' method='POST'>
                                 <input type='hidden' name='nombre' value='$value[nombre]'>
@@ -196,11 +191,6 @@
             });
         </script>
     <?php endif; ?>
-
-    
-
-
-    
 
     <!--Si el array de tarjetas esta vacio abrimos el modalCompra si no esta vacio abrimos el modalTarjetas-->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
@@ -385,9 +375,6 @@
     //         detalles.style.display = 'none';
     //     }
     // }
-
-    
-
 
     var timerInterval; 
 
