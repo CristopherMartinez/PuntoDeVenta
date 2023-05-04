@@ -24,3 +24,25 @@ hello: 250-smtp.gmail.com at your service, [2806:2f0:83e0:fb3b:10fe:7c98:cc8f:28
 Failed to authenticate password. Error: 534-5.7.9 Application-specific password required. Learn more at
 534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor dw16-20020a056870771000b00192566722e1sm392822oab.0 - gsmtp
 
+CRITICAL - 2023-05-04 18:11:16 --> Undefined array key 0
+in APPPATH\Views\usuario\inicio.php on line 4.
+ 1 APPPATH\Views\usuario\inicio.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\usuario\\inicio.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\inicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/inicio', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(72): view('usuario/inicio')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-04 18:11:24 --> Undefined array key 0
+in APPPATH\Views\usuario\inicio.php on line 4.
+ 1 APPPATH\Views\usuario\inicio.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\usuario\\inicio.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\inicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/inicio', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(72): view('usuario/inicio')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

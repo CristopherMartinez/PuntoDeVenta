@@ -7,6 +7,7 @@ use App\Models\usuario\Tarjeta;
 use App\Models\usuario\Ordenes;
 use App\Models\usuario\OrdenesUsuario;
 use App\Models\usuario\VideojuegosUsuario;
+use App\ModelS\generico\Email;
 
 class ShoppingCarController extends BaseController{
 
@@ -174,7 +175,7 @@ class ShoppingCarController extends BaseController{
             $videojuego->update($venta['idVideojuego'], $actualizarLicencias);
         }
         
-        //Se llama a funcion para agregar a tabla de VideojuegosUsuario mandando como parametro el idOrden
+        //Se llama a funcion para agregar a tabla de VideojuegosUsuario
          $this->addToVideojuegosUsuario();
 
 
@@ -182,8 +183,13 @@ class ShoppingCarController extends BaseController{
         unset($_SESSION['cart']);
 
         // Mostramos un mensaje
-        $session = session();
-        $session->setFlashdata('success', 'Se realizó la compra correctamente');
+        // $session = session();
+        // $session->setFlashdata('success', 'Se realizó la compra correctamente');
+
+        //Llamamos a la funcion sendCorreoCompra que esta en el modelo de Email
+        $email = new Email();
+        $email->sendCorreoCompra();
+
 
         return redirect()->to('usuario/listaCarrito');
         }
@@ -236,8 +242,8 @@ class ShoppingCarController extends BaseController{
             unset($_SESSION['cart']);
     
             // Mostramos un mensaje
-            $session = session();
-            $session->setFlashdata('success', 'Se realizó la compra correctamente');
+            // $session = session();
+            // $session->setFlashdata('success', 'Se realizó la compra correctamente');
     
             return redirect()->to('usuario/listaCarrito');
         }else{
@@ -286,16 +292,6 @@ class ShoppingCarController extends BaseController{
 
         //Recuperamos los datos de la tarjeta con el usuario y el numero de tarjeta  y guardamos dentro de arreglo datosTarjeta
         $datosTarjeta = $tarjeta->recuperarDatosTarjeta($_SESSION['datosUsuario'][0]['usuario'],$tarjetaSeleccionada);
-
-
-        // echo $fecha;
-        // echo $cvv;
-        // print_r($datosTarjeta[0]['nombre']);
-        // print_r($datosTarjeta[0]['cvv']); 
-        // print_r($datosTarjeta[0]['fechaVencimiento']); 
-        // print_r($fecha);
-        // print_r($cvv);
-
  
         //Si son iguales a los de la base de datos se realiza la compra
         if($cvv == $datosTarjeta[0]['cvv'] && $fecha == $datosTarjeta[0]['fechaVencimiento']){
@@ -370,13 +366,12 @@ class ShoppingCarController extends BaseController{
                 //Se llama a funcion para agregar a tabla de VideojuegosUsuario mandando como parametro el idOrden
                 $this->addToVideojuegosUsuario();
         
-        
                 // Eliminamos el carrito de la sesión
                 unset($_SESSION['cart']);
         
-                // Mostramos un mensaje
-                $session = session();
-                $session->setFlashdata('success', 'Se realizó la compra correctamente');
+                //Llamamos a la funcion sendCorreoCompra que esta en el modelo de Email
+                $email = new Email();
+                $email->sendCorreoCompra();
         
                 return redirect()->to('usuario/listaCarrito');
                 }

@@ -67,29 +67,6 @@ class LoginController extends BaseController{
     }
 
 
-                    // //llamamos al metodo de enviar correo
-                    // $this->sendCorreo($correo);
-    //Envia de correo de registro exitoso
-    public function sendCorreo($destinatario){
-        $this->email->setTo($destinatario);
-        $this->email->setFrom('worldgamess975@gmail.com', 'WorldGames');
-        $this->email->setSubject('Datos para iniciar sesión');
-        // $body = "";
-
-        $this->email->setMessage('Correo electronico');
-
-        //Enviamos el correo
-        $this->email->send();
-
-        // if ($this->email->send()) {
-        //     echo 'Correo electrónico enviado exitosamente.';
-        // } else {
-        //     $data =  $this->email->printDebugger(['headers']);
-        //     print_r($data);
-        // }
-        
-    }
-
 
     // public function verificar_login(){
     //     $correo = $this->request->getPost('correo');

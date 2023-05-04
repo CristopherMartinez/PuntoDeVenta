@@ -181,5 +181,31 @@
         </script>
     <?php endif; ?>
 
+    <!--Mensaje para mostrar que el usuario se registro exitosamente-->
+    <?php if (session()->has('registroExitoso')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('registroExitoso') ?>',
+                showConfirmButton: true,
+                // timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+    <!--Mensaje para mostrar que fallo el envio de correo-->
+    <?php if (session()->has('falloEnvioCorreo')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('falloEnvioCorreo') ?>',
+                showConfirmButton: true,
+                // timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+    
+
     
 

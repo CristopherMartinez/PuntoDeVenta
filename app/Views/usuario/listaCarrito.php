@@ -132,7 +132,7 @@
         </div>
     </div>           
 
-    <!--Mensaje para mostrar cuando se completa la compra-->
+    <!--Para mostrar diferentes tipos de mensajes como Guardado de tarjeta-->
     <?php if (session()->has('success')): ?>
         <script>
             Swal.fire({
@@ -140,6 +140,30 @@
                 title: '<?= session('success') ?>',
                 showConfirmButton: false,
                 timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+    <!--Mensaje para mostrar cuando se completa la compra-->
+    <?php if (session()->has('compraExitosa')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('compraExitosa') ?>',
+                showConfirmButton: true,
+                // timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+     <!--Mensaje para mostrar que fallo el envio de correo-->
+     <?php if (session()->has('falloEnvioCorreo')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('falloEnvioCorreo') ?>',
+                showConfirmButton: true,
+                // timer: 1500
             });
         </script>
     <?php endif; ?>
