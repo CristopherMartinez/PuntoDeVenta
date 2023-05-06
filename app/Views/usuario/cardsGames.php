@@ -1,5 +1,11 @@
 <head>
     <style>
+        .blue .material-symbols-outlined {
+            color: blue;
+        }
+
+        
+
         .img1 {
             height: 280px;
             border-radius: 30px;
@@ -210,19 +216,29 @@
         
     </style>
 </head>
+
 <body> 
             <div class="col-12 m-auto backgrounFooter" style="padding-top: 15px;">
                 <div class="owl-carousel owl-theme">
-            
-                  
+                           
                     <?php foreach ($videojuegos as $juego) { ?>
                     <div class="item mb-4">
                         <div class="card border-0 shadow">
-                        <a type="button" class="btnAddDeseo" prod="<?php echo $juego['idVideojuego'] ?>">
-                        <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
-                        favorite
-                        </span>
-                        </a>
+                        <!--Guardar deseo-->   
+                        <form action="<?php echo base_url().'/agregarDeseo'?>" method="POST" style="color: red; padding-left:85%; padding-bottom :10px; text-decoration:none;">
+                            <input type="text" id="idVideojuegoDeseo" name="idVideojuegoDeseo" value="<?php echo $juego['idVideojuego'] ?>" hidden>
+                            <input type="text" id="nombreDeseo" name="nombreDeseo" value="<?php echo $juego['nombre'] ?>" hidden>
+                            <input type="text" id="precioDeseo" name="precioDeseo" value="<?php echo $juego['precio'] ?>" hidden>
+                            <input type="text" id="nombreConsolaDeseo" name="nombreConsolaDeseo" value="<?php echo $juego['nombreConsola'] ?>" hidden>    
+                            <input type="text" id="imagenDeseo" name="imagenDeseo" value="<?php echo $juego['imagen'] ?>" hidden>    
+
+                            <button type="submit" class="btn btn-link border-0 p-0 blue">
+                                <span class="material-symbols-outlined">favorite</span>
+                                <!-- <a></a> -->
+                            </button>
+                        </form>  
+   
+
                         <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px;">
                             <div class="card-body">
                                 <form action="inicio" method="POST">
@@ -236,11 +252,11 @@
                                         <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
                                         <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
                                         <div>
-                                        <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
-                                        <span style="padding-left: 5px;">
-                                        <button type="submit" name="Add_To_Cart" class="btn btn-success" style="margin-top:10px;">Agregar al carrito</button>
-                                        <!-- <button type="button" class="btn btn-outline-success" style="margin-top:10px;" onclick="agregarAlCarrito()">Agregar al carrito</button> -->
-                                        </span>
+                                            <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
+                                            <span style="padding-left: 5px;">
+                                            <button type="submit" name="Add_To_Cart" class="btn btn-success" style="margin-top:10px;">Agregar al carrito</button>
+                                            <!-- <button type="button" class="btn btn-outline-success" style="margin-top:10px;" onclick="agregarAlCarrito()">Agregar al carrito</button> -->
+                                            </span>
                                         </div>
                                     </div>
                                 </form>    
@@ -251,26 +267,6 @@
                 
                     
                 </div>
-                <!-- <?php
-               
-                print_r(json_encode($_SESSION));
-                // print_r(json_encode($videojuegos));
-                ?> -->
-                <br>
-                <!--Prueba de envio de datos de seleccion hacia el carrito de compras-->
-                <!-- <div>Desde aqui se va mandar hacia el carrito de compras</div> -->
-                <!-- <form action="listaCarrito" method="POST">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" value="idVideojuego">
-                <br>
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" value="nombre">
-                <br>
-                <input type="submit" name="Add_To_Cart" value="Enviar">
-                </form> -->
-
-
-                 
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -298,6 +294,8 @@ crossorigin="anonymous">
                 }
             }
         })
+
+
 
         
 </script>

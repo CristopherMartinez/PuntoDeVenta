@@ -42,7 +42,10 @@ $routes->add('/usuario/gamesPlayStation','generico\GamesplayStation::indexLog');
 
 $routes->add('/usuario/listaCarrito','usuario\ShoppingCarController::listaCarrito');
 $routes->add('/usuario/listaDeseos','usuario\DeseosController::listaDeseos');
-
+//Agregar Deseo
+$routes->add('/agregarDeseo','usuario\DeseosController::agregarDeseo');
+//Eliminar Deseos
+$routes->add('/eliminarDeseos','usuario\DeseosController::eliminarDeseos');
 
 
 //Rutas invitado

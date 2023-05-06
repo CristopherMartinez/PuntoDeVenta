@@ -1,0 +1,22 @@
+CRITICAL - 2023-05-06 17:30:57 --> Undefined array key "imagenDeseo"
+in APPPATH\Views\usuario\listaDeseos.php on line 16.
+ 1 APPPATH\Views\usuario\listaDeseos.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "imagenDeseo"', 'APPPATH\\Views\\usuario\\listaDeseos.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaDeseos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaDeseos', [], true)
+ 5 APPPATH\Controllers\usuario\DeseosController.php(40): view('usuario/listaDeseos')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\DeseosController->listaDeseos()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\DeseosController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-06 17:33:54 --> Undefined array key "imagenDeseo"
+in APPPATH\Views\usuario\listaDeseos.php on line 16.
+ 1 APPPATH\Views\usuario\listaDeseos.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "imagenDeseo"', 'APPPATH\\Views\\usuario\\listaDeseos.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaDeseos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaDeseos', [], true)
+ 5 APPPATH\Controllers\usuario\DeseosController.php(40): view('usuario/listaDeseos')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\DeseosController->listaDeseos()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\DeseosController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

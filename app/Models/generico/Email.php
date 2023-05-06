@@ -60,6 +60,7 @@ class Email extends Model
         if ($this->email->send()) {          
             $session = session();
             $session->setFlashdata('registroExitoso', 'Registro Exitoso, se han enviado sus datos a su correo');
+            return redirect()->to('usuario/inicio');
 
         }else{
             $session = session();
@@ -80,6 +81,7 @@ class Email extends Model
         <html>
         <head>
             <meta charset="utf-8">  
+
         </head>
         <body>
             <h2>Compra de videojuegos en WorldGames</h2>
@@ -109,7 +111,7 @@ class Email extends Model
         if ($this->email->send()) {          
             $session = session();
             $session->setFlashdata('compraExitosa', 'Se ha realizado la compra correctamente, se enviaron detalles de la compra a su correo');
-
+            return redirect()->to('usuario/listaCarrito');
         }else{
             $session = session();
             $session->setFlashdata('falloEnvioCorreo', 'Ha fallado el envio de correo');
@@ -118,5 +120,7 @@ class Email extends Model
         }
 
     }
+
+    
           
 }

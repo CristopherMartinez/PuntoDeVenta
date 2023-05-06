@@ -260,8 +260,6 @@ class ShoppingCarController extends BaseController{
 
         session_start();
 
-        // print_r($_SESSION);
-
         if(isset($_SESSION['cart'])){
             unset($_SESSION['cart']);
             $session = session();
@@ -273,9 +271,7 @@ class ShoppingCarController extends BaseController{
             $session = session();
             $session->setFlashdata('SinCompras', 'No hay ningun videojuego agregado al carrito');
             return redirect()->to('usuario/listaCarrito');
-
         }
-       
     }
 
     //Funcion para comprar con tarjeta que se seleccione cuando ya se alla guardado una

@@ -20,7 +20,7 @@
             <thead style="color:whitesmoke;">
                 <tr>
                 <th>#</th>
-                <th>idVideojuego</th>
+                <!-- <th>idVideojuego</th> -->
                 <th>Nombre</th>
                 <th>Consola</th>
                 <th>Precio</th>
@@ -36,7 +36,7 @@
                     echo"
                     <tr>
                         <td>$key</td>
-                        <td>$value[idVideojuego]</td>
+                        <td hidden>$value[idVideojuego]</td>
                         <td>$value[nombre]</td>
                         <td>$value[NombreConsola]</td>
                         <td>$$value[precio]<input type='hidden' class='iprice' value='$value[precio]'></td>

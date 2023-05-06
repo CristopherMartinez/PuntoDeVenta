@@ -87,7 +87,14 @@ session_start();
                     <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;">
                       <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Saldo digital</a></li>
                       <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Ofertas</a></li>
-                      <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Mis juegos</a></li>
+                      <!--Mostramos unicamente cuando tenga juegos el usuario-->
+                      <?php
+                      if(isset($_SESSION['misJuegos'])){
+                        echo"
+                        <li><a class='dropdown-item' href='#' style='padding-left: 5px;'>Mis juegos</a></li>
+                        ";
+                      }
+                      ?>
                     </ul>
                   </li>   
                 </li>           
@@ -112,16 +119,14 @@ session_start();
                   <!--Cambiar de cart a Deseos-->
                   <!-- <?php
                       $count = 0;
-                      if(isset($_SESSION['cart'])){
-                        $count = count($_SESSION['cart']);
+                      if(isset($_SESSION['deseos'])){
+                        $count = count($_SESSION['deseos']);
                       }
                   ?>  -->
                         <span class="material-symbols-outlined">
                           favorite
                         </span>
-                        <span>
-                            0
-                        </span>
+                        <span><?php echo $count;?></span> 
                 </a>
                 <!-- <a class="nav-link" href="listaDeseos" style="position: relative; padding-left: 5px;" type="button">
                         <span class="material-symbols-outlined">

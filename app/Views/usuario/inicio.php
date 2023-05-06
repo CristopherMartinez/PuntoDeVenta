@@ -205,6 +205,32 @@
         </script>
     <?php endif; ?>
 
+     <!--Mensaje para mostrar que se agrego a lista de deseos-->
+     <?php if (session()->has('agregadoDeseos')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('agregadoDeseos') ?>',
+                showConfirmButton: false,
+                timer: 1800
+            });
+        </script>
+    <?php endif; ?>
+
+    <!--Mensaje para mostrar que ya esta en la lista de Deseos-->
+    <?php if (session()->has('yaEstaEnListaDeseos')): ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: '<?= session('yaEstaEnListaDeseos') ?>',
+                showConfirmButton: false,
+                timer: 1800
+            });
+        </script>
+    <?php endif; ?>
+
+
+
     
 
     
