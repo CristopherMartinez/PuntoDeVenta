@@ -1,95 +1,3 @@
-<?php
-  session_start();
-  
-  //Agregar al carrito
-  if($_SERVER['REQUEST_METHOD']=="POST"){
-  
-
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        //Verificamos que exista Add_To_Cart mandado mediante post
-        if (isset($_POST['Add_To_Cart'])) {
-            //Checamos que exista en la sesion un arreglo llamado cart
-            if (isset($_SESSION['cart'])) {
-                //Si existe asignamos a myitems de acuerdo a nombre y el idVideojuego
-                $myitems = array_column($_SESSION['cart'], 'nombre', 'idVideojuego');
-                if (isset($myitems[$_POST['idVideojuego']]) && $myitems[$_POST['idVideojuego']] == $_POST['nombre']) {
-                    //Asignamos un setFlashData para decir que ya esta en el carrito 
-                    $session = session();
-                    $session->setFlashdata('error', 'Este elemento ya está en el carrito');
-                    //Redirigimos a pagina inicio del usuario logueado
-                    echo "<script> 
-                        window.location.href = '" . base_url() . "/usuario/inicio';
-                        exit();
-                    </script>";
-
-                } else {
-                    //Si aun no existe en el carrito lo insertamos
-                    $count = count($_SESSION['cart']);
-                    $_SESSION['cart'][$count] = array(
-                        'idVideojuego' => $_POST['idVideojuego'],
-                        'nombre' => $_POST['nombre'],
-                        'precio' => $_POST['precio'],
-                        'NombreConsola' => $_POST['nombreConsola'],
-                        'Cantidad' => 1
-                    );
-                    $session = session();
-                    $session->setFlashdata('success', 'Agregado al carrito');
-                    echo "<script>
-                        window.location.href = '" . base_url() . "/usuario/inicio';
-                        exit();                      
-                    </script>";
-                }
-            } else {
-                 //Si aun no existe en el carrito lo insertamos
-                $_SESSION['cart'][0] = array(
-                    'idVideojuego' => $_POST['idVideojuego'],
-                    'nombre' => $_POST['nombre'],
-                    'precio' => $_POST['precio'],
-                    'NombreConsola' => $_POST['nombreConsola'],
-                    'Cantidad' => 1
-                );
-                $session = session();
-                $session->setFlashdata('success', 'Agregado al carrito');
-                echo "<script>          
-                    window.location.href = '" . base_url() . "/usuario/inicio';
-                    exit();
-                </script>";
-            }
-        }
-    }
-    
-
-    //REMOVER DEL CARRITO
-    if(isset($_POST['Remove_Item']))
-    {
-        foreach($_SESSION['cart'] as $key => $value)
-        {
-         
-            if($value['nombre']==$_POST['nombre'])
-            {
-                unset($_SESSION['cart'][$key]);
-                $_SESSION['cart'] = array_values($_SESSION['cart']);
-                echo"
-                <script>
-                alert('Eliminado del carrito');
-                window.location.href = '" . base_url() . "/usuario/inicio';
-                exit();
-                </script>";
-            } 
-        }
-    }
-}
-
-
-  
-?>
-
-
-
-
-
-
-
 
 <head>
     <style>
@@ -100,11 +8,39 @@
         }
         /*Los demas estilos estan en ../styles/styles.css*/ 
     </style>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/styles/styles.cs">
         <script src=" <?php echo base_url()?>/js/scripts.js"></script>
 </head>
 
 <body class="backgrounFooter">
+
+    <!--Mensaje de agregado correctamente-->
+    <?php if (session()->has('success')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('success') ?>',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+    <!--Mensaje de que ya se encuentra en el carrito-->
+    <?php if (session()->has('error')): ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: '<?= session('error') ?>',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+
 <div >
     <div class="container " style="padding-top: 30px; padding-bottom:30px;">
     <div class="row" style="background-color: #a2aab8;">
@@ -182,7 +118,7 @@
                     <div class="col-12" style="margin-top: 10px;">
                         <div class="card mb-3 backgroundGamesPlay" style="max-width: auto; border-radius:5px;">
                             
-                            <form action="gamesXbox" method="POST">
+                            <form action="<?php echo base_url().'/agregarAlCarritoXbox'?>" method="POST">
                                 <div class="row g-0">
                                     <div class="col-md-4 align-self-center">
                                         <img src="<?php echo base_url()?>/imagenes/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px;" alt="...">

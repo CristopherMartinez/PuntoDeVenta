@@ -1,8 +1,52 @@
 <head>
     <style>
-        .blue .material-symbols-outlined {
+        /* .blue .material-symbols-outlined {
             color: blue;
+        } */
+ 
+        .blue .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 100,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
         }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            }
+
+            .image-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            overflow: hidden;
+            transition: height 0.5s;    
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            }
+
+            .image-container:hover .image-description {
+            height: 60px;
+            }
+
+            .image-description::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            margin-left: -10px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid rgba(0, 0, 0, 0.7);
+            
+            }
+
 
         
 
@@ -231,17 +275,33 @@
                             <input type="text" id="precioDeseo" name="precioDeseo" value="<?php echo $juego['precio'] ?>" hidden>
                             <input type="text" id="nombreConsolaDeseo" name="nombreConsolaDeseo" value="<?php echo $juego['nombreConsola'] ?>" hidden>    
                             <input type="text" id="imagenDeseo" name="imagenDeseo" value="<?php echo $juego['imagen'] ?>" hidden>    
+                            <input type="text" id="descripcionDeseo" name="descripcionDeseo" value="<?php echo $juego['descripcion'] ?>" hidden>    
 
-                            <button type="submit" class="btn btn-link border-0 p-0 blue">
-                                <span class="material-symbols-outlined">favorite</span>
-                                <!-- <a></a> -->
+                            <button type='submit' class='btn btn-link border-0 p-0'>
+                                    <span class='material-symbols-outlined'>favorite</span>        
                             </button>
+
+
+                            <!-- //Checamos que exista en la sesion deseos, si existe checamos dentro del array
+                            //si existe el deseo, si existe pintamos el corazon de azul -->
+                            <!-- <?php
+                            if(isset($_SESSION['deseos'])){
+
+                                    if (array_search($juego['idVideojuego'], $_SESSION['deseos']) !== false) {
+                                        echo "true";
+                                    }
+                            }
+
+                            ?> -->
+
                         </form>  
    
-
-                        <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px;">
+                        <div class="image-container">        
+                            <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px; height:200px;">
+                            <div class="image-description"><?php echo $juego['descripcion'] ?></div>
+                        </div>       
                             <div class="card-body">
-                                <form action="inicio" method="POST">
+                                <form action="<?php echo base_url().'/agregarAlCarrito'?>" method="POST">
                                     <div class="card-title text-center">
                                         <p style="font-size: 20px; color:#2e2a2a;"><?php echo $juego['nombre'] ?></p>
                                         <!--Id del videojuego oculto(no borrar)-->
@@ -255,7 +315,6 @@
                                             <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
                                             <span style="padding-left: 5px;">
                                             <button type="submit" name="Add_To_Cart" class="btn btn-success" style="margin-top:10px;">Agregar al carrito</button>
-                                            <!-- <button type="button" class="btn btn-outline-success" style="margin-top:10px;" onclick="agregarAlCarrito()">Agregar al carrito</button> -->
                                             </span>
                                         </div>
                                     </div>

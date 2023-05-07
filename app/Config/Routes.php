@@ -46,6 +46,15 @@ $routes->add('/usuario/listaDeseos','usuario\DeseosController::listaDeseos');
 $routes->add('/agregarDeseo','usuario\DeseosController::agregarDeseo');
 //Eliminar Deseos
 $routes->add('/eliminarDeseos','usuario\DeseosController::eliminarDeseos');
+//Agregar al carrito
+$routes->add('/agregarAlCarrito','usuario\ShoppingCarController::agregarAlCarrito');
+//Agregar al carrito desde lista deseos
+$routes->add('/agregarAlCarritoDesdeDeseos','usuario\ShoppingCarController::agregarAlCarritoDesdeDeseos');
+//Eliminar individualmente del carrito de compras
+$routes->add('/eliminarIndividualDelCarrito','usuario\ShoppingCarController::eliminarIndividualDelCarrito');
+//Agregar al carrito desde page xbox
+$routes->add('/agregarAlCarritoXbox','usuario\ShoppingCarController::agregarAlCarritoXbox');
+
 
 
 //Rutas invitado

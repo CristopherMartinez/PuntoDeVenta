@@ -49,6 +49,156 @@ class ShoppingCarController extends BaseController{
 
     }
 
+    //Agregar al carrito desde inicio
+    public function agregarAlCarrito(){
+        //Checamos que exista en la sesion un arreglo llamado cart
+        if (isset($_SESSION['cart'])) {
+            //Si existe asignamos a myitems de acuerdo a nombre y el idVideojuego
+            $myitems = array_column($_SESSION['cart'], 'nombre', 'idVideojuego');
+            if (isset($myitems[$_POST['idVideojuego']]) && $myitems[$_POST['idVideojuego']] == $_POST['nombre']) {
+                //Asignamos un setFlashData para decir que ya esta en el carrito 
+                $session = session();
+                $session->setFlashdata('error', 'Este elemento ya está en el carrito');
+                //Redirigimos a pagina inicio del usuario logueado
+                return redirect()->to('usuario/inicio');
+            } else {
+                //Si aun no existe en el carrito lo insertamos
+                $count = count($_SESSION['cart']);
+                $_SESSION['cart'][$count] = array(
+                    'idVideojuego' => $_POST['idVideojuego'],
+                    'nombre' => $_POST['nombre'],
+                    'precio' => $_POST['precio'],
+                    'NombreConsola' => $_POST['nombreConsola'],
+                    'Cantidad' => 1
+                );
+                $session = session();
+                $session->setFlashdata('success', 'Agregado al carrito');
+                return redirect()->to('usuario/inicio');
+            }
+        } else {
+             //Si aun no existe en el carrito lo insertamos
+            $_SESSION['cart'][0] = array(
+                'idVideojuego' => $_POST['idVideojuego'],
+                'nombre' => $_POST['nombre'],
+                'precio' => $_POST['precio'],
+                'NombreConsola' => $_POST['nombreConsola'],
+                'Cantidad' => 1
+            );
+            $session = session();
+            $session->setFlashdata('success', 'Agregado al carrito');
+            return redirect()->to('usuario/inicio');
+        }
+    }
+
+    //Agregar al carrito desde deseos
+    public function agregarAlCarritoDesdeDeseos(){
+        //Checamos que exista en la sesion un arreglo llamado cart
+        if (isset($_SESSION['cart'])) {
+            //Si existe asignamos a myitems de acuerdo a nombre y el idVideojuego
+            $myitems = array_column($_SESSION['cart'], 'nombre', 'idVideojuego');
+            if (isset($myitems[$_POST['idVideojuego']]) && $myitems[$_POST['idVideojuego']] == $_POST['nombre']) {
+                //Asignamos un setFlashData para decir que ya esta en el carrito 
+                $session = session();
+                $session->setFlashdata('error', 'Este elemento ya está en el carrito');
+                //Redirigimos a pagina inicio del usuario logueado
+                return redirect()->to('usuario/listaDeseos');
+            } else {
+                //Si aun no existe en el carrito lo insertamos
+                $count = count($_SESSION['cart']);
+                $_SESSION['cart'][$count] = array(
+                    'idVideojuego' => $_POST['idVideojuego'],
+                    'nombre' => $_POST['nombre'],
+                    'precio' => $_POST['precio'],
+                    'NombreConsola' => $_POST['nombreConsola'],
+                    'Cantidad' => 1
+                );
+                //Se quitan de lista de deseos
+                foreach($_SESSION['deseos'] as $key => $value)
+                {
+                
+                    if($value['nombreDeseo']==$_POST['nombre'])
+                    {
+                        unset($_SESSION['deseos'][$key]);
+                        $_SESSION['deseos'] = array_values($_SESSION['deseos']);
+                    } 
+                }
+
+
+                $session = session();
+                $session->setFlashdata('success', 'Agregado al carrito');
+                return redirect()->to('usuario/listaDeseos');
+            }
+        } else {
+             //Si aun no existe en el carrito lo insertamos
+            $_SESSION['cart'][0] = array(
+                'idVideojuego' => $_POST['idVideojuego'],
+                'nombre' => $_POST['nombre'],
+                'precio' => $_POST['precio'],
+                'NombreConsola' => $_POST['nombreConsola'],
+                'Cantidad' => 1
+            );
+            //Se quitan de lista de deseos
+            foreach($_SESSION['deseos'] as $key => $value)
+                {
+                
+                    if($value['nombreDeseo']==$_POST['nombre'])
+                    {
+                        unset($_SESSION['deseos'][$key]);
+                        $_SESSION['deseos'] = array_values($_SESSION['deseos']);
+                    } 
+                }
+
+            $session = session();
+            $session->setFlashdata('success', 'Agregado al carrito');
+            return redirect()->to('usuario/listaDeseos');
+        }
+    }
+
+     //Agregar al carrito desde page Xbox
+     public function agregarAlCarritoXbox(){
+        //Checamos que exista en la sesion un arreglo llamado cart
+        if (isset($_SESSION['cart'])) {
+            //Si existe asignamos a myitems de acuerdo a nombre y el idVideojuego
+            $myitems = array_column($_SESSION['cart'], 'nombre', 'idVideojuego');
+            if (isset($myitems[$_POST['idVideojuego']]) && $myitems[$_POST['idVideojuego']] == $_POST['nombre']) {
+                //Asignamos un setFlashData para decir que ya esta en el carrito 
+                $session = session();
+                $session->setFlashdata('error', 'Este elemento ya está en el carrito');
+                //Redirigimos a pagina inicio del usuario logueado
+                return redirect()->to('usuario/gamesXbox');
+            } else {
+                //Si aun no existe en el carrito lo insertamos
+                $count = count($_SESSION['cart']);
+                $_SESSION['cart'][$count] = array(
+                    'idVideojuego' => $_POST['idVideojuego'],
+                    'nombre' => $_POST['nombre'],
+                    'precio' => $_POST['precio'],
+                    'NombreConsola' => $_POST['nombreConsola'],
+                    'Cantidad' => 1
+                );
+
+                $session = session();
+                $session->setFlashdata('success', 'Agregado al carrito');
+                return redirect()->to('usuario/gamesXbox');
+            }
+        } else {
+             //Si aun no existe en el carrito lo insertamos
+            $_SESSION['cart'][0] = array(
+                'idVideojuego' => $_POST['idVideojuego'],
+                'nombre' => $_POST['nombre'],
+                'precio' => $_POST['precio'],
+                'NombreConsola' => $_POST['nombreConsola'],
+                'Cantidad' => 1
+            );
+
+            $session = session();
+            $session->setFlashdata('success', 'Agregado al carrito');
+            return redirect()->to('usuario/gamesXbox');
+        }
+    }
+
+
+
     public function   listaCarrito(){
 
          // Verificar si la sesión está iniciada
@@ -389,48 +539,68 @@ class ShoppingCarController extends BaseController{
 
     }
 
+    public function eliminarIndividualDelCarrito(){
+        session_start();
+        if(isset($_SESSION['cart'])){
+            foreach($_SESSION['cart'] as $key => $value)
+            {
+            
+                if($value['nombre']==$_POST['nombre'])
+                {
+                    unset($_SESSION['cart'][$key]);
+                    $_SESSION['cart'] = array_values($_SESSION['cart']);
+                    $session = session();
+                    $session->setFlashdata('seEliminoIndividual', 'Se elimino correctamente');
+                    
+                    return redirect()->to('usuario/listaCarrito');
+                } 
+            }
+        }
+        
+    }
+
   
     //Funcion para verificar si ya tiene los juegos el usuario
-    // public function comprar(){
+    public function comprarVerJuegos(){
 
-    //     $user = new VideojuegosUsuario();
+        $user = new VideojuegosUsuario();
 
-    //     //Videojuegos del usuario
-    //     $idsVideojuegos = $user->getidsVideogames($_SESSION['datosUsuario'][0]['usuario']);
+        //Videojuegos del usuario
+        $idsVideojuegos = $user->getidsVideogames($_SESSION['datosUsuario'][0]['usuario']);
 
         
-    //     if(isset($_SESSION['cart'])){
-    //         $videojuegos = [];
-    //         foreach ($_SESSION['cart'] as $key => $values) {
-    //                     $nombre = $values['nombre'];
-    //                     $precio = $values['precio'];
-    //                     $cantidad = $values['Cantidad'];
-    //                     $idVideojuego = $values['idVideojuego'];
-    //                     $consola = $values['NombreConsola'];
+        if(isset($_SESSION['cart'])){
+            $videojuegos = [];
+            foreach ($_SESSION['cart'] as $key => $values) {
+                        $nombre = $values['nombre'];
+                        $precio = $values['precio'];
+                        $cantidad = $values['Cantidad'];
+                        $idVideojuego = $values['idVideojuego'];
+                        $consola = $values['NombreConsola'];
             
-    //                     // Agregamos los datos de la venta al arreglo de videojuegos
-    //                     $videojuegos[] = [  
-    //                         "idVideojuego"=>$idVideojuego,
-    //                         "nombre" => $nombre,
-    //                         "consola" => $consola,
-    //                         "precio" => $precio,
-    //                         "cantidad" => $cantidad,
-    //                     ];      
-    //                     // foreach ($videojuegos as $videojuego) {
-    //                     //     if (in_array($videojuego['idVideojuego'], $idsVideojuegos)) {
-    //                     //         echo "Se encontró el videojuego con ID " . $videojuego['idVideojuego'] . ": " . $videojuego['nombre'] . "<br>";
-    //                     //     }
-    //                     // }                
-    //                 }
+                        // Agregamos los datos de la venta al arreglo de videojuegos
+                        $videojuegos[] = [  
+                            "idVideojuego"=>$idVideojuego,
+                            "nombre" => $nombre,
+                            "consola" => $consola,
+                            "precio" => $precio,
+                            "cantidad" => $cantidad,
+                        ];      
+                        // foreach ($videojuegos as $videojuego) {
+                        //     if (in_array($videojuego['idVideojuego'], $idsVideojuegos)) {
+                        //         echo "Se encontró el videojuego con ID " . $videojuego['idVideojuego'] . ": " . $videojuego['nombre'] . "<br>";
+                        //     }
+                        // }                
+                    }
                
-    //     }
+        }
 
-    //     print_r(json_encode($idsVideojuegos));
-    //     print_r(json_encode($videojuegos));
+        print_r(json_encode($idsVideojuegos));
+        print_r(json_encode($videojuegos));
      
         
 
-    // }
+    }
 
     
 

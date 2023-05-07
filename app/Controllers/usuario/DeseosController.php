@@ -45,7 +45,7 @@ class DeseosController extends BaseController{
 
     public function agregarDeseo(){
 
-        print_r(json_encode($_SESSION));
+        // print_r(json_encode($_SESSION));
 
         //Checamos que exista en la sesion un arreglo llamado deseos
         if (isset($_SESSION['deseos'])) {
@@ -67,6 +67,7 @@ class DeseosController extends BaseController{
                     'precioDeseo' => $_POST['precioDeseo'],
                     'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
                     'imagen' => $_POST['imagenDeseo'],
+                    'descripcion' => $_POST['descripcionDeseo'],
                     'cantidadDeseo' => 1
                 );
                 $session = session();
@@ -82,6 +83,7 @@ class DeseosController extends BaseController{
                 'precioDeseo' => $_POST['precioDeseo'],
                 'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
                 'imagen' => $_POST['imagenDeseo'],
+                'descripcion' => $_POST['descripcionDeseo'],
                 'cantidadDeseo' => 1
             );
             $session = session();
@@ -89,12 +91,11 @@ class DeseosController extends BaseController{
 
             return redirect()->to('usuario/inicio');
         }
-
     }
 
     public function eliminarDeseos(){
         session_start();
-        
+
         if(isset($_SESSION['deseos'])){
             unset($_SESSION['deseos']);
             $session = session();

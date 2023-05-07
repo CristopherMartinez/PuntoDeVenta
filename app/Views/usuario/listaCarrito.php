@@ -45,7 +45,7 @@
                         </td>
                         <td class='itotal' hidden></td>
                         <td>
-                            <form action='inicio' method='POST'>
+                            <form action='".base_url()."/eliminarIndividualDelCarrito' method='POST'>
                                 <input type='hidden' name='nombre' value='$value[nombre]'>
                                 <button name='Remove_Item' class='btn btn-danger  rounded-circle'>
                                     <i class='fas fa-times' ></i>
@@ -130,7 +130,18 @@
                 </form>
             </div>
         </div>
-    </div>           
+    </div>      
+    
+    <?php if (session()->has('seEliminoIndividual')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('seEliminoIndividual') ?>',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        </script>
+    <?php endif; ?>
 
     <!--Para mostrar diferentes tipos de mensajes como Guardado de tarjeta-->
     <?php if (session()->has('success')): ?>
