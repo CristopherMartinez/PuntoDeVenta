@@ -95,6 +95,18 @@
         </script>
     <?php endif; ?>
 
+    <!--Mensaje de ingreso correcto-->
+    <?php if (session()->has('ingresoCorrecto')): ?>
+            <script>
+                Swal.fire({
+                    icon: 'success',
+                    title: '<?= session('ingresoCorrecto') ?>',
+                    showConfirmButton: false,
+                    timer: 1800
+                });
+            </script>
+    <?php endif; ?>
+
 
 
     

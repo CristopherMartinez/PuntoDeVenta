@@ -88,7 +88,7 @@
                     </div>
                 </div>
 
-                <div class="form-check mb-3">
+                <!-- <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" id="checkTelefono" name="checkTelefono" required>
                     <label class="form-check-label" for="form2Example3g" style="color:whitesmoke; font-weight:bold;">
                     Estoy de acuerdo con los <a href="#!" class="text-body"><u style="color:blue; text-decoration:none;"> Términos y Condiciones</u></a> 
@@ -96,7 +96,7 @@
                     <div class="invalid-feedback">
                         Por favor confirma los terminos y condiciones
                     </div>
-                </div>
+                </div> -->
 
                 <div class="mb-3">
                     <div class="d-flex justify-content-center form-group">

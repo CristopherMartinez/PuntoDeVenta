@@ -282,7 +282,10 @@
                         
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <div class="progress" style="width: 100%; height: 20px; margin-bottom: 10px;">
+                            <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" id="botonCerrar" data-bs-dismiss="modal" onclick="pararTemporizador()">Cerrar</button>
                         <button type="submit" class="btn btn-primary" >Comprar</button>   
                     </div>
                 </form>

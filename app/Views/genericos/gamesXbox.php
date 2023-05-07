@@ -21,6 +21,8 @@ print_r(json_encode($XboxOneX));
         }
         /*Los demas estilos estan en ../styles/styles.css*/ 
     </style>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/styles/styles.cs">
         <script src=" <?php echo base_url()?>/js/scripts.js"></script>
 </head>
@@ -124,7 +126,7 @@ print_r(json_encode($XboxOneX));
 
                                             <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:whitesmoke; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
                                             <!-- <span class="col-6 col-sm-6 col-xl-4"><button type="button" class="btn btn-outline-primary" style="margin-top:10px; margin-left:5px; font-weight:bolder;">Comprar</button></span> -->
-                                            <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
+                                            <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="button" class="btn btn-outline-success" style="margin-top:10px; font-weight:bolder;" onclick="mostrarMensaje()">Agregar al carrito</button></span>
                                         </p>
                                     </div>
                                 </div>
@@ -185,6 +187,18 @@ print_r(json_encode($XboxOneX));
         }
     });
     //Los demas scripts estan en ../js/scripts.js
+</script>
+
+<script>
+    function mostrarMensaje(){
+        Swal.fire({  
+        icon: 'info',
+        title: '¿Aun no estas registrado?',
+        showConfirmButton:true,
+        // html: '<button class="btn btn-primary">Registrate</button>'
+        confirmButtonText: '<a href="SingUp" style="text-decoration:none; color:#454746; font-weight:700;">Registrate</a>',
+        })   
+    }
 </script>
 
 

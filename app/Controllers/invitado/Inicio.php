@@ -4,6 +4,7 @@ use App\Models\invitado\RegistrarP;
 use App\Controllers\BaseController;
 use App\Models\Videojuegos;
 use App\Models\generico\Membresias;
+use App\Models\usuario\Tarjeta;
 
 class Inicio extends BaseController{
 
@@ -58,6 +59,16 @@ class Inicio extends BaseController{
 
         $membresia = new Membresias();
         $data3["membresias"] = $membresia->findAll();
+
+    //     //RecuperarTarjetas
+    //     $tarjeta = new Tarjeta();
+    //     $data["tarjetas"]=$tarjeta->recuperarTarjetas($_SESSION['datosUsuario'][0]['usuario']);
+       
+    //     //DataFinal a memberships
+    //     $dataFMemberships = array(
+    //        'membresias' => $membresia->findAll(),
+    //        'tarjetas' => $tarjeta->recuperarTarjetas($_SESSION['datosUsuario'][0]['usuario']),
+    //    );
 
 
         $vista= view('genericos/header').

@@ -37,7 +37,7 @@
                   <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;">
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Saldo digital</a></li>
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Monedas virtuales</a></li>
-                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Regalos</a></li>
+                    
                     <!-- <li><a class="dropdown-item" href="#" style="padding-left: 5px;">etc</a></li> -->
                   </ul>
                 </li>              

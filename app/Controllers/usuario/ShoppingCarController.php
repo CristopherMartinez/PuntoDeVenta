@@ -197,6 +197,51 @@ class ShoppingCarController extends BaseController{
         }
     }
 
+    //Agregar al carrito desde page PlayStation
+    public function agregarAlCarritoPlayStation(){
+        //Checamos que exista en la sesion un arreglo llamado cart
+        if (isset($_SESSION['cart'])) {
+            //Si existe asignamos a myitems de acuerdo a nombre y el idVideojuego
+            $myitems = array_column($_SESSION['cart'], 'nombre', 'idVideojuego');
+            if (isset($myitems[$_POST['idVideojuego']]) && $myitems[$_POST['idVideojuego']] == $_POST['nombre']) {
+                //Asignamos un setFlashData para decir que ya esta en el carrito 
+                $session = session();
+                $session->setFlashdata('error', 'Este elemento ya está en el carrito');
+                //Redirigimos a pagina inicio del usuario logueado
+                return redirect()->to('usuario/gamesPlayStation');
+            } else {
+                //Si aun no existe en el carrito lo insertamos
+                $count = count($_SESSION['cart']);
+                $_SESSION['cart'][$count] = array(
+                    'idVideojuego' => $_POST['idVideojuego'],
+                    'nombre' => $_POST['nombre'],
+                    'precio' => $_POST['precio'],
+                    'NombreConsola' => $_POST['nombreConsola'],
+                    'Cantidad' => 1
+                );
+
+                $session = session();
+                $session->setFlashdata('success', 'Agregado al carrito');
+                return redirect()->to('usuario/gamesPlayStation');
+            }
+        } else {
+             //Si aun no existe en el carrito lo insertamos
+            $_SESSION['cart'][0] = array(
+                'idVideojuego' => $_POST['idVideojuego'],
+                'nombre' => $_POST['nombre'],
+                'precio' => $_POST['precio'],
+                'NombreConsola' => $_POST['nombreConsola'],
+                'Cantidad' => 1
+            );
+
+            $session = session();
+            $session->setFlashdata('success', 'Agregado al carrito');
+            return redirect()->to('usuario/gamesPlayStation');
+        }
+    }
+    
+
+
 
 
     public function   listaCarrito(){

@@ -1,18 +1,12 @@
-<!-- <?php
-session_start();
-?>  -->
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <script src=" <?php echo base_url()?>/js/scripts.js"></script>    
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src=" <?php echo base_url()?>/js/scripts.js"></script>    
 
-    </head>
+</head>
 
-    <body class="imgregister letraGeneral" style="color:whitesmoke">
+<body class="imgregister letraGeneral" style="color:whitesmoke">
         <div class="container">
-    
-
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6">
                 <h2 class="text-center mb-4" style="color:whitesmoke; font-weight:Bolder;">Inicio de sesión</h2>
@@ -49,7 +43,14 @@ session_start();
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
-    </body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+</body>
+
+
+
+
+
 
 

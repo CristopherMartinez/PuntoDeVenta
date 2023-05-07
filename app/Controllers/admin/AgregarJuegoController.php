@@ -166,6 +166,8 @@ class AgregarJuegoController extends BaseController{
                 view('admin/registroVideojuegos',$dataF).
                 view('admin/editarVideojuego',$datos);
 
+                
+
         return $vista;
 
 
@@ -244,6 +246,10 @@ class AgregarJuegoController extends BaseController{
         //Actualizar datos
         $videojuego->update($id,$data);
         // $videojuego->where('idVideojuego', 1)->update($data);
+        return redirect()->route('admin/registroVideojuegos');
+    }
+
+    public function cerrarModalEditar(){
         return redirect()->route('admin/registroVideojuegos');
     }
     

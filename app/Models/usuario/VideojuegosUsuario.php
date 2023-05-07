@@ -17,10 +17,10 @@ class VideojuegosUsuario extends Model
                         $query = $this->db->query("SELECT idVideojuego FROM videojuegosusuario WHERE usuario = ?", [$usuario]);
                         return $query->getResultArray();   
         }
-        // public function getVideogamesUser($usuario){
-        //         $query = $this->db->query("SELECT idVideojuego,nombreVideojuego,consola,precio,imagen FROM videojuegosusuario WHERE usuario = ?", [$usuario]);
-        //         return $query->getResultArray();   
-        // }
+        public function getVideogamesUser($usuario){
+                $query = $this->db->query("SELECT idVideojuego,nombreVideojuego,consola,precio,imagen FROM videojuegosusuario WHERE usuario = ?", [$usuario]);
+                return $query->getResultArray();   
+        }
 
 
 }

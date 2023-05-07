@@ -54,7 +54,8 @@ $routes->add('/agregarAlCarritoDesdeDeseos','usuario\ShoppingCarController::agre
 $routes->add('/eliminarIndividualDelCarrito','usuario\ShoppingCarController::eliminarIndividualDelCarrito');
 //Agregar al carrito desde page xbox
 $routes->add('/agregarAlCarritoXbox','usuario\ShoppingCarController::agregarAlCarritoXbox');
-
+//Agregar al carrito desde page PlayStation
+$routes->add('/agregarAlCarritoPlayStation','usuario\ShoppingCarController::agregarAlCarritoPlayStation');
 
 
 //Rutas invitado
@@ -83,6 +84,9 @@ $routes->get('/borrar/(:num)','admin\AgregarJuegoController::borrar/$1');
 $routes->get('/editar/(:num)','admin\AgregarJuegoController::editar/$1');
 //Actualizar
 $routes->post('/actualizar','admin\AgregarJuegoController::actualizar');
+//Cerrar ModalEditar
+$routes->post('/cerrarModalEditar','admin\AgregarJuegoController::cerrarModalEditar');
+
 
 //Cerrar sesion
 $routes->get('/cerrarSesion', 'invitado\RegisterController::cerrarSesion');

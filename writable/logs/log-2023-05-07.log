@@ -148,3 +148,114 @@ in APPPATH\Controllers\usuario\ShoppingCarController.php on line 205.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 17:32:26 --> Undefined variable $Videojuego
+in APPPATH\Views\admin\registroVideojuegos.php on line 194.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Videojuego', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 194)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(25): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 17:38:10 --> Undefined variable $categorias
+in APPPATH\Views\admin\registroVideojuegos.php on line 80.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(169): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('53')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 17:41:03 --> Undefined variable $categorias
+in APPPATH\Views\admin\registroVideojuegos.php on line 80.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(169): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('53')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 17:41:40 --> Undefined variable $categorias
+in APPPATH\Views\admin\registroVideojuegos.php on line 80.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(169): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('53')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 17:41:50 --> Undefined variable $categorias
+in APPPATH\Views\admin\registroVideojuegos.php on line 80.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(169): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('53')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 17:41:59 --> Undefined variable $categorias
+in APPPATH\Views\admin\registroVideojuegos.php on line 80.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(169): view('admin/registroVideojuegos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('53')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 17:42:43 --> Undefined variable $categorias
+in APPPATH\Views\admin\registroVideojuegos.php on line 80.
+ 1 APPPATH\Views\admin\registroVideojuegos.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categorias', 'APPPATH\\Views\\admin\\registroVideojuegos.php', 80)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\registroVideojuegos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/registroVideojuegos', [...], true)
+ 5 APPPATH\Controllers\admin\AgregarJuegoController.php(154): view('admin/registroVideojuegos', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->editar('53')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 18:38:17 --> Undefined global variable $_SESSION
+in APPPATH\Controllers\invitado\LoginController.php on line 47.
+ 1 APPPATH\Controllers\invitado\LoginController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'APPPATH\\Controllers\\invitado\\LoginController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 18:39:10 --> Cannot use object of type CodeIgniter\Session\Session as array
+in APPPATH\Controllers\invitado\LoginController.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 18:42:57 --> Undefined array key "datosUsuario"
+in APPPATH\Controllers\invitado\LoginController.php on line 52.
+ 1 APPPATH\Controllers\invitado\LoginController.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datosUsuario"', 'APPPATH\\Controllers\\invitado\\LoginController.php', 52)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\LoginController->verificar_login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 18:52:45 --> Undefined array key "idVideojuego"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 230.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(230): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 230)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->agregarAlCarritoPlayStation()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-07 19:18:26 --> Undefined variable $dataFMemberships
+in APPPATH\Controllers\invitado\Inicio.php on line 78.
+ 1 APPPATH\Controllers\invitado\Inicio.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataFMemberships', 'APPPATH\\Controllers\\invitado\\Inicio.php', 78)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

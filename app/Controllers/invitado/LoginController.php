@@ -6,6 +6,7 @@ use App\Models\usuario\RegistrarUsuario;
 use App\Controllers\BaseController;
 use App\Models\Videojuegos;
 use App\Models\admin\Administradores;
+use App\Models\usuario\VideojuegosUsuario;
 
 class LoginController extends BaseController{
 
@@ -38,27 +39,40 @@ class LoginController extends BaseController{
             $passwordbd = $datosUsuario[0]['contrasenia'];
             if (password_verify($password, $passwordbd)) {
                 $generico = new RegistrarUsuario();
+
+                // //VERIFICAMOS SI TIENE VIDEOJUEGOS EL USUARIO
+                // $videojuegosUsuario = new VideojuegosUsuario(); 
+                // $videojuegosUsuario = $videojuegosUsuario->getVideogamesUser($_SESSION['datosUsuario']['usuario']);
+
+                // if(is_array($videojuegosUsuario) && count($videojuegosUsuario) > 0){
+                //    echo"<script>alert('prueba')</script>";
+                // }
+
+                
                 $session = session();
                 $sessionData = [
                     'datosUsuario' => $generico->traerDatosUsuarioPorCorreo($_POST["correo"]),
                     'logged_in' => true
                 ];
-                $session->set($sessionData);
 
+                
+                $session->set($sessionData);
+                $session = session();
+                $session->setFlashdata('ingresoCorrecto', 'Bienvenido de nuevo');
                 return redirect()->to('usuario/inicio');
 
             } else {
                 //Verificamos en el administrador aqui se llama el metodo
 
-                //Poner un mensaje con sweetalert2
-                echo "<script>alert('Contraseña incorrecta')</script>";
+                $session = session();
+                $session->setFlashdata('ingresoFallido', 'Verifica tus datos de sesion');
 
                 return redirect()->to('login');
             }
         } else {
-            //Poner un mensaje con sweetalert2
-            echo "<script>alert('Usuario no encontrado')</script>";
 
+            $session = session();
+            $session->setFlashdata('userNoEncontrado', 'Usuario no encontrado');
             return redirect()->to('login');
 
         }

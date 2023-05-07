@@ -1,13 +1,11 @@
-<!-- <?php
-session_start();
-?>  -->
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <script src=" <?php echo base_url()?>/js/scripts.js"></script>    
+<head>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src=" <?php echo base_url()?>/js/scripts.js"></script>    
 
-    </head>
+</head>
 
     <body class="imgregister letraGeneral" style="color:whitesmoke">
         <div class="container">
@@ -49,7 +47,32 @@ session_start();
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
-    </body>
 
+  
+        <!--Mensaje de ingreso fallido-->
+        <?php if (session()->has('ingresoFallido')): ?>
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: '<?= session('ingresoFallido') ?>',
+                    showConfirmButton: true,
+                    // timer: 1500
+                });
+            </script>
+        <?php endif; ?>
+
+        <!--Mensaje de ingreso correcto-->
+        <?php if (session()->has('userNoEncontrado')): ?>
+            <script>
+                Swal.fire({
+                    icon: 'info',
+                    title: '<?= session('userNoEncontrado') ?>',
+                    showConfirmButton: true,
+                    // timer: 1500
+                });
+            </script>
+        <?php endif; ?>
+
+
+    </body>
 

@@ -1,5 +1,43 @@
 <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
+
+        <style>
+          .image-container {
+            position: relative;
+            display: inline-block;
+            }
+
+            .image-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            overflow: hidden;
+            transition: height 0.5s;    
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            }
+
+            .image-container:hover .image-description {
+            height: 60px;
+            }
+
+            .image-description::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            margin-left: -10px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid rgba(0, 0, 0, 0.7);
+            
+            }
+
+        </style>
 </head> 
 <body> 
             <div class="col-12 m-auto backgrounFooter" style="padding-top: 15px;">
@@ -14,7 +52,11 @@
                         favorite
                         </span>
                         </a>
-                        <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px;">
+                            <!-- <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px;"> -->
+                            <div class="image-container">        
+                                <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px; height:200px;">
+                                <div class="image-description"><?php echo $juego['descripcion'] ?></div>
+                            </div>    
                             <div class="card-body">
                                 
                                     <div class="card-title text-center">
