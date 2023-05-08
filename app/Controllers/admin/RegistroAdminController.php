@@ -5,12 +5,20 @@ use App\Models\admin\Administradores;
 use App\Controllers\BaseController;
 
 class RegistroAdminController extends BaseController{
+    
+    protected $session;
+    
+    public function __construct()
+    {
+        $this->session = \Config\Services::session();
+    }
 
-    
-    
-    
     public function index(){
-        
+
+         // Verificar si la sesión está iniciada
+         if (!$this->session->get('logged_in')) {
+            return redirect()->to('/login');
+        }
 
         $generico = new Administradores();
         $data =  array(

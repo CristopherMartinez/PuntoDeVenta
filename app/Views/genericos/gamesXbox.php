@@ -1,11 +1,3 @@
-<!-- 
-<?php
-// print_r($videojuegosXbox);
-// print_r(json_encode($videojuegosXbox));
-// print_r(json_encode($listaVideojuegos));
-print_r(json_encode($XboxOneX));
-?> -->
-
 <head>
     <style>
         /* .list:hover{
@@ -41,6 +33,7 @@ print_r(json_encode($XboxOneX));
                         <input  type="search" id="searchInput" aria-label="Search"  class="form-control" placeholder="Buscar">
                         <button class="btn btn-outline-success" type="button" style="margin-left: 10px;" onclick="buscar()">Buscar</button>
                     </form>
+                    <br>
 
                         <!--Xbox One Series S-->
                         <div class="input-group mb-3 dropdown animate__animated animate__fadeInDown">

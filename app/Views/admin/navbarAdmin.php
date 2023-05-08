@@ -42,7 +42,13 @@
                   <a class="nav-link" href="ventas" style="color:whitesmoke;">Ventas</a>
                   </li>
               </ul>
+              <a href="<?php echo base_url().'/cerrarSesion'?>" class=" nav-item ml-auto btn btn-primary" style="display: flex; align-items: center;">
+                      Cerrar Sesión
+              </a>
+             
+              
             </div>
+           
         </nav>
 
         

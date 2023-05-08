@@ -5,6 +5,42 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            }
+
+            .image-description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            overflow: hidden;
+            transition: height 0.5s;    
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            }
+
+            .image-container:hover .image-description {
+            height: 65px;
+            }
+
+            .image-description::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            margin-left: -10px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid rgba(0, 0, 0, 0.7);
+            
+            }
+
         /*Los demas estilos estan en ../styles/styles.css*/ 
     </style>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
@@ -14,7 +50,7 @@
 </head>
 
 <body class="backgrounFooter">
-       <!--Mensaje de agregado correctamente-->
+    <!--Mensaje de agregado correctamente-->
     <?php if (session()->has('success')): ?>
         <script>
             Swal.fire({
@@ -115,37 +151,41 @@
                     <?php foreach ($videojuegosPlayStation as $juego) { ?>
                         <div class="col-12" style="margin-top: 10px;">
                             <div class="card mb-3 backgroundGamesPlay" style="max-width: auto; border-radius:5px;">
-                            <form action="<?php echo base_url().'/agregarAlCarritoPlayStation'?>" method="POST">
-                                <div class="row g-0">
-                                    <div class="col-md-4 align-self-center">
-                                        <img src="<?php echo base_url()?>/imagenes/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px;" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body" id="cards-container">
-                                            <h3 class="card-title" style="color:whitesmoke;"><?php echo $juego['nombre'] ?></h3>
-                                            <h5 class="card-text"  style="color:whitesmoke;"><?php echo $juego['nombreConsola'] ?></h5>
-                                            <!--Id del videojuego (no borrar)-->
-                                            <p class="card-text"  style="color:whitesmoke;" hidden><?php echo $juego['idVideojuego'] ?></p>
-                                            <p class="card-text"  style="color:whitesmoke;"><?php echo $juego['descripcion'] ?></p>
-                                            <!--Campos ocultos (no borrar)-->
-                                            <p class="category-tag" style="color:whitesmoke;" hidden>ID Categoria : <?php echo $juego['idCategoria'] ?></p>
-                                            <p class="consola-tag" style="color:whitesmoke;" hidden>ID Consola : <?php echo $juego['idConsola'] ?></p>
-                                            <input type="text" id="idVideojuego" name="idVideojuego" value="<?php echo $juego['idVideojuego'] ?>" hidden>
-                                            <input type="text" id="nombre" name="nombre" value="<?php echo $juego['nombre'] ?>" hidden>
-                                            <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
-                                            <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
+                                <form action="<?php echo base_url().'/agregarAlCarritoPlayStation'?>" method="POST">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 align-self-center">
+                                                <div class="image-container">       
+                                                    <img src="<?php echo base_url()?>/imagenes/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px; height:200px;" alt="...">
+                                                    <div class="image-description"><?php echo $juego['descripcion'] ?></div>
+                                                </div>
                                         
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body" id="cards-container">
+                                                <h1 class="card-title" style="color:whitesmoke;"><?php echo $juego['nombre'] ?></h1>
+                                                <h4 class="card-text"  style="color:whitesmoke;"><?php echo $juego['nombreConsola'] ?></h4>
+                                                <!--Id del videojuego (no borrar)-->
+                                                <p class="card-text"  style="color:whitesmoke;" hidden><?php echo $juego['idVideojuego'] ?></p>
+                                                <p class="card-text"  style="color:whitesmoke;" hidden><?php echo $juego['descripcion'] ?></p>
+                                                <!--Campos ocultos (no borrar)-->
+                                                <p class="category-tag" style="color:whitesmoke;" hidden>ID Categoria : <?php echo $juego['idCategoria'] ?></p>
+                                                <p class="consola-tag" style="color:whitesmoke;" hidden>ID Consola : <?php echo $juego['idConsola'] ?></p>
+                                                <input type="text" id="idVideojuego" name="idVideojuego" value="<?php echo $juego['idVideojuego'] ?>" hidden>
+                                                <input type="text" id="nombre" name="nombre" value="<?php echo $juego['nombre'] ?>" hidden>
+                                                <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
+                                                <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
+                                            
 
-                                            <p class="card-text">
+                                                <p class="card-text" style="padding-top:5px;">
 
-                                                <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:whitesmoke; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
-                                                <!-- <span class="col-6 col-sm-6 col-xl-4"><button type="button" class="btn btn-outline-primary" style="margin-top:10px; margin-left:5px; font-weight:bolder;">Comprar</button></span> -->
-                                                <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="submit" class="btn btn-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
-                                            </p>
+                                                    <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:whitesmoke; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
+                                                    <!-- <span class="col-6 col-sm-6 col-xl-4"><button type="button" class="btn btn-outline-primary" style="margin-top:10px; margin-left:5px; font-weight:bolder;">Comprar</button></span> -->
+                                                    <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="submit" class="btn btn-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
                             </div>
                         </div>
                     <?php } ?>
@@ -204,6 +244,107 @@
         }
     });
     //Los demas scripts estan en ../js/scripts.js
+</script>
+
+<script>
+    //-------------------------------------------------------------------------------------
+//PlayStation 3-----------------------------------
+function searchPlayStation3(categoria,consola) {
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+    const searchTerm = searchInput.value.toLowerCase();
+    
+    // Recorrer todas las tarjetas y ocultar aquellas que no coincidan con el término de búsqueda y con la categoría seleccionada
+    let foundMatch = false;
+    cards.forEach(function(card) {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        // const description = card.querySelector('.card-text:not([hidden])').textContent.toLowerCase();
+        const categoryTag = card.querySelector('.category-tag').textContent.toLowerCase();
+        const consolaTag = card.querySelector('.consola-tag').textContent.toLowerCase();
+        const matches = title.includes(searchTerm) && categoryTag.includes(categoria) &&consolaTag.includes(consola);
+        card.style.display = matches ? 'block' : 'none';
+
+        if(matches){
+            foundMatch = true;
+        }
+    });
+
+    // Mostrar o ocultar mensaje de no resultados
+    const noResults = document.getElementById('noResults');
+    if(!foundMatch) {
+        noResults.style.display = 'block';
+    } else {
+        noResults.style.display = 'none';
+    }
+}
+
+// PlayStation 4
+function searchPlayStation4(categoria,consola) {
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+    const searchTerm = searchInput.value.toLowerCase();
+    
+    // Recorrer todas las tarjetas y ocultar aquellas que no coincidan con el término de búsqueda y con la categoría seleccionada
+    let foundMatch = false;
+    cards.forEach(function(card) {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        // const description = card.querySelector('.card-text:not([hidden])').textContent.toLowerCase();
+        const categoryTag = card.querySelector('.category-tag').textContent.toLowerCase();
+        const consolaTag = card.querySelector('.consola-tag').textContent.toLowerCase();
+        const matches = title.includes(searchTerm) && categoryTag.includes(categoria) &&consolaTag.includes(consola);
+        card.style.display = matches ? 'block' : 'none';
+
+        if(matches){
+            foundMatch = true;
+        }
+    });
+
+    // Mostrar mensaje de no resultados
+    const noResults = document.getElementById('noResults');
+    if(!foundMatch){
+        noResults.style.display = 'block';
+    } else {
+        noResults.style.display = 'none';
+    }
+
+    
+    // console.log(categoria);
+    // console.log(consola);
+
+}
+
+//PlayStation 5
+function searchPlayStation5(categoria,consola) {
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+    const searchTerm = searchInput.value.toLowerCase();
+    
+    // Recorrer todas las tarjetas y ocultar aquellas que no coincidan con el término de búsqueda y con la categoría seleccionada
+    let foundMatch = false;
+    cards.forEach(function(card) {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        // const description = card.querySelector('.card-text:not([hidden])').textContent.toLowerCase();
+        const categoryTag = card.querySelector('.category-tag').textContent.toLowerCase();
+        const consolaTag = card.querySelector('.consola-tag').textContent.toLowerCase();
+        const matches = title.includes(searchTerm) && categoryTag.includes(categoria) &&consolaTag.includes(consola);
+        card.style.display = matches ? 'block' : 'none';
+
+        if(matches){
+            foundMatch = true;
+        }
+    });
+
+    // Mostrar mensaje de no resultados
+    const noResults = document.getElementById('noResults');
+    if(!foundMatch){
+        noResults.style.display = 'block';
+    } else {
+        noResults.style.display = 'none';
+    }
+}
+
+
+
 </script>
 
 

@@ -1,4 +1,5 @@
 
+
 <head>
     <style>
         .backgroundGamesPlay{
@@ -75,8 +76,7 @@
         </script>
     <?php endif; ?>
 
-
-    <div>
+    <div >
         <div class="container " style="padding-top: 30px; padding-bottom:30px;">
         <div class="row" style="background-color: #a2aab8;">
             <div class="col-xl-3 col-sm-12" style="background-color:transparent;">
@@ -91,54 +91,17 @@
                         </form>
                         <br>
 
-                            <!--Xbox One Series S-->
+                            <!--Nintendo-->
                             <div class="input-group mb-3 dropdown animate__animated animate__fadeInDown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <?php foreach ($listaVideojuegos as $juego) { ?>
+                                    <?php foreach ($Nintendo as $juego) { ?>
                                         <label><?php echo $juego->identificador ?> (<?php echo $juego->valor ?>)</label>
                                     <?php } ?>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <?php foreach ($listaVideojuegos as $videojuego) { ?>
-                                        <?php foreach ($totalGAventuraXboxSS as $categoria) { ?>
-                                            <li>
-                                                <a class="dropdown-item" href="#" onclick="searchXboxSS(<?php echo $categoria->idCategoria;?>,<?php echo $videojuego->idConsola;?>)" data-value="<?php echo $categoria->identificador; ?>">
-                                                    <?php echo $categoria->identificador . ' (' . $categoria->valor . ')'; ?>
-                                                </a>
-                                            
-                                            </li>
-                                        <?php } ?>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-
-                            <!--Xbox One X-->
-                            <div class="input-group mb-3 dropdown animate__animated animate__fadeInDown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <?php foreach ($XboxOneX as $juego) { ?>
-                                        <label><?php echo $juego->identificador ?> (<?php echo $juego->valor ?>)</label>
-                                    <?php } ?>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <?php foreach ($XboxOneX as $videojuego) { ?>
-                                        <?php foreach ($CantGeneroXboxX as $categoria) { ?>
-                                            <li><a class="dropdown-item" href="#" onclick="searchXboxX(<?php echo $categoria->idCategoria;?>,<?php echo $videojuego->idConsola;?>)"  data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
-                                        
-                                        <?php } ?>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-                            <!--Xbox One S-->
-                            <div class="input-group mb-3 dropdown animate__animated animate__fadeInDown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <?php foreach ($XboxOneS as $juego) { ?>
-                                        <label><?php echo $juego->identificador ?> (<?php echo $juego->valor ?>)</label>
-                                    <?php } ?>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <?php foreach ($XboxOneS as $videojuego) { ?>
-                                        <?php foreach ($CantGeneroXboxS as $categoria) { ?>
-                                            <li><a class="dropdown-item" href="#" onclick="searchXboxS(<?php echo $categoria->idCategoria;?>,<?php echo $videojuego->idConsola;?>)" data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
+                                    <?php foreach ($Nintendo as $videojuego) { ?>
+                                        <?php foreach ($CantGeneroNintendo as $categoria) { ?>
+                                            <li><a class="dropdown-item" href="#" onclick="searchNintendoSwitch(<?php echo $categoria->idCategoria;?>,<?php echo $videojuego->idConsola;?>)" data-value="<?php echo $categoria->identificador ?>"><?php echo $categoria->identificador . ' (' . $categoria->valor . ')' ?></a></li>
                                         <?php } ?>
                                     <?php } ?>
                                 </ul>
@@ -150,40 +113,36 @@
 
             <div class="col-xl-9 col-sm-12"  style="background-color: transparent; ">
                 <div class="row">
-                    <?php foreach ($videojuegosXbox as $juego) { ?>
+                    <?php foreach ($videojuegosNintendo as $juego) { ?>
                         <div class="col-12" style="margin-top: 10px;">
                             <div class="card mb-3 backgroundGamesPlay" style="max-width: auto; border-radius:5px;">
-                                
-                                <form action="<?php echo base_url().'/agregarAlCarritoXbox'?>" method="POST">
+                                <form action="<?php echo base_url().'/agregarAlCarritoNintendo'?>" method="POST">
                                     <div class="row g-0">
                                         <div class="col-md-4 align-self-center">
-                                            <div class="image-container">       
-                                                <img src="<?php echo base_url()?>/imagenes/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px; height:200px;" alt="..."> 
-                                                <div class="image-description"><?php echo $juego['descripcion'] ?></div>
-                                            </div>
-
+                                                <div class="image-container">       
+                                                    <img src="<?php echo base_url()?>/imagenes/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px; height:200px;" alt="...">
+                                                    <!-- <img src="<?php echo base_url()?>/imagenes/<?php echo $juego['imagen']?>" class="img-fluid rounded-start" style="border-radius: 5px; height:200px;" alt="..."> -->
+                                                    <div class="image-description"><?php echo $juego['descripcion'] ?></div>
+                                                </div>
+                                            
                                         </div>
                                         <div class="col-md-8">
                                             <div class="card-body" id="cards-container">
                                                 <h1 class="card-title" style="color:whitesmoke;"><?php echo $juego['nombre'] ?></h1>
-                                                <h4 class="card-text" style="color:whitesmoke; padding-top:10px;"><?php echo $juego['nombreConsola'] ?></h4>
-                                                <p class="card-text"  style="color:whitesmoke; font-size:16px;" hidden><?php echo $juego['descripcion'] ?></p>
-                                                <p class="card-text"  style="color:whitesmoke;" hidden><?php echo $juego['idVideojuego'] ?></p>
-                                                <p class="category-tag" style="color:whitesmoke;" hidden>ID Categoria : <?php echo $juego['idCategoria'] ?></p>
-                                                <p class="consola-tag" style="color:whitesmoke;" hidden>ID Consola : <?php echo $juego['idConsola'] ?></p>
+                                                <h4 class="card-text"  style="color:whitesmoke;"><?php echo $juego['nombreConsola'] ?></h4>
                                                 <input type="text" id="idVideojuego" name="idVideojuego" value="<?php echo $juego['idVideojuego'] ?>" hidden>
                                                 <input type="text" id="nombre" name="nombre" value="<?php echo $juego['nombre'] ?>" hidden>
                                                 <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
                                                 <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
+ 
                                                 <p class="card-text" style="padding-top:5px;">
-                                                    <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:white; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
-                                                    <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="submit" name="Add_To_Cart" class="btn btn-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
+                                                    <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:whitesmoke; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
+                                                    <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="submit" class="btn btn-outline-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                     <?php } ?>
@@ -191,7 +150,7 @@
                 </div>
             </div>
 
-            <!--indice-->
+
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item disabled">
@@ -212,7 +171,7 @@
 </body>
 
 <script>
-     //XBOX ONE SS-------------------------------------
+     //Nintendo-------------------------------------
     //Para detectar cuando se esta escribiendo y coincida lo que se pone en el input con la etiqueta .card-title
     const searchInput = document.getElementById('searchInput');
     const cards = document.querySelectorAll('.card');
@@ -239,7 +198,36 @@
             noResults.style.display = 'none';
         }
     });
-    //Los demas scripts estan en ../js/scripts.js
+    
+    //NINTENDO SWITCH-----------------------------------
+    function searchNintendoSwitch(categoria,consola) {
+        const searchInput = document.getElementById('searchInput');
+        const cards = document.querySelectorAll('.card');
+        const searchTerm = searchInput.value.toLowerCase();
+        
+        // Recorrer todas las tarjetas y ocultar aquellas que no coincidan con el término de búsqueda y con la categoría seleccionada
+        let foundMatch = false;
+        cards.forEach(function(card) {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            // const description = card.querySelector('.card-text:not([hidden])').textContent.toLowerCase();
+            const categoryTag = card.querySelector('.category-tag').textContent.toLowerCase();
+            const consolaTag = card.querySelector('.consola-tag').textContent.toLowerCase();
+            const matches = title.includes(searchTerm) && categoryTag.includes(categoria) &&consolaTag.includes(consola);
+            card.style.display = matches ? 'block' : 'none';
+
+            if(matches){
+                foundMatch = true;
+            }
+        });
+
+        // Mostrar o ocultar mensaje de no resultados
+        const noResults = document.getElementById('noResults');
+        if(!foundMatch) {
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
+    }
 </script>
 
 

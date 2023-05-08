@@ -6,8 +6,22 @@ use App\Models\usuario\RegistrarUsuario;
 use App\Models\usuario\Ordenes;
 
 class AdminController extends BaseController{
+
+    protected $session;
+    
+    public function __construct()
+    {
+        $this->session = \Config\Services::session();
+    }
+
     
     public function index(){
+
+        // Verificar si la sesión está iniciada
+        if (!$this->session->get('logged_in')) {
+            return redirect()->to('/login');
+        }
+
         $data=['titulo'=>'WorldGames'];
         $vistas= 
                 view('admin/navbarAdmin').
@@ -18,6 +32,13 @@ class AdminController extends BaseController{
     }
 
     public function recuperarclientes(){
+
+        // Verificar si la sesión está iniciada
+        if (!$this->session->get('logged_in')) {
+            return redirect()->to('/login');
+        }
+
+        
        $usuario = new RegistrarUsuario();
         // //El metodo findAll
         $usuarios = array(
@@ -33,6 +54,12 @@ class AdminController extends BaseController{
 
     //Mostrar vista de ventas
     public function ventas(){
+
+        // Verificar si la sesión está iniciada
+        if (!$this->session->get('logged_in')) {
+            return redirect()->to('/login');
+        }
+
         $ventas = new Ordenes();
        
         $ventas = array(
@@ -52,16 +79,16 @@ class AdminController extends BaseController{
         return $vistas;
     }
 
-    //Login de admin
-    public function mostrarVistaLogin(){
-        $vistas= 
-                view('genericos/header').
-                view('genericos/navbar').
-                 view('admin/login');
+    // //Login de admin
+    // public function mostrarVistaLogin(){
+    //     $vistas= 
+    //             view('genericos/header').
+    //             view('genericos/navbar').
+    //              view('admin/login');
          
-        return $vistas;
+    //     return $vistas;
 
-    }
+    // }
 
     //Verificar login de admin
     public function verificar_login(){

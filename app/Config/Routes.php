@@ -39,6 +39,7 @@ $routes->add('/usuario/inicio','invitado\Inicio::indexLog');
 $routes->add('/usuario/gamesXbox','generico\GamesXboxController::indexGameXboxLog');
 $routes->add('/usuario/ShoppingCar','usuario\ShoppingCarController::index'); 
 $routes->add('/usuario/gamesPlayStation','generico\GamesplayStation::indexLog');
+$routes->add('/usuario/gamesNintendo','generico\GamesNintendoController::indexLog');
 
 $routes->add('/usuario/listaCarrito','usuario\ShoppingCarController::listaCarrito');
 $routes->add('/usuario/listaDeseos','usuario\DeseosController::listaDeseos');
@@ -56,6 +57,10 @@ $routes->add('/eliminarIndividualDelCarrito','usuario\ShoppingCarController::eli
 $routes->add('/agregarAlCarritoXbox','usuario\ShoppingCarController::agregarAlCarritoXbox');
 //Agregar al carrito desde page PlayStation
 $routes->add('/agregarAlCarritoPlayStation','usuario\ShoppingCarController::agregarAlCarritoPlayStation');
+//Agregar al carrito desde page Nintendo
+$routes->add('/agregarAlCarritoNintendo','usuario\ShoppingCarController::agregarAlCarritoNintendo');
+
+
 
 
 //Rutas invitado

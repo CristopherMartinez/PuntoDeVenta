@@ -12,7 +12,7 @@
         'opsz' 48
         }
 
-        .image-container {
+            .image-container {
             position: relative;
             display: inline-block;
             }
@@ -268,38 +268,38 @@
                     <?php foreach ($videojuegos as $juego) { ?>
                     <div class="item mb-4">
                         <div class="card border-0 shadow">
-                        <!--Guardar deseo-->   
-                        <form action="<?php echo base_url().'/agregarDeseo'?>" method="POST" style="color: red; padding-left:85%; padding-bottom :10px; text-decoration:none;">
-                            <input type="text" id="idVideojuegoDeseo" name="idVideojuegoDeseo" value="<?php echo $juego['idVideojuego'] ?>" hidden>
-                            <input type="text" id="nombreDeseo" name="nombreDeseo" value="<?php echo $juego['nombre'] ?>" hidden>
-                            <input type="text" id="precioDeseo" name="precioDeseo" value="<?php echo $juego['precio'] ?>" hidden>
-                            <input type="text" id="nombreConsolaDeseo" name="nombreConsolaDeseo" value="<?php echo $juego['nombreConsola'] ?>" hidden>    
-                            <input type="text" id="imagenDeseo" name="imagenDeseo" value="<?php echo $juego['imagen'] ?>" hidden>    
-                            <input type="text" id="descripcionDeseo" name="descripcionDeseo" value="<?php echo $juego['descripcion'] ?>" hidden>    
+                            <!--Guardar deseo-->   
+                            <form action="<?php echo base_url().'/agregarDeseo'?>" method="POST" style="color: red; padding-left:85%; padding-bottom :10px; text-decoration:none;">
+                                <input type="text" id="idVideojuegoDeseo" name="idVideojuegoDeseo" value="<?php echo $juego['idVideojuego'] ?>" hidden>
+                                <input type="text" id="nombreDeseo" name="nombreDeseo" value="<?php echo $juego['nombre'] ?>" hidden>
+                                <input type="text" id="precioDeseo" name="precioDeseo" value="<?php echo $juego['precio'] ?>" hidden>
+                                <input type="text" id="nombreConsolaDeseo" name="nombreConsolaDeseo" value="<?php echo $juego['nombreConsola'] ?>" hidden>    
+                                <input type="text" id="imagenDeseo" name="imagenDeseo" value="<?php echo $juego['imagen'] ?>" hidden>    
+                                <input type="text" id="descripcionDeseo" name="descripcionDeseo" value="<?php echo $juego['descripcion'] ?>" hidden>    
 
-                            <button type='submit' class='btn btn-link border-0 p-0'>
-                                    <span class='material-symbols-outlined'>favorite</span>        
-                            </button>
+                                <button type='submit' class='btn btn-link border-0 p-0'>
+                                        <span class='material-symbols-outlined'>favorite</span>        
+                                </button>
 
 
-                            <!-- //Checamos que exista en la sesion deseos, si existe checamos dentro del array
-                            //si existe el deseo, si existe pintamos el corazon de azul -->
-                            <!-- <?php
-                            if(isset($_SESSION['deseos'])){
+                                <!-- //Checamos que exista en la sesion deseos, si existe checamos dentro del array
+                                //si existe el deseo, si existe pintamos el corazon de azul -->
+                                <!-- <?php
+                                if(isset($_SESSION['deseos'])){
 
-                                    if (array_search($juego['idVideojuego'], $_SESSION['deseos']) !== false) {
-                                        echo "true";
-                                    }
-                            }
+                                        if (array_search($juego['idVideojuego'], $_SESSION['deseos']) !== false) {
+                                            echo "true";
+                                        }
+                                }
 
-                            ?> -->
+                                ?> -->
 
-                        </form>  
+                            </form>  
    
-                        <div class="image-container">        
-                            <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px; height:200px;">
-                            <div class="image-description"><?php echo $juego['descripcion'] ?></div>
-                        </div>       
+                            <div class="image-container">        
+                                <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px; height:200px;">
+                                <div class="image-description"><?php echo $juego['descripcion'] ?></div>
+                            </div>       
                             <div class="card-body">
                                 <form action="<?php echo base_url().'/agregarAlCarrito'?>" method="POST">
                                     <div class="card-title text-center">

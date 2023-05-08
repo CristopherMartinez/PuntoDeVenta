@@ -26,6 +26,20 @@ class Administradores extends Model
         return $query->getRowArray() ?: false;
     }
 
+    public function obtenerAdmin($data) {
+            $admin = $this->db->table('administradores');
+            $admin->where($data);
+            return $admin->get()->getResultArray();
+    }
+
+    public function traerDatosAdminPorCorreo($correo){
+        $query = $this->db->query("SELECT administradores.nombre, administradores.apellidos, administradores.correoElectronico,
+                                   administradores.telefono         
+                                   FROM administradores 
+                                   WHERE administradores.correoElectronico = ?", array($correo));
+        return $query->getResultArray();
+}
+
         
 
 }

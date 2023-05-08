@@ -529,6 +529,88 @@ class Videojuegos extends Model
 
 //---------------------------------------------------------------------------------------------------------
 
+//--------------------------------------------------------------------------
+
+    //METODOS Nintendo
+
+    //Total de juegos de Nintendo
+    public function getTotalGamesNintendo(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '7'");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de aventura de Nintendo
+    public function TotalGamesAventuraNintendo(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '7' AND idCategoria = '1'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+    //Total de juegos de Arcade de Nintendo
+    public function TotalGamesArcadeNintendo(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '7' AND idCategoria = '2'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    //Total de juegos de Deportes de Nintendo
+    public function TotalGamesDeportesNintendo(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '7' AND idCategoria = '3'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Terror de Nintendo
+    public function TotalGamesTerrorNintendo(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '7' AND idCategoria = '4'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+    // //Total de juegos de Estrategia de Nintendo
+    public function TotalGamesEstrategiaNintendo(){
+        $query=$this->db->query("SELECT COUNT(*) as numJuegos
+                                 FROM videojuego 
+                                 WHERE idConsola = '7' AND idCategoria = '5'
+                                 ");
+        $result = $query->getRow();
+        return $result ? (int) $result->numJuegos : 0;
+    }
+
+
+    //Funcion para obtener 10 videojuegos de Nintendo
+    public function get10VideogamesNintendo(){
+        $query = $this->db->query("SELECT idVideojuego,nombre, descripcion, imagen, precio, cantidadInventario,idConsola,idCategoria FROM videojuego WHERE idConsola IN (7) LIMIT 10");
+        return $query->getResultArray();
+    }
+
+    //Funcion para obtener todos los videojuegos de Nintendo
+    public function getAllVideogamesNintendo(){
+        $query = $this->db->query("SELECT v.idVideojuego, v.nombre, v.descripcion, v.imagen, v.precio, v.cantidadInventario,v.idConsola,v.idCategoria, c.nombre as nombreConsola 
+            FROM videojuego v 
+            INNER JOIN consola c ON v.idConsola = c.idConsola 
+            WHERE v.idConsola IN (7)");
+        return $query->getResultArray();
+    }
+   
+
+    public function getConsolasNintendo(){
+        $query=$this->db->query("SELECT nombre FROM consola WHERE idConsola IN (7)");                      
+        return $query->getResultArray();
+    }
+//----------------------------------------------------------------------------------------------------------
 
     
 

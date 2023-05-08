@@ -118,7 +118,7 @@
 								</div> 
 								
 								<div class="form-group row">
-									<label for="cantidadInventario" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Cantidad de inventario</span></label>
+									<label for="cantidadInventario" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Cantidad de licencias</span></label>
 									<div class="col-sm-8">
 										<input type="number" value="<?=$Videojuego['cantidadInventario']?>"  class="form-control" name="cantidadInventario" required>
 									</div>

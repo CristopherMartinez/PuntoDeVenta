@@ -121,7 +121,7 @@
 
 							<!--Cantidad de inventario-->
 							<div class="form-group row">
-								<label for="cantidadInventario" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Cantidad de inventario</span></label>
+								<label for="cantidadInventario" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Cantidad de licencias</span></label>
 								<div class="col-sm-8">
 									<input type="number" value="<?=old('cantidadInventario')?>" class="form-control" name="cantidadInventario" required>
 								</div>
@@ -356,7 +356,7 @@
 									<td><b>Nombre</b></td>
 									<td><b>Descripción</b></td>
 									<td><b>Precio</b></td>
-									<td><b>Cantidad de inventario</b></td>
+									<td><b>Cantidad de Licencias</b></td>
 									<td><b>Consola</b></td>
 									<td><b>Acciones</b></td>
 									</tr>
@@ -369,7 +369,7 @@
 										<td><?= $v['nombre'] ?></td>
 										<td><?= $v['descripcion'] ?></td>
 										<td><?= sprintf('$%s', $v['precio']) ?></td>
-										<td><?= "{$v['cantidadInventario']} piezas" ?></td>
+										<td><?= "{$v['cantidadInventario']} licencias" ?></td>
 										<td><?= $v['consola'] ?></td>
 										<td>
 											

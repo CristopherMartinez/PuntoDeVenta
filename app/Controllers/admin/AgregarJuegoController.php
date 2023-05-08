@@ -7,12 +7,21 @@ use CodeIgniter\Validation\Exceptions\ValidationException;
 
 class AgregarJuegoController extends BaseController{
 
+    protected $session;
+    
     public function __construct()
     {
         helper(['upload']);
+        $this->session = \Config\Services::session();
     }
 
     public function index(){
+
+         // Verificar si la sesión está iniciada
+         if (!$this->session->get('logged_in')) {
+            return redirect()->to('/login');
+        }
+
         $generico = new Videojuegos();
         $dataF = array(
             'proveedores' => $generico->getProveedores(),
@@ -27,7 +36,6 @@ class AgregarJuegoController extends BaseController{
     }
 
     public function guardar_juego(){
-        // $mysqli=include_once"../Codeigniter4/app/Controllers/conexion.php";
         $generico2 = new Videojuegos();
         $idProveedor = $generico2->getIdProveedor($_POST['idProveedor']);
         $idCategoria = $generico2->getIdCategoria($_POST['categoria']);

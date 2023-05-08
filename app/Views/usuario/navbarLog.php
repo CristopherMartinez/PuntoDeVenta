@@ -70,7 +70,7 @@ session_start();
                       <li><a class="dropdown-item" href="gamesXbox" style="padding-left: 5px;">Xbox</a></li>
                       <!-- <li><hr class="dropdown-divider"></li> -->
                       <!-- <li><hr class="dropdown-divider"></li> -->
-                      <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Nintendo</a></li>
+                      <li><a class="dropdown-item" href="gamesNintendo" style="padding-left: 5px;">Nintendo</a></li>
                       
                     </ul>
                   </li>
