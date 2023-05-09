@@ -69,7 +69,8 @@ class ShoppingCarController extends BaseController{
                     'nombre' => $_POST['nombre'],
                     'precio' => $_POST['precio'],
                     'NombreConsola' => $_POST['nombreConsola'],
-                    'Cantidad' => 1
+                    'Cantidad' => 1,
+                    "imagen" => $_POST['imagen']
                 );
                 $session = session();
                 $session->setFlashdata('success', 'Agregado al carrito');
@@ -82,7 +83,8 @@ class ShoppingCarController extends BaseController{
                 'nombre' => $_POST['nombre'],
                 'precio' => $_POST['precio'],
                 'NombreConsola' => $_POST['nombreConsola'],
-                'Cantidad' => 1
+                'Cantidad' => 1,
+                "imagen" => $_POST['imagen']
             );
             $session = session();
             $session->setFlashdata('success', 'Agregado al carrito');
@@ -110,7 +112,8 @@ class ShoppingCarController extends BaseController{
                     'nombre' => $_POST['nombre'],
                     'precio' => $_POST['precio'],
                     'NombreConsola' => $_POST['nombreConsola'],
-                    'Cantidad' => 1
+                    'Cantidad' => 1,
+                    "imagen" => $_POST['imagen']
                 );
                 //Se quitan de lista de deseos
                 foreach($_SESSION['deseos'] as $key => $value)
@@ -135,7 +138,8 @@ class ShoppingCarController extends BaseController{
                 'nombre' => $_POST['nombre'],
                 'precio' => $_POST['precio'],
                 'NombreConsola' => $_POST['nombreConsola'],
-                'Cantidad' => 1
+                'Cantidad' => 1,
+                "imagen" => $_POST['imagen']
             );
             //Se quitan de lista de deseos
             foreach($_SESSION['deseos'] as $key => $value)
@@ -174,7 +178,8 @@ class ShoppingCarController extends BaseController{
                     'nombre' => $_POST['nombre'],
                     'precio' => $_POST['precio'],
                     'NombreConsola' => $_POST['nombreConsola'],
-                    'Cantidad' => 1
+                    'Cantidad' => 1,
+                    "imagen" => $_POST['imagen']
                 );
 
                 $session = session();
@@ -188,7 +193,8 @@ class ShoppingCarController extends BaseController{
                 'nombre' => $_POST['nombre'],
                 'precio' => $_POST['precio'],
                 'NombreConsola' => $_POST['nombreConsola'],
-                'Cantidad' => 1
+                'Cantidad' => 1,
+                "imagen" => $_POST['imagen']
             );
 
             $session = session();
@@ -217,7 +223,8 @@ class ShoppingCarController extends BaseController{
                     'nombre' => $_POST['nombre'],
                     'precio' => $_POST['precio'],
                     'NombreConsola' => $_POST['nombreConsola'],
-                    'Cantidad' => 1
+                    'Cantidad' => 1,
+                    "imagen" => $_POST['imagen']
                 );
 
                 $session = session();
@@ -231,7 +238,8 @@ class ShoppingCarController extends BaseController{
                 'nombre' => $_POST['nombre'],
                 'precio' => $_POST['precio'],
                 'NombreConsola' => $_POST['nombreConsola'],
-                'Cantidad' => 1
+                'Cantidad' => 1,
+                "imagen" => $_POST['imagen']
             );
 
             $session = session();
@@ -260,7 +268,8 @@ class ShoppingCarController extends BaseController{
                     'nombre' => $_POST['nombre'],
                     'precio' => $_POST['precio'],
                     'NombreConsola' => $_POST['nombreConsola'],
-                    'Cantidad' => 1
+                    'Cantidad' => 1,
+                    "imagen" => $_POST['imagen']
                 );
 
                 $session = session();
@@ -274,7 +283,8 @@ class ShoppingCarController extends BaseController{
                 'nombre' => $_POST['nombre'],
                 'precio' => $_POST['precio'],
                 'NombreConsola' => $_POST['nombreConsola'],
-                'Cantidad' => 1
+                'Cantidad' => 1,
+                "imagen" => $_POST['imagen']
             );
 
             $session = session();
@@ -422,8 +432,7 @@ class ShoppingCarController extends BaseController{
 
         //Llamamos a la funcion sendCorreoCompra que esta en el modelo de Email
         $email = new Email();
-        $email->sendCorreoCompra();
-
+        $email->sendCorreoCompra($ventas,$idOrden);
 
         return redirect()->to('usuario/listaCarrito');
         }
@@ -454,6 +463,7 @@ class ShoppingCarController extends BaseController{
                 $consola = $values['NombreConsola'];
                 $idVideojuego = $values['idVideojuego'];
                 $precio = $values['precio'];
+                $imagen = $values['imagen'];
     
                 // Agregamos los datos de la venta al arreglo 
                 $ventas[] = [
@@ -462,7 +472,7 @@ class ShoppingCarController extends BaseController{
                     "nombreVideojuego" => $nombre,
                     "consola" => $consola,
                     "precio" => $precio,
-                    // "image"=>$
+                    "imagen"=> $imagen
                 ];
                 
             }
@@ -593,15 +603,16 @@ class ShoppingCarController extends BaseController{
                     $videojuego->update($venta['idVideojuego'], $actualizarLicencias);
                 }
                 
-                //Se llama a funcion para agregar a tabla de VideojuegosUsuario mandando como parametro el idOrden
+                //Se llama a funcion para agregar a tabla de VideojuegosUsuario
                 $this->addToVideojuegosUsuario();
         
                 // Eliminamos el carrito de la sesión
                 unset($_SESSION['cart']);
         
                 //Llamamos a la funcion sendCorreoCompra que esta en el modelo de Email
+                
                 $email = new Email();
-                $email->sendCorreoCompra();
+                $email->sendCorreoCompra($ventas,$idOrden);
         
                 return redirect()->to('usuario/listaCarrito');
                 }

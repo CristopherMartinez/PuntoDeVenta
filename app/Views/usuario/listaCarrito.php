@@ -5,9 +5,7 @@
         <script src="https://kit.fontawesome.com/9efa70fc0a.js" crossorigin="anonymous"></script>
 </head>
 
- <!-- <?php       
-    print_r($tarjetas);
- ?> -->
+
 <br>
 <body class="backgrounFooter">
 <div class="container ">
@@ -237,7 +235,12 @@
     else
     {
         echo "#modalTarjetas";
-    }?>" onclick="temporizador()">
+
+    }?>" onclick="<?php if(empty($tarjetas)){
+        echo "temporizador();";
+    }else{
+        echo "temporizador2();";
+    } ?>">
     Realizar Compra
     </button>
     <!--Modal para realizar compra directa-->
@@ -245,7 +248,10 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:40px;">Realizar Compra</h3>
+                    <span><h3 class="modal-title" id="exampleModalLabel" style="color:black; padding-top:50px;">Realizar Compra</h3></span>
+                    <span>
+                        <h3 style="color:black; padding-top:50px;" id="gtotalModal2"></h3>
+                    </span>
                 </div>
                 <form method="POST" action="<?php echo base_url().'/comprar'?>" enctype="multipart/form-data">
                     <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
@@ -354,9 +360,9 @@
                     </div>
                     <div class="modal-footer">
                         <div class="progress" style="width: 100%; height: 20px; margin-bottom: 10px;">
-                            <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                            <div class="progress-bar2" role="progressbar" style="width: 0%;"></div>
                         </div>
-                        <button type="button" class="btn btn-secondary" id="botonCerrar" data-bs-dismiss="modal" onclick="pararTemporizador()">Cerrar</button>
+                        <button type="button" class="btn btn-secondary" id="botonCerrar2" data-bs-dismiss="modal" onclick="pararTemporizador2()">Cerrar</button>
                         <button type="submit" class="btn btn-primary">Comprar</button>   
                     </div>
 
@@ -383,6 +389,7 @@
     var itotal = document.getElementsByClassName('itotal');
     var gtotal = document.getElementById('gtotal');
     var gTotalModal = document.getElementById('gtotalModal');
+    var gTotalModal2 = document.getElementById('gtotalModal2');
 
 
 
@@ -397,6 +404,7 @@
         }
         gtotal.innerText = gt;
         gTotalModal.innerText = 'Total de compra: $' + gt;
+        gTotalModal2.innerText = 'Total de compra: $' + gt;
     }
 
     subTotal();
@@ -455,8 +463,44 @@
         clearInterval(timerInterval);
     }
 
+    var timerInterval2;
+    function temporizador2(){
+        var time = 60; // tiempo en segundos
+        var progressBar2 = document.querySelector('.progress-bar2');
+        progressBar2.classList.add('bg-success'); // añadir clase de color verde
+        var width = 0;
+        progressBar2.style.width = width + '%';
+        progressBar2.setAttribute('aria-valuenow', width);
+        timerInterval2 = setInterval(function() {
+            if (width >= 100) {
+                //seleccionamos mediante el id el elemento del boton y ejecutamos la funcion de click para que se cierre el 
+                //modal y se ejecute la funcion parar temporizador
+                var botonCerrar2 = document.getElementById('botonCerrar2');
+                botonCerrar2.click();
+                //Mostramos mensaje de que se acabo tu tiempo
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Se acabó tu tiempo!!',
+                })
 
 
+                // alert('Tiempo finalizado');
+            } else {
+                width += (100 / time);
+                progressBar2.style.width = width + '%';
+                progressBar2.setAttribute('aria-valuenow', width);
+                if (time - parseInt(width * (time / 100)) <= 40) {
+                    progressBar2.classList.remove('bg-success');
+                    progressBar2.classList.add('bg-danger'); // cambiar a color rojo
+                }
+            }
+        }, 1000); // intervalo de 1 segundo
+    }
+    //Función para parar el temporizador
+    function pararTemporizador2() {
+        clearInterval(timerInterval2);
+    }
 
 
 

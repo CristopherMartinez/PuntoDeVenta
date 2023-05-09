@@ -1,0 +1,136 @@
+CRITICAL - 2023-05-09 16:56:19 --> Undefined variable $videojuegos
+in APPPATH\Views\usuario\videogamesUser.php on line 9.
+ 1 APPPATH\Views\usuario\videogamesUser.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $videojuegos', 'APPPATH\\Views\\usuario\\videogamesUser.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(32): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:07:57 --> Undefined array key "descripcion"
+in APPPATH\Views\usuario\videogamesUser.php on line 44.
+ 1 APPPATH\Views\usuario\videogamesUser.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'APPPATH\\Views\\usuario\\videogamesUser.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(32): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:08:07 --> Undefined array key "descripcion"
+in APPPATH\Views\usuario\videogamesUser.php on line 44.
+ 1 APPPATH\Views\usuario\videogamesUser.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "descripcion"', 'APPPATH\\Views\\usuario\\videogamesUser.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(32): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:08:44 --> Undefined array key "nombreDeseo"
+in APPPATH\Views\usuario\videogamesUser.php on line 47.
+ 1 APPPATH\Views\usuario\videogamesUser.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreDeseo"', 'APPPATH\\Views\\usuario\\videogamesUser.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(32): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:08:52 --> Undefined array key "nombreDeseo"
+in APPPATH\Views\usuario\videogamesUser.php on line 47.
+ 1 APPPATH\Views\usuario\videogamesUser.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreDeseo"', 'APPPATH\\Views\\usuario\\videogamesUser.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(32): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:16:35 --> Undefined array key "imagen"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 457.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(457): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "imagen"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 457)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(413): App\Controllers\usuario\ShoppingCarController->addToVideojuegosUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:26:10 --> Undefined array key "imagen"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 272.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(272): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "imagen"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 272)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->agregarAlCarritoNintendo()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:26:48 --> Undefined array key "cart"
+in APPPATH\Views\usuario\listaCarrito.php on line 9.
+ 1 APPPATH\Views\usuario\listaCarrito.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cart"', 'APPPATH\\Views\\usuario\\listaCarrito.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaCarrito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaCarrito', [], true)
+ 5 APPPATH\Controllers\usuario\ShoppingCarController.php(318): view('usuario/listaCarrito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:27:03 --> Undefined array key "cart"
+in APPPATH\Views\usuario\listaCarrito.php on line 9.
+ 1 APPPATH\Views\usuario\listaCarrito.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cart"', 'APPPATH\\Views\\usuario\\listaCarrito.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaCarrito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaCarrito', [], true)
+ 5 APPPATH\Controllers\usuario\ShoppingCarController.php(318): view('usuario/listaCarrito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:30:55 --> Undefined array key "cart"
+in APPPATH\Views\usuario\listaDeseos.php on line 48.
+ 1 APPPATH\Views\usuario\listaDeseos.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cart"', 'APPPATH\\Views\\usuario\\listaDeseos.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaDeseos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaDeseos', [], true)
+ 5 APPPATH\Controllers\usuario\DeseosController.php(40): view('usuario/listaDeseos')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\DeseosController->listaDeseos()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\DeseosController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:31:51 --> Undefined array key "imagen"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 142.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(142): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "imagen"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 142)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->agregarAlCarritoDesdeDeseos()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:33:16 --> Undefined array key "imagenDeseo"
+in APPPATH\Views\usuario\listaDeseos.php on line 74.
+ 1 APPPATH\Views\usuario\listaDeseos.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "imagenDeseo"', 'APPPATH\\Views\\usuario\\listaDeseos.php', 74)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaDeseos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaDeseos', [], true)
+ 5 APPPATH\Controllers\usuario\DeseosController.php(40): view('usuario/listaDeseos')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\DeseosController->listaDeseos()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\DeseosController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 18:12:00 --> Undefined array key "cart"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 435.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(435): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "cart"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 435)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 18:15:58 --> Array to string conversion
+in APPPATH\Models\generico\Email.php on line 125.
+ 1 APPPATH\Models\generico\Email.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\generico\\Email.php', 125)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(435): App\Models\generico\Email->sendCorreoCompra([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

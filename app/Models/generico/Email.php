@@ -72,38 +72,48 @@ class Email extends Model
     }
 
     //Envio de correo de compra exitosa 
-    public function sendCorreoCompra(){
+    public function sendCorreoCompra($videojuegos,$idOrden){
+        // Concatenar la ruta de la imagen
+        $imagen_url = base_url('/imagenes/logoWorld.png');
+
         $this->email->setTo($_SESSION['datosUsuario'][0]['correo']);
         $this->email->setFrom('worldgamess975@gmail.com', 'WorldGames');
         $this->email->setSubject('Compra en WorldGames');
+ 
         $body = '
         <!DOCTYPE html>
         <html>
         <head>
             <meta charset="utf-8">  
-
         </head>
         <body>
-            <h2>Compra de videojuegos en WorldGames</h2>
-            <table class="table-primary">
-            <tr>
-                <td>Usuario</td>
-                <td>user</td>
-            </tr>
-            <tr>
-                <td>Compras</td>
-                <td>videojuegos</td>
-            </tr>
-            </table>
-        </body>
-        </html>';
 
-        // Reemplazamos los valores de las etiquetas con los datos del usuario y la imagen
-        // $body = str_replace('user', $usuario, $body);
-        // $body = str_replace('email', $destinatario, $body);
-        // $body = str_replace('password', $password, $body);
+        <img src="imagenUrl" style="width:80px;" alt="LogoWorldGames">
+        <h2 style="color:black;">Felicidades por tu compra en WorldGames '.$_SESSION['datosUsuario'][0]['usuario'].'</h2>
+        <h2 style="color:black;">Orden de compra #'.$idOrden.'</h2>
+        
+            <table class="table-primary table-bordered">
+            ';
+                $cont = 1;
+                foreach($videojuegos as $videojuego) {
+                    $body .= '
+                    <tr>
+                        <td>'.$cont.'</td>
+                        <td>' . $videojuego['nombre'] . '</td>
+                        <td>' . $videojuego['consola'] . '</td>
+                        <td>' . '$'.$videojuego['precio'] . '</td>
+                    </tr>                    
+                    ';
+                    $cont++;
+                }
+                
+        $body .= '
+                </table>
+            </body>
+            </html>
+        ';
 
-        // $body = str_replace('URL_DE_LA_IMAGEN_AQUI', $this->urlImagen, $body);
+        $body = str_replace('imagenUrl', $imagen_url, $body);
 
         $this->email->setMessage($body);
 
@@ -118,9 +128,6 @@ class Email extends Model
 
             return redirect()->to('usuario/listaCarrito');
         }
-
     }
 
-    
-          
 }

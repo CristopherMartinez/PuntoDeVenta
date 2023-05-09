@@ -55,7 +55,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarScroll" style="padding-left: 0px;">
               <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                   <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#" style="padding-left: 5px;">Nosotros</a>
+                  <a class="nav-link active" aria-current="page" href="#nosotros" style="padding-left: 5px;">Nosotros</a>
                   </li>
                   <!-- <li class="nav-item">
                   <a class="nav-link" href="#" style="padding-left: 5px;">Membresias</a>
@@ -85,7 +85,6 @@ session_start();
                       Mas
                     </a>
                     <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;">
-                      <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Saldo digital</a></li>
                       <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Ofertas</a></li>
                       <!--Mostramos unicamente cuando tenga juegos el usuario-->
                       <?php
@@ -95,6 +94,7 @@ session_start();
                         ";
                       }
                       ?>
+                      <li><a class="dropdown-item" href="videogamesUser" style="padding-left: 5px;">Mis juegos</a></li>
                     </ul>
                   </li>   
                 </li>           

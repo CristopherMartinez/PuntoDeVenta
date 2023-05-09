@@ -14,7 +14,7 @@
             <div class="row justify-content-center mt-5">
                    <div class="col-md-10">
                         <div class="mb-3">
-                            <h1 class="colorLetra">Nostros</h1>
+                            <h1 class="colorLetra" id='nosotros'>Nostros</h1>
                             <p style="text-align: justify;" for="textmision" class="form-label fontLetra" style="color:whitesmoke; font-weight:normal;">
                             Somos una tienda en línea dedicada a ofrecer la mejor selección de videojuegos. Con más de 5 años de experiencia en la industria de los videojuegos, nos hemos ganado 
                             una reputación por nuestro compromiso con la calidad, la excelencia en el servicio al cliente y la satisfacción 
@@ -40,7 +40,7 @@
                 <div class="row justify-content-center mt-5">
                    <div class="col-md-10">
                         <div class="mb-3 ">
-                            <h1 class="colorLetra">Mision</h1>
+                            <h1 class="colorLetra" id="visionMision">Mision</h1>
                             <p style="text-align: justify;" for="textmision" class="form-label fontLetra" style="color:whitesmoke; font-weight:normal;">
                             Ofrecemos la mejor experiencia de compra posible para jugadores de todas las edades y habilidades, con una amplia selección de 
                             juegos alta calidad, precios competitivos y un servicio excepcional. Manteniendo actualizado nuestros productos 

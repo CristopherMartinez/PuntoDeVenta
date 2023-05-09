@@ -174,7 +174,7 @@
                                                 <input type="text" id="nombre" name="nombre" value="<?php echo $juego['nombre'] ?>" hidden>
                                                 <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
                                                 <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
-                                            
+                                                <input type="text" id="imagen" name="imagen" value="<?php echo $juego['imagen'] ?>" hidden>
 
                                                 <p class="card-text" style="padding-top:5px;">
 

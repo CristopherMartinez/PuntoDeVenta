@@ -276,6 +276,7 @@
                                 <input type="text" id="nombreConsolaDeseo" name="nombreConsolaDeseo" value="<?php echo $juego['nombreConsola'] ?>" hidden>    
                                 <input type="text" id="imagenDeseo" name="imagenDeseo" value="<?php echo $juego['imagen'] ?>" hidden>    
                                 <input type="text" id="descripcionDeseo" name="descripcionDeseo" value="<?php echo $juego['descripcion'] ?>" hidden>    
+                                <input type="text" id="imagenDeseo" name="imagenDeseo" value="<?php echo $juego['imagen'] ?>" hidden>    
 
                                 <button type='submit' class='btn btn-link border-0 p-0'>
                                         <span class='material-symbols-outlined'>favorite</span>        
@@ -311,6 +312,7 @@
                                         <input type="text" id="nombre" name="nombre" value="<?php echo $juego['nombre'] ?>" hidden>
                                         <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
                                         <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
+                                        <input type="text" id="imagen" name="imagen" value="<?php echo $juego['imagen'] ?>" hidden>
                                         <div>
                                             <span><button type="button" class="btn btn-outline-primary" disabled style="color:black; border-color:black; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
                                             <span style="padding-left: 5px;">

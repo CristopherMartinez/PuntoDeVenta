@@ -68,7 +68,8 @@ class DeseosController extends BaseController{
                     'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
                     'imagen' => $_POST['imagenDeseo'],
                     'descripcion' => $_POST['descripcionDeseo'],
-                    'cantidadDeseo' => 1
+                    'cantidadDeseo' => 1,
+                    "imagen"=>$_POST['imagenDeseo']
                 );
                 $session = session();
                 $session->setFlashdata('agregadoDeseos', 'Agregado a lista de Deseos');
@@ -84,7 +85,8 @@ class DeseosController extends BaseController{
                 'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
                 'imagen' => $_POST['imagenDeseo'],
                 'descripcion' => $_POST['descripcionDeseo'],
-                'cantidadDeseo' => 1
+                'cantidadDeseo' => 1,
+                "imagen"=>$_POST['imagenDeseo']
             );
             $session = session();
             $session->setFlashdata('agregadoDeseos', 'Agregado a lista de Deseos');

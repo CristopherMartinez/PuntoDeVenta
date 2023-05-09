@@ -175,6 +175,7 @@
                                                 <input type="text" id="nombre" name="nombre" value="<?php echo $juego['nombre'] ?>" hidden>
                                                 <input type="text" id="precio" name="precio" value="<?php echo $juego['precio'] ?>" hidden>
                                                 <input type="text" id="precio" name="nombreConsola" value="<?php echo $juego['nombreConsola'] ?>" hidden>
+                                                <input type="text" id="imagen" name="imagen" value="<?php echo $juego['imagen'] ?>" hidden>
                                                 <p class="card-text" style="padding-top:5px;">
                                                     <span class="col-12 col-sm-12 col-xl-4"><button type="button" class="btn btn-outline-primary" disabled style="color:white; border-color:whitesmoke; margin-top:10px; font-weight:bolder;">Precio: $<?php echo $juego['precio'] ?></button></span>
                                                     <span class="col-6 col-sm-6 col-xl-4" style="padding-left: 5px;"><button type="submit" name="Add_To_Cart" class="btn btn-success" style="margin-top:10px; font-weight:bolder;">Agregar al carrito</button></span>

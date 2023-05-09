@@ -43,6 +43,7 @@ $routes->add('/usuario/gamesNintendo','generico\GamesNintendoController::indexLo
 
 $routes->add('/usuario/listaCarrito','usuario\ShoppingCarController::listaCarrito');
 $routes->add('/usuario/listaDeseos','usuario\DeseosController::listaDeseos');
+$routes->add('/usuario/videogamesUser','usuario\VideogamesUserController::getvideogamesUser');
 //Agregar Deseo
 $routes->add('/agregarDeseo','usuario\DeseosController::agregarDeseo');
 //Eliminar Deseos

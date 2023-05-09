@@ -44,9 +44,6 @@
         </style>
 </head>
 
-
-
-
 <body class="backgrounFooter">
     <div class="container">
         <br>
@@ -55,47 +52,48 @@
         </div>
         
         <div class="row">
-        <?php
-            if(isset($_SESSION['deseos'])){
+            <?php
+                if(isset($_SESSION['deseos'])){
 
-                foreach($_SESSION['deseos'] as $value){
-                    echo "
-                    <div class='col-md-4 col-sm-6 col-xs-12'>
-                        <div class='card'>
-                            <form action='".base_url()."/agregarAlCarritoDesdeDeseos' method='POST'>
-                                <div class='image-container'>
-                                    <img src='".base_url()."/images/$value[imagen]' class='card-img-top' style='height:150px; border-radius:10px;'>
-                                    <div class='image-description'>$value[descripcion]</div>
-                                </div>
-                                <div class='card-body'>
-                                    <h5 class='card-title' style='color:black;'>$value[nombreDeseo]</h5>
-                                    <p style='color:black;'>$value[nombreConsolaDeseo]</p>
-                                    <input type='hidden' id='idVideojuego' name='idVideojuego' value='".$value['idVideojuegoDeseo']."'>
-                                    <input type='hidden' id='nombre' name='nombre' value='".$value['nombreDeseo']."'>
-                                    <input type='hidden' id='precio' name='precio' value='".$value['precioDeseo']."'>
-                                    <input type='hidden' id='nombreConsola' name='nombreConsola' value='".$value['nombreConsolaDeseo']."'>
-                                    <div>
-                                        <span>
-                                            <button type='button' class='btn btn-outline-primary' disabled style='color:black; border-color:black; margin-top:10px; font-weight:bolder;'>Precio: $$value[precioDeseo]</button>
-                                        </span>
-                                        <span style='padding-left: 5px;'>
-                                            <button type='submit' name='Add_To_Cart' class='btn btn-success' style='margin-top:10px;'>Agregar al carrito</button>
-                                        </span>
+                    foreach($_SESSION['deseos'] as $value){
+                        echo "
+                        <div class='col-md-4 col-sm-6 col-xs-12'>
+                            <div class='card'>
+                                <form action='".base_url()."/agregarAlCarritoDesdeDeseos' method='POST'>
+                                    <div class='image-container'>
+                                        <img src='".base_url()."/images/$value[imagen]' class='card-img-top' style='height:150px; border-radius:10px;'>
+                                        <div class='image-description'>$value[descripcion]</div>
                                     </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>";
+                                    <div class='card-body'>
+                                        <h5 class='card-title' style='color:black;'>$value[nombreDeseo]</h5>
+                                        <p style='color:black;'>$value[nombreConsolaDeseo]</p>
+                                        <input type='hidden' id='idVideojuego' name='idVideojuego' value='".$value['idVideojuegoDeseo']."'>
+                                        <input type='hidden' id='nombre' name='nombre' value='".$value['nombreDeseo']."'>
+                                        <input type='hidden' id='precio' name='precio' value='".$value['precioDeseo']."'>
+                                        <input type='hidden' id='nombreConsola' name='nombreConsola' value='".$value['nombreConsolaDeseo']."'>
+                                        <input type='hidden' id='imagen' name='imagen' value='".$value['imagen']."'>
+                                       
+                                        <div>
+                                            <span>
+                                                <button type='button' class='btn btn-outline-primary' disabled style='color:black; border-color:black; margin-top:10px; font-weight:bolder;'>Precio: $$value[precioDeseo]</button>
+                                            </span>
+                                            <span style='padding-left: 5px;'>
+                                                <button type='submit' name='Add_To_Cart' class='btn btn-success' style='margin-top:10px;'>Agregar al carrito</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>";
 
-            
-                }
-            }else{
-                echo"
-                <h2 style='color:white;'>No hay Deseos en tu lista de deseos</h2>
-                ";
-            }          
+                
+                    }
+                }else{
+                    echo"
+                    <h2 style='color:white;'>No hay Deseos en tu lista de deseos</h2>
+                    ";
+                }          
             ?>
-            
         </div>
 
          
