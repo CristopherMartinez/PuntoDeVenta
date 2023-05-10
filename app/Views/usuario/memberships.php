@@ -1,3 +1,8 @@
+
+<head>
+    <script src="https://kit.fontawesome.com/9efa70fc0a.js" crossorigin="anonymous"></script>
+</head>
+
 <div class="pricing-wrapper clearfix" style="margin-bottom: 30px;">
     
     <?php foreach ($membresias as $membresia) { ?>
@@ -6,6 +11,64 @@
         </div>
     <?php } ?>
 </div>
+
+<?php
+    $opiniones = array(
+        array(
+            "titulo" => "Excelente pagina",
+            "descripcion" => "La variedad de juegos disponibles en esta página es impresionante. Me encanta que siempre están actualizando su catálogo con las últimas novedades. Además, el proceso de compra es muy fácil y la atención al cliente es excelente. Recomendado al 100%.",
+            "usuario" => "Lucia2343"
+        ),
+        array(
+            "titulo" => "Muy buenos juegos",
+            "descripcion" => "Desde que descubrí esta página, se ha convertido en mi lugar de referencia para comprar juegos en línea. Los precios son muy competitivos y la compra es siempre rápida y confiable. Además, me encanta la interfaz de usuario.",
+            "usuario" => "Carlos3043"
+        ),
+        array(
+            "titulo" => "Excelente presentación",
+            "descripcion" => "Esta página es perfecta para los gamers que buscan una experiencia de compra rápida y segura. La variedad de juegos es impresionante y siempre hay ofertas interesantes. Además, el proceso de compra es muy sencillo.",
+            "usuario" => "rodrigo8034"
+        )
+    );
+?>
+
+
+
+<div class="container">
+
+    <?php $count = 0; ?>
+    <?php foreach ($opiniones as $opinion) { ?>
+        <?php if ($count % 3 == 0) { ?>
+            <div class="row">
+        <?php } ?>
+        
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="card mb-4">
+                <div class="card-body" style="color:black;">
+                    <h4 class="card-title"><?= $opinion['titulo']?></h4>
+                    <p class="card-text"  style="font-size: 11px;"><?= $opinion['descripcion']?></p>
+                    <p class="card-text" style="font-size: 18px;"><small class="text-muted">Usuario :<?= $opinion['usuario']?></small></p>
+                    <div style="color:#426cf5;">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <?php $count++; ?>
+        <?php if ($count % 3 == 0) { ?>
+            </div>
+        <?php } ?>
+    <?php } ?>
+
+    <?php if ($count % 3 != 0) { ?>
+        </div>
+    <?php } ?>
+
+</div>
+
+
 
 
 <!--Membresia Premium-->

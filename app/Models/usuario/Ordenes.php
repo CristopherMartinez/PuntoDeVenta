@@ -18,20 +18,63 @@ class Ordenes extends Model
                 return $query->getResultArray();     
         }
 
-        // //Obtener productos comprados mediante el usuario
-        // public function getProducts($idOrden){
-        //         $query=$this->db->query("SELECT nombreVideojuego,consola,precio FROM videojuegosusuario WHERE idOrden = '$idOrden'");
-        //         return $query->getResultArray();     
-        // }
+        public function getFolio($idOrden){
+                $query = $this->db->query("SELECT folio FROM ordenes WHERE idOrden = '$idOrden'");
+                $result = $query->getResultArray();
+            
+                // Verificamos que se haya encontrado una fila
+                if (count($result) > 0) {
+                    // Accedemos a la entrada del arreglo y convertimos el valor a string
+                    $folio = strval($result[0]['folio']);
+                    return $folio;
+                } else {
+                    return null; // O un valor predeterminado para indicar que no se encontró el folio
+                }
+        }
 
-        // public function getProductsTotal($usuario) {
-        //         $query = $this->db->table('videojuegosusuario')
-        //                       ->selectSum('precio')
-        //                       ->where('usuario', $usuario)
-        //                       ->get();
-        //         $result = $query->getRow();
-        //         return isset($result->precio) ? $result->precio : 0;
-        //  }
+        // //Funcion para verificar si ya ha comprado el videojuego el usuario
+        // public function verificarYGuardar($juegos) {
+        //         $nuevosJuegos = array();
+        //         foreach ($juegos as $juego) {
+        //           list($idVideojuego, $nombre, $usuario, $consola) = $juego;
+        //           $query = "SELECT * FROM videojuegosUsuario WHERE idVideojuego={$idVideojuego} AND usuario='{$usuario}' AND consola='{$consola}'";
+        //           $result = $this->db->query($query);
+        //           if ($result->getNumRows() === 0) {
+        //             // Check if the combination of idVideojuego, usuario, and consola exists in ordenesUsuario
+        //             $query = "SELECT * FROM ordenesUsuario WHERE idVideojuego={$idVideojuego} AND consola='{$consola}'";
+        //             $result = $this->db->query($query);
+        //             if ($result->getNumRows() === 0) {
+        //               array_push($nuevosJuegos, $juego);
+        //             }
+        //           }
+        //         }
+        //         return $nuevosJuegos;
+        // }
+        
+        public function verificarYGuardar($ventas) {
+                $nuevosJuegos = array();
+                foreach ($ventas as $venta) {
+                    list($idVideojuego, $nombre, $usuario, $consola) = $venta;
+                    $query = "SELECT * FROM videojuegosUsuario WHERE idVideojuego={$idVideojuego} AND usuario='{$usuario}' AND consola='{$consola}'";
+                    $result = $this->db->query($query);
+                    if ($result !== false && $result->getNumRows() === 0) {
+                        $query = "SELECT * FROM ordenesUsuario WHERE idVideojuego={$idVideojuego} AND consola='{$consola}'";
+                        $result = $this->db->query($query);
+                        if ($result !== false && $result->getNumRows() === 0) {
+                            $nuevosJuegos[] = $venta;
+                            $this->videojuegosUsuario->insert($venta);
+                        }
+                    }
+                }
+                return $nuevosJuegos;
+            }
+            
+              
+
+
+
+            
+
             
             
 }

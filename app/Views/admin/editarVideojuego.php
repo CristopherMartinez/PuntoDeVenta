@@ -40,7 +40,7 @@
 									</script>
 			<?php } ?>	
 
-			<div class="modal-dialog" style="margin-bottom: 100px; margin-top: -600px;" >
+			<div class="modal-dialog d-flex align-items-center justify-content-center" style="position: fixed; top: 0; right: 0; bottom: 0; left: 0; min-height: 100vh;">
 				<div class="modal-content">
 
 					<div class="modal-header">
@@ -171,140 +171,6 @@
 
 				</div>
 			</div>
-
-			<!-- <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true" >
-				<div class="modal-dialog">
-					<div class="modal-content">
-
-					<div class="modal-header">
-						<h5 class="modal-title" id="miModalLabel" style="color:black;">Editar videojuego</h5>
-						<button type="button"  class="btn-closeEditar" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-
-						<div class="modal-body modal-scroll">
-							<div class="col-md-9 offset-md-2">
-								<form id="myForm" method="POST" action="<?php echo base_url().'/actualizar'?>" enctype="multipart/form-data">
-									<div class="form-group row" hidden>
-										<label for="idVideojuego" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">IdVideojuego</span></label>
-										<div class="col-sm-8">
-											<input type="text" value="<?=$Videojuego['idVideojuego']?>" id="idVideojuego" name="idVideojuego">
-										</div>
-									</div>
-									<div class="form-group row">
-										<label for="nombre" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Nombre</span></label>
-										<div class="col-sm-8">
-											<input type="text" value="<?= isset($Videojuego['nombre']) ? $Videojuego['nombre'] : '' ?>" class="form-control" id="nombre" name="nombre" required>
-										</div>
-									</div>
-									<?php 
-									if(session('validacionNombre1')){
-									?>
-									<div class="alert alert-danger" role="alert">
-										<?php 
-										echo session('validacionNombre1');
-										?>
-									</div>
-									<?php
-									}
-									?>
-									
-									<div class="form-group row">
-										<label for="categoria" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Categoria</span></label>
-										<div class="col-sm-8">
-											<select class="form-control" id="categoria" name="categoria">
-												<?php foreach($categorias as $cat) { ?>
-													<option value="<?= $cat['nombre'] ?>" <?= ($cat['nombre'] == $Videojuego['nombreCategoria']) ? 'selected' : '' ?>><?= $cat['nombre'] ?></option>
-												<?php } ?>
-											</select>
-										</div>
-									</div> 
-									
-									<div class="form-group row">
-										<label for="idProveedor" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Proveedor:</span></label>
-										<div class="col-sm-8">
-											<select class="form-control" id="idProveedor" name="idProveedor">
-												<?php foreach($proveedores as $pro) { ?>
-													<option value="<?= $pro['nombre'] ?>" <?= ($pro['nombre'] == $Videojuego['nombreProveedor']) ? 'selected' : '' ?>><?= $pro['nombre'] ?></option>
-												<?php } ?>
-											</select>
-										</div>
-									</div> 
-									
-									<div class="form-group row">
-										<label for="consola" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Consola:</span></label>
-										<div class="col-sm-8">
-											<select class="form-control" id="consola" name="consola">
-												<?php foreach($consolas as $con) { ?>
-													<option value="<?= $con['nombre'] ?>" <?= ($con['nombre'] == $Videojuego['nombreConsola']) ? 'selected' : '' ?>><?= $con['nombre'] ?></option>
-												<?php } ?>
-											</select>
-										</div>
-									</div>
-									
-									<div class="form-group row">
-										<label for="precio" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Precio</span></label>
-										<div class="col-sm-8">
-											<input type="number" value="<?=$Videojuego['precio']?>" class="form-control" id="precio" name="precio" required>
-										</div>
-									</div> 
-									
-									<div class="form-group row">
-										<label for="cantidadInventario" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Cantidad de inventario</span></label>
-										<div class="col-sm-8">
-											<input type="number" value="<?=$Videojuego['cantidadInventario']?>"  class="form-control" name="cantidadInventario" required>
-										</div>
-									</div>
-								
-									<div class="form-group row">
-										<label for="descripcion"class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Descripción</span></label>
-										<div class="col-sm-8">
-											<textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="<?=$Videojuego['descripcion']?>" maxlength="350"><?=$Videojuego['descripcion']?></textarea>
-										</div>
-									</div>   
-									<?php 
-									if(session('validacionDescripcion1')){
-									?>
-									<div class="alert alert-danger" role="alert">
-										<?php 
-										echo session('validacionDescripcion1');
-										?>
-									</div>
-									<?php
-									}
-									?>  
-									
-									<div class="form-group row">
-										<label for="imagen" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Imagen</span></label>
-										<div class="col-sm-8">
-						
-											<input name="imagen" id="imagen" type="file" class="form-control-file" style="padding-top: 5px;">
-											<span id="nombre-imagen"></span>
-
-
-
-										</div>
-									</div>
-									<div class="row mt-4">
-										<div class="col">
-											<button type="submit" class="btn btn-primary btn-block">
-												Actualizar
-												
-											</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-						
-
-					</div>
-
-				</div>
-			</div> -->
-
-		
-
-		
 
 
 <script>

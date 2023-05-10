@@ -32,12 +32,12 @@ class RegistroAdminController extends BaseController{
 
     public function guardar_admin(){
 
-        $contrasenia_cifrada = password_hash($_POST["contrasenia"], PASSWORD_DEFAULT);
+        $contrasenia_cifrada = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
         $data = [
             "nombre"=>$_POST["nombre"],
             "apellidos"=>$_POST["apellidos"],
-            "correoElectronico"=>$_POST["correoElectronico"],
+            "correoElectronico"=>$_POST["correo"],
             "telefono"=>$_POST["telefono"],
             "direccion"=>$_POST["direccion"],
             "contrasenia"=>$contrasenia_cifrada
@@ -50,8 +50,70 @@ class RegistroAdminController extends BaseController{
            var_dump($mregistrar->errors());
         }
 
+        $session = session();
+        $session->setFlashdata('registroAdmin', 'Administrador registrado correctamente');
+
         return redirect()->to('admin/registroAdmin'); //para regresar a pagina anterior 
 
+    }
+
+    public function editarAdministrador($id=null){
+        $administrador = new Administradores();
+
+        $data =  array(
+            'administradores' => $administrador->getAllAdmins(),
+            'administrador' => $administrador->where('idAdministrador',$id)->first()
+        );
+
+
+       
+         $vista= view('admin/navbarAdmin').
+                view('admin/registroAdmin',$data).
+                view('admin/editarAdmin',$data);
+
+                
+
+        return $vista;
+
+    }
+
+    public function actualizarAdmin(){
+        $admin = new Administradores();
+        $id = $this->request->getPost('idAdministrador');
+
+        $data = [
+            "nombre"=>$_POST["nombre"],
+            "apellidos"=>$_POST["apellidos"],
+            "correoElectronico"=>$_POST["correo"],
+            "telefono"=>$_POST["telefono"],
+            "direccion"=>$_POST["direccion"]
+        ];
+    
+        //Actualizar datos
+        $admin->update($id,$data);
+
+         //Mensaje
+         $session = session();
+         $session->setFlashdata('actualizarAdmin', 'Actualizado correctamente');
+ 
+        return redirect()->route('admin/registroAdmin');
+    }
+
+    public function borrarAdministrador($id=null){
+        
+        $administrador = new Administradores();
+
+        //Mensaje
+        $session = session();
+        $session->setFlashdata('borradoAdmin', 'Se ha borrado correctamente');
+
+        //Borrado en la base de datos 
+        $administrador->where('idAdministrador',$id)->delete();
+         return redirect()->route('admin/registroAdmin');
+    }
+
+    public function cerrarModalEditarAdmin(){
+        return redirect()->route('admin/registroAdmin');
     }
 
 }

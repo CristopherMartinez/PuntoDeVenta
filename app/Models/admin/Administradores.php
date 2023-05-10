@@ -11,7 +11,7 @@ class Administradores extends Model
     protected $allowedFields = ['idAdministrador','nombre','apellidos','correoElectronico','telefono','direccion','contrasenia'];
     
     public function getAllAdmins(){
-        $query=$this->db->query("SELECT nombre,apellidos,correoElectronico,telefono,direccion,contrasenia FROM administradores");
+        $query=$this->db->query("SELECT idAdministrador,nombre,apellidos,correoElectronico,telefono,direccion,contrasenia FROM administradores");
         return $query->getResultArray();
     }
 

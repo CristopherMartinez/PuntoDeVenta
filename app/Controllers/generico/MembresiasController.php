@@ -3,6 +3,7 @@ namespace App\Controllers\generico;
 use App\Models\generico\Sugerencias;
 use App\Controllers\BaseController;
 use App\Models\generico\Membresias;
+use App\Models\generico\Opiniones;
 use App\Models\usuario\Usuarios;
 use App\Models\usuario\RegistrarUsuario;
 
@@ -50,6 +51,8 @@ class MembresiasController extends BaseController{
             return redirect()->to('usuario/inicio');
         }
     }
+
+   
 
 
 }

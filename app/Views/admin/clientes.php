@@ -42,7 +42,7 @@ print_r(json_encode($usuarios));
 							<table id="miTabla" class="table table-hover table-bordered">
 								<thead>
 									<tr class="bg-dark">
-									<td><b>idUsuario</b></td>	
+									<td><b>#</b></td>	
 									<td><b>Membresía</b></td>	
 									<td><b>Usuario</b></td>
 									<td><b>Nombre</b></td>
@@ -53,16 +53,36 @@ print_r(json_encode($usuarios));
 									</tr>
 								</thead>
 								<tbody>
-								<?php foreach ($usuarios as $usuario): ?>
-									<tr class="bg-info">
-										<td><?= $usuario['idUsuario'] ?></td>
-                                        <td><?= $usuario['idMembresia'] ?></td>
-                                        <td><?= $usuario['usuario'] ?></td>
-                                        <td><?= $usuario['nombre'] ?> <?= $usuario['apellidos']?></td>
-                                        <td><?= $usuario['correo'] ?></td>
-                                        <td><?= $usuario['direccion'] ?></td>
-                                        <td><?= $usuario['telefono'] ?></td>
-                                        <td><?php 
+								<?php
+
+								$cont = 1;
+								foreach ($usuarios as $usuario): ?>
+									<tr class="bg-info" >
+										<td style="color:black;">
+
+											<?= $cont ?>
+
+										</td>
+                                        <td style="color:black;">
+										<?php 
+										
+											if($usuario['idMembresia'] == "1"){
+												echo "PREMIUM";
+											} 
+											elseif($usuario['idMembresia'] == "2"){
+												echo "GOLD";
+											}
+											elseif($usuario['idMembresia'] == "3"){
+												echo "DIAMONT";
+											}
+										?>
+										</td>
+                                        <td style="color:black;"><?= $usuario['usuario'] ?></td>
+                                        <td style="color:black;"><?= $usuario['nombre'] ?> <?= $usuario['apellidos']?></td>
+                                        <td style="color:black;"><?= $usuario['correo'] ?></td>
+                                        <td style="color:black;"><?= $usuario['direccion'] ?></td>
+                                        <td style="color:black;"><?= $usuario['telefono'] ?></td>
+                                        <td style="color:black;"><?php 
 										if($usuario['estado'] == 1){
 											echo "Activo";
 										}else{
@@ -70,7 +90,9 @@ print_r(json_encode($usuarios));
 										}
 										 ?></td>
 									</tr>
-								<?php endforeach; ?>
+								<?php 
+								$cont++;
+								endforeach; ?>
 
 								</tbody>
 							</table>

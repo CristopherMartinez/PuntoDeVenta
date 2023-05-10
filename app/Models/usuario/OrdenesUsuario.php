@@ -13,5 +13,10 @@ class OrdenesUsuario extends Model
         protected $allowedFields = ['idOrden','idVideojuego','nombre','consola','precio','cantidad'];
         
         
+        public function getDetalleOrden($idOrden){
+                $query = $this->db->query("SELECT * FROM ordenesusuario WHERE idOrden = ?", array($idOrden));
+                return $query->getResultArray();
+        }
+        
 }
 

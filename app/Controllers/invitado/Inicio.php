@@ -76,9 +76,10 @@ class Inicio extends BaseController{
                 view('invitado/carruselInicio').  
                 view('usuario/cardsGames',$data2).
                 view('usuario/memberships',$data3).
-                view('usuario/contacto').
+                view('usuario/misionVision').
+                
                 view('invitado/image').
-                view('usuario/misionVision'). 
+                view('usuario/contacto').
                 view('genericos/footer').
                 view('usuario/inicio');
         return $vista;

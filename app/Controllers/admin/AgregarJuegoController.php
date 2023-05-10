@@ -178,11 +178,6 @@ class AgregarJuegoController extends BaseController{
 
         return $vista;
 
-
-        // return redirect()->route('admin/registroVideojuegos');
-        // return view('admin/editarVideojuego',$datos);
-        // return redirect()->route('admin/registroVideojuegos');
-
     }
 
     public function actualizar(){
@@ -260,6 +255,8 @@ class AgregarJuegoController extends BaseController{
     public function cerrarModalEditar(){
         return redirect()->route('admin/registroVideojuegos');
     }
+
+    
     
     
 

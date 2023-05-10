@@ -12,7 +12,6 @@ class Email extends Model
 
     }
 
-
     //Registro exitoso
     public function sendCorreo($destinatario,$usuario,$password){
         $this->email->setTo($destinatario);
@@ -72,9 +71,10 @@ class Email extends Model
     }
 
     //Envio de correo de compra exitosa 
-    public function sendCorreoCompra($videojuegos,$idOrden){
-        // Concatenar la ruta de la imagen
-        $imagen_url = base_url('/imagenes/logoWorld.png');
+    public function sendCorreoCompra($videojuegos,$idOrden,$folio){
+        
+        //Recuperamos la imagen desde un link especifico
+        $imagen_url = "https://i.postimg.cc/MKV3vKwx/logo-World.png";
 
         $this->email->setTo($_SESSION['datosUsuario'][0]['correo']);
         $this->email->setFrom('worldgamess975@gmail.com', 'WorldGames');
@@ -88,9 +88,10 @@ class Email extends Model
         </head>
         <body>
 
-        <img src="imagenUrl" style="width:80px;" alt="LogoWorldGames">
+        <img src="imagenUrl" style="width:250px;" alt="LogoWorldGames">
         <h2 style="color:black;">Felicidades por tu compra en WorldGames '.$_SESSION['datosUsuario'][0]['usuario'].'</h2>
         <h2 style="color:black;">Orden de compra #'.$idOrden.'</h2>
+        <h2 style="color:black;">Folio de compra #'.$folio.'</h2>
         
             <table class="table-primary table-bordered">
             ';
@@ -122,12 +123,23 @@ class Email extends Model
             $session = session();
             $session->setFlashdata('compraExitosa', 'Se ha realizado la compra correctamente, se enviaron detalles de la compra a su correo');
             return redirect()->to('usuario/listaCarrito');
+        
         }else{
             $session = session();
             $session->setFlashdata('falloEnvioCorreo', 'Ha fallado el envio de correo');
 
             return redirect()->to('usuario/listaCarrito');
         }
+
     }
+
+    // public function sendCorreoRecuperacion(){
+    //     $this->email->setTo($_SESSION['datosUsuario'][0]['correo']);
+    //     $this->email->setFrom('worldgamess975@gmail.com', 'WorldGames');
+    //     $this->email->setSubject('Compra en WorldGames');
+
+        
+ 
+    // }
 
 }

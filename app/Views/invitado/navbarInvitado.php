@@ -39,8 +39,8 @@
                     Mas
                   </a>
                   <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;">
+                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Ofertas</a></li>
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Saldo digital</a></li>
-                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Monedas virtuales</a></li>
                     
                   </ul>
                 </li>              

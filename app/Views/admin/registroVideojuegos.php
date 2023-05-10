@@ -1,34 +1,46 @@
 <head>
-	<style>
-		.nombre{
-			color: black;
-		}
-/* 
-		.material-symbols-outlined {
-		font-variation-settings:
-		'FILL' 0,
-		'wght' 400,
-		'GRAD' 0,
-		'opsz' 48
-		} */
-		.modal-scroll {
-			max-height: 400px;
-			overflow-y: auto;
-		}
-		
-	</style>
+	<!-- Agregar los enlaces de los archivos necesarios -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
-
-
-    
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.11.5/pagination/simple_numbers_no_ellipses.js"></script>
+	    
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />					
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+	<style>
+		.nombre{
+			color: black;
+		}
+		.modal-scroll {
+			max-height: 400px;
+			overflow-y: auto;
+		}
+
+		table.dataTable tbody td {
+			color: white;
+		}
+		.dataTables_filter input[type="search"] {
+			background-color: white;
+		}
+		select {
+		color: white;
+		}
+		.dataTables_paginate .paginate_button {
+			color: white !important;
+		}
+		.dataTables_wrapper .paginate_button {
+		color: white !important;
+		}
+
+
+	</style>
 </head>
 
-<div class="container">
-	<br>
 
 		<?php if(session()->has('mensaje')){ ?>
 							<script>
@@ -40,6 +52,8 @@
 							</script>
 		<?php } ?>										
 
+<div class="container">
+		<h1>Registro de Videojuegos</h1>
 		<!-- Modal de registro de videojuego -->
 		<button type="button" class="btn btn-success" id="btnAbrirModal">Agregar videojuego</button>
 		<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true" >
@@ -170,180 +184,7 @@
 				</div>
 			</div>
 		</div>
-		
-		<!-- Modal de editar de videojuego -->
-		
-		<!-- <button type="button" class="btn btn-warning" id="btnAbrirModalEditar" hidden>Editar</button>
-		<?php if(isset($Videojuego)){?>
 
-		<div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true" >
-			<div class="modal-dialog">
-				<div class="modal-content">
-
-				<div class="modal-header">
-					<h5 class="modal-title" id="miModalLabel" style="color:black;">Editar videojuego</h5>
-					<button type="button"  class="btn-closeEditar" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-
-					<div class="modal-body modal-scroll">
-						<div class="col-md-9 offset-md-2">
-							<form id="myForm" method="POST" action="<?php echo base_url().'/actualizar'?>" enctype="multipart/form-data">
-								<div class="form-group row" hidden>
-									<label for="idVideojuego" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">IdVideojuego</span></label>
-									<div class="col-sm-8">
-										<input type="text" value="<?=$Videojuego['idVideojuego']?>" id="idVideojuego" name="idVideojuego">
-									</div>
-								</div>
-								<div class="form-group row">
-									<label for="nombre" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Nombre</span></label>
-									<div class="col-sm-8">
-										<input type="text" value="<?= isset($Videojuego['nombre']) ? $Videojuego['nombre'] : '' ?>" class="form-control" id="nombre" name="nombre" required>
-									</div>
-								</div>
-								<?php 
-								if(session('validacionNombre1')){
-								?>
-								<div class="alert alert-danger" role="alert">
-									<?php 
-									echo session('validacionNombre1');
-									?>
-								</div>
-								<?php
-								}
-								?>
-								
-								<div class="form-group row">
-									<label for="categoria" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Categoria</span></label>
-									<div class="col-sm-8">
-										<select class="form-control" id="categoria" name="categoria">
-											<?php foreach($categorias as $cat) { ?>
-												<option value="<?= $cat['nombre'] ?>" <?= ($cat['nombre'] == $Videojuego['nombreCategoria']) ? 'selected' : '' ?>><?= $cat['nombre'] ?></option>
-											<?php } ?>
-										</select>
-									</div>
-								</div> 
-								
-								<div class="form-group row">
-									<label for="idProveedor" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Proveedor:</span></label>
-									<div class="col-sm-8">
-										<select class="form-control" id="idProveedor" name="idProveedor">
-											<?php foreach($proveedores as $pro) { ?>
-												<option value="<?= $pro['nombre'] ?>" <?= ($pro['nombre'] == $Videojuego['nombreProveedor']) ? 'selected' : '' ?>><?= $pro['nombre'] ?></option>
-											<?php } ?>
-										</select>
-									</div>
-								</div> 
-								
-								<div class="form-group row">
-									<label for="consola" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Consola:</span></label>
-									<div class="col-sm-8">
-										<select class="form-control" id="consola" name="consola">
-											<?php foreach($consolas as $con) { ?>
-												<option value="<?= $con['nombre'] ?>" <?= ($con['nombre'] == $Videojuego['nombreConsola']) ? 'selected' : '' ?>><?= $con['nombre'] ?></option>
-											<?php } ?>
-										</select>
-									</div>
-								</div>
-								
-								<div class="form-group row">
-									<label for="precio" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Precio</span></label>
-									<div class="col-sm-8">
-										<input type="number" value="<?=$Videojuego['precio']?>" class="form-control" id="precio" name="precio" required>
-									</div>
-								</div> 
-								
-								<div class="form-group row">
-									<label for="cantidadInventario" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Cantidad de inventario</span></label>
-									<div class="col-sm-8">
-										<input type="number" value="<?=$Videojuego['cantidadInventario']?>"  class="form-control" name="cantidadInventario" required>
-									</div>
-								</div>
-							
-								<div class="form-group row">
-									<label for="descripcion"class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Descripción</span></label>
-									<div class="col-sm-8">
-										<textarea class="form-control" id="descripcion" name="descripcion" rows="3" placeholder="<?=$Videojuego['descripcion']?>" maxlength="350"><?=$Videojuego['descripcion']?></textarea>
-									</div>
-								</div>   
-								<?php 
-								if(session('validacionDescripcion1')){
-								?>
-								<div class="alert alert-danger" role="alert">
-									<?php 
-									echo session('validacionDescripcion1');
-									?>
-								</div>
-								<?php
-								}
-								?>  
-								
-								<div class="form-group row">
-									<label for="imagen" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Imagen</span></label>
-									<div class="col-sm-8">
-					
-										<input name="imagen" id="imagen" type="file" class="form-control-file" style="padding-top: 5px;">
-										<span id="nombre-imagen"></span>
-
-
-
-									</div>
-								</div>
-								<div class="row mt-4">
-									<div class="col">
-										<button type="submit" class="btn btn-primary btn-block">
-											Actualizar
-											
-										</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-					
-
-				</div>
-
-			</div>
-		</div>
-
-		 <?php }   ?>										 -->
-
-		
-
-		
-</div>
-
-<head>
-	<!-- Agregar los enlaces de los archivos necesarios -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
-	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.11.5/pagination/simple_numbers_no_ellipses.js"></script>
-	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />					
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-	<style>
-		table.dataTable tbody td {
-			color: white;
-		}
-		.dataTables_filter input[type="search"] {
-			background-color: white;
-		}
-		select {
-		color: white;
-		}
-		.dataTables_paginate .paginate_button {
-			color: white !important;
-		}
-		.dataTables_wrapper .paginate_button {
-		color: white !important;
-		}
-
-
-	</style>
-</head>
-
-
-<div class="container">
 				<div id="contenido de la tabla" class="form-group row">
 					<div class="col-sm-12">
 						<br>
@@ -364,26 +205,20 @@
 								<tbody>
 								<?php foreach ($videojuegos as $v): ?>
 									<tr class="bg-info" >
-										<td><?= $v['idVideojuego'] ?></td>
-										<td><img src="<?= base_url() . $v['imagen'] ?>" class="img-fluid rounded-start" style="border-radius: 5px; width: 400px; height: 200px;" alt="..."></td>
-										<td><?= $v['nombre'] ?></td>
-										<td><?= $v['descripcion'] ?></td>
-										<td><?= sprintf('$%s', $v['precio']) ?></td>
-										<td><?= "{$v['cantidadInventario']} licencias" ?></td>
-										<td><?= $v['consola'] ?></td>
+										<td style="color:black;"><?= $v['idVideojuego'] ?></td>
+										<td style="color:black;"><img src="<?= base_url() . $v['imagen'] ?>" class="img-fluid rounded-start" style="border-radius: 5px; width: 400px; height: 200px;" alt="..."></td>
+										<td style="color:black;"><?= $v['nombre'] ?></td>
+										<td style="color:black;"><?= $v['descripcion'] ?></td>
+										<td style="color:black;"><?= sprintf('$%s', $v['precio']) ?></td>
+										<td style="color:black;"><?= "{$v['cantidadInventario']} licencias" ?></td>
+										<td style="color:black;"><?= $v['consola'] ?></td>
 										<td>
 											
-										<!-- <a  href="<?=base_url('editar/'.$v['idVideojuego']);?>"  class="btn btn-warning" type="button">
-											<span class="material-symbols-outlined" style="display: inline-block; text-align: center;">
-											edit
-											</span>
-										</a> -->
-										<a  href="<?=base_url('editar/'.$v['idVideojuego']);?>"  class="btn btn-warning" type="button"  id="btnAbrirModalEditar">
+										<a  href="<?=base_url('editar/'.$v['idVideojuego']);?>"  class="btn btn-warning" type="button">
 											<span class="material-symbols-outlined" style="display: inline-block; text-align: center;">
 											edit
 											</span>
 										</a>
-
 										<a style="margin-top: 5px;" href="<?=base_url('borrar/'.$v['idVideojuego']);?>" class="btn btn-danger" type="button">
 											<span class="material-symbols-outlined" style="display: inline-block; text-align: center;">
 												delete
@@ -401,8 +236,6 @@
 				</div>
 </div>
 				
-    
-
 <script>
 	$(document).ready(function() {
 		$('#miTabla').DataTable({

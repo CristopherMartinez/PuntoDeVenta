@@ -52,33 +52,6 @@ class AdminController extends BaseController{
         return $vistas;
     }
 
-    //Mostrar vista de ventas
-    public function ventas(){
-
-        // Verificar si la sesión está iniciada
-        if (!$this->session->get('logged_in')) {
-            return redirect()->to('/login');
-        }
-
-        $ventas = new Ordenes();
-       
-        $ventas = array(
-            'ventas' => $ventas->findAll(),
-            'videojuegos'=>$ventas->getProducts1(31) //Test
-        );
-        // $ventas = array(
-        //     'ventas' => $ventas->findAll(),
-        //     'videojuegos' => $ventas->getProducts(session('datosUsuario')[0]['usuario']),
-        //     'total'=>$ventas->getProductsTotal(session('datosUsuario')[0]['usuario'])
-        // );
-
-        $vistas= 
-                view('admin/navbarAdmin').
-                 view('admin/ventas',$ventas);
-         
-        return $vistas;
-    }
-
     // //Login de admin
     // public function mostrarVistaLogin(){
     //     $vistas= 

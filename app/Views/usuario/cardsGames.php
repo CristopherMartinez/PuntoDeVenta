@@ -260,7 +260,6 @@
         
     </style>
 </head>
-
 <body> 
             <div class="col-12 m-auto backgrounFooter" style="padding-top: 15px;">
                 <div class="owl-carousel owl-theme">

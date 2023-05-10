@@ -77,7 +77,7 @@ $routes->add('/admin/inicio','admin\AdminController::index');
 $routes->add('/admin/clientes','admin\AdminController::recuperarclientes');
 $routes->add('/admin/registroVideojuegos','admin\AgregarJuegoController::index');
 $routes->add('/admin/registroAdmin','admin\RegistroAdminController::index');
-$routes->add('/admin/ventas','admin\AdminController::ventas');
+$routes->add('/admin/ventas','admin\VentasController::ventas');
 $routes->add('/admin/login','admin\AdminController::mostrarVistaLogin');
 
 //Guardado de Juegos y Admin
@@ -86,13 +86,24 @@ $routes->add('/guardar_juego','admin\AgregarJuegoController::guardar_juego');
 
 //Administrador Videojuegos
 $routes->get('/borrar/(:num)','admin\AgregarJuegoController::borrar/$1');
+//Borrar Administrador
+$routes->get('/borrarAdministrador/(:num)','admin\RegistroAdminController::borrarAdministrador/$1');
 //Editar Juego
 $routes->get('/editar/(:num)','admin\AgregarJuegoController::editar/$1');
-//Actualizar
+//Editar Administrador
+$routes->get('/editarAdministrador/(:num)','admin\RegistroAdminController::editarAdministrador/$1');
+//Actualizar videojuego
 $routes->post('/actualizar','admin\AgregarJuegoController::actualizar');
+//Actualizar admin
+$routes->post('/actualizarAdmin','admin\RegistroAdminController::actualizarAdmin');
 //Cerrar ModalEditar
 $routes->post('/cerrarModalEditar','admin\AgregarJuegoController::cerrarModalEditar');
-
+//Cerrar ModalDetalle
+$routes->post('/cerrarModalDetalle','admin\VentasController::cerrarModalDetalle');
+//Cerrar ModalEditarADMIN
+$routes->post('/cerrarModalEditarAdmin','admin\RegistroAdminController::cerrarModalEditarAdmin');
+// Detalle venta
+$routes->get('/detalleVenta/(:num)','admin\VentasController::detalleVenta/$1');
 
 //Cerrar sesion
 $routes->get('/cerrarSesion', 'invitado\RegisterController::cerrarSesion');
@@ -115,6 +126,9 @@ $routes->add('/comprarConTarjetaGuardada','usuario\ShoppingCarController::compra
 
 //Membresias (Comprar membresia)
 $routes->add('/comprarMembresia','generico\MembresiasController::comprarMembresia');
+
+//Detalle de venta
+$routes->add('/detalleVenta2','admin\VentasController::detalleVenta2');
 
 
 
