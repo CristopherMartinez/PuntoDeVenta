@@ -76,6 +76,8 @@ $routes->add('/verificar_login','invitado\LoginController::verificar_login');
 $routes->add('/guardar_persona','invitado\RegisterController::guardar_persona');
 $routes->add('/gamesNintendo','generico\GamesNintendoController::index');
 // $routes->add('/invitado/nosotros','invitado\Inicio::pageNosotrosinvitado');
+//Ruta de mensaje chatbot
+$routes->add('/usuario/message','usuario\ChatbotController::vistaMensaje');
 
 
 

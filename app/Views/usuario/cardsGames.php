@@ -1,16 +1,19 @@
 <head>
     <style>
-        /* .blue .material-symbols-outlined {
-            color: blue;
-        } */
+            /* .blue .material-symbols-outlined {
+                color: blue;
+            } */
+
+           
  
-        .blue .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 100,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-        }
+            .blue .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 100,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+            }
+
 
             .image-container {
             position: relative;
@@ -254,11 +257,13 @@
         width: 300px;
         }
         }
-
+        
+        
 
    
         
     </style>
+   
 </head>
 <body> 
             <div class="col-12 m-auto backgrounFooter" style="padding-top: 15px;">
@@ -269,6 +274,9 @@
                         <div class="card border-0 shadow">
                             <!--Guardar deseo-->   
                             <form action="<?php echo base_url().'/agregarDeseo'?>" method="POST" style="color: red; padding-left:85%; padding-bottom :10px; text-decoration:none;">
+                                  <!-- //Checamos que exista en la sesion deseos, si existe checamos dentro del array
+                                //si existe el deseo, si existe pintamos el corazon de azul -->
+                      
                                 <input type="text" id="idVideojuegoDeseo" name="idVideojuegoDeseo" value="<?php echo $juego['idVideojuego'] ?>" hidden>
                                 <input type="text" id="nombreDeseo" name="nombreDeseo" value="<?php echo $juego['nombre'] ?>" hidden>
                                 <input type="text" id="precioDeseo" name="precioDeseo" value="<?php echo $juego['precio'] ?>" hidden>
@@ -277,22 +285,33 @@
                                 <input type="text" id="descripcionDeseo" name="descripcionDeseo" value="<?php echo $juego['descripcion'] ?>" hidden>    
                                 <input type="text" id="imagenDeseo" name="imagenDeseo" value="<?php echo $juego['imagen'] ?>" hidden>    
 
-                                <button type='submit' class='btn btn-link border-0 p-0'>
-                                        <span class='material-symbols-outlined'>favorite</span>        
-                                </button>
-
-
-                                <!-- //Checamos que exista en la sesion deseos, si existe checamos dentro del array
-                                //si existe el deseo, si existe pintamos el corazon de azul -->
                                 <!-- <?php
-                                if(isset($_SESSION['deseos'])){
 
-                                        if (array_search($juego['idVideojuego'], $_SESSION['deseos']) !== false) {
-                                            echo "true";
-                                        }
-                                }
+                                    if(isset($_SESSION['deseos'])){
+
+                                    $estaEnListaDeseos = in_array($juego['idVideojuego'], $_SESSION['deseos']);
+                                    print($estaEnListaDeseos);
+
+                                    // if($estaEnListaDeseos == true){
+                                    //     echo " btn btn-link border-0 p-0 blue";
+                                    // }else{
+                                    //     echo " btn btn-link border-0 p-0 ";
+                                    // }
+                                            
+                                    }
 
                                 ?> -->
+
+                                <button type='submit' class='btn btn-link border-0 p-0 '>
+                                <span class='material-symbols-outlined'>favorite</span>
+                                </button>
+                                <!-- <button type='submit' class='btn btn-link border-0 p-0 blue'>
+                                <span class='material-symbols-outlined'>favorite</span>
+                                </button> -->
+
+
+                              
+                          
 
                             </form>  
    
@@ -327,7 +346,11 @@
                 
                     
                 </div>
+
+                
 </body>
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"

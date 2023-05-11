@@ -18,3 +18,67 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 15:51:43 --> Undefined variable $estaEnListaDeseos
+in APPPATH\Views\usuario\cardsGames.php on line 298.
+ 1 APPPATH\Views\usuario\cardsGames.php(298): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $estaEnListaDeseos', 'APPPATH\\Views\\usuario\\cardsGames.php', 298)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\cardsGames.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/cardsGames', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(78): view('usuario/cardsGames', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 15:58:56 --> Unclosed '{' on line 272
+in APPPATH\Views\usuario\cardsGames.php on line 384.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/cardsGames', [], true)
+ 3 APPPATH\Controllers\invitado\Inicio.php(78): view('usuario/cardsGames', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:38:42 --> Undefined array key "text"
+in APPPATH\Views\usuario\message.php on line 6.
+ 1 APPPATH\Views\usuario\message.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "text"', 'APPPATH\\Views\\usuario\\message.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\message.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/message', [], true)
+ 5 APPPATH\Controllers\usuario\ChatbotController.php(26): view('usuario/message')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ChatbotController->vistaMensaje()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ChatbotController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:40:23 --> Undefined array key "text"
+in APPPATH\Views\usuario\message.php on line 6.
+ 1 APPPATH\Views\usuario\message.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "text"', 'APPPATH\\Views\\usuario\\message.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\message.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/message', [], true)
+ 5 APPPATH\Controllers\usuario\ChatbotController.php(26): view('usuario/message')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ChatbotController->vistaMensaje()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ChatbotController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:41:36 --> Undefined array key "text"
+in APPPATH\Views\usuario\message.php on line 11.
+ 1 APPPATH\Views\usuario\message.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "text"', 'APPPATH\\Views\\usuario\\message.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\message.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/message', [], true)
+ 5 APPPATH\Controllers\usuario\ChatbotController.php(26): view('usuario/message')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ChatbotController->vistaMensaje()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ChatbotController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 16:43:11 --> Undefined array key "text"
+in APPPATH\Views\usuario\message.php on line 10.
+ 1 APPPATH\Views\usuario\message.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "text"', 'APPPATH\\Views\\usuario\\message.php', 10)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\message.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/message', [], true)
+ 5 APPPATH\Controllers\usuario\ChatbotController.php(26): view('usuario/message')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ChatbotController->vistaMensaje()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ChatbotController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
