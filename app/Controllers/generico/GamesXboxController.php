@@ -99,7 +99,7 @@ class GamesXboxController extends BaseController{
 
         $vista= view('genericos/header').
                 view('invitado/navbarInvitado').
-                view('genericos/gamesXbox',$data);
+                view('invitado/gamesXbox',$data);
         
 
         return $vista;

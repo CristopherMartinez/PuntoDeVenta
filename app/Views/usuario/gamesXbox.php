@@ -75,6 +75,30 @@
         </script>
     <?php endif; ?>
 
+     <!--Mensaje para mostrar que se agrego a lista de deseos-->
+     <?php if (session()->has('agregadoDeseos')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session('agregadoDeseos') ?>',
+                showConfirmButton: false,
+                timer: 1800
+            });
+        </script>
+    <?php endif; ?>
+
+    <!--Mensaje para mostrar que ya esta en la lista de Deseos-->
+    <?php if (session()->has('yaEstaEnListaDeseos')): ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: '<?= session('yaEstaEnListaDeseos') ?>',
+                showConfirmButton: false,
+                timer: 1800
+            });
+        </script>
+    <?php endif; ?>
+
 
     <div>
         <div class="container " style="padding-top: 30px; padding-bottom:30px;">
@@ -153,7 +177,23 @@
                     <?php foreach ($videojuegosXbox as $juego) { ?>
                         <div class="col-12" style="margin-top: 10px;">
                             <div class="card mb-3 backgroundGamesPlay" style="max-width: auto; border-radius:5px;">
-                                
+
+                                <form action="<?php echo base_url().'/agregarDeseoXbox'?>" method="POST" style="color: red; padding-left:95%; text-decoration:none;">
+                                    <input type="text" id="idVideojuegoDeseo" name="idVideojuegoDeseo" value="<?php echo $juego['idVideojuego'] ?>" hidden>
+                                    <input type="text" id="nombreDeseo" name="nombreDeseo" value="<?php echo $juego['nombre'] ?>" hidden>
+                                    <input type="text" id="precioDeseo" name="precioDeseo" value="<?php echo $juego['precio'] ?>" hidden>
+                                    <input type="text" id="nombreConsolaDeseo" name="nombreConsolaDeseo" value="<?php echo $juego['nombreConsola'] ?>" hidden>    
+                                    <input type="text" id="imagenDeseo" name="imagenDeseo" value="<?php echo $juego['imagen'] ?>" hidden>    
+                                    <input type="text" id="descripcionDeseo" name="descripcionDeseo" value="<?php echo $juego['descripcion'] ?>" hidden>    
+                                    <input type="text" id="imagenDeseo" name="imagenDeseo" value="<?php echo $juego['imagen'] ?>" hidden>    
+
+                                    <div>
+                                            <button type='submit' class='btn btn-link border-0 p-0'>
+                                                    <span class='material-symbols-outlined'>favorite</span>        
+                                            </button>
+                                    </div> 
+                                </form>
+
                                 <form action="<?php echo base_url().'/agregarAlCarritoXbox'?>" method="POST">
                                     <div class="row g-0">
                                         <div class="col-md-4 align-self-center">
@@ -188,7 +228,7 @@
                             </div>
                         </div>
                     <?php } ?>
-                    <div id="noResults" style="display:none;">No se encontraron resultados de la busqueda.</div>
+                    <div id="noResults" style="display:none; font-size:28px; color:black; font-weight:bold;">No se encontraron resultados de la busqueda.</div>
                 </div>
             </div>
 

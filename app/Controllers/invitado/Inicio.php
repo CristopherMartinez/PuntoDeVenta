@@ -29,9 +29,10 @@ class Inicio extends BaseController{
                  view('invitado/jumbotron.php').  
                  view('invitado/carruselInicio').    
                  view('invitado/cardsInicio.php',$data2).
-                 view('invitado/memberships').
-                 view('usuario/contacto.php').
+                 view('invitado/memberships').                
+                 view('usuario/misionVision'). 
                  view('invitado/image').
+                 view('usuario/contacto.php').
                  view('genericos/footer');
                 //  view('invitado/inicio');      
         return $vistas;
@@ -76,8 +77,7 @@ class Inicio extends BaseController{
                 view('invitado/carruselInicio').  
                 view('usuario/cardsGames',$data2).
                 view('usuario/memberships',$data3).
-                view('usuario/misionVision').
-                
+                view('usuario/misionVision'). 
                 view('invitado/image').
                 view('usuario/contacto').
                 view('genericos/footer').

@@ -19,7 +19,7 @@
                     <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;;" onmousedown="seleccionVideojuegos(event)">
                       <li><a class="dropdown-item" href="gamesplayStation" style="padding-left: 5px;" data-opcion="PlayStation">PlayStation</a></li>
                       <li><a class="dropdown-item" href="gamesXbox" style="padding-left: 5px;" data-opcion="Xbox">Xbox</a></li>
-                      <li><a class="dropdown-item" href="#" style="padding-left: 5px;" data-opcion="Nintendo">Nintendo</a></li>
+                      <li><a class="dropdown-item" href="gamesNintendo" style="padding-left: 5px;" data-opcion="Nintendo">Nintendo</a></li>
                     </ul>
                     <ul>
                   </ul>  

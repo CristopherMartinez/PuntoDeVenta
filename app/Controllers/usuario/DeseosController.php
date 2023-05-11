@@ -95,6 +95,163 @@ class DeseosController extends BaseController{
         }
     }
 
+    //Agregar deseo desde Pagina de juegos de nintendo
+    public function agregarDeseoNintendo(){
+        
+        //Checamos que exista en la sesion un arreglo llamado deseos
+        if (isset($_SESSION['deseos'])) {
+            //Si existe asignamos a myitems de acuerdo a nombre y el idVideojuego
+            $myitems = array_column($_SESSION['deseos'], 'nombreDeseo', 'idVideojuegoDeseo');
+            if (isset($myitems[$_POST['idVideojuegoDeseo']]) && $myitems[$_POST['idVideojuegoDeseo']] == $_POST['nombreDeseo']) {
+                //Asignamos un setFlashData para decir que ya esta en la lista de deseos
+                $session = session();
+                $session->setFlashdata('yaEstaEnListaDeseos', 'Este elemento ya está en la lista de deseos');
+                //Redirigimos a pagina inicio del usuario logueado
+                return redirect()->to('usuario/gamesNintendo');
+
+            } else {
+                //Si aun no existe en el carrito lo insertamos
+                $count = count($_SESSION['deseos']);
+                $_SESSION['deseos'][$count] = array(
+                    'idVideojuegoDeseo' => $_POST['idVideojuegoDeseo'],
+                    'nombreDeseo' => $_POST['nombreDeseo'],
+                    'precioDeseo' => $_POST['precioDeseo'],
+                    'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
+                    'imagen' => $_POST['imagenDeseo'],
+                    'descripcion' => $_POST['descripcionDeseo'],
+                    'cantidadDeseo' => 1,
+                    "imagen"=>$_POST['imagenDeseo']
+                );
+                $session = session();
+                $session->setFlashdata('agregadoDeseos', 'Agregado a lista de Deseos');
+
+                return redirect()->to('usuario/gamesNintendo');
+            }
+        } else {
+            //Si aun no existe en el carrito lo insertamos
+            $_SESSION['deseos'][0] = array(
+                'idVideojuegoDeseo' => $_POST['idVideojuegoDeseo'],
+                'nombreDeseo' => $_POST['nombreDeseo'],
+                'precioDeseo' => $_POST['precioDeseo'],
+                'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
+                'imagen' => $_POST['imagenDeseo'],
+                'descripcion' => $_POST['descripcionDeseo'],
+                'cantidadDeseo' => 1,
+                "imagen"=>$_POST['imagenDeseo']
+            );
+            $session = session();
+            $session->setFlashdata('agregadoDeseos', 'Agregado a lista de Deseos');
+
+            return redirect()->to('usuario/gamesNintendo');
+        }
+    }
+    
+    //Agregar deseo desde Pagina de juegos de Xbox
+    public function agregarDeseoXbox(){
+        
+        //Checamos que exista en la sesion un arreglo llamado deseos
+        if (isset($_SESSION['deseos'])) {
+            //Si existe asignamos a myitems de acuerdo a nombre y el idVideojuego
+            $myitems = array_column($_SESSION['deseos'], 'nombreDeseo', 'idVideojuegoDeseo');
+            if (isset($myitems[$_POST['idVideojuegoDeseo']]) && $myitems[$_POST['idVideojuegoDeseo']] == $_POST['nombreDeseo']) {
+                //Asignamos un setFlashData para decir que ya esta en la lista de deseos
+                $session = session();
+                $session->setFlashdata('yaEstaEnListaDeseos', 'Este elemento ya está en la lista de deseos');
+                //Redirigimos a pagina inicio del usuario logueado
+                return redirect()->to('usuario/gamesXbox');
+
+            } else {
+                //Si aun no existe en el carrito lo insertamos
+                $count = count($_SESSION['deseos']);
+                $_SESSION['deseos'][$count] = array(
+                    'idVideojuegoDeseo' => $_POST['idVideojuegoDeseo'],
+                    'nombreDeseo' => $_POST['nombreDeseo'],
+                    'precioDeseo' => $_POST['precioDeseo'],
+                    'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
+                    'imagen' => $_POST['imagenDeseo'],
+                    'descripcion' => $_POST['descripcionDeseo'],
+                    'cantidadDeseo' => 1,
+                    "imagen"=>$_POST['imagenDeseo']
+                );
+                $session = session();
+                $session->setFlashdata('agregadoDeseos', 'Agregado a lista de Deseos');
+
+                return redirect()->to('usuario/gamesXbox');
+            }
+        } else {
+            //Si aun no existe en el carrito lo insertamos
+            $_SESSION['deseos'][0] = array(
+                'idVideojuegoDeseo' => $_POST['idVideojuegoDeseo'],
+                'nombreDeseo' => $_POST['nombreDeseo'],
+                'precioDeseo' => $_POST['precioDeseo'],
+                'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
+                'imagen' => $_POST['imagenDeseo'],
+                'descripcion' => $_POST['descripcionDeseo'],
+                'cantidadDeseo' => 1,
+                "imagen"=>$_POST['imagenDeseo']
+            );
+            $session = session();
+            $session->setFlashdata('agregadoDeseos', 'Agregado a lista de Deseos');
+
+            return redirect()->to('usuario/gamesXbox');
+        }
+    }
+
+    //Agregar deseo desde Pagina de juegos de PlayStation
+    public function agregarDeseoPlayStation(){
+        
+        //Checamos que exista en la sesion un arreglo llamado deseos
+        if (isset($_SESSION['deseos'])) {
+            //Si existe asignamos a myitems de acuerdo a nombre y el idVideojuego
+            $myitems = array_column($_SESSION['deseos'], 'nombreDeseo', 'idVideojuegoDeseo');
+            if (isset($myitems[$_POST['idVideojuegoDeseo']]) && $myitems[$_POST['idVideojuegoDeseo']] == $_POST['nombreDeseo']) {
+                //Asignamos un setFlashData para decir que ya esta en la lista de deseos
+                $session = session();
+                $session->setFlashdata('yaEstaEnListaDeseos', 'Este elemento ya está en la lista de deseos');
+                //Redirigimos a pagina inicio del usuario logueado
+                return redirect()->to('usuario/gamesPlayStation');
+
+            } else {
+                //Si aun no existe en el carrito lo insertamos
+                $count = count($_SESSION['deseos']);
+                $_SESSION['deseos'][$count] = array(
+                    'idVideojuegoDeseo' => $_POST['idVideojuegoDeseo'],
+                    'nombreDeseo' => $_POST['nombreDeseo'],
+                    'precioDeseo' => $_POST['precioDeseo'],
+                    'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
+                    'imagen' => $_POST['imagenDeseo'],
+                    'descripcion' => $_POST['descripcionDeseo'],
+                    'cantidadDeseo' => 1,
+                    "imagen"=>$_POST['imagenDeseo']
+                );
+                $session = session();
+                $session->setFlashdata('agregadoDeseos', 'Agregado a lista de Deseos');
+
+                return redirect()->to('usuario/gamesPlayStation');
+            }
+        } else {
+            //Si aun no existe en el carrito lo insertamos
+            $_SESSION['deseos'][0] = array(
+                'idVideojuegoDeseo' => $_POST['idVideojuegoDeseo'],
+                'nombreDeseo' => $_POST['nombreDeseo'],
+                'precioDeseo' => $_POST['precioDeseo'],
+                'nombreConsolaDeseo' => $_POST['nombreConsolaDeseo'],
+                'imagen' => $_POST['imagenDeseo'],
+                'descripcion' => $_POST['descripcionDeseo'],
+                'cantidadDeseo' => 1,
+                "imagen"=>$_POST['imagenDeseo']
+            );
+            $session = session();
+            $session->setFlashdata('agregadoDeseos', 'Agregado a lista de Deseos');
+
+            return redirect()->to('usuario/gamesPlayStation');
+        }
+    }
+
+    
+
+    
+
     public function eliminarDeseos(){
         session_start();
 

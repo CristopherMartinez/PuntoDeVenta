@@ -1,0 +1,20 @@
+CRITICAL - 2023-05-11 06:23:14 --> Undefined variable $listaVideojuegos
+in APPPATH\Views\genericos\gamesplayStation.php on line 95.
+ 1 APPPATH\Views\genericos\gamesplayStation.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listaVideojuegos', 'APPPATH\\Views\\genericos\\gamesplayStation.php', 95)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\genericos\\gamesplayStation.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/gamesplayStation', [], true)
+ 5 APPPATH\Controllers\generico\GamesplayStation.php(26): view('genericos/gamesplayStation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 06:29:04 --> Invalid file: "invitado/gamesplayStation.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/gamesplayStation.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/gamesplayStation', [], true)
+ 3 APPPATH\Controllers\generico\GamesplayStation.php(106): view('invitado/gamesplayStation', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesplayStation->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesplayStation))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

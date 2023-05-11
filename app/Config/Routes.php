@@ -46,6 +46,12 @@ $routes->add('/usuario/listaDeseos','usuario\DeseosController::listaDeseos');
 $routes->add('/usuario/videogamesUser','usuario\VideogamesUserController::getvideogamesUser');
 //Agregar Deseo
 $routes->add('/agregarDeseo','usuario\DeseosController::agregarDeseo');
+//Agregar Deseo desde pagina de juegos nintendo
+$routes->add('/agregarDeseoNintendo','usuario\DeseosController::agregarDeseoNintendo');
+//Agregar Deseo desde pagina de juegos xbox
+$routes->add('/agregarDeseoXbox','usuario\DeseosController::agregarDeseoXbox');
+//Agregar Deseo desde pagina de juegos PlayStation
+$routes->add('/agregarDeseoPlayStation','usuario\DeseosController::agregarDeseoPlayStation');
 //Eliminar Deseos
 $routes->add('/eliminarDeseos','usuario\DeseosController::eliminarDeseos');
 //Agregar al carrito
@@ -68,6 +74,7 @@ $routes->add('/agregarAlCarritoNintendo','usuario\ShoppingCarController::agregar
 $routes->add('/SingUp','invitado\RegisterController::index');
 $routes->add('/verificar_login','invitado\LoginController::verificar_login');
 $routes->add('/guardar_persona','invitado\RegisterController::guardar_persona');
+$routes->add('/gamesNintendo','generico\GamesNintendoController::index');
 // $routes->add('/invitado/nosotros','invitado\Inicio::pageNosotrosinvitado');
 
 

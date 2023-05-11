@@ -54,7 +54,7 @@ class GamesNintendoController extends BaseController{
 
         $vista= view('genericos/header').
                 view('invitado/navbarInvitado').
-                view('genericos/gamesNintendo',$data);
+                view('invitado/gamesNintendo',$data);
         
 
         return $vista;

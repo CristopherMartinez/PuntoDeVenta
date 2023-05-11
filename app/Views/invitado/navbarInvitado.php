@@ -24,7 +24,7 @@
                     <!-- <li><hr class="dropdown-divider"></li> -->
                     <!-- <li><a class="dropdown-item" href="#" style="padding-left: 5px;">PC</a></li> -->
                     <!-- <li><hr class="dropdown-divider"></li> -->
-                    <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Nintendo</a></li>
+                    <li><a class="dropdown-item" href="gamesNintendo" style="padding-left: 5px;">Nintendo</a></li>
                     
                   </ul>
                 </li>

@@ -47,18 +47,25 @@
                     <?php foreach ($videojuegos as $juego) { ?>
                     <div class="item mb-4">
                         <div class="card border-0 shadow">
-                        <a type="button" class="btnAddDeseo" prod="<?php echo $juego['idVideojuego'] ?>">
-                        <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
-                        favorite
-                        </span>
-                        </a>
-                            <!-- <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px;"> -->
+                            <!-- <a type="button" class="btnAddDeseo" prod="<?php echo $juego['idVideojuego'] ?>">
+                            <span class="material-symbols-outlined" style="color: red; padding-left:85%; padding-bottom :10px;">
+                            favorite
+                            </span>
+                            </a> -->
+                            <!-- <button type='submit' class='btn btn-link border-0 p-0'>
+                                        <span class='material-symbols-outlined'>favorite</span>        
+                            </button> -->
+                            <div style="color: red; padding-left:85%; padding-bottom :10px; text-decoration:none;">
+                                <button type='submit' class='btn btn-link border-0 p-0' onclick="mostrarMensaje()">
+                                        <span class='material-symbols-outlined'>favorite</span>        
+                                </button>
+                            </div>  
+
                             <div class="image-container">        
                                 <img class="img1" src="<?php echo base_url()?>/images/<?php echo $juego['imagen']?>" alt="" class="card-img-top" style="padding-top:5px; height:200px;">
                                 <div class="image-description"><?php echo $juego['descripcion'] ?></div>
                             </div>    
                             <div class="card-body">
-                                
                                     <div class="card-title text-center">
                                         <p style="font-size: 20px; color:#2e2a2a;"><?php echo $juego['nombre'] ?></p>
                                         <!--Id del videojuego oculto(no borrar)-->
