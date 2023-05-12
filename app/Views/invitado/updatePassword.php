@@ -8,13 +8,29 @@
 </head>
 
 
+
 <body class="imgregister letraGeneral" style="color:whitesmoke">
+
+<?php if (session()->getFlashdata('mensaje')) : ?>
+    <script>
+        // Mostrar SweetAlert
+        Swal.fire({
+            icon: 'success',
+            title: '<?= session()->getFlashdata('mensaje') ?>',
+            showConfirmButton: true,
+            // timer: 1500
+        });
+    </script>
+<?php endif; ?>
+
+
+
         <div class="container">
     
 
             <div class="row justify-content-center mt-5">
                 <div class="col-md-6">
-                <h2 class="text-center mb-4" style="color:whitesmoke; font-weight:Bolder;">Recuperación de cuenta</h2>
+                <h2 class="text-center mb-4" style="color:whitesmoke; font-weight:Bolder;">Actualizar de contraseña</h2>
                 <form method="POST" action="<?php echo base_url().'/enviarCorreoRecuperacion'?>" onsubmit="return validarRecaptcha()">
                    
                     <div class="mb-3">
@@ -42,53 +58,6 @@
       
     </body>
 
-
-    <!-- <body class="imgregister letraGeneral" style="color:whitesmoke">
-        <div class="container">
-    
-
-            <div class="row justify-content-center mt-5">
-                <div class="col-md-6">
-                <h2 class="text-center mb-4" style="color:whitesmoke; font-weight:Bolder;">Actualizar Password</h2>
-                <form method="POST" action="<?php echo base_url().'/updatePassword'?>" onsubmit="return validarRecaptcha()">
-                   
-                    <div class="mb-3">
-                        <label for="contrasenia1" class="form-label" style="color:whitesmoke; font-weight:bold;">Nueva contraseña</label>
-                        <div class="input-group">
-                            <input type="password" class="form-control" id="contrasenia1" name="contrasenia1" required  autocomplete="current-password">
-                            <button class="btn btn-outline-secondary" type="button" id="ver-contrasenia1" onclick="verContraseniaLogin1()"><span class="material-symbols-outlined">visibility_off</span></button>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="contrasenia" class="form-label" style="color:whitesmoke; font-weight:bold;">Repite la contraseña</label>
-                        <div class="input-group">
-                            <input type="password" class="form-control" id="contrasenia" name="contrasenia" required  autocomplete="current-password">
-                            <button class="btn btn-outline-secondary" type="button" id="ver-contrasenia" onclick="verContraseniaLogin()"><span class="material-symbols-outlined">visibility_off</span></button>
-                        </div>
-                    </div>
-                    
-
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-center form-group">
-                            <div class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="d-grid">
-                    <button type="submit" class="tn btn-danger" style="border-radius: 10px;">Actualizar password</button>
-                    </div>
-
-
-                </form>
-                </div>
-            </div>
-        </div>
-
-  
-      
-    </body> -->
-
 <script>
      
 
@@ -107,19 +76,7 @@
 
     function guardarEnLocalStorage(){
         var correo = document.getElementById("correo").value;
-        localStorage.setItem("correo", correo);
-
-       
-    }
-
-    function showMessage(){
-        Swal.fire({
-                icon: 'success',
-                title: 'Actualización de contraseña',
-                text:'Se ha enviado a tu correo un link para actualizar contraseña',
-                showConfirmButton: false,
-                timer: 2000
-            });
+        localStorage.setItem("correo", correo); 
     }
 
 

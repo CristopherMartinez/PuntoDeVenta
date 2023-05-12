@@ -8,6 +8,34 @@
 </head>
 
     <body class="imgregister letraGeneral" style="color:whitesmoke">
+
+    
+    <?php if (session()->getFlashdata('actualizoCorrectamente')) : ?>
+        <script>
+            // Mostrar SweetAlert
+            Swal.fire({
+                icon: 'success',
+                title: '<?= session()->getFlashdata('actualizoCorrectamente') ?>',
+                showConfirmButton: true,
+                // timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+
+    <?php if (session()->getFlashdata('noCoinciden')) : ?>
+        <script>
+            // Mostrar SweetAlert
+            Swal.fire({
+                icon: 'error',
+                title: '<?= session()->getFlashdata('noCoinciden') ?>',
+                showConfirmButton: true,
+                // timer: 1500
+            });
+        </script>
+    <?php endif; ?>
+    
+
+
         <div class="container">
     
 
@@ -41,7 +69,7 @@
                         </div>
                     </div>
                     <div class="d-grid">
-                    <button type="submit" class="tn btn-danger" style="border-radius: 10px;" onclick="borrarLocalStorage()">Actualizar password</button>
+                    <button type="submit" class="tn btn-danger" style="border-radius: 10px;" >Actualizar password</button>
                     </div>
 
 
@@ -80,18 +108,9 @@
     function borrarLocalStorage(){
         localStorage.removeItem("correo");
 
-        showMessage();
     }
 
-    function showMessage(){
-        Swal.fire({
-                icon: 'success',
-                title: 'Actualización de contraseña',
-                text:'Se ha actualizado con exito, inicie sesión nuevamente',
-                showConfirmButton: false,
-                 timer: 2000
-            });
-    }
+
 
 
 </script>

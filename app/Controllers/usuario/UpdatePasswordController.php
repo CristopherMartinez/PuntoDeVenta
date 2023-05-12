@@ -44,7 +44,10 @@ class UpdatePasswordController extends BaseController{
     
 
         
-        return redirect()->to('updatePassword');
+        // return redirect()->to('updatePassword');
+        // Si los passwords coinciden
+        return redirect()->to('updatePassword')->with('mensaje', 'Se envio un correo con un link para actualizar la contraseña');
+
 
     }
 
@@ -71,18 +74,6 @@ class UpdatePasswordController extends BaseController{
                 //Actualizar datos
                 $usuario->update($id, $data);
 
-                echo"
-                <script>
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Actualización de contraseña',
-                    text:'Se ha enviado a tu correo un link para actualizar contraseña',
-                    showConfirmButton: false,
-                    timer: 2000
-                });
-                </script>
-                ";
-
       
 
             } catch (\Exception $e) {
@@ -92,11 +83,12 @@ class UpdatePasswordController extends BaseController{
 
                 
             }
+            
 
-             // $session = session();
-            // $session->setFlashdata('passwordDif', 'No coinciden los dos passwords, verificar');
-          
-            return redirect()->to('updatePassword2');
+            return redirect()->to('updatePassword2')->with('actualizoCorrectamente', 'Se actualizo correctamente, inicia sesion de nuevo');
+
+        }else{
+            return redirect()->to('updatePassword2')->with('noCoinciden', 'Las contraseñas no coinciden');
 
         }
 
