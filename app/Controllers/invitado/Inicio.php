@@ -32,7 +32,8 @@ class Inicio extends BaseController{
                  view('invitado/memberships').                
                  view('usuario/misionVision'). 
                  view('invitado/image').
-                 view('usuario/contacto.php').
+                 view('invitado/contacto').
+                //  view('usuario/contacto.php').
                  view('genericos/footer');
                 //  view('invitado/inicio');      
         return $vistas;

@@ -5,7 +5,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  
+
+
+  <!-- <script src=" <?php echo base_url()?>/js/scripts.js"></script>   -->
 
 
 <style>
@@ -227,7 +229,7 @@
       </span> contacto@worldgames.com.mx</p>
     </div>
     <div class="col-sm-7 slideanim">
-      <form name="registro" method="POST" action="<?php echo base_url().'/guardar_sugerencia2'?>" onsubmit="return validarRecaptcha()">
+      <form name="registro" method="POST" action="<?php echo base_url().'/guardar_sugerencia'?>" onsubmit="return validarRecaptcha()" >
         
         <div class="row" style="padding-bottom: 10px;">
           <div class="col-sm-6 form-group" style="padding-bottom: 10px;">
@@ -246,7 +248,7 @@
                             <div class="help-block with-errors"></div>
                         </div>
         </div>
-        
+
         <div class="row">
           <div class="col-sm-12 form-group">
             <button class="btn btn-outline-primary" type="submit" style="font-size:medium; ">Enviar</button>
@@ -298,7 +300,7 @@
 
                   <div class="modal-footer">
                     <button type="button" class="btn btn-danger" class="close" data-dismiss="modal" aria-label="Close">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="send-btn">Enviar</button>
+                    <button type="button" class="btn btn-primary" id="send-btn" onclick="sugerenciaEnviada()">Enviar</button>
                     
                   </div>
             
@@ -317,7 +319,7 @@
                 $("#data").val('');             
                 // iniciar el código ajax
                 $.ajax({
-                    url: 'message',
+                    url: 'invitado/message',
                     type: 'POST',
                     data: 'text=' + $value,
                     success: function (result) {
@@ -348,4 +350,5 @@
     });
  
 </script>
-</html>
+
+

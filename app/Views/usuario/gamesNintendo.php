@@ -47,7 +47,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/styles/styles.cs">
-        <script src=" <?php echo base_url()?>/js/scripts.js"></script>
+        <!-- <script src=" <?php echo base_url()?>/js/scripts.js"></script> -->
 </head>
 
 <body class="backgrounFooter">
@@ -241,6 +241,8 @@
         }
     });
     
+</script>
+<script>
     //NINTENDO SWITCH-----------------------------------
     function searchNintendoSwitch(categoria,consola) {
         const searchInput = document.getElementById('searchInput');
@@ -269,6 +271,8 @@
         } else {
             noResults.style.display = 'none';
         }
+
+    
     }
 </script>
 

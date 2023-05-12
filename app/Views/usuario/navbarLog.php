@@ -78,7 +78,7 @@ session_start();
                   <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="padding-left: 5px;">Ofertas</a>
                   </li> -->
                   <li class="nav-item">
-                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="padding-left: 5px;">Lanzamientos</a>
+                  <a class="nav-link" href="lanzamientos" tabindex="-1" aria-disabled="true" style="padding-left: 5px;">Lanzamientos</a>
                   </li>  
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="padding-left: 5px;">

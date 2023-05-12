@@ -33,10 +33,10 @@
                     </div>
 
                     <div class="mb-3">
-                    <div class="d-flex justify-content-center form-group">
-                        <div class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                        <div class="help-block with-errors"></div>
-                    </div>
+                        <div class="d-flex justify-content-center form-group">
+                            <div class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                            <div class="help-block with-errors"></div>
+                        </div>
                     </div>
                     <div class="d-grid">
                     <button type="submit" class="tn btn-danger" style="border-radius: 10px;">Iniciar sesión</button>

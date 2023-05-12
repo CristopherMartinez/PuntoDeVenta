@@ -71,7 +71,7 @@
 							<div class="form-group row">
 								<label for="nombre" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Nombre</span></label>
 								<div class="col-sm-8">
-									<input type="text" value="<?=old('nombre')?>" class="form-control" id="nombre" name="nombre" required>
+									<input type="text" value="<?=old('nombre')?>" class="form-control" id="nombre" name="nombre" maxlength="15" required>
 								</div>
 							</div> 
 							<!-- <?php 

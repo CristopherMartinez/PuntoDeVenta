@@ -29,10 +29,16 @@ $routes->set404Override();
 
 //Rutas genericas
 $routes->add('/gamesplayStation','generico\GamesplayStation::index');
+
+//Vista de nuevos Lanzamientos en usuario sin loguear
+$routes->add('/lanzamientos','usuario\LanzamientosController::showLanzamientos');
+
+
 $routes->add('/gamesXbox','generico\GamesXboxController::index');
 $routes->add('inicio','invitado\Inicio::index');
 $routes->add('/login','invitado\LoginController::index');
 $routes->add('/guardar_sugerencia','generico\SugerenciasController::guardar_sugerencia');
+$routes->add('/guardar_sugerencia2','generico\SugerenciasController::guardar_sugerencia2');
 
 //Rutas de usuario Logueado
 $routes->add('/usuario/inicio','invitado\Inicio::indexLog');
@@ -40,9 +46,15 @@ $routes->add('/usuario/gamesXbox','generico\GamesXboxController::indexGameXboxLo
 $routes->add('/usuario/ShoppingCar','usuario\ShoppingCarController::index'); 
 $routes->add('/usuario/gamesPlayStation','generico\GamesplayStation::indexLog');
 $routes->add('/usuario/gamesNintendo','generico\GamesNintendoController::indexLog');
+$routes->add('/usuario/lanzamientos','usuario\LanzamientosController::showLanzamientos2');
+
 
 $routes->add('/usuario/listaCarrito','usuario\ShoppingCarController::listaCarrito');
+//Mostrar vista de deseos
 $routes->add('/usuario/listaDeseos','usuario\DeseosController::listaDeseos');
+
+// $routes->add('/invitado/lanzamientos','usuario\LanzamientosController::showLanzamientos');
+
 $routes->add('/usuario/videogamesUser','usuario\VideogamesUserController::getvideogamesUser');
 //Agregar Deseo
 $routes->add('/agregarDeseo','usuario\DeseosController::agregarDeseo');
@@ -78,7 +90,7 @@ $routes->add('/gamesNintendo','generico\GamesNintendoController::index');
 // $routes->add('/invitado/nosotros','invitado\Inicio::pageNosotrosinvitado');
 //Ruta de mensaje chatbot
 $routes->add('/usuario/message','usuario\ChatbotController::vistaMensaje');
-
+$routes->add('/invitado/message','usuario\ChatbotController::vistaMensaje2');
 
 
 //Rutas de administrador

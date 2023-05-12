@@ -133,6 +133,10 @@ class Email extends Model
 
     }
 
+    public function sendCorreoRecordatorio(){
+        
+    }
+
     // public function sendCorreoRecuperacion(){
     //     $this->email->setTo($_SESSION['datosUsuario'][0]['correo']);
     //     $this->email->setFrom('worldgamess975@gmail.com', 'WorldGames');

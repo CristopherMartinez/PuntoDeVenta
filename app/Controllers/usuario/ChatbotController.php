@@ -18,12 +18,22 @@ class ChatbotController extends BaseController{
 
     }
     
-
+    //Desde contacto de usuario logueado
     public function vistaMensaje(){
 
 
         // Cargar la vista de la lista de mensaje
         $vista = view('usuario/message');
+
+        return $vista;
+
+    }
+    //Desde contacto de usuario no logueado
+    public function vistaMensaje2(){
+
+
+        // Cargar la vista de la lista de mensaje
+        $vista = view('invitado/message');
 
         return $vista;
 

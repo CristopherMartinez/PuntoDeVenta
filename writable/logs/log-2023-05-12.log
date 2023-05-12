@@ -1,0 +1,22 @@
+CRITICAL - 2023-05-12 01:20:27 --> Undefined array key "precioDeseo"
+in APPPATH\Views\invitado\lanzamientos.php on line 71.
+ 1 APPPATH\Views\invitado\lanzamientos.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precioDeseo"', 'APPPATH\\Views\\invitado\\lanzamientos.php', 71)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\lanzamientos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/lanzamientos', [], true)
+ 5 APPPATH\Controllers\usuario\LanzamientosController.php(27): view('invitado/lanzamientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\LanzamientosController->showLanzamientos()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\LanzamientosController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 01:31:23 --> Undefined array key "nombreConsola"
+in APPPATH\Views\invitado\lanzamientos.php on line 69.
+ 1 APPPATH\Views\invitado\lanzamientos.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreConsola"', 'APPPATH\\Views\\invitado\\lanzamientos.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\lanzamientos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/lanzamientos', [], true)
+ 5 APPPATH\Controllers\usuario\LanzamientosController.php(27): view('invitado/lanzamientos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\LanzamientosController->showLanzamientos()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\LanzamientosController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

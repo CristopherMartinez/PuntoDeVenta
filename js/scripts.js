@@ -153,6 +153,17 @@ function searchXboxS(categoria,consola) {
                 return true;
             }
             }
+
+        function sugerenciaEnviada(){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Comentarios',
+                    text: 'Comentarios enviados',
+                    showConfirmButton: false,
+                    timer: 1800
+                });
+        
+            }
         
 //--------------------------------------------------------------------------
 
@@ -172,80 +183,5 @@ function searchXboxS(categoria,consola) {
 //----------------------------------------------------------------------------
 
 
-// //Lista de deseos-----------------------------------------------------------
-// //Obtenemos todos los elementos del html con la clase .btnAddDeseo 
-// const btnAddDeseo = document.querySelectorAll('.btnAddDeseo');
-// //Cantidad de deseos
-// const btnDeseo = document.querySelector('#btnCantidadDeseo');
-// //Lista vacia de Deseos
-// let listaDeseo;
+      
 
-// document.addEventListener('DOMContentLoaded',function(){
-//     if(localStorage.getItem('listaDeseo') != null){
-//         listaDeseo = JSON.parse(localStorage.getItem('listaDeseo'));
-//     }    
-//     cantidadDeseo();
-//     for (let i = 0; i < btnAddDeseo.length; i++) {
-//               //Agregamos por cada vuelta un evento click y obtenemos el id del producto 
-//             //Pasamos el id del producto a la funcion agregarDeseo
-//             btnAddDeseo[i].addEventListener('click',function(){
-//             let idProducto = btnAddDeseo[i].getAttribute('prod');
-//             agregarDeseo(idProducto);
-//         })
-        
-//     }
-// })
-
-//Funcion en que pasamos como parametro el id del producto que ya hemos recuperado
-// function agregarDeseo(idProducto){
-
-//     if(localStorage.getItem('listaDeseo') == null){
-//         listaDeseo = [];
-//     }else{
-//         let listaExiste = JSON.parse(localStorage.getItem('listaDeseo'));
-//         for (let i = 0; i < listaExiste.length; i++) {
-//             // const element = array[index];
-//             if(listaExiste[i]['idProducto'] == idProducto){
-//                 //Mostramos el mensaje de que el producto ya ha favoritos
-//                 Swal.fire({
-//                     position: 'top-end',
-//                     icon: 'warning',
-//                     title: 'Producto ya agregado a favoritos',
-//                     showConfirmButton: false,
-//                     timer: 1500
-//                   })
-//                   return;
-//             }
-//         }
-//         listaDeseo.concat(localStorage.getItem('listaDeseo'));
-//     }
-
-//     listaDeseo.push({
-//         "idProducto" : idProducto,
-//         "cantidad" : 1
-//     });
-//     //Agregamos a localStorage
-//     localStorage.setItem('listaDeseo',JSON.stringify(listaDeseo));
-//     //Mostramos alerta
-//     Swal.fire({
-//         position: 'top-end',
-//         icon: 'success',
-//         title: 'Producto agregado a favoritos',
-//         showConfirmButton: false,
-//         timer: 1500
-//       })
-//     cantidadDeseo();
-// }
-
-// function cantidadDeseo(){
-//     //Recuperamos
-//     let listas = JSON.parse(localStorage.getItem('listaDeseo'));
-//     //Si no hay deseos seguir mostrando 0 en cantidad
-//     if(listas != null){
-//         btnDeseo.textContent = listas.length;
-//     }else{
-//         btnDeseo.textContent = 0;
-//     }
-    
-    
-// }

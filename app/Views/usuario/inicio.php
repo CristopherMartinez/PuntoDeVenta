@@ -107,7 +107,22 @@
             </script>
     <?php endif; ?>
 
+     <!--Mensaje de sugerencias-->
+    <?php if (session()->has('sugerenciaEnviada')): ?>
+            <script>
+                Swal.fire({
+                    icon: 'success',
+                    title: '<?= session('sugerenciaEnviada') ?>',
+                    showConfirmButton: false,
+                    timer: 1800
+                });
+            </script>
+    <?php endif; ?>
 
+
+   
+
+    
 
 
 
