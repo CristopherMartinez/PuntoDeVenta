@@ -134,16 +134,50 @@ class Email extends Model
     }
 
     public function sendCorreoRecordatorio(){
-        
+
     }
 
-    // public function sendCorreoRecuperacion(){
-    //     $this->email->setTo($_SESSION['datosUsuario'][0]['correo']);
-    //     $this->email->setFrom('worldgamess975@gmail.com', 'WorldGames');
-    //     $this->email->setSubject('Compra en WorldGames');
 
-        
+    public function sendCorreoActualizacion($correo){
+        $this->email->setTo($correo);
+        $this->email->setFrom('worldgamess975@gmail.com', 'WorldGames');
+        $this->email->setSubject('Recuperacion de cuenta');
+
+        $body = '
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">  
+        </head>
+        <body>
+            <h2>Actualiza tu contraseña</h2>
+            <div>Ingresa al siguiente link:</div>
+           
+            <a href="http://localhost/Codeigniter4/index.php/updatePassword2" class="btn btn-link">Actualizar contraseña</a>
+
+        </body>
+        </html>';
+
+
+        $this->email->setMessage($body);
+
+        // //Enviamos el correo
+        // $this->email->send();
+
+        //Si se envia el correo exitosamente asignamos un flashData de registro exitoso, si no se envia asignamos fallo el envio
+        if ($this->email->send()) {          
+            $session = session();
+            $session->setFlashdata('envioExitoso', 'Se envio correctamente');
+            return redirect()->to('updatePassword');
+
+        }else{
+            $session = session();
+            $session->setFlashdata('falloEnvioCorreo', 'Ha fallado el envio de correo');
+
+            return redirect()->to('updatePassword');
+        }
  
-    // }
+    }
+
 
 }

@@ -48,14 +48,30 @@ $routes->add('/usuario/gamesPlayStation','generico\GamesplayStation::indexLog');
 $routes->add('/usuario/gamesNintendo','generico\GamesNintendoController::indexLog');
 $routes->add('/usuario/lanzamientos','usuario\LanzamientosController::showLanzamientos2');
 
+//Actualizar password
+$routes->add('/updatePassword','usuario\UpdatePasswordController::showUpdatePassword');
+
+$routes->add('/updatePassword2','usuario\UpdatePasswordController::showUpdatePassword2');
+
+$routes->add('updatePassword','usuario\UpdatePasswordController::updatePassword');
+
+$routes->add('updatePasswordTest','usuario\UpdatePasswordController::updatePasswordTest');
+
+$routes->add('enviarCorreoRecuperacion','usuario\UpdatePasswordController::enviarCorreoRecuperacion');
+
+
 
 $routes->add('/usuario/listaCarrito','usuario\ShoppingCarController::listaCarrito');
 //Mostrar vista de deseos
 $routes->add('/usuario/listaDeseos','usuario\DeseosController::listaDeseos');
 
-// $routes->add('/invitado/lanzamientos','usuario\LanzamientosController::showLanzamientos');
-
 $routes->add('/usuario/videogamesUser','usuario\VideogamesUserController::getvideogamesUser');
+//Actualizar password
+$routes->add('/usuario/updatePassword','usuario\UpdatePasswordController::updatePassword');
+
+
+
+
 //Agregar Deseo
 $routes->add('/agregarDeseo','usuario\DeseosController::agregarDeseo');
 //Agregar Deseo desde pagina de juegos nintendo

@@ -140,6 +140,8 @@ function searchXboxS(categoria,consola) {
             }
         }
 
+       
+
         function validarRecaptcha() {
             var response = grecaptcha.getResponse();
             if (response.length == 0) {

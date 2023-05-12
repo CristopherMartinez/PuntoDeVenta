@@ -28,7 +28,7 @@
                     </div>
                     <div class="form-check d-flex justify-content-center mb-3">
                     <label class="form-check-label" for="form2Example3g" style="color:whitesmoke; font-weight:bold;">
-                        ¿Olvidaste tu contraseña? <a href="#!" class="text-body"><u style="color:blue; text-decoration:none;">Restablecer contraseña</u></a> 
+                        ¿Olvidaste tu contraseña? <a href="updatePassword" class="text-body"><u style="color:blue; text-decoration:none;">Restablecer contraseña</u></a> 
                     </label>
                     </div>
 

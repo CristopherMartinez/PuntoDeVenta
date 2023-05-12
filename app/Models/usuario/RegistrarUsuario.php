@@ -84,6 +84,30 @@ class RegistrarUsuario extends Model
         return $query->getRowArray() ?: false;
         }
 
+
+        public function traerId($correo) {
+                $query = $this->db->query("SELECT usuarios.idUsuario 
+                                           FROM usuarios 
+                                           WHERE usuarios.correo = ?", array($correo));
+                $row = $query->getRow();
+                return $row->idUsuario;
+        }
+
+        public function actualizarPassword($correo, $nuevoPassword) {
+                $query = $this->db->query("UPDATE usuarios SET contrasenia = ? WHERE correo = ?", array($nuevoPassword, $correo));
+                return $query->getResultArray();
+        }
+
+        public function actualizarNombre($correo, $nombre) {
+                $query = $this->db->query("UPDATE usuarios SET nombre = ? WHERE correo = ?", array($nombre, $correo));
+                return $query->getResultArray();
+            }
+            
+
+            
+            
+        
+
             
             
       

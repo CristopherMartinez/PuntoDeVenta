@@ -20,3 +20,52 @@ in APPPATH\Views\invitado\lanzamientos.php on line 69.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\LanzamientosController))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 05:25:05 --> Undefined array key "password1"
+in APPPATH\Controllers\usuario\UpdatePasswordController.php on line 42.
+ 1 APPPATH\Controllers\usuario\UpdatePasswordController.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password1"', 'APPPATH\\Controllers\\usuario\\UpdatePasswordController.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\UpdatePasswordController->updatePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\UpdatePasswordController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 05:27:38 --> Undefined array key "password2"
+in APPPATH\Controllers\usuario\UpdatePasswordController.php on line 43.
+ 1 APPPATH\Controllers\usuario\UpdatePasswordController.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "password2"', 'APPPATH\\Controllers\\usuario\\UpdatePasswordController.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\UpdatePasswordController->updatePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\UpdatePasswordController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 05:40:19 --> Invalid file: "invitado/updatePassword.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('invitado/updatePassword.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/updatePassword', [], true)
+ 3 APPPATH\Controllers\usuario\UpdatePasswordController.php(35): view('invitado/updatePassword')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\UpdatePasswordController->showUpdatePassword()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\UpdatePasswordController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 05:44:11 --> Undefined array key "contrasenia"
+in APPPATH\Controllers\usuario\UpdatePasswordController.php on line 42.
+ 1 APPPATH\Controllers\usuario\UpdatePasswordController.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasenia"', 'APPPATH\\Controllers\\usuario\\UpdatePasswordController.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\UpdatePasswordController->updatePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\UpdatePasswordController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 05:44:44 --> Undefined array key "contrasenia"
+in APPPATH\Controllers\usuario\UpdatePasswordController.php on line 42.
+ 1 APPPATH\Controllers\usuario\UpdatePasswordController.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasenia"', 'APPPATH\\Controllers\\usuario\\UpdatePasswordController.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\UpdatePasswordController->updatePassword()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\UpdatePasswordController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 06:13:45 --> Too few arguments to function App\Controllers\usuario\UpdatePasswordController::showUpdatePassword2(), 0 passed in C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\usuario\UpdatePasswordController.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\UpdatePasswordController->showUpdatePassword2()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\UpdatePasswordController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 06:14:37 --> Too few arguments to function App\Controllers\usuario\UpdatePasswordController::showUpdatePassword2(), 0 passed in C:\xampp\htdocs\Codeigniter4\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\usuario\UpdatePasswordController.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\UpdatePasswordController->showUpdatePassword2()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\UpdatePasswordController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
