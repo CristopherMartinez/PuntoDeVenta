@@ -13,6 +13,11 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 	<style>
+
+		.is-invalid {
+			border-color: #dc3545;
+			background-color: #f8d7da;
+		}
 		.nombre{
 			color: black;
 		}
@@ -41,16 +46,36 @@
 	</style>
 </head>
 
+		<?php if(session()->has('validacionCorrecta')){ ?>
+							<script>
+								Swal.fire({
+									icon: 'success',
+									title: 'Registro exitoso',
+									text: '<?php echo session('validacionCorrecta'); ?>'
+								})
+							</script>
+		<?php } ?>	
 
+		<?php if(session()->has('validacionFallo')){ ?>
+							<script>
+								Swal.fire({
+									icon: 'error',
+									title: 'Verificar nombre',
+									text: '<?php echo session('validacionFallo'); ?>'
+								})
+							</script>
+		<?php } ?>	
+		
 		<?php if(session()->has('mensaje')){ ?>
 							<script>
 								Swal.fire({
 									icon: 'error',
-									title: 'Oops...',
+									title: 'Verificar',
 									text: '<?php echo session('mensaje'); ?>'
 								})
 							</script>
-		<?php } ?>										
+		<?php } ?>	
+									
 
 <div class="container">
 		<h1>Registro de Videojuegos</h1>
@@ -67,25 +92,13 @@
 					<div class="modal-body modal-scroll">
 						<div class="col-md-9 offset-md-2">
 
-						
 							<div class="form-group row">
 								<label for="nombre" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Nombre</span></label>
 								<div class="col-sm-8">
 									<input type="text" value="<?=old('nombre')?>" class="form-control" id="nombre" name="nombre" maxlength="15" required>
+									<div id="nombreError" class="invalid-feedback">El nombre debe tener al menos 10 caracteres.</div>
 								</div>
 							</div> 
-							<!-- <?php 
-							if(session('validacionNombre')){
-							?>
-							<div class="alert alert-danger" role="alert">
-								<?php 
-								echo session('validacionNombre');
-								?>
-							</div>
-							<?php
-							}
-							?> -->
-
 							<!--Categoria-->
 							<div class="form-group row">
 								<label for="categoria" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Categoria</span></label>
@@ -98,7 +111,6 @@
 									</select>
 								</div>
 							</div>
-
 							<!--Proveedor-->
 							<div class="form-group row">
 								<label for="idProveedor" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Proveedor:</span></label>
@@ -111,7 +123,6 @@
 									</select>
 								</div>
 							</div> 
-
 							<!--Consola-->
 							<div class="form-group row">
 								<label for="consola" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Consola:</span></label>
@@ -124,14 +135,22 @@
 									</select>
 								</div>
 							</div>
-
 							<!--Precio-->
-							<div class="form-group row">
+							<!-- <div class="form-group row">
 								<label for="precio" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Precio</span></label>
 								<div class="col-sm-8">
 									<input type="number" value="<?=old('precio')?>" class="form-control" id="precio" name="precio" required>
 								</div>
-							</div> 
+								
+							</div>  -->
+							<div class="form-group row">
+								<label for="precio" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Precio</span></label>
+								<div class="col-sm-8">
+									<input type="number" value="<?=old('precio')?>" class="form-control" id="precio" name="precio" required>
+									<div class="invalid-feedback">El precio debe ser mayor que 800 y menor que 2500</div>
+								</div>
+							</div>
+
 
 							<!--Cantidad de inventario-->
 							<div class="form-group row">
@@ -140,25 +159,16 @@
 									<input type="number" value="<?=old('cantidadInventario')?>" class="form-control" name="cantidadInventario" required>
 								</div>
 							</div>
-
 							<!--Descripcion-->
 							<div class="form-group row">
 								<label for="descripcion" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Descripción</span></label>
 								<div class="col-sm-8">
 									<textarea class="form-control" id="descripcion" name="descripcion" rows="3" maxlength="350" required><?= old('descripcion') ?></textarea>
+									<div id="descripcionError" class="invalid-feedback">La descripción debe tener al menos 15 caracteres.</div>
 								</div>
-							</div> 
-							<!-- <?php 
-							if(session('validacionDescripcion')){
-							?>
-							<div class="alert alert-danger" role="alert">
-								<?php 
-								echo session('validacionDescripcion');
-								?>
 							</div>
-							<?php
-							}
-							?>    -->
+
+
 							<div class="form-group row">
 								<label for="imagen" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Imagen</span></label>
 								<div class="col-sm-8">
@@ -166,14 +176,9 @@
 									<img id="imagen-preview" alt="videojuego" style="max-width: 180px; max-height: 180px;">
 									<!-- <img id="imagen-preview" src="<?php echo base_url()?>/imagenes/logoWorld.png" alt="prueba" style="max-width: 180px; max-height: 180px;"> -->
 									<!-- <img id="imagen-preview" src="{{ old('imagen') ? asset('../imagenes' . old('imagen')) : asset('imagenes/logoWorld.png') }}" alt="prueba" style="max-width: 180px; max-height: 180px;"> -->
-									<input name="imagen" id="imagen" type="file" class="form-control-file" onchange="previewImage(this)" style="padding-top: 5px;">
+									<input name="imagen" id="imagen" type="file" class="form-control-file" onchange="previewImage(this)" style="padding-top: 5px;" required>
 								</div>
 							</div>
-
-							
-
-						
-
 						</div>
 					</div>
 
@@ -346,6 +351,57 @@
 								reader.readAsDataURL(input.files[0]);
 							}
 						}
+
+
+  //Validar la longitud de descripcion
+  const descripcion = document.getElementById('descripcion');
+  const descripcionError = document.getElementById('descripcionError');
+  const minLength = 15;
+
+  descripcion.addEventListener('input', () => {
+    if (descripcion.value.length < minLength) {
+      descripcionError.style.display = 'block';
+      descripcion.setCustomValidity('La descripción debe tener al menos 15 caracteres.');
+    } else {
+      descripcionError.style.display = 'none';
+      descripcion.setCustomValidity('');
+    }
+  });
+
+
+   //Validar la longitud de nombre
+   const nombre = document.getElementById('nombre');
+  const nombreError = document.getElementById('nombreError');
+  const minLengthnombre = 10;
+
+  nombre.addEventListener('input', () => {
+    if (nombre.value.length < minLengthnombre) {
+		nombreError.style.display = 'block';
+      nombre.setCustomValidity('El nombre debe tener al menos 10 caracteres.');
+    } else {
+		nombreError.style.display = 'none';
+		nombre.setCustomValidity('');
+    }
+  });
+
+
+    //Validar precio
+    const precioInput = document.getElementById('precio');
+	const precioErrorMsg = document.createElement('div');
+	precioInput.parentElement.appendChild(precioErrorMsg);
+
+	precioInput.addEventListener('input', () => {
+	const precio = parseInt(precioInput.value);
+	if (precio < 800 || precio > 2500) {
+		precioInput.classList.add('is-invalid');
+		precioErrorMsg.innerText = 'El precio debe ser mayor a 800 y menor a 2500.';
+	} else {
+		precioInput.classList.remove('is-invalid');
+		precioErrorMsg.innerText = '';
+	}
+	});
+
+
 </script>
 
 			

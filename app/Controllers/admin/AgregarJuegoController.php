@@ -8,11 +8,13 @@ use CodeIgniter\Validation\Exceptions\ValidationException;
 class AgregarJuegoController extends BaseController{
 
     protected $session;
+    protected $validacion;
     
     public function __construct()
     {
         helper(['upload']);
         $this->session = \Config\Services::session();
+        $this->validacion = \Config\Services::validation();
     }
 
     public function index(){
@@ -35,32 +37,86 @@ class AgregarJuegoController extends BaseController{
         return $vista;
     }
 
+    // $validacion = $this->validate([
+        //     'imagen'=>[
+        //         'uploaded[imagen]',
+        //         'mime_in[imagen,image/jpeg,image/png,image/gif]',
+        //         'max_size[imagen,4096]'
+        //     ]
+        // ]);
+
+        
+        // if(!$validacion){
+        //     $session = session();
+        //     //Imagen invalida
+        //     $session->setFlashdata('mensaje','La imagen es invalida');
+        //     return redirect()->route('admin/registroVideojuegos')->withInput();
+
+        // }
+
     public function guardar_juego(){
+
         $generico2 = new Videojuegos();
         $idProveedor = $generico2->getIdProveedor($_POST['idProveedor']);
         $idCategoria = $generico2->getIdCategoria($_POST['categoria']);
         $idConsola = $generico2->getIdConsola($_POST['consola']);
 
+        //Si la imagen viene vacia enviar imagen predefinida, se asigna aqui
+        // if(empty($_FILES['imagen']['name'])){
+        //     $session = session();
+        //     $session->setFlashdata('mensaje','Se envia imagen predefinida aqui');
+
+        //     // $img = $this->request->getFile("imagen");
+
+        //     // if($validacion){
+        //     //     $img->move('./images', $_POST['nombre'] . '.png');
+        //     //     $rutaImagen = '../images/' . $_POST['nombre'] . '.png';
+        //     // }else{
+        //     //     //echo 'ERROR en la validacion de la imagen';
+        //     //     //Mostrar mensaje de error
+        //     //     return redirect()->route('admin/registroVideojuegos');
+        //     // }
+
+        //     // $data = [
+        //     //     "idProveedor"=>$idProveedor,
+        //     //     "nombre"=>$_POST["nombre"],
+        //     //     "descripcion"=>$_POST["descripcion"],
+        //     //     "precio"=>$_POST["precio"],
+        //     //     "cantidadInventario"=>$_POST["cantidadInventario"],
+        //     //     "idCategoria"=> $idCategoria,
+        //     //     "idConsola"=> $idConsola,
+        //     //     "imagen"=>strval($rutaImagen)
+        //     // ];
+
+        //     //   $mregistrar=new agregarVideojuego();
+
+        //     // //Este es el primer metodo de insercion
+        //     // if($mregistrar->insert($data)==false){
+        //     //    var_dump($mregistrar->errors());
+        //     // }
+
+
+        //     return redirect()->route('admin/registroVideojuegos')->withInput();
+
+        // }
+        
         $validacion = $this->validate([
-            'nombre'=>'required|min_length[3]',
-            'precio'=>'required|numeric',
-            'cantidadInventario'=>'required|integer',
-            'descripcion'=>'required',
             'imagen'=>[
                 'uploaded[imagen]',
                 'mime_in[imagen,image/jpeg,image/png,image/gif]',
                 'max_size[imagen,4096]'
             ]
         ]);
-
+        
+        //Si no viene vacia se valida la imagen
         if(!$validacion){
             $session = session();
-            //Mensaje de datos invalidos
-            $session->setFlashdata('mensaje','Verifique la información ingresada');
-            // $session->setFlashdata('validacionNombre','El nombre ingresado es incorrecto');
-            // $session->setFlashdata('validacionDescripcion','La longitud mínima debe ser 10 letras');
+            //Imagen invalida
+            $session->setFlashdata('mensaje','La imagen es invalida');
             return redirect()->route('admin/registroVideojuegos')->withInput();
         }
+        
+        //Se envian los datos con la imagen seleccionada
 
         $img = $this->request->getFile("imagen");
 
@@ -85,27 +141,17 @@ class AgregarJuegoController extends BaseController{
         ];
 
           $mregistrar=new agregarVideojuego();
+
         //Este es el primer metodo de insercion
         if($mregistrar->insert($data)==false){
-            //var_dump proporcina informacion sobre el tamaño del array o los elementos que lo componen
            var_dump($mregistrar->errors());
         }
-        // if ($mregistrar->insert($data)) {
-        //     $mensaje = "Juego insertado correctamente";
-        //     echo '<script type="text/javascript">
-        //             Swal.fire({
-        //                 icon: "success",
-        //                 title: "¡Éxito!",
-        //                 text: "'.$mensaje.'",
-        //                 showConfirmButton: false,
-        //                 timer: 1500
-        //             });
-        //           </script>';
-        // }
+
+        $session = session();
+        $session->setFlashdata('validacionCorrecta','Se ha agregado el juego');
 
          return redirect()->route('admin/registroVideojuegos');
 
-        // return redirect()->back(); //para regresar a pagina anterior 
     }
 
     public function borrar($id=null){
