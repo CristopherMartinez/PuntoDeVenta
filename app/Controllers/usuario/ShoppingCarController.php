@@ -333,7 +333,17 @@ class ShoppingCarController extends BaseController{
             "fechaVencimiento" => $_POST["fechaVencimiento1"],
             "cvv" => $_POST["cvv1"],
         ];
-    
+
+        //Contamos cuantas tarjetas tiene el usuario si tiene mas de 4 mostramos mensaje de que ha alcanzado el
+        //limite
+        $numTarjetas = $tarjeta->contarTarjetas($_SESSION['datosUsuario'][0]['usuario']);
+
+        if (($numTarjetas >= 4)) {
+            $session = session();
+            $session->setFlashdata('numTarjetas', 'Se alcanzo el limite de tarjetas que puedes agregar');
+            return redirect()->to('usuario/listaCarrito');
+        }
+        
         if($tarjeta->existeTarjeta($_POST["tarjeta1"]) == False){
     
             $tarjeta->insert($data);

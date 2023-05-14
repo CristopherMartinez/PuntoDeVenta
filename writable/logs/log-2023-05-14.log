@@ -9,3 +9,36 @@ in SYSTEMPATH\BaseModel.php on line 1680.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 19:32:11 --> Undefined variable $usuarios
+in APPPATH\Views\admin\clientes.php on line 4.
+ 1 APPPATH\Views\admin\clientes.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'APPPATH\\Views\\admin\\clientes.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\clientes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/clientes', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(65): view('admin/clientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AdminController->recuperarclientes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 19:32:25 --> Undefined variable $usuarios
+in APPPATH\Views\admin\clientes.php on line 4.
+ 1 APPPATH\Views\admin\clientes.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'APPPATH\\Views\\admin\\clientes.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\clientes.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/clientes', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(65): view('admin/clientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AdminController->recuperarclientes()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 19:46:04 --> Undefined array key "fechaVencimiento"
+in APPPATH\Views\usuario\listaCarrito.php on line 358.
+ 1 APPPATH\Views\usuario\listaCarrito.php(358): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fechaVencimiento"', 'APPPATH\\Views\\usuario\\listaCarrito.php', 358)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\listaCarrito.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/listaCarrito', [], true)
+ 5 APPPATH\Controllers\usuario\ShoppingCarController.php(319): view('usuario/listaCarrito', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaCarrito()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

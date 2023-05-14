@@ -28,6 +28,13 @@ class Tarjeta extends Model
                 $query = $this->db->query("SELECT * FROM tarjetasusuario WHERE usuario = ? AND numeroTarjeta = ?", array($usuario, $tarjeta));
                 return $query->getResultArray();
         }
+
+        public function contarTarjetas($usuario) {
+                $query = $this->db->query("SELECT COUNT(*) as total FROM tarjetasusuario WHERE usuario = ?", array($usuario));
+                $result = $query->getRow();
+                return $result->total;
+            }
+            
             
 }
 

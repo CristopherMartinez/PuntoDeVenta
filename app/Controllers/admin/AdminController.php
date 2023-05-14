@@ -2,6 +2,7 @@
 namespace App\Controllers\admin;
 use App\Controllers\BaseController;
 use App\Models\admin\Administradores;
+use App\Models\generico\Puntos;
 use App\Models\usuario\RegistrarUsuario;
 use App\Models\usuario\Ordenes;
 
@@ -31,6 +32,7 @@ class AdminController extends BaseController{
 
     }
 
+    //Vista de usuarios
     public function recuperarclientes(){
 
         // Verificar si la sesión está iniciada
@@ -39,12 +41,25 @@ class AdminController extends BaseController{
         }
 
         
-       $usuario = new RegistrarUsuario();
-        // //El metodo findAll
+        $usuario = new RegistrarUsuario();
+        $puntos = new Puntos();
+
+        $usuarios2 = $usuario->findAll();
+
+        //Se hace un foreach para agregar los puntos de cada usuario y si no tiene mandar cero
+        foreach ($usuarios2 as &$usuario) {
+            // Obtener el puntaje del usuario actual
+            $puntosUsuario = $puntos->where('idUsuario', $usuario['idUsuario'])->first();
+            // Agregar los puntos al arreglo usuarios2
+            $usuario['puntos'] = $puntosUsuario ? $puntosUsuario['puntos'] : 0;
+        }
+
+        //El metodo findAll trae todos los usuarios
         $usuarios = array(
-            'usuarios' => $usuario->findAll()
+            'usuarios' => $usuarios2
         );
 
+      
         $vistas= 
                 view('admin/navbarAdmin').
                  view('admin/clientes',$usuarios);

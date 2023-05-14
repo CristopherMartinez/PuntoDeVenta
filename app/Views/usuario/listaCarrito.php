@@ -3,6 +3,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
         <script src="https://kit.fontawesome.com/9efa70fc0a.js" crossorigin="anonymous"></script>
+      
 </head>
 
 
@@ -225,6 +226,17 @@
         </script>
     <?php endif; ?>
 
+      <!--Mensaje para mostrar numero de tarjetas maximo alcanzado-->        
+      <?php if (session()->has('numTarjetas')): ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: '<?= session('numTarjetas') ?>',
+                showConfirmButton: true
+            });
+        </script>
+    <?php endif; ?>
+
     <!--Si el array de tarjetas esta vacio abrimos el modalCompra si no esta vacio abrimos el modalTarjetas-->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" 
     data-bs-target="
@@ -313,33 +325,83 @@
                             <!--Tarjetas registradas (En caso de haber)-->
                             <?php
                             if(isset($tarjetas)){
-                               
-                                
+
+                                // foreach($tarjetas as $tarjeta){
+                                //     echo
+                                //     "
+                                //     <div class='container'>
+                                //         <div class='col'>
+                                //             <div class='card'>
+                                //                 <div class='card-body'>
+                                //                     <h5 class='card-title' style='color:black;'>Tarjeta de debito</h5>
+                                //                     <div class='mb-3'>
+                                //                     <span>  
+                                //                         <input type='radio' name='tarjeta_seleccionada' id='tarjeta_seleccionada' value='$tarjeta[numeroTarjeta]'/>
+                                //                         <label style='color: black; padding-left:5px; font-size:16px;'>$tarjeta[numeroTarjeta]</label>
+                                //                     </span>
+                                //                     <span><i class='fa-brands fa-cc-visa fa-2xl' style='color: #1c10c6;'></i></span>
+                                //                     <br>
+                                //                     <a href='#' style='text-decoration:none; color:black; font-weight:bold; font-size:15px;' id='detalle-link'>Ver detalle</a>
+                                //                     </div>
+                                //                 </div>
+                                //             </div>
+                                //         </div>
+                                //     </div>
+                                    
+
+                                //     ";    
+                                // }
+
+                                $numeroTarjetas = count($tarjetas);
+
+                                echo "<div class='container'><div class='row'>";
+
                                 foreach($tarjetas as $tarjeta){
-                                    echo
-                                    "
-                                    <div class='container'>
-                                        <div class='col'>
+                                    // $colClass = ($numeroTarjetas == 2) ? 'col-sm-6' : 'col-sm-12';
+
+                                    if($numeroTarjetas == 1){
+                                        $colClass = 'col-sm-12';
+                                    }
+                                    elseif($numeroTarjetas == 2){
+                                        $colClass = 'col-sm-6';
+                                    }
+                                    elseif($numeroTarjetas == 3){
+                                        $colClass = 'col-sm-12';
+                                    }else{
+                                        $colClass = 'col-sm-6';
+                                    }
+
+                                    echo "
+                                        <div class='$colClass'>
                                             <div class='card'>
                                                 <div class='card-body'>
-                                                    <h5 class='card-title' style='color:black;'>Tarjeta de debito</h5>
-                                                    <div class='mb-3'>
-                                                    <span>  
-                                                        <input type='radio' name='tarjeta_seleccionada' id='tarjeta_seleccionada' value='$tarjeta[numeroTarjeta]'/>
-                                                        <label style='color: black; padding-left:5px; font-size:16px;'>$tarjeta[numeroTarjeta]</label>
-                                                    </span>
-                                                    <span><i class='fa-brands fa-cc-visa fa-2xl' style='color: #1c10c6;'></i></span>
-                                                    <br>
-                                                    <a href='#' style='text-decoration:none; color:black; font-weight:bold; font-size:15px;' id='detalle-link'>Ver detalle</a>
-                                                    </div>
+                                                    <div class='row'>
+                                                        <div class='col-md-12 col-sm-12 col-xs-12'>
+                                                            <h4 class='card-title' style='color:black;'>Tarjeta de débito</h4>
+                                                            <div class='mb-3'>
+                                                                <span>
+                                                                    <input type='radio' name='tarjeta_seleccionada' id='tarjeta_seleccionada' value='$tarjeta[numeroTarjeta]'/>
+                                                                    <label style='font-size:14px; color:black;'>$tarjeta[numeroTarjeta]</label>
+                                                                </span>
+                                                                <br>
+                                                                <a href='#' style='text-decoration:none; color:black; font-weight:bold; font-size:15px;' id='detalle-link'>Ver detalle</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class='col-md-12 col-sm-12 col-xs-12'>
+                                                            <img src='https://www.mastercard.com/content/dam/mccom/global/logos/logo-mastercard-mobile.svg' style='max-height: 60px;'/>
+                                                        </div>
+                                                    </div>     
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-
-                                    ";    
+                                    ";
                                 }
+
+                                echo "</div></div>";
+
+
+
+                                
                             }
                             
                             ?>

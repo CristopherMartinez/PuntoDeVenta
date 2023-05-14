@@ -58,7 +58,7 @@
                     foreach($lanzamientos as $value){
                         echo "
                         <div class='col-md-4 col-sm-6 col-xs-12'>
-                            <form action='".base_url()."/sendCorreoRecordatorio' method='POST'>
+                           
                                 <div class='card'>
                                         <label style='color:black; font-size:18px;'>Fecha de salida: $value[fechaSalida]</label>
                                         <div class='image-container' style='padding-top:5px;'>
@@ -73,12 +73,12 @@
                                                     <button type='button' class='btn btn-outline-primary' disabled style='color:black; border-color:black; margin-top:10px; font-weight:bolder;'>Precio: $$value[precio]</button>
                                                 </span>
                                                 <span style='padding-left: 5px;'>
-                                                    <button type='submit' class='btn btn-success' style='margin-top:10px;' onclick='mostrarMensaje()'>Avisarme</button>
+                                                    <button type='submit' class='btn btn-success' style='margin-top:10px;' onclick='avisar()'>Avisarme</button>
                                                 </span>
                                             </div>
                                         </div>
                                 </div>
-                            </form>
+                            
                         </div>";
 
                 
@@ -98,4 +98,15 @@
 
 
 </body>
+
+<script>
+    function avisar(){
+        Swal.fire({
+                icon: 'success',
+                title: 'Recordatorio',
+                text:'Se te avisara posteriormente',
+                showConfirmButton: true
+            });
+    }
+</script>
 

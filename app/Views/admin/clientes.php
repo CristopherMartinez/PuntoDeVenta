@@ -1,9 +1,3 @@
-
-<!-- <?php
-//Para imprimir en formato JSON Test
-print_r(json_encode($usuarios));
-?> -->
-
 <h2 style="text-align: center; margin-top:10px;">Usuarios</h2>
 
 <head>
@@ -49,6 +43,7 @@ print_r(json_encode($usuarios));
 									<td><b>Correo</b></td>
                                     <td><b>Dirección</b></td>
 									<td><b>Teléfono</b></td>
+									<td><b>Puntos</b></td>
                                     <td><b>Estado</b></td>
 									</tr>
 								</thead>
@@ -82,6 +77,7 @@ print_r(json_encode($usuarios));
                                         <td style="color:black;"><?= $usuario['correo'] ?></td>
                                         <td style="color:black;"><?= $usuario['direccion'] ?></td>
                                         <td style="color:black;"><?= $usuario['telefono'] ?></td>
+										<td style="color:black;"><?= $usuario['puntos'] ?></td>
                                         <td style="color:black;"><?php 
 										if($usuario['estado'] == 1){
 											echo "Activo";
