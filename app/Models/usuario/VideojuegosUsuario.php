@@ -22,5 +22,13 @@ class VideojuegosUsuario extends Model
                 return $query->getResultArray();   
         }
 
-
+        //Funcion para calcular puntos recibiendo el numero de ventas y devolvemos los puntos
+        public function calcularPuntos($ventas) {
+                // Asignar 10 puntos por cada venta
+                $puntos = $ventas * 10;
+                return $puntos;
+        }
+            
+            
+        
 }

@@ -37,23 +37,6 @@ class AgregarJuegoController extends BaseController{
         return $vista;
     }
 
-    // $validacion = $this->validate([
-        //     'imagen'=>[
-        //         'uploaded[imagen]',
-        //         'mime_in[imagen,image/jpeg,image/png,image/gif]',
-        //         'max_size[imagen,4096]'
-        //     ]
-        // ]);
-
-        
-        // if(!$validacion){
-        //     $session = session();
-        //     //Imagen invalida
-        //     $session->setFlashdata('mensaje','La imagen es invalida');
-        //     return redirect()->route('admin/registroVideojuegos')->withInput();
-
-        // }
-
     public function guardar_juego(){
 
         $generico2 = new Videojuegos();

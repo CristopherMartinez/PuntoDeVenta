@@ -8,6 +8,7 @@ use App\Models\usuario\Ordenes;
 use App\Models\usuario\OrdenesUsuario;
 use App\Models\usuario\VideojuegosUsuario;
 use App\ModelS\generico\Email;
+use App\Models\generico\Puntos;
 
 class ShoppingCarController extends BaseController{
 
@@ -567,12 +568,14 @@ class ShoppingCarController extends BaseController{
 
     }
 
-    //Realizar compra usuario insertando en Tabla de VideojuegosUsuario CORRECTO
+    //Realizar compra usuario insertando en Tabla de VideojuegosUsuario 
+    //y agregando puntos
+    //CORRECTO
     public function addToVideojuegosUsuario()
     {
          $videojuegosUsuario = new VideojuegosUsuario();
          $ordenes = new Ordenes();
-
+         $puntos = new Puntos();
 
         session_start();
 
@@ -603,13 +606,32 @@ class ShoppingCarController extends BaseController{
                 // $ordenes->verificarYGuardar($ventas);
                 $videojuegosUsuario->insert($venta);
             }
-    
+
+            //Aqui obtenemos el numero de ventas del arreglo ventas
+            $numeroDeVentas = count($ventas);
+            //llamamos a la funcion para obtener los puntos ganados
+            $puntosGanados = $videojuegosUsuario->calcularPuntos($numeroDeVentas);
+            $clienteId = $_SESSION['datosUsuario'][0]['idUsuario'];
+         
+            //Verificar si ya existe un registro de puntos para este cliente
+            $puntosExistentes = $puntos->where('idUsuario', $clienteId)->first();
+
+            if ($puntosExistentes) {
+                // Si existe, actualizar el registro con los nuevos puntos ganados
+                $puntosNuevos = $puntosExistentes['puntos'] + $puntosGanados;
+                $puntos->update($puntosExistentes['idPuntos'], ['puntos' => $puntosNuevos]);
+            } else {
+                // Si no existe, crear un nuevo registro
+                $puntos->insert(['idUsuario' => $clienteId, 'puntos' => $puntosGanados]);
+            }
+
             // Eliminamos el carrito de la sesión
             unset($_SESSION['cart']);
   
             return redirect()->to('usuario/listaCarrito');
 
-        }else{
+        }
+        else{
             //Mostrar mensaje de que no hay en el carrito cosas
             $session = session();
             $session->setFlashdata('SinCompras', 'No hay ningun videojuego agregado al carrito');
