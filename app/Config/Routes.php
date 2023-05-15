@@ -66,6 +66,7 @@ $routes->add('/usuario/listaCarrito','usuario\ShoppingCarController::listaCarrit
 $routes->add('/usuario/listaDeseos','usuario\DeseosController::listaDeseos');
 
 $routes->add('/usuario/videogamesUser','usuario\VideogamesUserController::getvideogamesUser');
+
 //Actualizar password
 $routes->add('/usuario/updatePassword','usuario\UpdatePasswordController::updatePassword');
 

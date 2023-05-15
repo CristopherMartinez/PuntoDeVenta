@@ -56,13 +56,13 @@
 								<div class="form-group row" hidden>
 									<label for="idVideojuego" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">IdVideojuego</span></label>
 									<div class="col-sm-8">
-										<input type="text" value="<?=$Videojuego['idVideojuego']?>" id="idVideojuego" name="idVideojuego">
+										<input type="text" value="<?=$Videojuego['idVideojuego']?>" id="idVideojuego" name="idVideojuego" >
 									</div>
 								</div>
 								<div class="form-group row">
 									<label for="nombre" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Nombre</span></label>
 									<div class="col-sm-8">
-										<input type="text" value="<?= isset($Videojuego['nombre']) ? $Videojuego['nombre'] : '' ?>" class="form-control" id="nombre" name="nombre" required>
+										<input type="text" value="<?= isset($Videojuego['nombre']) ? $Videojuego['nombre'] : '' ?>" class="form-control" id="nombre" name="nombre" maxlength="15" required>
 									</div>
 								</div>
 								<?php 
@@ -110,12 +110,23 @@
 									</div>
 								</div>
 								
+								<!-- <div class="form-group row">
+									<label for="precio" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Precio</span></label>
+									<div class="col-sm-8">
+										<input type="number" value="<?=$Videojuego['precio']?>" class="form-control" id="precio" name="precio" required>
+										<div class="invalid-feedback">El precio debe ser mayor que 800 y menor que 2500</div>
+									</div>
+								</div>  -->
 								<div class="form-group row">
 									<label for="precio" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Precio</span></label>
 									<div class="col-sm-8">
 										<input type="number" value="<?=$Videojuego['precio']?>" class="form-control" id="precio" name="precio" required>
+										<small class="form-text text-muted">El precio debe ser mayor que 800 y menor que 2500.</small>
+										<div class="invalid-feedback">El precio debe ser mayor que 800 y menor que 2500</div>
 									</div>
-								</div> 
+								</div>
+								
+
 								
 								<div class="form-group row">
 									<label for="cantidadInventario" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Cantidad de licencias</span></label>
@@ -145,10 +156,8 @@
 								<div class="form-group row">
 									<label for="imagen" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Imagen</span></label>
 									<div class="col-sm-8">
-					
-										<input name="imagen" id="imagen" type="file" class="form-control-file" style="padding-top: 5px;">
-										<span id="nombre-imagen"></span>
-
+		
+									<input name="imagen" id="imagen" type="file" class="form-control-file" style="padding-top: 5px;" title="<?= $Videojuego['imagen']?>">
 
 
 									</div>
@@ -173,43 +182,31 @@
 			</div>
 
 
+
+
 <script>
-	function previewImage(input) {
-							if (input.files && input.files[0]) {
-								var reader = new FileReader();
-								reader.onload = function(e) {
-									$('#imagen-preview').attr('src', e.target.result);
-								}
-								reader.readAsDataURL(input.files[0]);
-							}
-	}
 
-	// //Modal de editar
-	// //Obtener el botón y el modal
-	// var btnAbrirModalEditar = document.getElementById("btnAbrirModalEditar");
-	// var editarModal = document.getElementById("editarModal");
-
-	// // Agregar evento al botón para mostrar el modal
-	// btnAbrirModalEditar.addEventListener("click", function() {
-	// editarModal.classList.add("show");
-	// editarModal.style.display = "block";
-	// });
-
-	// // Agregar evento al botón de cerrar para ocultar el modal
-	// var btnCerrarModalEditar = editarModal.querySelector(".btn-close");
-	// btnCerrarModalEditar.addEventListener("click", function() {
-	// editarModal.classList.remove("show");
-	// editarModal.style.display = "none";
-	// });
 	
+	const precioInput = document.getElementById('precio');
+	const precioErrorMsg = precioInput.nextElementSibling;
+	const precioHelpMsg = precioInput.nextElementSibling.nextElementSibling;
 
-</script>
-
-<script>
-	document.getElementById('imagen').addEventListener('change', function() {
-		var nombreImagen = this.files[0].name;
-		document.getElementById('nombre-imagen').textContent = nombreImagen;
+	precioInput.addEventListener('input', () => {
+		const precio = parseInt(precioInput.value);
+		if (precio < 800 || precio > 2500) {
+			precioInput.classList.add('is-invalid');
+			precioHelpMsg.style.display = 'none';
+			precioErrorMsg.textContent = 'El precio debe ser mayor a 800 y menor a 2500.';
+		} else {
+			precioInput.classList.remove('is-invalid');
+			precioHelpMsg.style.display = 'block';
+			precioErrorMsg.textContent = '';
+		}
 	});
+
+
+
 </script>
+
 
 			

@@ -13,6 +13,7 @@ class VideogamesUserController extends BaseController{
 
     }
 
+    //Mostrar videojuegos usuario
     public function getvideogamesUser(){
 
          // Verificar si la sesión está iniciada
@@ -21,11 +22,7 @@ class VideogamesUserController extends BaseController{
         }
 
         $videoGamesUser = new VideojuegosUsuario();
-
         $videojuegos['videogamesUser'] = $videoGamesUser->getVideogamesUser($_SESSION['datosUsuario'][0]['usuario']);
-
-
-
          // Cargar la vista de los videojuegos del usuario
          $vista =   view('genericos/header') .
                     view('usuario/navbarLog').
@@ -33,12 +30,6 @@ class VideogamesUserController extends BaseController{
 
         return $vista;
 
-        
-
     }
-    
-  
-    
-
 
 }

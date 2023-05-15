@@ -85,7 +85,7 @@ session_start();
                       Mas
                     </a>
                     <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;">
-                      <!-- <li><a class="dropdown-item" href="puntos" style="padding-left: 5px;">Mis puntos</a></li> -->
+                      <!-- <li><a class="dropdown-item" href="playVideogames" style="padding-left: 5px;">Jugar</a></li> -->
                       <!--Mostramos unicamente cuando tenga juegos el usuario-->
                       <?php
                       if(isset($_SESSION['misJuegos'])){

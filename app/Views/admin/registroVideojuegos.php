@@ -173,9 +173,9 @@
 								<label for="imagen" class="col-sm-4 col-form-label font-weight-bold"><span class="nombre">Imagen</span></label>
 								<div class="col-sm-8">
 									<!-- <input name="imagen"  id="imagen" type="file" class="form-control-file" required> -->
-									<img id="imagen-preview" alt="videojuego" style="max-width: 180px; max-height: 180px;">
-									<!-- <img id="imagen-preview" src="<?php echo base_url()?>/imagenes/logoWorld.png" alt="prueba" style="max-width: 180px; max-height: 180px;"> -->
+																		<!-- <img id="imagen-preview" src="<?php echo base_url()?>/imagenes/logoWorld.png" alt="prueba" style="max-width: 180px; max-height: 180px;"> -->
 									<!-- <img id="imagen-preview" src="{{ old('imagen') ? asset('../imagenes' . old('imagen')) : asset('imagenes/logoWorld.png') }}" alt="prueba" style="max-width: 180px; max-height: 180px;"> -->
+									<img id="imagen-preview" alt="videojuego" style="max-width: 180px; max-height: 180px;">
 									<input name="imagen" id="imagen" type="file" class="form-control-file" onchange="previewImage(this)" style="padding-top: 5px;" required>
 								</div>
 							</div>
@@ -298,49 +298,9 @@
 	miModal.style.display = "none";
 	});
 
-	// //Modal de editar
-	// // Obtener el botón y el modal
-	// var btnAbrirModalEditar = document.getElementById("btnAbrirModalEditar");
-	// var editarModal = document.getElementById("editarModal");
-
-	// // Agregar evento al botón para mostrar el modal
-	// btnAbrirModalEditar.addEventListener("click", function() {
-	// editarModal.classList.add("show");
-	// editarModal.style.display = "block";
-	// });
-
-	// // Agregar evento al botón de cerrar para ocultar el modal
-	// var btnCerrarModalEditar = editarModal.querySelector(".btn-closeEditar");
-	// btnCerrarModalEditar.addEventListener("click", function() {
-	// editarModal.classList.remove("show");
-	// editarModal.style.display = "none";
-	// });
-
-
-	// function abrirModalEditar(){
-	// 	var botonAbrirEditar = document.getElementById('btnAbrirModalEditar');
-    //     botonAbrirEditar.click();
-	// }
-	
-	
 </script>
 
-<script>
-	// 	function abrirModal(id) {
-	//     $('#miModal').modal('show');
-	//     $('#id').val(id);
-	//     $.ajax({
-	//         url: "<?php echo base_url('editar'); ?>",
-	//         type: "POST",
-	//         data: {id: id},
-	//         dataType: "JSON",
-	//         success: function(data) {
-	//             $('#nombre').val(data.nombre);
-	//             // $('#email').val(data.email);
-	//         }
-	//     });
-	// }
-</script>
+
 <script>
 						function previewImage(input) {
 							if (input.files && input.files[0]) {

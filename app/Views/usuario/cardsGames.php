@@ -305,14 +305,10 @@
                                 <button type='submit' class='btn btn-link border-0 p-0 '>
                                 <span class='material-symbols-outlined'>favorite</span>
                                 </button>
+
                                 <!-- <button type='submit' class='btn btn-link border-0 p-0 blue'>
                                 <span class='material-symbols-outlined'>favorite</span>
                                 </button> -->
-
-
-                              
-                          
-
                             </form>  
    
                             <div class="image-container">        

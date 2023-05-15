@@ -37,6 +37,107 @@ class AgregarJuegoController extends BaseController{
         return $vista;
     }
 
+    //CORRECTO
+    // public function guardar_juego(){
+
+    //     $generico2 = new Videojuegos();
+    //     $idProveedor = $generico2->getIdProveedor($_POST['idProveedor']);
+    //     $idCategoria = $generico2->getIdCategoria($_POST['categoria']);
+    //     $idConsola = $generico2->getIdConsola($_POST['consola']);
+
+    //     //Si la imagen viene vacia enviar imagen predefinida, se asigna aqui
+    //     // if(empty($_FILES['imagen']['name'])){
+    //     //     $session = session();
+    //     //     $session->setFlashdata('mensaje','Se envia imagen predefinida aqui');
+
+    //     //     // $img = $this->request->getFile("imagen");
+
+    //     //     // if($validacion){
+    //     //     //     $img->move('./images', $_POST['nombre'] . '.png');
+    //     //     //     $rutaImagen = '../images/' . $_POST['nombre'] . '.png';
+    //     //     // }else{
+    //     //     //     //echo 'ERROR en la validacion de la imagen';
+    //     //     //     //Mostrar mensaje de error
+    //     //     //     return redirect()->route('admin/registroVideojuegos');
+    //     //     // }
+
+    //     //     // $data = [
+    //     //     //     "idProveedor"=>$idProveedor,
+    //     //     //     "nombre"=>$_POST["nombre"],
+    //     //     //     "descripcion"=>$_POST["descripcion"],
+    //     //     //     "precio"=>$_POST["precio"],
+    //     //     //     "cantidadInventario"=>$_POST["cantidadInventario"],
+    //     //     //     "idCategoria"=> $idCategoria,
+    //     //     //     "idConsola"=> $idConsola,
+    //     //     //     "imagen"=>strval($rutaImagen)
+    //     //     // ];
+
+    //     //     //   $mregistrar=new agregarVideojuego();
+
+    //     //     // //Este es el primer metodo de insercion
+    //     //     // if($mregistrar->insert($data)==false){
+    //     //     //    var_dump($mregistrar->errors());
+    //     //     // }
+
+
+    //     //     return redirect()->route('admin/registroVideojuegos')->withInput();
+
+    //     // }
+        
+    //     $validacion = $this->validate([
+    //         'imagen'=>[
+    //             'uploaded[imagen]',
+    //             'mime_in[imagen,image/jpeg,image/png,image/gif]',
+    //             'max_size[imagen,4096]'
+    //         ]
+    //     ]);
+        
+    //     //Si no viene vacia se valida la imagen
+    //     if(!$validacion){
+    //         $session = session();
+    //         //Imagen invalida
+    //         $session->setFlashdata('mensaje','La imagen es invalida');
+    //         return redirect()->route('admin/registroVideojuegos')->withInput();
+    //     }
+        
+    //     //Se envian los datos con la imagen seleccionada
+
+    //     $img = $this->request->getFile("imagen");
+
+    //     if($validacion){
+    //         $img->move('./images', $_POST['nombre'] . '.png');
+    //         $rutaImagen = '../images/' . $_POST['nombre'] . '.png';
+    //     }else{
+    //         //echo 'ERROR en la validacion de la imagen';
+    //         //Mostrar mensaje de error
+    //         return redirect()->route('admin/registroVideojuegos');
+    //     }
+
+    //     $data = [
+    //         "idProveedor"=>$idProveedor,
+    //         "nombre"=>$_POST["nombre"],
+    //         "descripcion"=>$_POST["descripcion"],
+    //         "precio"=>$_POST["precio"],
+    //         "cantidadInventario"=>$_POST["cantidadInventario"],
+    //         "idCategoria"=> $idCategoria,
+    //         "idConsola"=> $idConsola,
+    //         "imagen"=>strval($rutaImagen)
+    //     ];
+
+    //       $mregistrar=new agregarVideojuego();
+
+    //     //Este es el primer metodo de insercion
+    //     if($mregistrar->insert($data)==false){
+    //        var_dump($mregistrar->errors());
+    //     }
+
+    //     $session = session();
+    //     $session->setFlashdata('validacionCorrecta','Se ha agregado el juego');
+
+    //      return redirect()->route('admin/registroVideojuegos');
+
+    // }
+
     public function guardar_juego(){
 
         $generico2 = new Videojuegos();
@@ -44,45 +145,6 @@ class AgregarJuegoController extends BaseController{
         $idCategoria = $generico2->getIdCategoria($_POST['categoria']);
         $idConsola = $generico2->getIdConsola($_POST['consola']);
 
-        //Si la imagen viene vacia enviar imagen predefinida, se asigna aqui
-        // if(empty($_FILES['imagen']['name'])){
-        //     $session = session();
-        //     $session->setFlashdata('mensaje','Se envia imagen predefinida aqui');
-
-        //     // $img = $this->request->getFile("imagen");
-
-        //     // if($validacion){
-        //     //     $img->move('./images', $_POST['nombre'] . '.png');
-        //     //     $rutaImagen = '../images/' . $_POST['nombre'] . '.png';
-        //     // }else{
-        //     //     //echo 'ERROR en la validacion de la imagen';
-        //     //     //Mostrar mensaje de error
-        //     //     return redirect()->route('admin/registroVideojuegos');
-        //     // }
-
-        //     // $data = [
-        //     //     "idProveedor"=>$idProveedor,
-        //     //     "nombre"=>$_POST["nombre"],
-        //     //     "descripcion"=>$_POST["descripcion"],
-        //     //     "precio"=>$_POST["precio"],
-        //     //     "cantidadInventario"=>$_POST["cantidadInventario"],
-        //     //     "idCategoria"=> $idCategoria,
-        //     //     "idConsola"=> $idConsola,
-        //     //     "imagen"=>strval($rutaImagen)
-        //     // ];
-
-        //     //   $mregistrar=new agregarVideojuego();
-
-        //     // //Este es el primer metodo de insercion
-        //     // if($mregistrar->insert($data)==false){
-        //     //    var_dump($mregistrar->errors());
-        //     // }
-
-
-        //     return redirect()->route('admin/registroVideojuegos')->withInput();
-
-        // }
-        
         $validacion = $this->validate([
             'imagen'=>[
                 'uploaded[imagen]',
@@ -152,6 +214,7 @@ class AgregarJuegoController extends BaseController{
          return redirect()->route('admin/registroVideojuegos');
     }
 
+    //Mostrar datos de videojuego para actualizar
     public function editar($id=null){
         $videojuego = new Videojuegos();
 
@@ -172,10 +235,6 @@ class AgregarJuegoController extends BaseController{
 
 
         $validacion = $this->validate([
-            // 'nombre'=>'required|min_length[3]',
-            // 'precio'=>'required|numeric',
-            // 'cantidadInventario'=>'required|integer',
-            // 'descripcion'=>'required',
             'imagen'=>[
                 'uploaded[imagen]',
                 'mime_in[imagen,image/jpeg,image/png,image/gif]',
@@ -183,33 +242,17 @@ class AgregarJuegoController extends BaseController{
             ]
         ]);
 
-        // if(!$validacion){
-        //     $session = session();
-        //     //Mensaje de datos invalidos
-        //     $session->setFlashdata('mensaje1','Verifique la información ingresada');
-        //     $session->setFlashdata('validacionNombre1','El nombre ingresado es incorrecto');
-        //     $session->setFlashdata('validacionDescripcion1','La longitud mínima debe ser 10 letras');
-        //     return redirect()->route('admin/registroVideojuegos')->withInput();
-
-        // }
-        // if(!$validacion){
-        //     $session = session();
-        //     //Mensaje de datos invalidos
-        //     $session->setFlashdata('mensaje1','Verifique la información ingresada');
-        //     return redirect()->route('admin/registroVideojuegos')->withInput();
-        // }
 
          $vista= view('admin/navbarAdmin').
                 view('admin/registroVideojuegos',$dataF).
                 view('admin/editarVideojuego',$datos);
 
-                
-
         return $vista;
 
     }
 
-    public function actualizar(){
+    //Actualizar videojuego
+    public function actualizar() {
         $videojuego = new Videojuegos();
         $id = $this->request->getPost('idVideojuego');
         $idProveedor = $videojuego->getIdProveedor($this->request->getPost('idProveedor'));
@@ -219,52 +262,33 @@ class AgregarJuegoController extends BaseController{
         $cantidadInventario = $this->request->getPost('cantidadInventario');
         $idCategoria = $videojuego->getIdCategoria($this->request->getPost('categoria'));
         $idConsola = $videojuego->getIdConsola($this->request->getPost('consola'));
-
-            $validacion = $this->validate([
-            'nombre' => 'required|min_length[3]',
-            'precio' => 'required|numeric',
-            'cantidadInventario' => 'required|integer',
-            'descripcion' => 'required',
+    
+        $validacion = $this->validate([
             'imagen' => [
                 'uploaded[imagen]',
                 'mime_in[imagen,image/jpeg,image/png,image/gif]',
                 'max_size[imagen,4096]'
             ]
-            ]);
-        
-            // if (!$validacion) {
-            //     $session = session();
-            //     $session->setFlashdata('validacionNombre1', '<span style="font-size: 12px;">El nombre ingresado anteriormente es incorrecto</span>');
-            //     $session->setFlashdata('validacionDescripcion1', '<span style="font-size: 12px;">La descripción debe ser minimo de 10 caracteres</span>');
-            //     return redirect()->back()->with('mensaje1', 'Verifica los datos ingresados');
-
-            // }
-            // if(!is_array($validacion) || !$validacion['nombre']) {
-            //     // $session = session();
-            //     // $session->setFlashdata('validacionNombre1', '<span style="font-size: 12px;">El nombre ingresado anteriormente es incorrecto</span>');
-            //     return redirect()->back()->with('mensaje1', 'El nombre del Videojuego ingresado es incorrecto');
-            // }
-            // if(!is_array($validacion) || !$validacion['descripcion']) {
-            //     // $session = session();
-            //     // $session->setFlashdata('validacionDescripcion1', '<span style="font-size: 12px;">La descripción debe ser minimo de 10 caracteres</span>');
-            //     return redirect()->back()->with('mensaje1', 'La descripción debe ser minimo de 10 caracteres');
-            // }
-            
-
-            
-        
-            // $img = $this->request->getFile("imagen");
-        
-            // if (!$img->isValid()) {
-            //     // Handle image upload error
-            //     return redirect()->route('admin/registroVideojuegos');
-            // }
-        
-            // $img->move(WRITEPATH . 'uploads');
-            // $rutaImagen = base_url() . '/uploads/' . $img->getName();
-
+        ]);
     
-            $data = [
+        $videojuegoActual = $videojuego->find($id);
+        $rutaImagen = $videojuegoActual['imagen'];
+    
+        //Solo si cambio la imagen
+        if($validacion){
+            if($this->request->getFile("imagen")){
+                //Borrado de archivo en carpeta images
+                $ruta = str_replace('..', '.', $videojuegoActual['imagen']);
+                $ruta = './' . $ruta;
+                unlink($ruta);
+    
+                $img = $this->request->getFile("imagen");
+                $img->move('./images', $_POST['nombre'] . '.png');
+                $rutaImagen = '../images/' . $_POST['nombre'] . '.png';
+            }
+        }
+    
+        $data = [
             "idProveedor" => $idProveedor,
             "nombre" => $nombre,
             "descripcion" => $descripcion,
@@ -272,15 +296,15 @@ class AgregarJuegoController extends BaseController{
             "cantidadInventario" => $cantidadInventario,
             "idCategoria" => $idCategoria,
             "idConsola" => $idConsola,
-            // "imagen" => $rutaImagen
+            "imagen" => $rutaImagen
         ];
     
-        //Actualizar datos
-        $videojuego->update($id,$data);
-        // $videojuego->where('idVideojuego', 1)->update($data);
+        $vid = new Videojuegos();
+        $vid->update($id,$data);
+    
         return redirect()->route('admin/registroVideojuegos');
     }
-
+ 
     public function cerrarModalEditar(){
         return redirect()->route('admin/registroVideojuegos');
     }

@@ -60,7 +60,7 @@
                         <div class='col-md-4 col-sm-6 col-xs-12'>
                            
                                 <div class='card'>
-                                        <label style='color:black; font-size:18px;'>Fecha de salida: $value[fechaSalida]</label>
+                                        <label style='color:black; font-size:18px; font-weight:bold;'>Fecha de salida: $value[fechaSalida]</label>
                                         <div class='image-container' style='padding-top:5px;'>
                                             <img src='".base_url()."/images/$value[imagen]' class='card-img-top' style='height:150px; border-radius:10px;'>
                                             <div class='image-description'>$value[descripcion]</div>

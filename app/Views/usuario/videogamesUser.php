@@ -32,7 +32,7 @@
                                         echo "
                                         <div class='col-md-4 col-sm-6 col-xs-12'>
                                                 <div class='card'>
-                                                        <form action='".base_url()."/jugar' method='POST'>
+                                                        
                                                                 <div class='image-container'>
                                                                         <img src='".base_url()."/images/$value[imagen]' class='card-img-top' style='height:150px; border-radius:10px;'>
                                                                         
@@ -44,10 +44,10 @@
                                                                         <input type='hidden' id='nombre' name='nombre' value='".$value['nombreVideojuego']."'>
                                                                         <input type='hidden' id='precio' name='precio' value='".$value['precio']."'>
                                                                         <input type='hidden' id='nombreConsola' name='nombreConsola' value='".$value['consola']."'>
-                                                                        <button type='submit' class='btn btn-danger'>Empezar a jugar</button>
+                                                                        <button type='button' class='btn btn-danger' onclick='openVideo()'>Empezar a jugar</button>
                                                                         
                                                                 </div>
-                                                        </form>
+                                                    
                                                 </div>
                                         </div>";
 
@@ -58,4 +58,24 @@
                         ?>
                 </div>
         </div>
+
 </body>
+
+
+<script>
+        function openVideo(){
+                Swal.fire({
+                html: '<iframe width="100%" height="350" src="https://www.youtube.com/embed/{https://youtu.be/_OIj3e03ntY}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+                showCloseButton: true,
+                showConfirmButton: false,
+                focusConfirm: false,
+                customClass: {
+                container: 'swal-modal-container',
+                popup: 'swal-modal-popup',
+                content: 'swal-modal-content',
+                closeButton: 'swal-modal-close-button'
+                }
+                });
+
+        }
+</script>

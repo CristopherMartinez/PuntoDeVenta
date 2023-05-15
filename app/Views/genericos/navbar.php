@@ -30,17 +30,15 @@
                 <li class="nav-item">
                 <a class="nav-link" href="lanzamientos" tabindex="-1" aria-disabled="true" style="padding-left: 5px;">Lanzamientos</a>
                 </li>  
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="padding-left: 5px;">
                     Mas
                   </a>
                   <ul class="dropdown-menu navVideo" style="background-color: transparent; font-weight:bolder; opacity:.95;">
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Ofertas</a></li>
                     <li><a class="dropdown-item" href="#" style="padding-left: 5px;">Saldo digital</a></li>
-                    
-                    <!-- <li><a class="dropdown-item" href="#" style="padding-left: 5px;">etc</a></li> -->
                   </ul>
-                </li>              
+                </li>               -->
             </ul>
             <!-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">

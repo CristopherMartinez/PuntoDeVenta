@@ -42,3 +42,171 @@ in APPPATH\Views\usuario\listaCarrito.php on line 358.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 21:28:32 --> Invalid file: "usuario/play.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('usuario/play.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/play', [], true)
+ 3 APPPATH\Controllers\usuario\VideogamesUserController.php(46): view('usuario/play')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->playVideogames()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 21:33:15 --> Invalid file: "/playVideogames.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/playVideogames.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('/playVideogames', [], true)
+ 3 APPPATH\Controllers\usuario\VideogamesUserController.php(46): view('/playVideogames')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->playVideogames()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 22:09:10 --> Undefined variable $listaVideojuegos
+in APPPATH\Views\invitado\gamesNintendo.php on line 72.
+ 1 APPPATH\Views\invitado\gamesNintendo.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listaVideojuegos', 'APPPATH\\Views\\invitado\\gamesNintendo.php', 72)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\gamesNintendo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/gamesNintendo', [], true)
+ 5 APPPATH\Controllers\generico\GamesNintendoController.php(57): view('invitado/gamesNintendo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesNintendoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesNintendoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 22:09:42 --> Undefined variable $listaVideojuegos
+in APPPATH\Views\invitado\gamesNintendo.php on line 72.
+ 1 APPPATH\Views\invitado\gamesNintendo.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listaVideojuegos', 'APPPATH\\Views\\invitado\\gamesNintendo.php', 72)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\gamesNintendo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/gamesNintendo', [], true)
+ 5 APPPATH\Controllers\generico\GamesNintendoController.php(57): view('invitado/gamesNintendo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesNintendoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesNintendoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 22:10:51 --> Undefined variable $listaVideojuegos
+in APPPATH\Views\invitado\gamesNintendo.php on line 72.
+ 1 APPPATH\Views\invitado\gamesNintendo.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listaVideojuegos', 'APPPATH\\Views\\invitado\\gamesNintendo.php', 72)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\gamesNintendo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/gamesNintendo', [], true)
+ 5 APPPATH\Controllers\generico\GamesNintendoController.php(57): view('invitado/gamesNintendo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesNintendoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesNintendoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 22:13:54 --> Undefined variable $totalGAventuraPlayStation3
+in APPPATH\Views\invitado\gamesNintendo.php on line 78.
+ 1 APPPATH\Views\invitado\gamesNintendo.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalGAventuraPlayStation3', 'APPPATH\\Views\\invitado\\gamesNintendo.php', 78)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\gamesNintendo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/gamesNintendo', [], true)
+ 5 APPPATH\Controllers\generico\GamesNintendoController.php(57): view('invitado/gamesNintendo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesNintendoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesNintendoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 22:14:18 --> Undefined variable $totalGAventuraPlayStation3
+in APPPATH\Views\invitado\gamesNintendo.php on line 78.
+ 1 APPPATH\Views\invitado\gamesNintendo.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalGAventuraPlayStation3', 'APPPATH\\Views\\invitado\\gamesNintendo.php', 78)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\invitado\\gamesNintendo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('invitado/gamesNintendo', [], true)
+ 5 APPPATH\Controllers\generico\GamesNintendoController.php(57): view('invitado/gamesNintendo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesNintendoController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesNintendoController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 22:29:22 --> Undefined array key "idVideojuego"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 258.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 258)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->agregarAlCarritoNintendo()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 22:31:09 --> Undefined array key "idVideojuego"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 258.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(258): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idVideojuego"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 258)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->agregarAlCarritoNintendo()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 22:38:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\inicio.php on line 26.
+ 1 APPPATH\Views\admin\inicio.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\inicio.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\inicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/inicio', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(29): view('admin/inicio', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 23:24:49 --> unlink(../images/../images/juego de prueba.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 252.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../images/../images/juego de prueba.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 252)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(252): unlink('../images/../images/juego de prueba.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 23:25:41 --> unlink(../images/juego de prueba.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 252.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../images/juego de prueba.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 252)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(252): unlink('../images/juego de prueba.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 23:27:45 --> unlink(../images/juego de prueba.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 252.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../images/juego de prueba.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 252)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(252): unlink('../images/juego de prueba.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 23:27:54 --> unlink(../images/juego de prueba.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 252.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../images/juego de prueba.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 252)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(252): unlink('../images/juego de prueba.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 23:29:03 --> unlink(C:\xampp\htdocs\Codeigniter4\../images/juego de prueba.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 252.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\xampp\\htdocs\\Codeigniter4\\../images/juego de prueba.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 252)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(252): unlink('FCPATH\\../images/juego de prueba.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 23:41:28 --> unlink(./1684107650_642803bbd8ae118fb8f5.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 205.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(./1684107650_642803bbd8ae118fb8f5.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 205)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(205): unlink('./1684107650_642803bbd8ae118fb8f5.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('75')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 23:47:22 --> unlink(././images/1684107900_1a2fe4d946facca8956f.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 209.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(././images/1684107900_1a2fe4d946facca8956f.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 209)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(209): unlink('././images/1684107900_1a2fe4d946facca8956f.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('77')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 23:51:37 --> unlink(././images/juegoprueba3.png): No such file or directory
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 210.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(././images/juegoprueba3.png): No such file or directory', 'APPPATH\\Controllers\\admin\\AgregarJuegoController.php', 210)
+ 2 APPPATH\Controllers\admin\AgregarJuegoController.php(210): unlink('././images/juegoprueba3.png')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->borrar('79')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 23:58:00 --> Call to a member function update() on array
+in APPPATH\Controllers\admin\AgregarJuegoController.php on line 314.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AgregarJuegoController->actualizar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
