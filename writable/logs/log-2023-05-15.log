@@ -64,3 +64,102 @@ in APPPATH\Controllers\admin\AgregarJuegoController.php on line 298.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 04:54:21 --> Undefined array key "idUsuario"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 637.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(637): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuario"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 637)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(563): App\Controllers\usuario\ShoppingCarController->addToVideojuegosUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 09:32:40 --> Array to string conversion
+in APPPATH\Views\usuario\videogamesUser.php on line 17.
+ 1 APPPATH\Views\usuario\videogamesUser.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\usuario\\videogamesUser.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(45): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 09:33:00 --> Array to string conversion
+in APPPATH\Views\usuario\videogamesUser.php on line 17.
+ 1 APPPATH\Views\usuario\videogamesUser.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\usuario\\videogamesUser.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(45): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 09:33:05 --> Array to string conversion
+in APPPATH\Views\usuario\videogamesUser.php on line 17.
+ 1 APPPATH\Views\usuario\videogamesUser.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\usuario\\videogamesUser.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(45): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 09:33:33 --> Array to string conversion
+in APPPATH\Views\usuario\videogamesUser.php on line 17.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\usuario\\videogamesUser.php', 17)
+ 2 APPPATH\Views\usuario\videogamesUser.php(17): implode(', ', [...])
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 6 APPPATH\Controllers\usuario\VideogamesUserController.php(45): view('usuario/videogamesUser', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 09:34:14 --> Array to string conversion
+in APPPATH\Views\usuario\videogamesUser.php on line 17.
+ 1 APPPATH\Views\usuario\videogamesUser.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\usuario\\videogamesUser.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(45): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 09:35:10 --> Undefined array key 0
+in APPPATH\Views\usuario\videogamesUser.php on line 12.
+ 1 APPPATH\Views\usuario\videogamesUser.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\usuario\\videogamesUser.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(45): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-15 10:47:51 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-05-15 10:47:51 --> 220 smtp.gmail.com ESMTP v13-20020a056830140d00b006aaf82bd5a2sm8970372otp.43 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2806:2f0:83e0:fb3b:8017:80dd:74ec:8142]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2806:2f0:83e0:fb3b:8017:80dd:74ec:8142]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 

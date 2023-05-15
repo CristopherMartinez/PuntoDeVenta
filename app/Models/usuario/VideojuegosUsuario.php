@@ -28,6 +28,32 @@ class VideojuegosUsuario extends Model
                 $puntos = $ventas * 10;
                 return $puntos;
         }
+
+        //Funcion que retorna los videojuegos a vender verificando los que ya se tienen
+        public function videojuegosFinales($usuario, $juegos_a_vender) {
+                $query = $this->db->query("SELECT idVideojuego FROM videojuegosusuario WHERE usuario = ?", [$usuario]);
+                $juegos_comprados = array_column($query->getResultArray(), 'idVideojuego');
+                
+                $juegos_faltantes = array();
+                foreach ($juegos_a_vender as $juego) {
+                    if (!in_array($juego['idVideojuego'], $juegos_comprados)) {
+                        $juegos_faltantes[] = $juego;
+                    }
+                }
+                
+                return $juegos_faltantes;
+        }
+
+
+        public function getPointsOfUser($idUsuario){
+                $query = $this->db->query("SELECT puntos FROM puntos WHERE idUsuario = ?", [$idUsuario]);
+                return $query->getResultArray();   
+
+        }
+
+        
+
+     
             
             
         

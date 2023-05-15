@@ -7,13 +7,15 @@
 
 <body class="backgrounFooter">
         <div class="container">
+
+
                 <br>
                 <div class="alert alert-primary" role="alert">
                 <h3 style="color:black;">Mis videojuegos</h3>
                 </div>
                 <br>
                 <div>
-                        <h3 style="color:white;">Puntos acumulados: 20</h3>
+                        <h3 style="color:white;">Puntos acumulados: <?php echo $puntos[0]['puntos']?></h3>
                 </div>
 
                 <div class="row">
@@ -25,9 +27,7 @@
                                 ";
                         }else{
 
-                                
-                                // print_r(json_encode($videogamesUser));
-                              
+
                                 foreach($videogamesUser as $value){
                                         echo "
                                         <div class='col-md-4 col-sm-6 col-xs-12'>
@@ -44,8 +44,8 @@
                                                                         <input type='hidden' id='nombre' name='nombre' value='".$value['nombreVideojuego']."'>
                                                                         <input type='hidden' id='precio' name='precio' value='".$value['precio']."'>
                                                                         <input type='hidden' id='nombreConsola' name='nombreConsola' value='".$value['consola']."'>
-                                                                        <button type='button' class='btn btn-danger' onclick='openVideo()'>Empezar a jugar</button>
-                                                                        
+                                                                        <button type='button' class='btn btn-danger' onclick=\"openVideoGameModal('$value[nombreVideojuego]')\">Empezar a jugar</button>
+
                                                                 </div>
                                                     
                                                 </div>
@@ -53,6 +53,7 @@
 
                                 
                                 }
+                                
                         }
 
                         ?>
@@ -63,9 +64,33 @@
 
 
 <script>
-        function openVideo(){
-                Swal.fire({
-                html: '<iframe width="100%" height="350" src="https://www.youtube.com/embed/{https://youtu.be/_OIj3e03ntY}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        // function openVideo(){
+        //         Swal.fire({
+        //         html: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/T9s0hLDUCu8?start=14&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+        //         showCloseButton: true,
+        //         showConfirmButton: false,
+        //         focusConfirm: false,
+        //         customClass: {
+        //         container: 'swal-modal-container',
+        //         popup: 'swal-modal-popup',
+        //         content: 'swal-modal-content',
+        //         closeButton: 'swal-modal-close-button'
+        //         }
+        //         });
+
+        // }
+
+        //Funcion que pasa como parametro el nombre del videojuego y busca de acuerdo al nombre un video relacionado 
+        function openVideoGameModal(videoGameName) {
+        // Obtener los videos relacionados con el nombre del videojuego
+        fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${videoGameName}%20demo&key=AIzaSyBNMMkshJUU6ZVexEcDLIFAS9-ZfN3udNE&type=video`)
+        .then(response => response.json())
+        .then(data => {
+        // Obtener el primer video de la lista de resultados
+        const videoId = data.items[0].id.videoId;
+        // Abrir el modal con el video incrustado
+        Swal.fire({
+                html: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/${videoId}?start=14&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
                 showCloseButton: true,
                 showConfirmButton: false,
                 focusConfirm: false,
@@ -75,7 +100,19 @@
                 content: 'swal-modal-content',
                 closeButton: 'swal-modal-close-button'
                 }
-                });
-
+        });
+        })
+        .catch(error => {
+        console.error(error);
+        // Mostrar un mensaje de error si ocurre un problema al buscar videos
+        Swal.fire({
+                icon: 'error',
+                title: 'Error al buscar videos',
+                text: 'Ha ocurrido un problema al buscar videos relacionados con el videojuego.'
+        });
+        });
         }
+
+     
+
 </script>

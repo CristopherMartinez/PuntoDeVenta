@@ -20,5 +20,12 @@ class Usuarios extends Model
         public function actualizarMembresia($usuario, $nuevoIdMembresia) {
             $this->db->query("UPDATE usuarios SET idMembresia = ? WHERE usuario = ?", [$nuevoIdMembresia, $usuario]);
         }
+
+        public function getIdUser($usuario){
+            $query = $this->db->query("SELECT idUsuario FROM usuarios WHERE usuario = ?", [$usuario]);
+            $row = $query->getRow();
+            return $row ? $row->idUsuario : null;
+        }
+        
         
 }

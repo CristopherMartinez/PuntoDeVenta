@@ -21,12 +21,26 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
           <h6 class="text-uppercase fw-bold mb-4" style="font-weight: bolder; font-size:17px;">Contacto</h6>
-          <p style="font-size:15px;"><i class="fas fa-home me-3 text-secondary" ></i>Merida Yucatán</p>
           <p style="font-size:15px;">
-            <i class="fas fa-envelope me-3 text-secondary"></i>
+          <!-- <i class="fas fa-home me-3 text-secondary" ></i> -->
+          <span class="material-symbols-outlined" style="width: 40px; padding-right:10px">
+          pin_drop
+          </span>
+          Merida Yucatán
+          </p>
+          <p style="font-size:15px;">
+            <!-- <i class="fas fa-envelope me-3 text-secondary"></i> -->
+            <span class="material-symbols-outlined" style="width: 40px; padding-right:10px">
+            mail
+            </span> 
             contacto@worldgames.com.mx
           </p>
-          <p style="font-size:15px;""><i class="fas fa-phone me-3 text-secondary"></i> + 52 99 93 34 23 22</p>
+          <p style="font-size:15px;"">
+          <!-- <i class="fas fa-phone me-3 text-secondary"></i> -->
+          <span class="material-symbols-outlined" style="width: 40px; padding-right:10px" >
+          call
+          </span>
+           + 52 99 93 34 23 22</p>
         </div>
 
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">

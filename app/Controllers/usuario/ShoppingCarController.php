@@ -358,7 +358,7 @@ class ShoppingCarController extends BaseController{
         }
     }
 
-    //Comprar sin agregar tarjeta directo CORRECTO
+    //Comprar sin agregar tarjeta directo 
     public function comprar(){
 
         
@@ -416,7 +416,21 @@ class ShoppingCarController extends BaseController{
             ];             
         }
 
-        foreach ($ventas as $venta) {
+        // //Aqui debe ponerse el arreglo con las ventas finales una vez se verifiquen que juegos ya se tienen
+        // $vid = new VideojuegosUsuario();
+        // $ventasFinales  = $vid->videojuegosFinales($_SESSION['datosUsuario'][0]['usuario'],$ventas);
+
+
+        // if (empty($ventasFinales )) {
+        //     // Mostramos mensaje de que ya se han comprado todos los videojuegos agregados
+        //     $session = session();
+        //     $session->setFlashdata('TodosComprados', 'Todos los videojuegos que intentaste comprar ya han sido adquiridos por ti anteriormente');
+        //     return redirect()->to('usuario/listaCarrito');
+        // }
+
+        //En el foreach se debe iterar sobre el el arreglo de ventas finales
+
+        foreach ($ventas  as $venta) {
             $ordenesUsuario->insert($venta);
             
             // Obtener la cantidad actual del videojuego correspondiente
@@ -459,18 +473,16 @@ class ShoppingCarController extends BaseController{
 
     }
 
-     //Funcion para comprar con tarjeta que se seleccione cuando ya se alla guardado una
+     //Funcion para comprar con tarjeta que se seleccione cuando ya se hayaa guardado alguna tarjeta
+     //CORRECTO
      public function comprarConTarjetaGuardada(){
 
         $tarjeta = new Tarjeta();
-
         //Obtenemos la tarjeta seleccionada,la fecha y el cvv
         $tarjetaSeleccionada = $_POST['tarjeta_seleccionada'];
         $fecha = $_POST['fechaVencimientomodalTarjetas'];
         $cvv = $_POST['cvvmodalTarjetas'];
-
         $datosTarjeta = [];
-
         //Recuperamos los datos de la tarjeta con el usuario y el numero de tarjeta  y guardamos dentro de arreglo datosTarjeta
         $datosTarjeta = $tarjeta->recuperarDatosTarjeta($_SESSION['datosUsuario'][0]['usuario'],$tarjetaSeleccionada);
  
@@ -479,15 +491,17 @@ class ShoppingCarController extends BaseController{
             //Si existe en la sesion el arreglo carrito
             if(isset($_SESSION['cart'])){
 
+                session_start();
+                // Creamos un arreglo para almacenar los datos de todas las ventas
+                $ventas = [];
                 $ordenes = new Ordenes();
                 $videojuego = new Videojuegos();
                 $ordenesUsuario = new OrdenesUsuario();
-
                 //Generamos un folio aleatorio
                 $folio = rand(1000000000, 9999999999);
                 //Obtenemos la fecha actual y hora
                 $fechaVenta = date('Y-m-d H:i:s');
-        
+                
                 //Se genera arreglo con datos de la venta
                 $data = [
                     "usuario"=>$_SESSION['datosUsuario'][0]['usuario'],
@@ -500,15 +514,10 @@ class ShoppingCarController extends BaseController{
                     "cvv" => $datosTarjeta[0]['cvv'],
                     "fechaVenta"=> $fechaVenta
                 ];
-        
+
                 $ordenes->insert($data);
                 //Obtenemos el idOrden que se genero automaticamente 
                 $idOrden = $ordenes->getConnection()->insert_id;
-
-                session_start();
-        
-                // Creamos un arreglo para almacenar los datos de todas las ventas
-                $ventas = [];
         
                 foreach ($_SESSION['cart'] as $key => $values) {
                     $nombre = $values['nombre'];
@@ -521,14 +530,36 @@ class ShoppingCarController extends BaseController{
                     $ventas[] = [
                         "idOrden" => $idOrden,
                         "idVideojuego"=>$idVideojuego,
+                        "usuario"=> $_SESSION['datosUsuario'][0]['usuario'],
                         "nombre" => $nombre,
                         "consola" => $consola,
                         "precio" => $precio,
                         "cantidad" => $cantidad,
                     ];             
                 }
-        
-                foreach ($ventas as $venta) {
+       
+                //Aqui debe ponerse el arreglo con las ventas finales una vez se verifiquen que juegos ya se tienen
+                $orden = new OrdenesUsuario();
+                //Ventas finales de tabla de videojuegosUsuario
+                $ventasFinales  = $orden->videojuegosFinales($_SESSION['datosUsuario'][0]['usuario'],$ventas);
+                //Ventas finales de tabla de ordenesUsuario
+
+                if (empty($ventasFinales )) {
+
+                    // Mostramos mensaje de que ya se han comprado todos los videojuegos agregados
+                    $session = session();
+                    $session->setFlashdata('TodosComprados', 'Todos los videojuegos que intentaste comprar ya han sido adquiridos por ti anteriormente');
+
+                    $or = new Ordenes();
+                    $ultimoRegistro = $or->orderBy('idOrden', 'DESC')->first();
+                    if (!empty($ultimoRegistro)) {
+                        $or->where('idOrden', $ultimoRegistro['idOrden'])->delete();
+                    }
+
+                    return redirect()->to('usuario/listaCarrito');
+                }
+
+                foreach ($ventasFinales as $venta) {
                     $ordenesUsuario->insert($venta);
                     
                     // Obtener la cantidad actual del videojuego correspondiente
@@ -545,7 +576,7 @@ class ShoppingCarController extends BaseController{
                     $videojuego->update($venta['idVideojuego'], $actualizarLicencias);
                 }
                 
-                //Se llama a funcion para agregar a tabla de VideojuegosUsuario
+                // //Se llama a funcion para agregar a tabla de VideojuegosUsuario
                 $this->addToVideojuegosUsuario();
         
                 // Eliminamos el carrito de la sesión
@@ -556,7 +587,9 @@ class ShoppingCarController extends BaseController{
 
                 //Llamamos a la funcion sendCorreoCompra que esta en el modelo de Email
                 $email = new Email();
-                $email->sendCorreoCompra($ventas,$idOrden,$folio);
+                $email->sendCorreoCompra($ventasFinales,$idOrden,$folio);
+
+                
         
                 return redirect()->to('usuario/listaCarrito');
                 }
@@ -566,6 +599,7 @@ class ShoppingCarController extends BaseController{
                     $session = session();
                     $session->setFlashdata('SinCompras', 'No hay ningun videojuego agregado al carrito');
                     return redirect()->to('usuario/listaCarrito');
+          
                 }
             }
         else
@@ -578,8 +612,7 @@ class ShoppingCarController extends BaseController{
 
     }
 
-    //Realizar compra usuario insertando en Tabla de VideojuegosUsuario 
-    //y agregando puntos
+    //Realizar compra usuario insertando en Tabla de VideojuegosUsuario y agregando puntos
     //CORRECTO
     public function addToVideojuegosUsuario()
     {
@@ -608,11 +641,27 @@ class ShoppingCarController extends BaseController{
                     "consola" => $consola,
                     "precio" => $precio,
                     "imagen"=> $imagen
-                ];     
+                ];    
+                
+                
             }
+
+            //Aqui debe ponerse el arreglo con las ventas finales una vez se verifiquen que juegos ya se tienen
+            $vid = new VideojuegosUsuario();
+            //Ventas finales de tabla de videojuegosUsuario
+            $ventasFinales  = $vid->videojuegosFinales($_SESSION['datosUsuario'][0]['usuario'],$ventas);
+            //Ventas finales de tabla de ordenesUsuario
+
+            if (empty($ventasFinales )) {
+                // Mostramos mensaje de que ya se han comprado todos los videojuegos agregados
+                $session = session();
+                $session->setFlashdata('TodosComprados', 'Algunos juegos ya han sido adquiridos por ti');
+                // return redirect()->to('usuario/listaCarrito');
+            }
+
     
             // Insertamos los datos de todas las ventas en la tabla de videojuegosUsuario
-            foreach ($ventas as $venta) {
+            foreach ($ventasFinales as $venta) {
                 // $ordenes->verificarYGuardar($ventas);
                 $videojuegosUsuario->insert($venta);
             }
@@ -691,49 +740,4 @@ class ShoppingCarController extends BaseController{
     }
 
   
-    // //Funcion para verificar si ya tiene los juegos el usuario
-    // public function comprarVerJuegos(){
-
-    //     $user = new VideojuegosUsuario();
-
-    //     //Videojuegos del usuario
-    //     $idsVideojuegos = $user->getidsVideogames($_SESSION['datosUsuario'][0]['usuario']);
-
-        
-    //     if(isset($_SESSION['cart'])){
-    //         $videojuegos = [];
-    //         foreach ($_SESSION['cart'] as $key => $values) {
-    //                     $nombre = $values['nombre'];
-    //                     $precio = $values['precio'];
-    //                     $cantidad = $values['Cantidad'];
-    //                     $idVideojuego = $values['idVideojuego'];
-    //                     $consola = $values['NombreConsola'];
-            
-    //                     // Agregamos los datos de la venta al arreglo de videojuegos
-    //                     $videojuegos[] = [  
-    //                         "idVideojuego"=>$idVideojuego,
-    //                         "nombre" => $nombre,
-    //                         "consola" => $consola,
-    //                         "precio" => $precio,
-    //                         "cantidad" => $cantidad,
-    //                     ];      
-    //                     // foreach ($videojuegos as $videojuego) {
-    //                     //     if (in_array($videojuego['idVideojuego'], $idsVideojuegos)) {
-    //                     //         echo "Se encontró el videojuego con ID " . $videojuego['idVideojuego'] . ": " . $videojuego['nombre'] . "<br>";
-    //                     //     }
-    //                     // }                
-    //                 }
-               
-    //     }
-
-    //     print_r(json_encode($idsVideojuegos));
-    //     print_r(json_encode($videojuegos));
-     
-        
-
-    // }
-
-    
-
-
 }

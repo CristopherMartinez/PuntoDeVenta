@@ -170,7 +170,7 @@
      <?php if (session()->has('falloEnvioCorreo')): ?>
         <script>
             Swal.fire({
-                icon: 'success',
+                icon: 'info',
                 title: '<?= session('falloEnvioCorreo') ?>',
                 showConfirmButton: true,
                 // timer: 1500
@@ -232,6 +232,17 @@
             Swal.fire({
                 icon: 'info',
                 title: '<?= session('numTarjetas') ?>',
+                showConfirmButton: true
+            });
+        </script>
+    <?php endif; ?>
+
+      <!--Mensaje para mostrar mensaje de que ya se han comprado los videojuegos-->        
+      <?php if (session()->has('TodosComprados')): ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: '<?= session('TodosComprados') ?>',
                 showConfirmButton: true
             });
         </script>

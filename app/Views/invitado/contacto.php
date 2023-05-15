@@ -218,13 +218,19 @@
   <h2 class="text-center" style="color:whitesmoke; font-weight:bolder;">CONTACTO</h2>
   <div class="row">
     <div class="col-sm-5">
-      <p style="font-size:medium;"><span class="material-symbols-outlined" style="width: 40px; padding-right:10px">
+      <p style="font-size:medium;">
+      <span class="material-symbols-outlined" style="width: 40px; padding-right:10px">
       pin_drop
-      </span>Merida Yucatan</p>
-      <p style="font-size:medium;"><span class="material-symbols-outlined" style="width: 40px; padding-right:10px" >
+      </span>
+      Merida Yucatan</p>
+      <p style="font-size:medium;">
+      <span class="material-symbols-outlined" style="width: 40px; padding-right:10px" >
       call
-      </span>99-93-35-43-42</p>
-      <p style="font-size:medium;"><span class="material-symbols-outlined" style="width: 40px; padding-right:10px">
+      </span>
+      99-93-35-43-42
+      </p>
+      <p style="font-size:medium;">
+      <span class="material-symbols-outlined" style="width: 40px; padding-right:10px">
       mail
       </span> contacto@worldgames.com.mx</p>
     </div>
@@ -251,7 +257,7 @@
 
         <div class="row">
           <div class="col-sm-12 form-group">
-            <button class="btn btn-outline-primary" type="submit" style="font-size:medium; ">Enviar</button>
+            <button class="btn btn-outline-primary" type="submit" style="font-size:medium;">Enviar</button>
           </div>
         </div>
       </form>
@@ -300,7 +306,7 @@
 
                   <div class="modal-footer">
                     <button type="button" class="btn btn-danger" class="close" data-dismiss="modal" aria-label="Close">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="send-btn" onclick="sugerenciaEnviada()">Enviar</button>
+                    <button type="button" class="btn btn-primary" id="send-btn" >Enviar</button>
                     
                   </div>
             
