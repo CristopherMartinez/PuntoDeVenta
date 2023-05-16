@@ -24,3 +24,56 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:23:33 --> Undefined array key "idUsuario"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 704.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(704): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuario"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 704)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(482): App\Controllers\usuario\ShoppingCarController->addToVideojuegosUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:26:04 --> Undefined array key "idUsuario"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 704.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(704): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuario"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 704)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(611): App\Controllers\usuario\ShoppingCarController->addToVideojuegosUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:39:32 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\inicio.php on line 26.
+ 1 APPPATH\Views\admin\inicio.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\inicio.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\inicio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('admin/inicio', [], true)
+ 5 APPPATH\Controllers\admin\AdminController.php(29): view('admin/inicio', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\admin\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:47:03 --> Undefined array key "correo"
+in APPPATH\Models\generico\Email.php on line 79.
+ 1 APPPATH\Models\generico\Email.php(79): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "correo"', 'APPPATH\\Models\\generico\\Email.php', 79)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(493): App\Models\generico\Email->sendCorreoCompra([...], 186, '8467637628')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 19:01:09 --> Trying to access array offset on value of type null
+in APPPATH\Views\usuario\navbarLog.php on line 158.
+ 1 APPPATH\Views\usuario\navbarLog.php(158): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\usuario\\navbarLog.php', 158)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\navbarLog.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/navbarLog', [], true)
+ 5 APPPATH\Controllers\invitado\Inicio.php(77): view('usuario/navbarLog', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\invitado\Inicio->indexLog()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\invitado\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 19:03:52 --> Undefined array key "datosUsuario"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 335.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(335): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "datosUsuario"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 335)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->listaCarrito()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

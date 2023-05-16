@@ -22,7 +22,7 @@ class RegistrarUsuario extends Model
         }
 
         public function traerDatosUsuarioPorUsuario($usuario){
-                $query = $this->db->query("SELECT usuarios.usuario, membresia.nombre 
+                $query = $this->db->query("SELECT usuarios.usuario,usuarios.idUsuario,usuarios.correo, membresia.nombre 
                                            FROM usuarios 
                                            JOIN membresia ON usuarios.idMembresia = membresia.idMembresia 
                                            WHERE usuarios.usuario = ?", array($usuario));
