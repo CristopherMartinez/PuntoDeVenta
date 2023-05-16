@@ -25,6 +25,13 @@ class RegisterController extends BaseController{
             $data2["videojuegos"]=$videojuego->get10VideogamesPlay();
 
 
+            if($_POST["contrasenia"] != $_POST["contrasenia2"]){
+                $session = session();
+                $session->setFlashdata('paswordInvalid', 'No coinciden las contraseñas');
+                return redirect()->to('SingUp');
+            }
+
+
             if (isset($_POST['correo'])) {
                 $texto = $_POST['correo'];
             
@@ -75,7 +82,9 @@ class RegisterController extends BaseController{
 
             }else{
                 //Existe el usuario Falta mostrar mensaje 
-                 return redirect()->back();
+                $session = session();
+                $session->setFlashdata('existeUsuario', 'Ya existe un usuario registrado con este correo');
+                return redirect()->to('SingUp');
             }
         }
 

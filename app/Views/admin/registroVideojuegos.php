@@ -42,6 +42,12 @@
 		color: white !important;
 		}
 
+		/* img {
+		max-width: 100%;
+		height: auto;
+		} */
+
+
 
 	</style>
 </head>
@@ -211,7 +217,19 @@
 								<?php foreach ($videojuegos as $v): ?>
 									<tr class="bg-info" >
 										<td style="color:black;"><?= $v['idVideojuego'] ?></td>
-										<td style="color:black;"><img src="<?= base_url() . $v['imagen'] ?>" class="img-fluid rounded-start" style="border-radius: 5px; width: 400px; height: 200px;" alt="..."></td>
+										<!-- <td style="color:black;"><img src="<?= base_url() . $v['imagen'] ?>" class="img-fluid rounded-start" style="border-radius: 5px; width: 400px; height: 200px;" alt="..."></td>
+										 -->
+										<td style="color:black;">
+										<img src="<?= base_url() . $v['imagen'] ?>"
+											class="img-fluid rounded-start"
+											style="border-radius: 5px; max-width: 100%; max-height: 200px;"
+											alt="..."
+											srcset="<?= base_url() . $v['imagen'] ?> 400w,
+													<?= base_url() . $v['imagen'] ?> 600w,
+													<?= base_url() . $v['imagen'] ?> 800w"
+											sizes="(min-width: 576px) 50vw, 100vw">
+										</td>
+
 										<td style="color:black;"><?= $v['nombre'] ?></td>
 										<td style="color:black;"><?= $v['descripcion'] ?></td>
 										<td style="color:black;"><?= sprintf('$%s', $v['precio']) ?></td>

@@ -94,6 +94,14 @@ class RegistrarUsuario extends Model
                 return $row->idUsuario;
         }
 
+        // public function getUserWith($correo) {
+        //         $query = $this->db->query("SELECT usuarios.idUsuario 
+        //                                    FROM usuarios 
+        //                                    WHERE usuarios.correo = ?", array($correo));
+        //         $row = $query->getRow();
+        //         return $row->idUsuario;
+        // }
+
         public function actualizarPassword($correo, $nuevoPassword) {
                 $query = $this->db->query("UPDATE usuarios SET contrasenia = ? WHERE correo = ?", array($nuevoPassword, $correo));
                 return $query->getResultArray();

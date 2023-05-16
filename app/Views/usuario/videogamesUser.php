@@ -15,7 +15,10 @@
                 </div>
                 <br>
                 <div>
+                        <?php if(isset($puntos[0]['puntos'])){?>
                         <h3 style="color:white;">Puntos acumulados: <?php echo $puntos[0]['puntos']?></h3>
+                        <?php }
+                        ?>
                 </div>
 
                 <div class="row">

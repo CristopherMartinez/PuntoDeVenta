@@ -6,7 +6,6 @@
       
 </head>
 
-
 <br>
 <body class="backgrounFooter">
 <div class="container ">
@@ -266,6 +265,7 @@
     } ?>">
     Realizar Compra
     </button>
+    
     <!--Modal para realizar compra directa-->
     <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">

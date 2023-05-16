@@ -163,3 +163,89 @@ hello: 250-smtp.gmail.com at your service, [2806:2f0:83e0:fb3b:8017:80dd:74ec:81
 250 SMTPUTF8
 
 Failed to authenticate password. Error: 
+CRITICAL - 2023-05-15 17:31:24 --> Cannot access offset of type string on string
+in APPPATH\Models\usuario\VideojuegosUsuario.php on line 39.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(112): App\Models\usuario\VideojuegosUsuario->videojuegosFinales('marti9082', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->agregarAlCarrito()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 17:32:36 --> Cannot access offset of type string on string
+in APPPATH\Models\usuario\VideojuegosUsuario.php on line 39.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(80): App\Models\usuario\VideojuegosUsuario->videojuegosFinales('marti9082', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->agregarAlCarrito()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 19:37:35 --> Undefined array key 0
+in APPPATH\Views\usuario\videogamesUser.php on line 18.
+ 1 APPPATH\Views\usuario\videogamesUser.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\usuario\\videogamesUser.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(45): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 19:41:27 --> Undefined array key "idUsuario"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 710.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(710): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuario"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 710)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(488): App\Controllers\usuario\ShoppingCarController->addToVideojuegosUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 19:42:49 --> Undefined array key "idUsuario"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 710.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(710): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuario"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 710)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(617): App\Controllers\usuario\ShoppingCarController->addToVideojuegosUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 19:46:01 --> Cannot access offset of type string on string
+in APPPATH\Models\usuario\VideojuegosUsuario.php on line 39.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(80): App\Models\usuario\VideojuegosUsuario->videojuegosFinales('crisb4763', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->agregarAlCarrito()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 19:46:55 --> Undefined array key "idUsuario"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 695.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(695): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuario"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 695)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(601): App\Controllers\usuario\ShoppingCarController->addToVideojuegosUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 19:49:46 --> Undefined array key "idUsuario"
+in APPPATH\Controllers\usuario\ShoppingCarController.php on line 696.
+ 1 APPPATH\Controllers\usuario\ShoppingCarController.php(696): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idUsuario"', 'APPPATH\\Controllers\\usuario\\ShoppingCarController.php', 696)
+ 2 APPPATH\Controllers\usuario\ShoppingCarController.php(601): App\Controllers\usuario\ShoppingCarController->addToVideojuegosUsuario()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\ShoppingCarController->comprarConTarjetaGuardada()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\ShoppingCarController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 20:18:54 --> Undefined array key 0
+in APPPATH\Views\usuario\videogamesUser.php on line 18.
+ 1 APPPATH\Views\usuario\videogamesUser.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\usuario\\videogamesUser.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(45): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 20:41:01 --> Array to string conversion
+in APPPATH\Views\usuario\videogamesUser.php on line 18.
+ 1 APPPATH\Views\usuario\videogamesUser.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\usuario\\videogamesUser.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\usuario\\videogamesUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('usuario/videogamesUser', [], true)
+ 5 APPPATH\Controllers\usuario\VideogamesUserController.php(45): view('usuario/videogamesUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\usuario\VideogamesUserController->getvideogamesUser()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario\VideogamesUserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

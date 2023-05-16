@@ -11,8 +11,8 @@
         <ul class="table-list">
             <li>Temporadas <span>de videojuegos</span></li>
             <li>Acceso Ilimitado <span>por 3 meses</span></li>
-            <li>Gratis 3 <span>videojuegos</span></li>
-            <li>15 días <span> de demos espciales</span></li>
+            <li>Promociones <span>especiales</span></li>
+            <li>15 días <span> de demos especiales</span></li>
             <li>6 Meses <span>de acceso a juegos online</span></li>
         </ul>
         <div class="table-buy">
@@ -25,7 +25,7 @@
         <div class="price">$100<sup>/ mes</sup></div>
         <ul class="table-list">
             <li>Acceso Ilimitado <span>por 12 meses</span></li>
-            <li>Gratis 10 <span>videojuegos</span></li>
+            <li>Juegos nintendo<span> especiales</span></li>
             <li>1 Meses <span>de demos especiales</span></li>
             <li>6 Meses <span> de acceso a juegos online</span></li>
             <li>Acceso a preventa especial</li>
@@ -40,7 +40,7 @@
         <div class="price">$200<sup>/ mes</sup></div>
         <ul class="table-list">
             <li>Acceso Ilimitado <span>por 15 meses</span></li>
-            <li>Gratis 15 <span>videojuegos</span></li>
+            <li>Mas puntos <span>al comprar</span></li>
             <li>12 meses<span> de acceso a juegos online</span></li>
             <li>Soporte <span> personalizado</span></li>
             <li>Acceso a preventa especial</li>

@@ -1,8 +1,8 @@
 <head>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
- -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src=" <?php echo base_url()?>/js/scripts.js"></script>   
 
   <style>
       /* #ver-repite-contrasenia span.material-symbols-outlined {
@@ -15,12 +15,40 @@
 </head>
 
 
+
+
+
+
+
 <body class="imgregister letraGeneral" style="color:whitesmoke">
+
+<?php if (session()->has('paswordInvalid')): ?>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: '<?= session('paswordInvalid') ?>',
+                showConfirmButton: true
+            });
+        </script>
+    <?php endif; ?>
+
+    <?php if (session()->has('existeUsuario')): ?>
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: '<?= session('existeUsuario') ?>',
+                showConfirmButton: true
+            });
+        </script>
+    <?php endif; ?>
+
+    
+
       <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
             <h2 class="text-center mb-4" style="color:whitesmoke; font-weight:bolder;">REGISTRATE</h2>
-            <form id="miFormulario" class="needs-validation" novalidate name="registro" method="POST" action="<?php echo base_url().'/guardar_persona'?>"><!--onsubmit="return validarFormulario()"-->
+            <form id="miFormulario" class="needs-validation" novalidate name="registro" method="POST" action="<?php echo base_url().'/guardar_persona'?>" onsubmit="return validarRecaptcha()"><!--onsubmit="return validarFormulario()"-->
 
                 <div class="mb-3">
                     <label for="nombre" class="form-label" style="color:whitesmoke; font-weight:bold;">Nombre</label>
@@ -105,7 +133,7 @@
                 </div>
 
                 <div class="d-grid justify-content-center" style="margin-top:10px;">
-                <button type="submit" class="tn btn-danger" style="border-radius: 10px; width:400px;" onclick="return validarRecaptcha()">Registrarse</button>
+                <button type="submit" class="tn btn-danger" style="border-radius: 10px; width:400px;">Registrarse</button>
                 </div>
             </form>
             </div>
@@ -139,19 +167,7 @@
     contrasenia.addEventListener("change", validarContrasenia);
     confirmarContrasenia.addEventListener("change", validarContrasenia);
 
-    function validarRecaptcha() {
-            var response = grecaptcha.getResponse();
-            if (response.length == 0) {
-                // El usuario no ha completado el reCAPTCHA
-                Swal.fire({
-                text: 'Porfavor verifíca el Recaptcha',        
-                })
-                return false;
-            } else {
-                // El usuario ha completado el reCAPTCHA
-                return true;
-            }
-            }
+
             function togglePasswordVisibility(inputId, buttonId) {
       const inputField = document.getElementById(inputId);
       const verContraseniaBtn = document.getElementById(buttonId);

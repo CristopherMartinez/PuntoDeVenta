@@ -73,6 +73,7 @@ class ShoppingCarController extends BaseController{
                     'Cantidad' => 1,
                     "imagen" => $_POST['imagen']
                 );
+
                 $session = session();
                 $session->setFlashdata('success', 'Agregado al carrito');
                 return redirect()->to('usuario/inicio');
@@ -87,6 +88,26 @@ class ShoppingCarController extends BaseController{
                 'Cantidad' => 1,
                 "imagen" => $_POST['imagen']
             );
+
+
+            // //Aqui debe ponerse el arreglo con las ventas finales una vez se verifiquen que juegos ya se tienen
+            // $orden = new VideojuegosUsuario();
+            // //Ventas finales de tabla de videojuegosUsuario
+            // $ventasFinales  = $orden->videojuegosFinales($_SESSION['datosUsuario'][0]['usuario'],$_SESSION['cart'][0]);
+            // //Ventas finales de tabla de ordenesUsuario
+
+            // if (empty($ventasFinales )) {
+
+            //     // Mostramos mensaje de que ya se han comprado todos los videojuegos agregados
+            //     $session = session();
+            //     $session->setFlashdata('TodosComprados', 'Todos los videojuegos que intentaste comprar ya han sido adquiridos por ti anteriormente');
+            //     // return redirect()->to('usuario/listaCarrito');
+            // }
+
+
+
+
+
             $session = session();
             $session->setFlashdata('success', 'Agregado al carrito');
             return redirect()->to('usuario/inicio');
@@ -409,6 +430,7 @@ class ShoppingCarController extends BaseController{
             $ventas[] = [
                 "idOrden" => $idOrden,
                 "idVideojuego"=>$idVideojuego,
+                "usuario"=> $_SESSION['datosUsuario'][0]['usuario'],
                 "nombre" => $nombre,
                 "consola" => $consola,
                 "precio" => $precio,
@@ -416,21 +438,30 @@ class ShoppingCarController extends BaseController{
             ];             
         }
 
-        // //Aqui debe ponerse el arreglo con las ventas finales una vez se verifiquen que juegos ya se tienen
-        // $vid = new VideojuegosUsuario();
-        // $ventasFinales  = $vid->videojuegosFinales($_SESSION['datosUsuario'][0]['usuario'],$ventas);
+        //Aqui debe ponerse el arreglo con las ventas finales una vez se verifiquen que juegos ya se tienen
+        $vid = new VideojuegosUsuario();
+        //Ventas finales de tabla de videojuegosUsuario
+        $ventasFinales  = $vid->videojuegosFinales($_SESSION['datosUsuario'][0]['usuario'],$ventas);
+        //Ventas finales de tabla de ordenesUsuario
 
+        if (empty($ventasFinales )) {
+            // Mostramos mensaje de que ya se han comprado todos los videojuegos agregados
+             $session = session();
+             $session->setFlashdata('TodosComprados', 'Todos los videojuegos que intentaste comprar ya han sido adquiridos por ti anteriormente');
 
-        // if (empty($ventasFinales )) {
-        //     // Mostramos mensaje de que ya se han comprado todos los videojuegos agregados
-        //     $session = session();
-        //     $session->setFlashdata('TodosComprados', 'Todos los videojuegos que intentaste comprar ya han sido adquiridos por ti anteriormente');
-        //     return redirect()->to('usuario/listaCarrito');
-        // }
+             $or = new Ordenes();
+             $ultimoRegistro = $or->orderBy('idOrden', 'DESC')->first();
+             if (!empty($ultimoRegistro)) {
+                 $or->where('idOrden', $ultimoRegistro['idOrden'])->delete();
+             }
+
+             return redirect()->to('usuario/listaCarrito');   
+        }
+
 
         //En el foreach se debe iterar sobre el el arreglo de ventas finales
 
-        foreach ($ventas  as $venta) {
+        foreach ($ventasFinales  as $venta) {
             $ordenesUsuario->insert($venta);
             
             // Obtener la cantidad actual del videojuego correspondiente
@@ -459,7 +490,7 @@ class ShoppingCarController extends BaseController{
 
         //Llamamos a la funcion sendCorreoCompra que esta en el modelo de Email
         $email = new Email();
-        $email->sendCorreoCompra($ventas,$idOrden,$folio);
+        $email->sendCorreoCompra($ventasFinales,$idOrden,$folio);
 
         return redirect()->to('usuario/listaCarrito');
         }
@@ -620,12 +651,12 @@ class ShoppingCarController extends BaseController{
          $ordenes = new Ordenes();
          $puntos = new Puntos();
 
-        session_start();
-
         // Creamos un arreglo para almacenar los datos de todas las ventas
         $ventas = [];
 
         if(isset($_SESSION['cart'])){
+            session_start();
+
             foreach ($_SESSION['cart'] as $key => $values) {
                 $nombre = $values['nombre'];
                 $consola = $values['NombreConsola'];

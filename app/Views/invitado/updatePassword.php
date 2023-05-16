@@ -23,6 +23,20 @@
     </script>
 <?php endif; ?>
 
+<?php if (session()->getFlashdata('doesntExist')) : ?>
+    <script>
+        // Mostrar SweetAlert
+        Swal.fire({
+            icon: 'error',
+            title: '<?= session()->getFlashdata('doesntExist') ?>',
+            showConfirmButton: true,
+            // timer: 1500
+        });
+    </script>
+<?php endif; ?>
+
+
+
 
 
         <div class="container">

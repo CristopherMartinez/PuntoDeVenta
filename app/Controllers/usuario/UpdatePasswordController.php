@@ -37,17 +37,21 @@ class UpdatePasswordController extends BaseController{
     public function enviarCorreoRecuperacion(){
         $correo = $_POST['correo'];
 
-        $email = new Email();
-        $email->sendCorreoActualizacion($correo);
-
-        // echo "<script>localStorage.setItem('email', '" . $correo . "');</script>";
-    
-
+        $user = new RegistrarUsuario();
+        $res = $user->buscarPorCorreo($correo);
         
-        // return redirect()->to('updatePassword');
-        // Si los passwords coinciden
-        return redirect()->to('updatePassword')->with('mensaje', 'Se envio un correo con un link para actualizar la contraseña');
+        //Si existe el correo en la bd se envia el correo
+        if($res == true){
+            
+            $email = new Email();
+            $email->sendCorreoActualizacion($correo);
+            return redirect()->to('login')->with('mensaje', 'Se envio un correo con un link para actualizar la contraseña');
 
+
+        }else{
+            return redirect()->to('updatePassword')->with('doesntExist', 'No esta registrado el correo');
+
+        }
 
     }
 
