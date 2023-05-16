@@ -103,7 +103,8 @@ class GamesplayStation extends BaseController{
 
         $vista= view('genericos/header').
                 view('invitado/navbarInvitado').
-                view('invitado/gamesplayStation',$data);
+                view('invitado/gamesplayStation',$data).
+                view('genericos/footerInvitado');
         
 
         return $vista;
@@ -208,7 +209,9 @@ class GamesplayStation extends BaseController{
 
         $vista= view('genericos/header').
                 view('usuario/navbarLog',$usuario).
-                view('usuario/gamesPlayStation',$data);
+                view('usuario/gamesPlayStation',$data).
+                view('genericos/footer');
+                
         
 
         return $vista;

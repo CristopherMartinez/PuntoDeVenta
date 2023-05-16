@@ -395,7 +395,6 @@
                                                                     <label style='font-size:14px; color:black;'>$tarjeta[numeroTarjeta]</label>
                                                                 </span>
                                                                 <br>
-                                                                <a href='#' style='text-decoration:none; color:black; font-weight:bold; font-size:15px;' id='detalle-link'>Ver detalle</a>
                                                             </div>
                                                         </div>
                                                         <div class='col-md-12 col-sm-12 col-xs-12'>

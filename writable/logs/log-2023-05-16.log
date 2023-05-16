@@ -6,3 +6,21 @@ in APPPATH\Controllers\admin\AgregarJuegoController.php on line 210.
  4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\admin\AgregarJuegoController))
  5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 17:03:43 --> Invalid file: "genericos/footerInvitado.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('genericos/footerInvitado.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('genericos/footerInvitado', [], true)
+ 3 APPPATH\Controllers\generico\GamesXboxController.php(103): view('genericos/footerInvitado')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 17:04:18 --> Invalid file: "generico/footerInvitado.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('generico/footerInvitado.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('generico/footerInvitado', [], true)
+ 3 APPPATH\Controllers\generico\GamesXboxController.php(103): view('generico/footerInvitado')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\generico\GamesXboxController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\generico\GamesXboxController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

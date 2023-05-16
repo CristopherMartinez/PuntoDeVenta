@@ -15,31 +15,27 @@
           <li>
 
           <?php
-          if(isset($_SESSION)) {
               $currentPage = $_SERVER['REQUEST_URI'];
 
-              if($currentPage == '/Codeigniter4/usuario/inicio') {
+              if($currentPage == '/Codeigniter4/inicio') {
                   echo "<a href='#nosotros' class='informacion'>¿Quiénes somos?</a></li>";
               } 
               //Si esta en otra pagina
               else{
-                  echo "<a href='" . base_url() . "/usuario/inicio#nosotros' class='informacion'>¿Quiénes somos?</a></li>";
+                  echo "<a href='" . base_url() . "/inicio#nosotros' class='informacion'>¿Quiénes somos?</a></li>";
               }
-          }
           ?>
 
           <?php
-          if(isset($_SESSION)) {
               $currentPage = $_SERVER['REQUEST_URI'];
 
-              if($currentPage == '/Codeigniter4/usuario/inicio') {
+              if($currentPage == '/Codeigniter4/inicio') {
                   echo "<a href='#visionMision' class='informacion'>Misión y Visión</a></li>";
               } 
               //Si esta en otra pagina
               else{
-                  echo "<a href='" . base_url() . "/usuario/inicio#visionMision' class='informacion'>Misión y Visión</a></li>";
+                  echo "<a href='" . base_url() . "/inicio#visionMision' class='informacion'>Misión y Visión</a></li>";
               }
-          }
           ?>
 
 

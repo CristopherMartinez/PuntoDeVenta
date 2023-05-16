@@ -23,7 +23,8 @@ class LanzamientosController extends BaseController{
          // Cargar la vista de la lista de deseos
          $vista = view('genericos/header') .
                   view('genericos/navbar').
-                  view('invitado/lanzamientos',$data);
+                  view('invitado/lanzamientos',$data).
+                  view('genericos/footerInvitado');
  
          return $vista;
  
@@ -50,7 +51,8 @@ class LanzamientosController extends BaseController{
         // Cargar la vista de la lista de deseos
         $vista = view('genericos/header') .
                  view('usuario/navbarLog',$usuario).
-                 view('usuario/lanzamientos',$data);
+                 view('usuario/lanzamientos',$data).
+                 view('genericos/footer');
 
         return $vista;
 

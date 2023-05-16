@@ -116,7 +116,8 @@ class GamesNintendoController extends BaseController{
 
         $vista= view('genericos/header').
                 view('usuario/navbarLog',$usuario).
-                view('usuario/gamesNintendo',$data);
+                view('usuario/gamesNintendo',$data).
+                view('genericos/footer');
         return $vista;
     }
 }

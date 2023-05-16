@@ -7,7 +7,19 @@
             <div class="collapse navbar-collapse" id="navbarScroll" style="padding-left: 0px;">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item" style="margin-left: 5px;">
-                <a class="nav-link active" aria-current="page" href="#nosotros" style="padding-left: 5px;">Nosotros</a>
+                <!-- <a class="nav-link active" aria-current="page" href="#nosotros" style="padding-left: 5px;">Nosotros</a> -->
+                <?php
+                  $currentPage = $_SERVER['REQUEST_URI'];
+
+                  if($currentPage == '/Codeigniter4/inicio') {
+                      echo "<a class='nav-link active' aria-current='page' href='#nosotros' style='padding-left: 5px;'>Nosotros</a></li>";
+                  } 
+                  //Si esta en otra pagina
+                  else{
+                      echo "<a class='nav-link active' aria-current='page' href='" . base_url() . "/inicio#nosotros' style='padding-left: 5px;'>Nosotros</a></li>";
+                  }
+              ?>
+
                 </li>
                 <!-- <li class="nav-item">
                 <a class="nav-link" href="#" style="padding-left: 5px;">Membresias</a>
